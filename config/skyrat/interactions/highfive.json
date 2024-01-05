@@ -7,8 +7,9 @@
 	"message": [
 		"%USER% gives %TARGET% a highfive!"
 	],
-	"sound_use": 0,
+	"sound_use": 1,
 	"sound_possible": [
+		"sound/weapons/slap.ogg"
 	],
 	"sound_range": 7,
 	"interaction_requires": [
