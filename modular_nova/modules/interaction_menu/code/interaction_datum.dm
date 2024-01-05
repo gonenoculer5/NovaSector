@@ -55,6 +55,9 @@ GLOBAL_LIST_EMPTY_TYPED(interaction_instances, /datum/interaction)
 	if(target == user && usage == INTERACTION_OTHER)
 		return FALSE
 
+	if(target != user && usage == INTERACTION_SELF)
+		return FALSE
+
 	if(user_required_parts.len)
 		for(var/thing in user_required_parts)
 			var/obj/item/organ/external/genital/required_part = user.get_organ_slot(thing)
@@ -73,12 +76,19 @@ GLOBAL_LIST_EMPTY_TYPED(interaction_instances, /datum/interaction)
 
 	for(var/requirement in interaction_requires)
 		switch(requirement)
+			if(INTERACTION_REQUIRE_SELF_FLEXIBLE)
+				if(!HAS_TRAIT(user, TRAIT_FLEXIBLE))
+					return
+			if(INTERACTION_REQUIRE_TARGET_FLEXIBLE)
+				if(!HAS_TRAIT(target, TRAIT_FLEXIBLE))
+					return
 			if(INTERACTION_REQUIRE_SELF_HAND)
 				if(!user.get_active_hand())
 					return FALSE
 			if(INTERACTION_REQUIRE_TARGET_HAND)
 				if(!target.get_active_hand())
 					return FALSE
+			
 			else
 				CRASH("Unimplemented interaction requirement '[requirement]'")
 	return TRUE
@@ -95,6 +105,11 @@ GLOBAL_LIST_EMPTY_TYPED(interaction_instances, /datum/interaction)
 	var/msg = pick(message)
 	// We replace %USER% with nothing because manual_emote already prepends it.
 	msg = trim(replacetext(replacetext(msg, "%TARGET%", "[target]"), "%USER%", ""), INTERACTION_MAX_CHAR)
+	msg = replacetext(replacetext(msg, "%TARGET_PRONOUN_THEIR%", target.p_their()), "%TARGET_PRONOUN_THEIRS%", target.p_theirs())
+	msg = replacetext(replacetext(msg, "%USER_PRONOUN_THEIR%", user.p_their()), "%USER_PRONOUN_THEIRS%", user.p_theirs())
+	msg = replacetext(replacetext(msg, "%TARGET_PRONOUN_THEM%", target.p_them()), "%USER_PRONOUN_THEM%", user.p_them())
+	msg = replacetext(replacetext(msg, "%TARGET_PRONOUN_THEY%", target.p_they()), "%USER_PRONOUN_THEY%", user.p_they())
+
 	if(lewd)
 		user.emote("subtler", null, msg, TRUE)
 	else
@@ -102,10 +117,18 @@ GLOBAL_LIST_EMPTY_TYPED(interaction_instances, /datum/interaction)
 	if(user_messages.len)
 		var/user_msg = pick(user_messages)
 		user_msg = replacetext(replacetext(user_msg, "%TARGET%", "[target]"), "%USER%", "[user]")
+		user_msg = replacetext(replacetext(user_msg, "%TARGET_PRONOUN_THEIR%", target.p_their()), "%TARGET_PRONOUN_THEIRS%", target.p_theirs())
+		user_msg = replacetext(replacetext(user_msg, "%USER_PRONOUN_THEIR%", user.p_their()), "%USER_PRONOUN_THEIRS%", user.p_theirs())
+		user_msg = replacetext(replacetext(user_msg, "%TARGET_PRONOUN_THEM%", target.p_them()), "%USER_PRONOUN_THEM%", user.p_them())
+		user_msg = replacetext(replacetext(user_msg, "%TARGET_PRONOUN_THEY%", target.p_they()), "%USER_PRONOUN_THEY%", user.p_they())
 		to_chat(user, user_msg)
 	if(target_messages.len)
 		var/target_msg = pick(target_messages)
 		target_msg = replacetext(replacetext(target_msg, "%TARGET%", "[target]"), "%USER%", "[user]")
+		target_msg = replacetext(replacetext(target_msg, "%TARGET_PRONOUN_THEIR%", target.p_their()), "%TARGET_PRONOUN_THEIRS%", target.p_theirs())
+		target_msg = replacetext(replacetext(target_msg, "%USER_PRONOUN_THEIR%", user.p_their()), "%USER_PRONOUN_THEIRS%", user.p_theirs())
+		target_msg = replacetext(replacetext(target_msg, "%TARGET_PRONOUN_THEM%", target.p_them()), "%USER_PRONOUN_THEM%", user.p_them())
+		target_msg = replacetext(replacetext(target_msg, "%TARGET_PRONOUN_THEY%", target.p_they()), "%USER_PRONOUN_THEY%", user.p_they())
 		to_chat(target, target_msg)
 	if(sound_use)
 		if(!sound_possible)

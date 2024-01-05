@@ -11,6 +11,9 @@
 #define INTERACTION_REQUIRE_SELF_HAND "self_hand"
 #define INTERACTION_REQUIRE_TARGET_HAND "target_hand"
 
+#define INTERACTION_REQUIRE_SELF_FLEXIBLE "self_flexible"
+#define INTERACTION_REQUIRE_TARGET_FLEXIBLE "target_flexible"
+
 // Interaction Types: Do we do it to ourself or someone else
 #define INTERACTION_SELF "self"
 #define INTERACTION_OTHER "other"

@@ -73,6 +73,9 @@
 		else
 			var/list/interactable_inrange_humans = list()
 
+			if(HAS_TRAIT(src, TRAIT_FLEXIBLE))
+				interactable_inrange_humans[name] = src
+
 			// Unfortunately prefs can't be checked here, because byond/tgstation moment.
 			for(var/mob/living/carbon/human/iterating_human in (view(1, src) - src))
 				interactable_inrange_humans[iterating_human.name] = iterating_human
