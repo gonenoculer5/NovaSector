@@ -111,6 +111,7 @@
 		/mob/living/proc/emote_mousesqueak,
 		/mob/living/proc/emote_merp,
 		/mob/living/proc/emote_bark,
+		/mob/living/proc/emote_whine,
 		/mob/living/proc/emote_squish,
 		/mob/living/proc/emote_meow,
 		/mob/living/proc/emote_hiss1,
@@ -686,6 +687,11 @@
 	set name = "> Bark"
 	set category = "Emotes+"
 	usr.emote("bark", intentional = TRUE)
+
+/mob/living/proc/emote_whine()
+	set name = "> Whine"
+	set category = "Emotes+"
+	usr.emote("whine", intentional = TRUE)
 
 /mob/living/proc/emote_squish()
 	set name = "> Squish"
