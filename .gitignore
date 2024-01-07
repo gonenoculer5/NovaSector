@@ -243,3 +243,6 @@ define_sanity_output.txt
 # ezdb
 /db/
 /config/ezdb.txt
+
+# Ignore possibly NSFW interactions
+config/~config_nova/interactions/
