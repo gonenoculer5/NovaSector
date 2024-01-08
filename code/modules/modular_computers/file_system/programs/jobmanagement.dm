@@ -35,8 +35,10 @@ GLOBAL_VAR_INIT(time_last_changed_position, 0)
 	if(job.job_flags & JOB_CANNOT_OPEN_SLOTS)
 		return FALSE
 	// NOVA EDIT ADDITION START
+	/* Bluemoon edit - Remove veteran requirement
 	if(job.veteran_only)
 		return FALSE
+	/*
 	// NOVA EDIT ADDITION END
 	return TRUE
 
