@@ -19,7 +19,7 @@
 	"interaction_requires": [
 		"self_hand"
 	],
-	"use_sound": 1,
+	"sound_use": 1,
 	"sound_possible": [
 		"sound/weapons/thudswoosh.ogg"
 	],
