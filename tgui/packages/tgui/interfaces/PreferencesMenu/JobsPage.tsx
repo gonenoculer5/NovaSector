@@ -224,6 +224,7 @@ const JobRow = (props: { className?: string; job: Job; name: string }) => {
       </Stack>
     );
     // NOVA EDIT START
+  /* Bluemoon edit - Remove veteran requirement
   } else if (job.veteran && !data.is_veteran) {
     rightSide = (
       <Stack align="center" height="100%" pr={1}>
@@ -232,6 +233,7 @@ const JobRow = (props: { className?: string; job: Job; name: string }) => {
         </Stack.Item>
       </Stack>
     );
+  */
   } else if (
     data.species_restricted_jobs &&
     data.species_restricted_jobs.indexOf(name) !== -1

@@ -349,15 +349,19 @@ export function QuirksPage(props) {
           if (quirk.value > 0) {
             if (positiveQuirks >= maxPositiveQuirks) {
               return "You can't have any more positive quirks!";
+            /* Bluemoon edit - Disable quirk points
             } else if (balance + quirk.value > 0) {
               return 'You need a negative quirk to balance this out!';
+            */
             }
           }
 
           // NOVA EDIT START - Veteran quirks
+          /* Bluemoon edit - Remove veteran requirement
           if (quirk.veteran_only && !data.is_veteran) {
             return 'You need to be a veteran to select this quirk, apply today!';
           }
+          */
           // NOVA EDIT END
 
           const selectedQuirkNames = selectedQuirks.map((quirkKey) => {
@@ -385,9 +389,11 @@ export function QuirksPage(props) {
         const getReasonToNotRemove = (quirkName: string) => {
           const quirk = quirkInfo[quirkName];
 
+          /* Bluemoon edit - Disable quirk points
           if (balance - quirk.value > 0) {
             return 'You need to remove a positive quirk first!';
           }
+          */
 
           return undefined;
         };

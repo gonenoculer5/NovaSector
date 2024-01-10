@@ -276,9 +276,11 @@ const SpeciesPageInner = (props: {
                   <Button
                     key={speciesKey}
                     onClick={() => {
+                      /* Bluemoon edit - Remove veteran requirement
                       if (species.veteran_only && !data.is_veteran) {
                         return;
                       }
+                      */
                       setSpecies(speciesKey);
                     }}
                     selected={

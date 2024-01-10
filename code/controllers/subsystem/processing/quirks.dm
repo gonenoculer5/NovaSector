@@ -187,7 +187,8 @@ PROCESSING_SUBSYSTEM_DEF(quirks)
 /datum/controller/subsystem/processing/quirks/proc/filter_invalid_quirks(list/quirks, list/augments) // NOVA EDIT - AUGMENTS+
 	var/list/new_quirks = list()
 	var/list/positive_quirks = list()
-	var/balance = 0
+	// Bluemoon edit - Disable quirk points
+	var/balance = -INFINITY
 
 	var/list/all_quirks = get_quirks()
 
