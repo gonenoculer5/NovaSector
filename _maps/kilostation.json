@@ -1,0 +1,26 @@
+{
+	"version": 1,
+	"map_name": "Kilo Station",
+	"map_path": "map_files/KiloStation",
+	"map_file": "KiloStation.dmm",
+	"shuttles": {
+		"emergency": "emergency_nova",
+		"ferry": "ferry_nova",
+		"cargo": "cargo_nova",
+		"whiteship": "whiteship_nova"
+	},
+	"traits": [
+		{
+			"Linkage": "Cross",
+			"Bombcap Multiplier": 0.7
+		}
+	],
+	"job_changes": {
+		"Cook": {
+			"additional_cqc_areas": ["/area/station/service/bar/atrium"]
+		},
+		"Captain": {
+			"special_charter": "asteroid"
+		}
+	}
+}

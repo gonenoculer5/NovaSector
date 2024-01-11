@@ -68,3 +68,9 @@ map blueshift
 	minplayers 0
 	votable
 endmap
+
+# Bluemoon edit - Add Kilostation map
+map kilostation
+	minplayers 0
+	votable
+endmap

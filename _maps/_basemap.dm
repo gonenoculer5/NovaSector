@@ -18,6 +18,9 @@
 		#include "map_files\NSVBlueshift\Blueshift.dmm"
 		// NOVA EDIT END
 
+		// Bluemoon edit - Add Kilostation map
+		#include "map_files\KiloStation\KiloStation.dmm"
+
 		#ifdef CIBUILDING
 			#include "templates.dm"
 		#endif
