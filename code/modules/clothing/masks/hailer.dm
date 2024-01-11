@@ -224,7 +224,8 @@ GLOBAL_LIST_INIT(hailer_phrases, list(
 /obj/item/clothing/mask/party_horn/ui_action_click(mob/user, action)
 	if(!COOLDOWN_FINISHED(src, horn_cooldown))
 		return
-	COOLDOWN_START(src, horn_cooldown, 10 SECONDS)
+	// Bluemoon edit - Reduce party horn cooldown
+	COOLDOWN_START(src, horn_cooldown, 2 SECONDS)
 	playsound(src, 'sound/items/party_horn.ogg', 75, FALSE)
 	flick("party_horn_animated", src)
 
