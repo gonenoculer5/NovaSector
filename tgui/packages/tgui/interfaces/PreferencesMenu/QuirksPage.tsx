@@ -461,7 +461,7 @@ export function QuirksPage(props) {
                 </Stack.Item>
 
                 <Stack.Item>
-                  <StatDisplay>{balance}</StatDisplay>
+                  <StatDisplay>{"∞"}</StatDisplay>
                 </Stack.Item>
 
                 <Stack.Item>

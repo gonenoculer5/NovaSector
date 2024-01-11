@@ -268,7 +268,7 @@ export const LimbsPage = (props) => {
               alignItems: 'center',
             }}
           >
-            {balance}
+            {"∞"}
           </Box>
         </Section>
       </Stack.Item>
