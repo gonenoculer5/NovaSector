@@ -53,6 +53,9 @@ SUBSYSTEM_DEF(player_ranks)
 	if(!istype(user))
 		CRASH("Invalid user type provided to is_donator(), expected 'client' and obtained '[user ? user.type : "null"]'.")
 
+	// Bluemoon edit - Bypass donator check
+	return TRUE
+	/*
 	if(GLOB.donator_list[user.ckey])
 		return TRUE
 
@@ -60,6 +63,7 @@ SUBSYSTEM_DEF(player_ranks)
 		return TRUE
 
 	return FALSE
+	*/
 
 
 /**
@@ -145,11 +149,16 @@ SUBSYSTEM_DEF(player_ranks)
 /datum/controller/subsystem/player_ranks/proc/update_prefs_donator_status(datum/preferences/prefs)
 	if(!prefs)
 		return
-
+	// Bluemoon edit - Bypass donator check
+	prefs.unlock_content = TRUE
+	prefs.donator_status = TRUE
+	prefs.max_save_slots = 50
+	/*
 	prefs.unlock_content = !!prefs.parent.IsByondMember()
 	prefs.donator_status = is_donator(prefs.parent)
 	if(prefs.unlock_content || prefs.donator_status)
 		prefs.max_save_slots = 50
+	*/
 
 
 /// Handles loading mentors either via SQL or using the legacy system,

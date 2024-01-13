@@ -67,6 +67,8 @@
 			return
 
 		if("select_item")
+			// Bluemoon edit - Bypass donator check
+			/*
 			//Here we will perform basic checks to ensure there are no exploits happening
 			if(interacted_item.donator_only && !GLOB.donator_list[owner.ckey] && !is_admin(owner))
 				message_admins("LOADOUT SYSTEM: Possible exploit detected, non-donator [owner.ckey] tried loading [interacted_item.item_path], but this is donator only.")
@@ -75,6 +77,7 @@
 			if(interacted_item.ckeywhitelist && !(owner.ckey in interacted_item.ckeywhitelist))
 				message_admins("LOADOUT SYSTEM: Possible exploit detected, non-donator [owner.ckey] tried loading [interacted_item.item_path], but this is ckey locked.")
 				return
+			*/
 			if(params["deselect"])
 				deselect_item(interacted_item)
 				owner?.prefs?.character_preview_view.update_body()
@@ -97,13 +100,15 @@
 		if("clear_all_items")
 			LAZYNULL(owner.prefs.loadout_list)
 			owner?.prefs?.character_preview_view.update_body()
-
+		// Bluemoon edit - Bypass donator check
 		if("donator_explain")
+			to_chat(owner, examine_block("<b><font color='#f566d6'>Unlocked by TBMC. <a href='https://ko-fi.com/novasector13'>Donate to Nova Sector!</a></font></b>"))
+		/*
 			if(GLOB.donator_list[owner.ckey])
 				to_chat(owner, examine_block("<b><font color='#f566d6'>Thank you for donating, this item is for you <3!</font></b>"))
 			else
 				to_chat(owner, examine_block(span_boldnotice("This item is restricted to donators only, for more information, please check the discord(#server-info) for more information!")))
-
+		*/
 		if("ckey_explain")
 			to_chat(owner, examine_block(span_green("This item is restricted to your ckey only. Thank you!")))
 
@@ -255,7 +260,11 @@
 	for(var/path in owner?.prefs?.loadout_list)
 		all_selected_paths += path
 	data["selected_loadout"] = all_selected_paths
+	// Bluemoon edit - Bypass donator check
+	data["user_is_donator"] = TRUE
+	/*
 	data["user_is_donator"] = !!(GLOB.donator_list[owner.ckey] || is_admin(owner))
+	*/
 
 	return data
 
