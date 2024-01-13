@@ -31,7 +31,6 @@ map icebox
 endmap
 
 map metastation
-	default
 	minplayers 0
 	votable
 endmap
@@ -71,6 +70,7 @@ endmap
 
 # Bluemoon edit - Add Kilostation map
 map kilostation
+	default
 	minplayers 0
 	votable
 endmap
