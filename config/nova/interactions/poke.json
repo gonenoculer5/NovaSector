@@ -18,5 +18,8 @@
 		"<span class='purple'>%USER% prods you lightly, trying to get your attention.</span>",
 		"<span class='purple'>%USER% nudges you gently with %USER_PRONOUN_THEIR% finger.</span>",
 		"<span class='purple'>You feel %USER%'s finger poke you in the side.</span>"
+	],
+	"interaction_requires": [
+		"self_hand"
 	]
 }
