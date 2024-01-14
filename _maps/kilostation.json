@@ -4,10 +4,10 @@
 	"map_path": "map_files/KiloStation",
 	"map_file": "KiloStation.dmm",
 	"shuttles": {
-		"emergency": "emergency_nova",
-		"ferry": "ferry_nova",
-		"cargo": "cargo_nova",
-		"whiteship": "whiteship_nova"
+		"emergency": "emergency_kilo",
+		"ferry": "ferry_kilo",
+		"cargo": "cargo_kilo",
+		"whiteship": "whiteship_kilo"
 	},
 	"traits": [
 		{
