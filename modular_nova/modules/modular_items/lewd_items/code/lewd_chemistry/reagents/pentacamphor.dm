@@ -1,4 +1,4 @@
-// Pentacamphor. Used to purge crocin and hexacrocin. Can permanently disable arousal or cure amorousfication on overdose.
+// Pentacamphor. Used to purge crocin and hexacrocin. Can permanently disable arousal or cure bimbofication on overdose.
 /datum/reagent/drug/aphrodisiac/camphor/pentacamphor
 	name = "Pentacamphor"
 	description = "Chemically condensed camphor. Causes an extreme reduction in libido and a permanent one if overdosed. Non-addictive."
