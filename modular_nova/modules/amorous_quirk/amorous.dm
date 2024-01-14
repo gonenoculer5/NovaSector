@@ -5,7 +5,7 @@
 	mob_trait = TRAIT_AMOROUS
 	gain_text = span_purple("Your libido is going haywire! It feels like speaking is much harder...")
 	lose_text = span_notice("Your mind is free. Your thoughts are pure and innocent once more.")
-	medical_record_text = "Subject has permanent hormonal disruption and seems extremely aroused."
+	medical_record_text = "Subject has permanent hormonal disruption."
 	icon = FA_ICON_HEART
 	erp_quirk = TRUE
 
