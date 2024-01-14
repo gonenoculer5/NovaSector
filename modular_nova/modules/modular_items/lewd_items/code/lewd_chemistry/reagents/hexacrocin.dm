@@ -8,7 +8,7 @@
 	taste_description = "liquid desire"
 	color = "#FF2BFF"
 	overdose_threshold = 25
-	overdose_pref_datum = /datum/preference/toggle/erp/bimbofication
+	overdose_pref_datum = /datum/preference/toggle/erp/amorousfication
 
 	emote_probability = 5
 	thought_probability = 5
@@ -38,12 +38,12 @@
 		to_chat(exposed_mob, span_purple("[displayed_extreme_thought]"))
 
 /datum/reagent/drug/aphrodisiac/crocin/hexacrocin/overdose_effects(mob/living/carbon/human/exposed_mob)
-	if(prob(OD_CHANCE_NO_TRAUMA) || HAS_TRAIT(exposed_mob, TRAIT_BIMBO))
+	if(prob(OD_CHANCE_NO_TRAUMA) || HAS_TRAIT(exposed_mob, TRAIT_AMOROUS))
 		return ..()
 
 	to_chat(exposed_mob, span_purple("Your libido is going haywire! It feels like speaking is much harder..."))
-	exposed_mob.gain_trauma(/datum/brain_trauma/very_special/bimbo, TRAUMA_RESILIENCE_BASIC)
-	ADD_TRAIT(exposed_mob, TRAIT_BIMBO, TRAIT_LEWDCHEM)
+	exposed_mob.gain_trauma(/datum/brain_trauma/very_special/amorous, TRAUMA_RESILIENCE_BASIC)
+	ADD_TRAIT(exposed_mob, TRAIT_AMOROUS, TRAIT_LEWDCHEM)
 
 /datum/chemical_reaction/hexacrocin
 	results = list(/datum/reagent/drug/aphrodisiac/crocin/hexacrocin = 1)

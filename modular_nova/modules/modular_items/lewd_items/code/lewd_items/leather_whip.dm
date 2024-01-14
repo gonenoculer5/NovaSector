@@ -238,7 +238,7 @@
 				target.adjust_arousal(5)
 				target.adjust_pain(5)
 				target.apply_status_effect(/datum/status_effect/spanked)
-				if(HAS_TRAIT(target, TRAIT_MASOCHISM || TRAIT_BIMBO))
+				if(HAS_TRAIT(target, TRAIT_MASOCHISM || TRAIT_AMOROUS))
 					target.add_mood_event("pervert spanked", /datum/mood_event/perv_spanked)
 				play_lewd_sound(loc, 'sound/weapons/whip.ogg', 60)
 
@@ -252,7 +252,7 @@
 				target.adjust_arousal(3)
 				target.adjust_pain(8)
 				target.apply_status_effect(/datum/status_effect/spanked)
-				if(HAS_TRAIT(target, TRAIT_MASOCHISM || TRAIT_BIMBO))
+				if(HAS_TRAIT(target, TRAIT_MASOCHISM || TRAIT_AMOROUS))
 					target.add_mood_event("pervert spanked", /datum/mood_event/perv_spanked)
 				play_lewd_sound(loc, 'sound/weapons/whip.ogg', 100)
 		else

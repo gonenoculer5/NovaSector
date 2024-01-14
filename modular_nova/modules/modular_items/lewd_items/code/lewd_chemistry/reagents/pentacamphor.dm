@@ -1,4 +1,4 @@
-// Pentacamphor. Used to purge crocin and hexacrocin. Can permanently disable arousal or cure bimbofication on overdose.
+// Pentacamphor. Used to purge crocin and hexacrocin. Can permanently disable arousal or cure amorousfication on overdose.
 /datum/reagent/drug/aphrodisiac/camphor/pentacamphor
 	name = "Pentacamphor"
 	description = "Chemically condensed camphor. Causes an extreme reduction in libido and a permanent one if overdosed. Non-addictive."
@@ -20,10 +20,10 @@
 		exposed_mob.reagents.remove_reagent(/datum/reagent/drug/aphrodisiac/crocin/hexacrocin, reagent_reduction_amount)
 
 /datum/reagent/drug/aphrodisiac/camphor/pentacamphor/overdose_start(mob/living/carbon/human/exposed_mob)
-	if(HAS_TRAIT(exposed_mob, TRAIT_BIMBO))
-		exposed_mob.cure_trauma_type(/datum/brain_trauma/very_special/bimbo, TRAUMA_RESILIENCE_ABSOLUTE)
+	if(HAS_TRAIT(exposed_mob, TRAIT_AMOROUS))
+		exposed_mob.cure_trauma_type(/datum/brain_trauma/very_special/amorous, TRAUMA_RESILIENCE_ABSOLUTE)
 		to_chat(exposed_mob, span_notice("Your mind is free. Your thoughts are pure and innocent once more."))
-		REMOVE_TRAIT(exposed_mob, TRAIT_BIMBO, TRAIT_LEWDCHEM)
+		REMOVE_TRAIT(exposed_mob, TRAIT_AMOROUS, TRAIT_LEWDCHEM)
 		return
 	if(!HAS_TRAIT(exposed_mob, TRAIT_NEVERBONER))
 		to_chat(exposed_mob, span_notice("You feel like you'll never feel aroused again..."))

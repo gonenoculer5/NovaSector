@@ -1,5 +1,5 @@
 /*
-*	BIMBO
+*	AMOROUS
 */
 
 /datum/brain_trauma
@@ -9,7 +9,7 @@
 /datum/brain_trauma/very_special
 	abstract_type = /datum/brain_trauma/very_special
 
-/datum/brain_trauma/very_special/bimbo
+/datum/brain_trauma/very_special/amorous
 	name = "Permanent hormonal disruption"
 	desc = "The patient has completely lost the ability to form speech and seems extremely aroused."
 	scan_desc = "permanent hormonal disruption"
@@ -44,7 +44,7 @@
 /**
  * If we are not satisfied, this will be ran through
  */
-/datum/brain_trauma/very_special/bimbo/proc/try_unsatisfied()
+/datum/brain_trauma/very_special/amorous/proc/try_unsatisfied()
 	var/mob/living/carbon/human/human_owner = owner
 	//we definitely need an owner; but if you are satisfied, just return
 	if(satisfaction || !human_owner)
@@ -66,23 +66,26 @@
 	if(stress >= 240)
 		human_owner.adjustStaminaLoss(30)
 		lust_message = "You body feels so very hot, almost unwilling to cooperate..."
+	// Bluemoon edit - Make Amorous non-lethal
+	/*
 	if(stress >= 300)
 		human_owner.adjustOxyLoss(40)
 		lust_message = "You feel your neck tightening, straining..."
+	*/
 	to_chat(human_owner, span_purple(lust_message))
 	return TRUE
 
 /**
  * If we have climaxed, return true
  */
-/datum/brain_trauma/very_special/bimbo/proc/check_climaxed()
+/datum/brain_trauma/very_special/amorous/proc/check_climaxed()
 	if(owner.has_status_effect(/datum/status_effect/climax))
 		stress = 0
 		satisfaction = 300
 		return TRUE
 	return FALSE
 
-/datum/brain_trauma/very_special/bimbo/on_life()
+/datum/brain_trauma/very_special/amorous/on_life()
 	var/mob/living/carbon/human/human_owner = owner
 
 	//Check if we climaxed, if so, just stop for now
@@ -131,15 +134,15 @@
 /**
  * If we have another human in view, return true
  */
-/datum/brain_trauma/very_special/bimbo/proc/in_company()
+/datum/brain_trauma/very_special/amorous/proc/in_company()
 	for(var/mob/living/carbon/human/human_check in oview(owner, 4))
 		if(!istype(human_check))
 			continue
 		return TRUE
 	return FALSE
 
-/datum/brain_trauma/very_special/bimbo/handle_speech(datum/source, list/speech_args)
-	if(!HAS_TRAIT(owner, TRAIT_BIMBO)) //You have the trauma but not the trait, go ahead and fail here
+/datum/brain_trauma/very_special/amorous/handle_speech(datum/source, list/speech_args)
+	if(!HAS_TRAIT(owner, TRAIT_AMOROUS)) //You have the trauma but not the trait, go ahead and fail here
 		return ..()
 	var/message = speech_args[SPEECH_MESSAGE]
 	var/list/split_message = splittext(message, " ") //List each word in the message
@@ -153,24 +156,24 @@
 	message = jointext(split_message, " ")
 	speech_args[SPEECH_MESSAGE] = message
 
-/datum/brain_trauma/very_special/bimbo/on_gain()
-	owner.add_mood_event("bimbo", /datum/mood_event/bimbo)
-	if(!HAS_TRAIT_FROM(owner, TRAIT_BIMBO, TRAIT_LEWDCHEM))
-		ADD_TRAIT(owner, TRAIT_BIMBO, TRAIT_LEWDCHEM)
+/datum/brain_trauma/very_special/amorous/on_gain()
+	owner.add_mood_event("amorous", /datum/mood_event/amorous)
+	if(!HAS_TRAIT_FROM(owner, TRAIT_AMOROUS, TRAIT_LEWDCHEM))
+		ADD_TRAIT(owner, TRAIT_AMOROUS, TRAIT_LEWDCHEM)
 	RegisterSignal(owner, COMSIG_MOB_SAY, PROC_REF(handle_speech))
 	if(!HAS_TRAIT_FROM(owner, TRAIT_MASOCHISM, TRAIT_APHRO))
 		ADD_TRAIT(owner, TRAIT_MASOCHISM, TRAIT_APHRO)
 
-/datum/brain_trauma/very_special/bimbo/on_lose()
-	owner.clear_mood_event("bimbo")
-	if(HAS_TRAIT_FROM(owner, TRAIT_BIMBO, TRAIT_LEWDCHEM))
-		REMOVE_TRAIT(owner, TRAIT_BIMBO, TRAIT_LEWDCHEM)
+/datum/brain_trauma/very_special/amorous/on_lose()
+	owner.clear_mood_event("amorous")
+	if(HAS_TRAIT_FROM(owner, TRAIT_AMOROUS, TRAIT_LEWDCHEM))
+		REMOVE_TRAIT(owner, TRAIT_AMOROUS, TRAIT_LEWDCHEM)
 	UnregisterSignal(owner, COMSIG_MOB_SAY)
 	if(HAS_TRAIT_FROM(owner, TRAIT_MASOCHISM, TRAIT_APHRO))
 		REMOVE_TRAIT(owner, TRAIT_MASOCHISM, TRAIT_APHRO)
 
 //Mood boost
-/datum/mood_event/bimbo
+/datum/mood_event/amorous
 	description = span_purple("So-o... Help..less... Lo-ve it!\n")
 
 /*
