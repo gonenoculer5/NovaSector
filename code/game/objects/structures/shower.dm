@@ -320,7 +320,10 @@ MAPPING_DIRECTIONAL_HELPERS(/obj/machinery/shower, (-16))
 		if(!ismopable(movable_content)) // Mopables will be cleaned anyways by the turf wash above
 			wash_atom(movable_content) // Reagent exposure is handled in wash_atom
 
+	// Bluemoon edit - Infinite showers
+	/*
 	reagents.remove_any(SHOWER_SPRAY_VOLUME)
+	*/
 
 /obj/machinery/shower/deconstruct(disassembled = TRUE)
 	new /obj/item/stack/sheet/iron(drop_location(), 2)
