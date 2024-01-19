@@ -6,7 +6,7 @@
 	lose_text = span_notice("Your sensitivity to headpats fades away!")
 	medical_record_text = "Subject has an extremely sensitive head and scalp."
 	icon = FA_ICON_PERSON_HARASSING
-	lewd_quirk = TRUE
+	erp_quirk = TRUE
 
 /datum/mood_event/headpat_lover
 	description = "I LOVE HEADPATS! YES PLEASE!! OH GOD YES!!!"
