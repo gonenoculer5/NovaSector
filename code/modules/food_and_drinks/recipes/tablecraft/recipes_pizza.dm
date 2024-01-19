@@ -22,6 +22,7 @@
 	result = /obj/item/food/pizza/meat/raw
 	category = CAT_PIZZA
 
+/* Bluemoon edit - Remove arnold pizza
 /datum/crafting_recipe/food/arnold
 	reqs = list(
 		/obj/item/food/flatdough = 1,
@@ -32,6 +33,7 @@
 	)
 	result = /obj/item/food/pizza/arnold/raw
 	category = CAT_PIZZA
+*/
 
 /datum/crafting_recipe/food/mushroompizza
 	reqs = list(

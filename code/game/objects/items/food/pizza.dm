@@ -345,6 +345,7 @@
 	. = ..()
 	AddElement(/datum/element/swabable, CELL_LINE_TABLE_MOLD, CELL_VIRUS_TABLE_GENERIC, rand(2, 4), 25)
 
+/* Bluemoon edit - Remove arnold pizza
 // Arnold Pizza
 // Has meme code.
 /obj/item/food/pizza/arnold
@@ -418,6 +419,7 @@
 /obj/item/food/pizzaslice/arnold/attackby(obj/item/item, mob/user)
 	i_kill_you(item, user)
 	. = ..()
+*/
 
 // Ant Pizza, now with more ants.
 /obj/item/food/pizzaslice/ants
