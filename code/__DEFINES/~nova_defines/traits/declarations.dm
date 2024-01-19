@@ -151,6 +151,9 @@
 /// If clothing can also be damaged by piercing wound checks, instead of JUST slashes and burns
 #define TRAIT_CLOTHES_DAMAGED_BY_PIERCING "clothing_damaged_by_piercing"
 
+// Bluemoon edit - Flexible quirk
 #define TRAIT_FLEXIBLE "flexible"
+// Bluemoon edit - Headpat Lover quirk
+#define TRAIT_HEADPATLOVER "headpat_lover"
 
 // END TRAIT DEFINES

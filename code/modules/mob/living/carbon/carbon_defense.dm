@@ -500,9 +500,12 @@
 
 		// Bluemoon edit - Headpat lover
 		if(HAS_TRAIT(src, TRAIT_HEADPATLOVER))
-			quirk_holder.add_mood_event("headpat_lover", /datum/mood_event/headpat_lover)
-			adjust_arousal(4)
-			adjust_pleasure(6)
+			var/mob/living/carbon/human/affected_human = src
+			if(!istype(affected_human))
+				return
+			affected_human.add_mood_event("headpat_lover", /datum/mood_event/headpat_lover)
+			affected_human.adjust_arousal(4)
+			affected_human.adjust_pleasure(6)
 
 	else if ((helper.zone_selected == BODY_ZONE_PRECISE_GROIN) && !isnull(src.get_organ_by_type(/obj/item/organ/external/tail)))
 		helper.visible_message(span_notice("[helper] pulls on [src]'s tail!"), \
