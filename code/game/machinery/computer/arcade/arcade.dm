@@ -670,9 +670,9 @@ GLOBAL_LIST_INIT(arcade_prize_pool, list(
 	if(do_after(user, 5 SECONDS, target = src, extra_checks = CALLBACK(src, PROC_REF(do_they_still_have_that_hand), user, chopchop)))
 		// Bluemoon edit - Remove amputation from arcade machines
 		chopchop.receive_damage(brute = 15)
-		/*
 		playsound(src, 'sound/weapons/slice.ogg', 25, TRUE, -1)
 		to_chat(user, span_userdanger("The guillotine drops on your arm, and the machine sucks it in!"))
+		/*
 		chopchop.dismember()
 		qdel(chopchop)
 		*/
