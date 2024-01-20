@@ -8,6 +8,19 @@ import { getRandomization, PreferenceList } from './MainPage';
 import { ServerPreferencesFetcher } from './ServerPreferencesFetcher';
 import { useRandomToggleState } from './useRandomToggleState';
 
+// Bluemoon edit - ERP quirk color
+function getValueClass(quirk: Quirk) {
+  if (quirk.value > 0) {
+    return 'positive';
+  } else if (quirk.value < 0) {
+    return 'negative';
+  } else if (quirk.erp_quirk) {
+    return 'erp_quirk';
+  } else {
+    return 'neutral';
+  }
+}
+/*
 function getValueClass(value: number) {
   if (value > 0) {
     return 'positive';
@@ -17,6 +30,7 @@ function getValueClass(value: number) {
     return 'neutral';
   }
 }
+*/
 
 function getCorrespondingPreferences(
   customization_options: string[],
@@ -131,7 +145,7 @@ function QuirkDisplay(props: QuirkDisplayProps) {
         >
           <Stack vertical fill>
             <Stack.Item
-              className={`${className}--${getValueClass(value)}`}
+              className={`${className}--${getValueClass(quirk)}`}
               style={{
                 borderBottom: '1px solid black',
                 padding: '2px',
@@ -340,7 +354,7 @@ export function QuirksPage(props) {
           if (quirk.value > 0) {
             if (positiveQuirks >= maxPositiveQuirks) {
               return "You can't have any more positive quirks!";
-            /* Bluemoon edit - Disable quirk points
+              /* Bluemoon edit - Disable quirk points
             } else if (balance + quirk.value > 0) {
               return 'You need a negative quirk to balance this out!';
             */
@@ -452,7 +466,7 @@ export function QuirksPage(props) {
                 </Stack.Item>
 
                 <Stack.Item>
-                  <StatDisplay>{"∞"}</StatDisplay>
+                  <StatDisplay>{'∞'}</StatDisplay>
                 </Stack.Item>
 
                 <Stack.Item>

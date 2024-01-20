@@ -234,6 +234,8 @@ $department_map: (
 
         $quality_map: (
           'positive': colors.$green,
+          // Bluemoon edit - ERP quirk color
+          'erp_quirk': colors.$purple,
           'neutral': colors.$white,
           'negative': colors.$red,
         );
