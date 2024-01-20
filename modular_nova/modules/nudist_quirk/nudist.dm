@@ -17,7 +17,7 @@
 // Bad mood from wearing most uniforms
 /datum/mood_event/tight_clothes
 	description = "I hate wearing these tight clothes!"
-	mood_change = -2
+	mood_change = -3
 
 // This component listens for when clothes are being equipped
 /datum/component/nudist
@@ -33,10 +33,11 @@
 	human_parent.clear_mood_event("tight_clothes")
 
 // Check uniform slot for clothes and possibly give the quirk holder a bad mood event.
-/datum/component/nudist/proc/check_uniform(obj/item/equip_target)
+/datum/component/nudist/proc/check_uniform()
 	var/mob/living/carbon/human/human_parent = parent
+	var/obj/item/uniform = human_parent.get_item_by_slot(ITEM_SLOT_ICLOTHING)
 	// Gear harness is OK
-	if(!equip_target || istype(equip_target, /obj/item/clothing/under/misc/nova/gear_harness))
+	if(!uniform || istype(uniform, /obj/item/clothing/under/misc/nova/gear_harness))
 		human_parent.clear_mood_event("tight_clothes")
 		return
 	human_parent.add_mood_event("tight_clothes", /datum/mood_event/tight_clothes)
