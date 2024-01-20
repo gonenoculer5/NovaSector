@@ -4,6 +4,8 @@
 
 #define CLIMAX_ON_FLOOR "On the floor"
 #define CLIMAX_IN_OR_ON "Climax in or on someone"
+// Bluemoon edit - Climax in containers
+#define CLIMAX_IN_CONTAINER "Climax in container"
 
 /mob/living/carbon/human
 	/// Used to prevent nightmare scenarios.
@@ -73,26 +75,61 @@
 		else
 			var/list/interactable_inrange_humans = list()
 
+			// Bluemoon edit - Climax in containers
+			var/list/fillable_inrange_containers = list()
+
+			// Bluemoon edit - Flexible quirk
 			if(HAS_TRAIT(src, TRAIT_FLEXIBLE))
 				interactable_inrange_humans[name] = src
 
+			// Bluemoon edit - Climax in containers
+			var/list/atoms_in_view = (view(1, src) - src)
+			for(var/mob/living/carbon/human/iterating_human in atoms_in_view)
+				interactable_inrange_humans[iterating_human.name] = iterating_human
+			/*
 			// Unfortunately prefs can't be checked here, because byond/tgstation moment.
 			for(var/mob/living/carbon/human/iterating_human in (view(1, src) - src))
 				interactable_inrange_humans[iterating_human.name] = iterating_human
+			*/
+
+			// Bluemoon edit - Climax in containers
+			for(var/obj/item/reagent_containers/iterating_container in atoms_in_view)
+				if((iterating_container.reagent_flags & OPENCONTAINER) || (iterating_container.reagent_flags & DUNKABLE))
+					fillable_inrange_containers[iterating_container.name] = iterating_container
 
 			var/list/buttons = list(CLIMAX_ON_FLOOR)
 			if(interactable_inrange_humans.len)
 				buttons += CLIMAX_IN_OR_ON
 
+			// Bluemoon edit - Climax in containers
+			if(fillable_inrange_containers.len)
+				buttons += CLIMAX_IN_CONTAINER
+
 			var/penis_climax_choice = tgui_alert(src, "Choose where to shoot your load.", "Load preference!", buttons)
 
 			var/create_cum_decal = FALSE
+
+			// Bluemoon edit - Climax in containers
+			var/obj/item/organ/external/genital/testicles/testicles = get_organ_slot(ORGAN_SLOT_TESTICLES)
 
 			if(!penis_climax_choice || penis_climax_choice == CLIMAX_ON_FLOOR)
 				create_cum_decal = TRUE
 				visible_message(span_userlove("[src] shoots [self_their] sticky load onto the floor!"), \
 					span_userlove("You shoot string after string of hot cum, hitting the floor!"))
 
+			// Bluemoon edit - Climax in containers
+			else if(penis_climax_choice == CLIMAX_IN_CONTAINER)
+				var/target_choice = tgui_input_list(src, "Choose a container to cum in.", "Choose target!", fillable_inrange_containers)
+				if(!target_choice)
+					create_cum_decal = TRUE
+					visible_message(span_userlove("[src] shoots [self_their] sticky load onto the floor!"), \
+						span_userlove("You shoot string after string of hot cum, hitting the floor!"))
+					testicles.transfer_internal_fluid(null, testicles.internal_fluid_count * 0.6)
+				else
+					visible_message(span_userlove("[src] shoots [self_their] sticky load into [target_choice]!"), \
+						span_userlove("You shoot string after string of hot cum into [target_choice]!"))
+					var/obj/item/reagent_containers/container = fillable_inrange_containers[target_choice]
+					testicles.transfer_internal_fluid(container.reagents, testicles.internal_fluid_count * 0.6)
 			else
 				var/target_choice = tgui_input_list(src, "Choose a person to cum in or on.", "Choose target!", interactable_inrange_humans)
 				if(!target_choice)
@@ -123,17 +160,31 @@
 						create_cum_decal = TRUE
 						visible_message(span_userlove("[src] shoots their sticky load onto the floor!"), \
 							span_userlove("You shoot string after string of hot cum, hitting the floor!"))
+						// Bluemoon edit - Climax in containers
+						testicles.transfer_internal_fluid(null, testicles.internal_fluid_count * 0.6)
 					else if(climax_into_choice == "On [target_human_them]")
 						create_cum_decal = TRUE
 						visible_message(span_userlove("[src] shoots their sticky load onto [target_human]!"), \
 							span_userlove("You shoot string after string of hot cum onto [target_human]!"))
+						// Bluemoon edit - Climax in containers
+						testicles.transfer_internal_fluid(null, testicles.internal_fluid_count * 0.6)
 					else
 						visible_message(span_userlove("[src] hilts [self_their] cock into [target_human]'s [climax_into_choice], shooting cum into [target_human_them]!"), \
 							span_userlove("You hilt your cock into [target_human]'s [climax_into_choice], shooting cum into [target_human_them]!"))
 						to_chat(target_human, span_userlove("Your [climax_into_choice] fills with warm cum as [src] shoots [self_their] load into it."))
+						// Bluemoon edit - Climax in containers
+						if(climax_into_choice == "mouth")
+							var/obj/item/organ/internal/stomach/belly = target_human.get_organ_slot(ORGAN_SLOT_STOMACH)
+							if(belly)
+								testicles.transfer_internal_fluid(belly.reagents, testicles.internal_fluid_count * 0.6)
+							else
+								testicles.transfer_internal_fluid(null, testicles.internal_fluid_count * 0.6)
 
+			// Bluemoon edit - Climax in containers
+			/*
 			var/obj/item/organ/external/genital/testicles/testicles = get_organ_slot(ORGAN_SLOT_TESTICLES)
 			testicles.transfer_internal_fluid(null, testicles.internal_fluid_count * 0.6) // yep. we are sending semen to nullspace
+			*/
 			if(create_cum_decal)
 				add_cum_splatter_floor(get_turf(src))
 
@@ -166,3 +217,5 @@
 #undef CLIMAX_BOTH
 #undef CLIMAX_ON_FLOOR
 #undef CLIMAX_IN_OR_ON
+// Bluemoon edit - Climax in containers
+#undef CLIMAX_IN_CONTAINER
