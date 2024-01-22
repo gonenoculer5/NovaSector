@@ -153,7 +153,5 @@
 
 // Bluemoon edit - Flexible quirk
 #define TRAIT_FLEXIBLE "flexible"
-// Bluemoon edit - Headpat Lover quirk
-#define TRAIT_HEADPATLOVER "headpat_lover"
 
 // END TRAIT DEFINES
