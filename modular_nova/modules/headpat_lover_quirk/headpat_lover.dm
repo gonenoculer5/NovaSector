@@ -19,7 +19,7 @@
 /datum/mood_event/headpat_lover
 	description = "I LOVE HEADPATS! YES PLEASE!! OH GOD YES!!!"
 	mood_change = 50
-	timeout = 1 MINUTE
+	timeout = 1 MINUTES
 	special_screen_obj = "mood_happiness_good"
 
 // This component listens for when headpats happen
