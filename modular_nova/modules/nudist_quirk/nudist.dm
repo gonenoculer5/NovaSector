@@ -25,6 +25,12 @@
 	/// Whitelist of clothing items which don't cause bad moodlet.
 	var/static/list/obj/item/clothing_whitelist = list(
 		/obj/item/clothing/under/misc/nova/gear_harness,
+		/obj/item/clothing/under/costume/nova/bathrobe,
+		/obj/item/clothing/under/costume/nova/yukata,
+		/obj/item/clothing/under/costume/gladiator/ash_walker/chestwrap,
+		/obj/item/clothing/under/costume/gladiator/ash_walker/robe,
+		/obj/item/clothing/under/costume/gladiator/ash_walker/shaman,
+		/obj/item/clothing/under/costume/gladiator/ash_walker/white,
 	)
 	var/obj/item/uniform_type_cache
 
