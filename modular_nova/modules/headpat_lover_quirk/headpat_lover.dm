@@ -30,6 +30,7 @@
 
 /datum/component/headpat_lover/UnregisterFromParent()
 	UnregisterSignal(parent, COMSIG_CARBON_HELP_ACT)
+	var/mob/living/carbon/human/human_parent = parent
 	human_parent.clear_mood_event("headpat_lover")
 
 /datum/component/headpat_lover/proc/check_headpat(mob/living/carbon/human/human_petter)
@@ -38,9 +39,14 @@
 	if(!(istype(human_petter)))
 		return
 
-	if(check_zone(human_petter.zone_selected) == BODY_ZONE_HEAD && get_bodypart(BODY_ZONE_HEAD)) 
-		var/mob/living/carbon/human/human_parent = parent
+	var/mob/living/carbon/human/human_parent = parent
+	if(check_zone(human_petter.zone_selected) == BODY_ZONE_HEAD && human_parent.get_bodypart(BODY_ZONE_HEAD))
 		new /obj/effect/temp_visual/heart(human_parent.loc)
-		human_parent.add_mood_event("headpat_lover", /datum/mood_event/headpat_lover)
-		human_parent.adjust_arousal(4)
-		human_parent.adjust_pleasure(6)
+		// Avoid blocking from TGUI alerting.
+		INVOKE_ASYNC(src, PROC_REF(pleasure_pet), human_parent)
+
+// Needed because adjust_arousal (and etc.) call blocking TGUI procs which can't be executed from a signal handler.
+/datum/component/headpat_lover/proc/pleasure_pet(mob/living/carbon/human/human_pet)
+	human_pet.add_mood_event("headpat_lover", /datum/mood_event/headpat_lover)
+	human_pet.adjust_arousal(4)
+	human_pet.adjust_pleasure(6)
