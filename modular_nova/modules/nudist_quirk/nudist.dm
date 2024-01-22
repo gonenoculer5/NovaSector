@@ -5,6 +5,7 @@
 	gain_text = span_notice("Your skin feels terribly sensitive under tight clothing.")
 	lose_text = span_notice("Your sensitivity to tight clothes seems to fade away!")
 	medical_record_text = "Subject has sensitive skin and refuses to wear clothing."
+	quirk_flags = QUIRK_HUMAN_ONLY | QUIRK_MOODLET_BASED
 	icon = FA_ICON_SHIRT
 	var/datum/component/nudist_component
 
@@ -21,10 +22,16 @@
 
 // This component listens for when clothes are being equipped
 /datum/component/nudist
+	/// Whitelist of clothing items which don't cause bad moodlet.
+	var/static/list/obj/item/clothing_whitelist = list(
+		/obj/item/clothing/under/misc/nova/gear_harness,
+	)
+	var/obj/item/uniform_type_cache
 
 /datum/component/nudist/RegisterWithParent()
 	RegisterSignal(parent, COMSIG_MOB_EQUIPPED_ITEM, PROC_REF(check_uniform))
 	RegisterSignal(parent, COMSIG_MOB_UNEQUIPPED_ITEM, PROC_REF(check_uniform))
+	check_uniform()
 
 /datum/component/nudist/UnregisterFromParent()
 	UnregisterSignal(parent, COMSIG_MOB_EQUIPPED_ITEM)
@@ -34,11 +41,19 @@
 
 // Check uniform slot for clothes and possibly give the quirk holder a bad mood event.
 /datum/component/nudist/proc/check_uniform()
+	SIGNAL_HANDLER
+
 	var/mob/living/carbon/human/human_parent = parent
 	var/obj/item/uniform = human_parent.get_item_by_slot(ITEM_SLOT_ICLOTHING)
-	// Gear harness is OK
-	if(!uniform || istype(uniform, /obj/item/clothing/under/misc/nova/gear_harness))
+
+	if(!uniform || is_type_in_list(uniform, clothing_whitelist))
 		human_parent.clear_mood_event("tight_clothes")
 		return
+
+	if(uniform.type == uniform_type_cache)
+		return
+
+	uniform_type_cache = uniform.type
+	new /obj/effect/temp_visual/annoyed(human_parent.loc)
 	human_parent.add_mood_event("tight_clothes", /datum/mood_event/tight_clothes)
 
