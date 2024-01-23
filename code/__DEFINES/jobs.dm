@@ -48,6 +48,8 @@
 #define JOB_RESEARCH_DIRECTOR "Research Director"
 #define JOB_CHIEF_ENGINEER "Chief Engineer"
 #define JOB_CHIEF_MEDICAL_OFFICER "Chief Medical Officer"
+// Bluemoon edit - Add Shipstation map
+#define JOB_SHUTTLE_PILOT "Shuttle Pilot"
 //Silicon
 #define JOB_AI "AI"
 #define JOB_CYBORG "Cyborg"

@@ -379,6 +379,8 @@
 		"whiteship_tram",
 		"whiteship_personalshuttle",
 		"whiteship_obelisk",
+		// Bluemoon edit - Add Shipstation map
+		"whiteship_ship",
 	)
 
 /// Helper proc that tests to ensure all whiteship templates can spawn at their docking port, and logs their sizes

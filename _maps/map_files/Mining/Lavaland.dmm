@@ -4143,7 +4143,7 @@
 	height = 24;
 	name = "lavaland wastes";
 	shuttle_id = "whiteship_lavaland";
-	width = 35
+	width = 40
 	},
 /turf/open/misc/asteroid/basalt/lava_land_surface,
 /area/lavaland/surface/outdoors)

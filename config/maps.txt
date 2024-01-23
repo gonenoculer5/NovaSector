@@ -74,3 +74,9 @@ map kilostation
 	minplayers 0
 	votable
 endmap
+
+# Bluemoon edit - Add Shipstation map
+map shipstation
+	minplayers 0
+	votable
+endmap
