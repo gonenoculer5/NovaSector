@@ -5301,10 +5301,10 @@
 "pa" = (
 /obj/machinery/door/firedoor/heavy,
 /obj/structure/cable,
-/obj/machinery/airalarm/mixingchamber{
-	dir = 8;
+/obj/machinery/airalarm/directional/east{
 	pixel_x = -26
 	},
+/obj/effect/mapping_helpers/airalarm/mixingchamber_access,
 /turf/open/floor/iron,
 /area/station/science/ordnance/burnchamber)
 "pb" = (
@@ -7517,10 +7517,10 @@
 /obj/machinery/atmospherics/components/binary/pump{
 	dir = 8
 	},
-/obj/machinery/airalarm/engine{
-	dir = 1;
+/obj/machinery/airalarm/directional/south{
 	pixel_y = 23
 	},
+/obj/effect/mapping_helpers/airalarm/engine_access,
 /turf/open/floor/engine,
 /area/station/engineering/supermatter)
 "wS" = (
@@ -9276,10 +9276,10 @@
 /turf/open/floor/wood,
 /area/station/service/bar)
 "CM" = (
-/obj/machinery/airalarm/mixingchamber{
-	dir = 8;
+/obj/machinery/airalarm/directional/east{
 	pixel_x = -26
 	},
+/obj/effect/mapping_helpers/airalarm/mixingchamber_access,
 /turf/open/floor/iron,
 /area/station/science/ordnance/freezerchamber)
 "CN" = (
