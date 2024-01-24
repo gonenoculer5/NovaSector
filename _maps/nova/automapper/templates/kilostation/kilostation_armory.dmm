@@ -1,5 +1,4 @@
 //MAP CONVERTED BY dmm2tgm.py THIS HEADER COMMENT PREVENTS RECONVERSION, DO NOT REMOVE
-//Bluemoon edit - Add Kilostation map
 "a" = (
 /obj/structure/rack,
 /obj/effect/turf_decal/bot,

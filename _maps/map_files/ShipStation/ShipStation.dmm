@@ -378,9 +378,7 @@
 /turf/open/floor/plating,
 /area/station/maintenance/department/cargo)
 "bz" = (
-/obj/structure/window/reinforced{
-	dir = 8
-	},
+/obj/structure/window/reinforced/spawner/directional/west,
 /obj/effect/turf_decal/tile/neutral{
 	dir = 1
 	},
@@ -696,7 +694,7 @@
 /obj/structure/chair/sofa/bench/right{
 	dir = 8
 	},
-/obj/structure/window/reinforced/spawner/east,
+/obj/structure/window/reinforced/spawner/directional/east,
 /turf/open/floor/iron,
 /area/station/cargo/storage)
 "cq" = (
@@ -1232,7 +1230,7 @@
 /area/space/nearstation)
 "dP" = (
 /obj/item/target,
-/obj/structure/window/reinforced,
+/obj/structure/window/reinforced/spawner/directional/south,
 /obj/effect/turf_decal/stripes/line{
 	dir = 1
 	},
@@ -1315,7 +1313,7 @@
 /turf/open/floor/plating,
 /area/station/engineering/supermatter/room)
 "ec" = (
-/obj/effect/landmark/xeno_spawn,
+/obj/effect/landmark/generic_maintenance_landmark,
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/mapping_helpers/burnt_floor,
 /turf/open/floor/plating,
@@ -1468,7 +1466,7 @@
 /obj/effect/decal/cleanable/dirt,
 /obj/machinery/light/cold/directional/east,
 /turf/open/floor/iron,
-/area/blueshield)
+/area/station/maintenance/central)
 "ey" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/machinery/atmospherics/components/binary/pump{
@@ -1490,9 +1488,7 @@
 "eA" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/turf_decal/stripes/line,
-/obj/structure/window/reinforced{
-	dir = 4
-	},
+/obj/structure/window/reinforced/spawner/directional/east,
 /obj/effect/turf_decal/delivery,
 /obj/machinery/portable_atmospherics/canister/oxygen,
 /turf/open/floor/iron,
@@ -1847,9 +1843,7 @@
 /area/station/engineering/main)
 "fA" = (
 /obj/effect/decal/cleanable/dirt,
-/obj/structure/window/reinforced{
-	dir = 4
-	},
+/obj/structure/window/reinforced/spawner/directional/east,
 /obj/effect/turf_decal/delivery,
 /obj/machinery/portable_atmospherics/canister/oxygen,
 /turf/open/floor/iron,
@@ -1919,9 +1913,7 @@
 /area/station/engineering/main)
 "fI" = (
 /obj/effect/decal/cleanable/dirt,
-/obj/structure/window/reinforced{
-	dir = 4
-	},
+/obj/structure/window/reinforced/spawner/directional/east,
 /obj/machinery/atmospherics/pipe/heat_exchanging/simple{
 	dir = 5
 	},
@@ -2091,9 +2083,7 @@
 /area/station/science/ordnance)
 "gj" = (
 /obj/structure/table/reinforced,
-/obj/structure/window/reinforced{
-	dir = 4
-	},
+/obj/structure/window/reinforced/spawner/directional/east,
 /obj/machinery/button/door{
 	id = "xeno4";
 	name = "Containment Control"
@@ -2119,9 +2109,7 @@
 /turf/open/floor/engine,
 /area/station/engineering/gravity_generator)
 "gm" = (
-/obj/structure/window/reinforced{
-	dir = 8
-	},
+/obj/structure/window/reinforced/spawner/directional/west,
 /obj/machinery/disposal/bin,
 /obj/structure/disposalpipe/trunk{
 	dir = 1
@@ -2132,9 +2120,7 @@
 /area/station/science/xenobiology)
 "go" = (
 /obj/structure/table/reinforced,
-/obj/structure/window/reinforced{
-	dir = 4
-	},
+/obj/structure/window/reinforced/spawner/directional/east,
 /obj/machinery/button/door{
 	id = "xeno3";
 	name = "Containment Control"
@@ -2146,9 +2132,7 @@
 /area/station/science/xenobiology)
 "gp" = (
 /obj/structure/table/reinforced,
-/obj/structure/window/reinforced{
-	dir = 4
-	},
+/obj/structure/window/reinforced/spawner/directional/east,
 /obj/machinery/button/door{
 	id = "xeno2";
 	name = "Containment Control"
@@ -2170,9 +2154,7 @@
 /area/station/science/ordnance)
 "gt" = (
 /obj/structure/table/reinforced,
-/obj/structure/window/reinforced{
-	dir = 4
-	},
+/obj/structure/window/reinforced/spawner/directional/east,
 /obj/machinery/button/door{
 	id = "xeno1";
 	name = "Containment Control"
@@ -2269,9 +2251,7 @@
 /area/station/commons/dorms/barracks)
 "gI" = (
 /obj/effect/decal/cleanable/dirt,
-/obj/structure/window/reinforced{
-	dir = 4
-	},
+/obj/structure/window/reinforced/spawner/directional/east,
 /obj/machinery/atmospherics/components/unary/thermomachine/freezer/on,
 /turf/open/floor/iron,
 /area/station/science/server)
@@ -2416,7 +2396,7 @@
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/cable,
 /turf/open/floor/iron,
-/area/blueshield)
+/area/station/maintenance/central)
 "ha" = (
 /obj/structure/cable,
 /obj/effect/decal/cleanable/dirt,
@@ -2448,7 +2428,7 @@
 /area/station/security/brig)
 "he" = (
 /obj/structure/table/reinforced,
-/obj/structure/window/reinforced,
+/obj/structure/window/reinforced/spawner/directional/south,
 /obj/machinery/button/door{
 	id = "xenosecure";
 	name = "Containment Control";
@@ -2658,10 +2638,8 @@
 /area/station/science/xenobiology)
 "hI" = (
 /obj/effect/decal/cleanable/dirt,
-/obj/structure/window/reinforced,
-/obj/structure/window/reinforced{
-	dir = 8
-	},
+/obj/structure/window/reinforced/spawner/directional/south,
+/obj/structure/window/reinforced/spawner/directional/west,
 /obj/effect/turf_decal/delivery,
 /obj/structure/closet/secure_closet/engineering_personal,
 /turf/open/floor/iron,
@@ -2709,7 +2687,7 @@
 /obj/effect/decal/cleanable/dirt,
 /obj/machinery/light/cold/directional/west,
 /turf/open/floor/iron,
-/area/blueshield)
+/area/station/maintenance/central)
 "hR" = (
 /obj/structure/chair/office/light{
 	dir = 1
@@ -2733,9 +2711,9 @@
 /obj/machinery/requests_console{
 	department = "Xenobiology Lab";
 	name = "Xenobiology RC";
-	pixel_x = 32;
-	receive_ore_updates = 1
+	pixel_x = 32
 	},
+/obj/effect/mapping_helpers/requests_console/ore_update,
 /obj/effect/turf_decal/stripes/line{
 	dir = 1
 	},
@@ -3324,8 +3302,7 @@
 /turf/open/floor/plating,
 /area/station/maintenance/department/cargo)
 "jl" = (
-/obj/structure/window/reinforced{
-	dir = 1;
+/obj/structure/window/reinforced/spawner/directional/north{
 	pixel_y = 1
 	},
 /obj/machinery/disposal/bin,
@@ -3665,9 +3642,7 @@
 	id = "xeno8";
 	name = "Containment Control"
 	},
-/obj/structure/window/reinforced{
-	dir = 4
-	},
+/obj/structure/window/reinforced/spawner/directional/east,
 /obj/effect/turf_decal/bot,
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/iron,
@@ -3694,9 +3669,7 @@
 "ki" = (
 /obj/machinery/disposal/bin,
 /obj/structure/disposalpipe/trunk,
-/obj/structure/window/reinforced{
-	dir = 8
-	},
+/obj/structure/window/reinforced/spawner/directional/west,
 /obj/effect/turf_decal/bot,
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/iron,
@@ -3708,9 +3681,7 @@
 	name = "Containment Control"
 	},
 /obj/machinery/light/cold/directional/south,
-/obj/structure/window/reinforced{
-	dir = 4
-	},
+/obj/structure/window/reinforced/spawner/directional/east,
 /obj/effect/turf_decal/bot,
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/iron,
@@ -3721,9 +3692,7 @@
 	id = "xeno6";
 	name = "Containment Control"
 	},
-/obj/structure/window/reinforced{
-	dir = 4
-	},
+/obj/structure/window/reinforced/spawner/directional/east,
 /obj/effect/turf_decal/bot,
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/iron,
@@ -3748,9 +3717,7 @@
 	name = "Containment Control"
 	},
 /obj/machinery/light/cold/directional/south,
-/obj/structure/window/reinforced{
-	dir = 4
-	},
+/obj/structure/window/reinforced/spawner/directional/east,
 /obj/effect/turf_decal/bot,
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/iron,
@@ -4847,7 +4814,7 @@
 /area/station/science/ordnance)
 "nD" = (
 /obj/machinery/atmospherics/components/unary/vent_scrubber/on,
-/obj/structure/window/reinforced/plasma,
+/obj/structure/window/reinforced/plasma/spawner/directional/south,
 /turf/open/floor/engine,
 /area/station/engineering/supermatter)
 "nE" = (
@@ -5431,7 +5398,7 @@
 /turf/open/floor/engine/n2,
 /area/station/engineering/atmos)
 "px" = (
-/obj/effect/landmark/xeno_spawn,
+/obj/effect/landmark/generic_maintenance_landmark,
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/plating,
 /area/station/maintenance/central)
@@ -6552,7 +6519,7 @@
 /area/station/maintenance/department/crew_quarters/dorms)
 "ts" = (
 /obj/structure/table,
-/obj/item/storage/secure/briefcase,
+/obj/item/storage/briefcase/secure,
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/plating,
 /area/station/maintenance/central)
@@ -6687,7 +6654,7 @@
 /obj/machinery/computer/exodrone_control_console{
 	dir = 1
 	},
-/obj/structure/window/reinforced/spawner,
+/obj/structure/window/reinforced/spawner/directional/south,
 /turf/open/floor/iron,
 /area/station/cargo/storage)
 "tS" = (
@@ -6793,9 +6760,7 @@
 "uj" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/cable,
-/obj/structure/window/reinforced{
-	dir = 8
-	},
+/obj/structure/window/reinforced/spawner/directional/west,
 /obj/effect/turf_decal/delivery,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
@@ -6903,9 +6868,7 @@
 "uG" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/table/reinforced,
-/obj/structure/window/reinforced{
-	dir = 1
-	},
+/obj/structure/window/reinforced/spawner/directional/north,
 /obj/machinery/door/window/left/directional/north{
 	dir = 4;
 	name = "Engineering Desk";
@@ -7241,7 +7204,7 @@
 /turf/open/floor/plating/airless,
 /area/station/science/ordnance/bomb)
 "vS" = (
-/obj/structure/window/reinforced/plasma,
+/obj/structure/window/reinforced/plasma/spawner/directional/south,
 /obj/effect/decal/cleanable/dirt,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/cyan/visible,
 /obj/machinery/power/energy_accumulator/grounding_rod/anchored,
@@ -7275,10 +7238,6 @@
 /obj/effect/landmark/start/hangover,
 /turf/open/floor/iron,
 /area/station/hallway/primary/central)
-"vW" = (
-/obj/effect/decal/cleanable/dirt,
-/turf/open/floor/iron,
-/area/blueshield)
 "vX" = (
 /obj/structure/bed,
 /obj/item/bedsheet/dorms,
@@ -7288,9 +7247,7 @@
 /area/station/security/prison/safe)
 "vZ" = (
 /obj/machinery/shower/directional/west,
-/obj/structure/window{
-	dir = 8
-	},
+/obj/structure/window/spawner/directional/west,
 /obj/effect/decal/cleanable/dirt,
 /obj/item/soap,
 /turf/open/floor/iron/white,
@@ -7360,7 +7317,7 @@
 /turf/open/floor/iron,
 /area/station/science/ordnance)
 "wl" = (
-/mob/living/simple_animal/hostile/retaliate/goat{
+/mob/living/basic/goat/pete{
 	name = "Pete"
 	},
 /obj/effect/decal/cleanable/dirt,
@@ -7426,7 +7383,7 @@
 /turf/open/floor/iron,
 /area/station/engineering/main)
 "wu" = (
-/obj/structure/window/reinforced/spawner/east,
+/obj/structure/window/reinforced/spawner/directional/east,
 /obj/structure/flora/bush/flowers_br,
 /obj/structure/flora/bush/ferny,
 /turf/open/floor/grass,
@@ -7671,7 +7628,7 @@
 /turf/open/floor/iron,
 /area/station/science/ordnance)
 "xq" = (
-/obj/structure/window/reinforced/spawner/east,
+/obj/structure/window/reinforced/spawner/directional/east,
 /obj/structure/flora/bush/flowers_yw,
 /obj/structure/flora/bush,
 /turf/open/floor/grass,
@@ -7738,10 +7695,8 @@
 /area/station/service/bar)
 "xz" = (
 /obj/effect/decal/cleanable/dirt,
-/obj/structure/window/reinforced{
-	dir = 4
-	},
-/obj/structure/window/reinforced,
+/obj/structure/window/reinforced/spawner/directional/east,
+/obj/structure/window/reinforced/spawner/directional/south,
 /obj/effect/turf_decal/delivery,
 /obj/structure/tank_dispenser,
 /turf/open/floor/iron,
@@ -7859,12 +7814,8 @@
 /area/station/engineering/atmos)
 "xY" = (
 /obj/effect/decal/cleanable/dirt,
-/obj/structure/window/reinforced{
-	dir = 4
-	},
-/obj/structure/window/reinforced{
-	dir = 1
-	},
+/obj/structure/window/reinforced/spawner/directional/east,
+/obj/structure/window/reinforced/spawner/directional/north,
 /obj/structure/table/reinforced,
 /obj/item/crowbar/power,
 /obj/item/stack/sheet/plasteel/fifty,
@@ -7969,10 +7920,8 @@
 /area/station/commons/storage/primary)
 "yr" = (
 /obj/effect/decal/cleanable/dirt,
-/obj/structure/window/reinforced{
-	dir = 4
-	},
-/obj/structure/window/reinforced,
+/obj/structure/window/reinforced/spawner/directional/east,
+/obj/structure/window/reinforced/spawner/directional/south,
 /obj/structure/table/reinforced,
 /obj/item/screwdriver/power,
 /obj/item/storage/toolbox/electrical,
@@ -8099,9 +8048,7 @@
 /turf/open/floor/iron,
 /area/station/science/ordnance)
 "yO" = (
-/obj/item/kirbyplants{
-	icon_state = "plant-18"
-	},
+/obj/item/kirbyplants/organic/plant18,
 /obj/effect/turf_decal/stripes/line{
 	dir = 9
 	},
@@ -8302,7 +8249,7 @@
 /obj/structure/chair/sofa/bench/left{
 	dir = 4
 	},
-/obj/structure/window/reinforced/spawner/west,
+/obj/structure/window/reinforced/spawner/directional/west,
 /turf/open/floor/iron,
 /area/station/cargo/storage)
 "zx" = (
@@ -8415,7 +8362,7 @@
 /obj/effect/turf_decal/tile/neutral{
 	dir = 8
 	},
-/mob/living/simple_animal/parrot/poly,
+/mob/living/basic/parrot/poly,
 /turf/open/floor/iron/dark,
 /area/station/command/heads_quarters/ce)
 "zU" = (
@@ -8657,7 +8604,7 @@
 /obj/item/gun/ballistic/revolver/russian,
 /obj/item/gun/energy/disabler,
 /obj/item/lazarus_injector,
-/obj/item/storage/secure/briefcase{
+/obj/item/storage/briefcase/secure{
 	contents = newlist(/obj/item/clothing/suit/armor/vest,/obj/item/gun/ballistic/automatic/pistol,/obj/item/suppressor,/obj/item/melee/baton/telescopic,/obj/item/clothing/mask/balaclava,/obj/item/bodybag,/obj/item/soap/nanotrasen)
 	},
 /turf/open/floor/iron/dark,
@@ -9146,9 +9093,9 @@
 /obj/machinery/reagentgrinder,
 /obj/machinery/requests_console{
 	department = "Kitchen";
-	pixel_x = 30;
-	supplies_requestable = 1
+	pixel_x = 30
 	},
+/obj/effect/mapping_helpers/requests_console/supplies,
 /obj/effect/decal/cleanable/dirt,
 /obj/machinery/light/cold/directional/east,
 /turf/open/floor/iron/cafeteria,
@@ -9345,9 +9292,7 @@
 /area/station/engineering/atmos)
 "CX" = (
 /obj/item/target,
-/obj/structure/window/reinforced{
-	dir = 1
-	},
+/obj/structure/window/reinforced/spawner/directional/north,
 /obj/effect/turf_decal/stripes/line,
 /turf/open/floor/plating/airless,
 /area/station/science/ordnance/bomb)
@@ -9356,7 +9301,7 @@
 /area/station/engineering/supermatter/room)
 "CZ" = (
 /obj/effect/decal/cleanable/dirt,
-/obj/structure/window/reinforced/spawner/east,
+/obj/structure/window/reinforced/spawner/directional/east,
 /obj/machinery/exodrone_launcher,
 /obj/effect/turf_decal/stripes/asteroid/line{
 	dir = 1
@@ -9470,7 +9415,7 @@
 /obj/machinery/status_display/supply{
 	pixel_x = -32
 	},
-/obj/structure/window/reinforced/spawner,
+/obj/structure/window/reinforced/spawner/directional/south,
 /turf/open/floor/iron,
 /area/station/cargo/storage)
 "Dp" = (
@@ -9483,7 +9428,7 @@
 "Dq" = (
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/carpet/executive,
-/area/blueshield)
+/area/station/maintenance/central)
 "Dr" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/turf_decal/stripes/asteroid/line{
@@ -9542,7 +9487,7 @@
 /turf/open/floor/iron,
 /area/station/hallway/secondary/entry)
 "Dy" = (
-/obj/machinery/door/airlock/glass_large{
+/obj/machinery/door/airlock/multi_tile/public/glass{
 	name = "Hydroponics"
 	},
 /obj/effect/decal/cleanable/dirt,
@@ -9634,7 +9579,7 @@
 /obj/effect/decal/cleanable/dirt,
 /obj/machinery/light_switch/directional/north,
 /turf/open/floor/iron,
-/area/blueshield)
+/area/station/maintenance/central)
 "Ea" = (
 /obj/structure/table,
 /obj/item/wrench,
@@ -9889,13 +9834,13 @@
 /area/station/command/gateway)
 "Fc" = (
 /obj/machinery/requests_console{
-	announcementConsole = 1;
 	department = "Chief Engineer's Desk";
 	name = "Chief Engineer RC";
-	pixel_x = -32;
-	assistance_requestable = 1;
-	supplies_requestable = 1
+	pixel_x = -32
 	},
+/obj/effect/mapping_helpers/requests_console/announcement,
+/obj/effect/mapping_helpers/requests_console/supplies,
+/obj/effect/mapping_helpers/requests_console/assistance,
 /obj/machinery/camera/directional/west{
 	c_tag = "Chief Engineer's Office"
 	},
@@ -9909,7 +9854,7 @@
 /obj/effect/turf_decal/tile/neutral{
 	dir = 8
 	},
-/obj/machinery/modular_computer/console/preset/id{
+/obj/machinery/modular_computer/preset/id{
 	dir = 4
 	},
 /turf/open/floor/iron/dark,
@@ -10202,7 +10147,7 @@
 /obj/structure/chair/sofa/bench/right{
 	dir = 4
 	},
-/obj/structure/window/reinforced/spawner/west,
+/obj/structure/window/reinforced/spawner/directional/west,
 /turf/open/floor/iron,
 /area/station/cargo/storage)
 "FX" = (
@@ -10257,12 +10202,8 @@
 /area/station/maintenance/central)
 "Gd" = (
 /obj/effect/decal/cleanable/dirt,
-/obj/structure/window/reinforced{
-	dir = 4
-	},
-/obj/structure/window/reinforced{
-	dir = 1
-	},
+/obj/structure/window/reinforced/spawner/directional/east,
+/obj/structure/window/reinforced/spawner/directional/north,
 /obj/effect/turf_decal/delivery,
 /obj/structure/closet/secure_closet/engineering_welding,
 /turf/open/floor/iron,
@@ -10296,7 +10237,7 @@
 "Gj" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/machinery/light/cold/directional/south,
-/obj/structure/window/reinforced/spawner/east,
+/obj/structure/window/reinforced/spawner/directional/east,
 /turf/open/floor/plating,
 /area/station/cargo/storage)
 "Gl" = (
@@ -10365,7 +10306,6 @@
 /area/station/commons/dorms/barracks)
 "GA" = (
 /obj/effect/decal/cleanable/dirt,
-/obj/machinery/rnd/bepis,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2{
 	dir = 8
 	},
@@ -10456,7 +10396,7 @@
 /obj/structure/chair/sofa/bench/left{
 	dir = 8
 	},
-/obj/structure/window/reinforced/spawner/east,
+/obj/structure/window/reinforced/spawner/directional/east,
 /turf/open/floor/iron,
 /area/station/cargo/storage)
 "GN" = (
@@ -10538,7 +10478,7 @@
 /obj/effect/turf_decal/tile/blue{
 	dir = 8
 	},
-/obj/structure/window/reinforced,
+/obj/structure/window/reinforced/spawner/directional/south,
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/iron/cafeteria,
 /area/station/commons/dorms)
@@ -10819,9 +10759,7 @@
 	charge = 2e+006
 	},
 /obj/structure/cable,
-/obj/structure/window/reinforced{
-	dir = 4
-	},
+/obj/structure/window/reinforced/spawner/directional/east,
 /turf/open/floor/iron,
 /area/station/engineering/main)
 "HR" = (
@@ -10877,7 +10815,7 @@
 /obj/machinery/power/apc/auto_name/directional/north,
 /obj/structure/cable,
 /turf/open/floor/iron,
-/area/blueshield)
+/area/station/maintenance/central)
 "HY" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/machinery/door/firedoor,
@@ -10930,7 +10868,7 @@
 "If" = (
 /obj/structure/table/reinforced,
 /obj/item/folder/yellow,
-/obj/item/stamp/ce,
+/obj/item/stamp/head/ce,
 /obj/effect/landmark/event_spawn,
 /turf/open/floor/iron,
 /area/station/command/heads_quarters/ce)
@@ -11062,12 +11000,8 @@
 /area/station/hallway/secondary/entry)
 "IA" = (
 /obj/effect/decal/cleanable/dirt,
-/obj/structure/window/reinforced{
-	dir = 1
-	},
-/obj/structure/window/reinforced{
-	dir = 8
-	},
+/obj/structure/window/reinforced/spawner/directional/north,
+/obj/structure/window/reinforced/spawner/directional/west,
 /obj/effect/turf_decal/delivery,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
@@ -11604,10 +11538,10 @@
 /obj/machinery/requests_console{
 	department = "Science";
 	name = "Science Requests Console";
-	pixel_y = 30;
-	receive_ore_updates = 1;
-	supplies_requestable = 1
+	pixel_y = 30
 	},
+/obj/effect/mapping_helpers/requests_console/ore_update,
+/obj/effect/mapping_helpers/requests_console/supplies,
 /obj/structure/table/reinforced,
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/iron,
@@ -11694,7 +11628,7 @@
 /obj/effect/landmark/start/blueshield,
 /obj/structure/chair/office,
 /turf/open/floor/carpet/executive,
-/area/blueshield)
+/area/station/maintenance/central)
 "Kl" = (
 /obj/machinery/button/door{
 	id = "Cabin6";
@@ -11913,7 +11847,7 @@
 /obj/structure/cable,
 /obj/effect/mapping_helpers/airlock/access/any/command/captain,
 /turf/open/floor/iron,
-/area/blueshield)
+/area/station/maintenance/central)
 "KU" = (
 /obj/structure/closet/secure_closet/personal/cabinet,
 /obj/effect/decal/cleanable/dirt,
@@ -12673,11 +12607,8 @@
 	},
 /turf/open/floor/plating/airless,
 /area/station/science/ordnance/bomb)
-"NG" = (
-/turf/closed/wall,
-/area/blueshield)
 "NH" = (
-/obj/machinery/modular_computer/console/preset/engineering{
+/obj/machinery/modular_computer/preset/engineering{
 	dir = 4
 	},
 /obj/effect/turf_decal/delivery,
@@ -12705,13 +12636,13 @@
 /area/station/maintenance/department/cargo)
 "NN" = (
 /obj/effect/decal/cleanable/dirt,
-/obj/structure/window/spawner,
+/obj/structure/window/spawner/directional/south,
 /turf/open/floor/plating,
 /area/station/maintenance/department/cargo)
 "NO" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/bed,
-/obj/structure/window/spawner,
+/obj/structure/window/spawner/directional/south,
 /obj/machinery/light/cold/directional/east,
 /turf/open/floor/plating,
 /area/station/maintenance/department/cargo)
@@ -12826,7 +12757,7 @@
 "Ok" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/table/reinforced,
-/obj/structure/window/reinforced,
+/obj/structure/window/reinforced/spawner/directional/south,
 /obj/machinery/door/window/left/directional/north{
 	dir = 4;
 	name = "Engineering Desk";
@@ -12894,7 +12825,7 @@
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/table/wood,
 /turf/open/floor/iron,
-/area/blueshield)
+/area/station/maintenance/central)
 "Ox" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/landmark/start/hangover,
@@ -12919,7 +12850,7 @@
 /area/station/maintenance/department/cargo)
 "OB" = (
 /obj/effect/decal/cleanable/dirt,
-/obj/structure/window/spawner/north,
+/obj/structure/window/spawner/directional/north,
 /turf/open/floor/plating,
 /area/station/maintenance/department/cargo)
 "OD" = (
@@ -12927,7 +12858,7 @@
 /obj/structure/frame/computer{
 	dir = 8
 	},
-/obj/structure/window/spawner/north,
+/obj/structure/window/spawner/directional/north,
 /obj/machinery/light/cold/directional/east,
 /turf/open/floor/plating,
 /area/station/maintenance/department/cargo)
@@ -12996,7 +12927,6 @@
 /obj/item/computer_disk/engineering,
 /obj/item/computer_disk/engineering,
 /obj/item/computer_disk/engineering,
-/obj/item/computer_disk/atmos,
 /turf/open/floor/iron,
 /area/station/command/heads_quarters/ce)
 "OT" = (
@@ -13175,8 +13105,8 @@
 "Pz" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/flora/bush/fullgrass,
-/obj/structure/window/reinforced/spawner,
-/obj/structure/window/reinforced/spawner/east,
+/obj/structure/window/reinforced/spawner/directional/south,
+/obj/structure/window/reinforced/spawner/directional/east,
 /turf/open/floor/grass,
 /area/station/common/cryopods)
 "PA" = (
@@ -13187,8 +13117,8 @@
 "PB" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/flora/bush/lavendergrass,
-/obj/structure/window/reinforced/spawner,
-/obj/structure/window/reinforced/spawner/west,
+/obj/structure/window/reinforced/spawner/directional/south,
+/obj/structure/window/reinforced/spawner/directional/west,
 /turf/open/floor/grass,
 /area/station/common/cryopods)
 "PD" = (
@@ -13518,9 +13448,6 @@
 	},
 /turf/open/floor/iron,
 /area/station/engineering/main)
-"QJ" = (
-/turf/closed/wall/r_wall/rust,
-/area/blueshield)
 "QK" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/turf_decal/stripes/line{
@@ -13554,7 +13481,7 @@
 "QO" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/cable,
-/obj/effect/landmark/xeno_spawn,
+/obj/effect/landmark/generic_maintenance_landmark,
 /obj/machinery/light/cold/directional/west,
 /turf/open/floor/plating,
 /area/station/maintenance/central)
@@ -13861,7 +13788,7 @@
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/closet/secure_closet/blueshield,
 /turf/open/floor/iron,
-/area/blueshield)
+/area/station/maintenance/central)
 "RN" = (
 /obj/effect/turf_decal/stripes/asteroid/line{
 	dir = 5
@@ -14105,7 +14032,7 @@
 /turf/open/floor/iron,
 /area/station/hallway/secondary/entry)
 "Sw" = (
-/obj/structure/window/reinforced/plasma,
+/obj/structure/window/reinforced/plasma/spawner/directional/south,
 /obj/structure/cable,
 /obj/effect/decal/cleanable/dirt,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/cyan/visible,
@@ -14266,9 +14193,7 @@
 "SY" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/cable,
-/obj/structure/window/reinforced{
-	dir = 4
-	},
+/obj/structure/window/reinforced/spawner/directional/east,
 /obj/effect/turf_decal/delivery,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4{
 	dir = 4
@@ -14360,7 +14285,7 @@
 /area/station/hallway/secondary/entry)
 "Tm" = (
 /obj/effect/decal/cleanable/dirt,
-/obj/effect/landmark/xeno_spawn,
+/obj/effect/landmark/generic_maintenance_landmark,
 /turf/open/floor/plating,
 /area/station/maintenance/central)
 "Tn" = (
@@ -14792,9 +14717,7 @@
 /area/station/engineering/gravity_generator)
 "UG" = (
 /obj/effect/turf_decal/delivery,
-/obj/item/kirbyplants{
-	icon_state = "plant-21"
-	},
+/obj/item/kirbyplants/organic/plant21,
 /turf/open/floor/iron,
 /area/station/hallway/secondary/entry)
 "UH" = (
@@ -15100,7 +15023,7 @@
 /area/station/science/ordnance)
 "VI" = (
 /obj/structure/bed/dogbed/renault,
-/mob/living/simple_animal/pet/fox/renault,
+/mob/living/basic/pet/fox/renault,
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/wood,
 /area/station/command/heads_quarters/captain)
@@ -15376,7 +15299,7 @@
 "Wy" = (
 /obj/structure/table,
 /obj/item/flashlight/lamp{
-	on = 0
+	start_on = 0
 	},
 /obj/item/knife/kitchen,
 /obj/effect/decal/cleanable/dirt,
@@ -15617,7 +15540,7 @@
 "Xj" = (
 /obj/structure/table/wood,
 /obj/item/folder/blue,
-/obj/item/stamp/captain,
+/obj/item/stamp/head/captain,
 /obj/effect/decal/cleanable/dirt,
 /obj/machinery/atmospherics/components/unary/vent_scrubber/on/layer2{
 	dir = 4
@@ -15689,7 +15612,7 @@
 /obj/structure/table/wood,
 /obj/item/pinpointer/nuke,
 /obj/item/disk/nuclear,
-/obj/item/storage/secure/safe{
+/obj/structure/secure_safe{
 	pixel_x = 35;
 	pixel_y = 5
 	},
@@ -15853,13 +15776,13 @@
 /area/station/cargo/storage)
 "XV" = (
 /obj/machinery/requests_console{
-	announcementConsole = 1;
 	department = "Captain's Desk";
 	name = "Captain RC";
-	pixel_x = -30;
-	assistance_requestable = 1;
-	anon_tips_receiver = 1
+	pixel_x = -30
 	},
+/obj/effect/mapping_helpers/requests_console/announcement,
+/obj/effect/mapping_helpers/requests_console/information,
+/obj/effect/mapping_helpers/requests_console/assistance,
 /obj/structure/filingcabinet,
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/wood,
@@ -15873,7 +15796,7 @@
 /turf/open/floor/wood,
 /area/station/command/heads_quarters/captain)
 "XX" = (
-/obj/effect/landmark/xeno_spawn,
+/obj/effect/landmark/generic_maintenance_landmark,
 /turf/open/floor/iron,
 /area/station/science/ordnance/storage)
 "XY" = (
@@ -16027,9 +15950,7 @@
 	charge = 2e+006
 	},
 /obj/structure/cable,
-/obj/structure/window/reinforced{
-	dir = 8
-	},
+/obj/structure/window/reinforced/spawner/directional/west,
 /turf/open/floor/iron,
 /area/station/engineering/main)
 "Yv" = (
@@ -16070,7 +15991,7 @@
 /area/station/command/heads_quarters/captain)
 "Yz" = (
 /obj/effect/decal/cleanable/dirt,
-/obj/machinery/modular_computer/console/preset/id{
+/obj/machinery/modular_computer/preset/id{
 	dir = 8
 	},
 /turf/open/floor/wood,
@@ -16412,7 +16333,7 @@
 /area/station/command/heads_quarters/captain)
 "ZH" = (
 /obj/structure/altar_of_gods,
-/obj/item/storage/book/bible,
+/obj/item/book/bible,
 /obj/item/nullrod,
 /obj/machinery/light/small/directional/east,
 /obj/effect/mapping_helpers/broken_floor,
@@ -52136,12 +52057,12 @@ Ws
 Ws
 Ws
 Mn
-NG
-NG
-NG
-NG
-NG
-QJ
+Ws
+Ws
+Ws
+Ws
+Ws
+YK
 hO
 hO
 hO
@@ -52393,12 +52314,12 @@ GZ
 YS
 Ws
 BD
-NG
+Ws
 RM
-vW
+MS
 hQ
-vW
-QJ
+MS
+YK
 nv
 nv
 nv
@@ -52650,12 +52571,12 @@ ZX
 ZZ
 Ws
 fP
-NG
+Ws
 HX
 Dq
 Dq
 Ow
-QJ
+YK
 nv
 nv
 nv
@@ -52912,7 +52833,7 @@ gZ
 Dq
 Kk
 Ow
-QJ
+YK
 nv
 nv
 nv
@@ -53164,12 +53085,12 @@ ZX
 ZX
 Mn
 Mn
-NG
+Ws
 DZ
 ew
 Ow
 Ow
-QJ
+YK
 nv
 nv
 nv
@@ -53421,12 +53342,12 @@ Ws
 ND
 tS
 pJ
-QJ
-QJ
-QJ
-QJ
-QJ
-QJ
+YK
+YK
+YK
+YK
+YK
+YK
 nv
 nv
 nv

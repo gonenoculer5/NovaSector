@@ -90,9 +90,7 @@
 /turf/open/floor/iron/dark,
 /area/shuttle/shipstation)
 "aL" = (
-/obj/structure/window/reinforced{
-	dir = 4
-	},
+/obj/structure/window/reinforced/spawner/directional/east,
 /obj/effect/turf_decal/bot_blue,
 /obj/structure/rack/gunrack,
 /obj/effect/spawner/armory_spawn/microfusion,
@@ -102,12 +100,8 @@
 /obj/machinery/computer/records/security{
 	dir = 4
 	},
-/obj/structure/window/reinforced{
-	dir = 8
-	},
-/obj/structure/window/reinforced{
-	dir = 1
-	},
+/obj/structure/window/reinforced/spawner/directional/west,
+/obj/structure/window/reinforced/spawner/directional/north,
 /turf/open/floor/mineral/plastitanium,
 /area/shuttle/shipstation)
 "aR" = (
@@ -130,14 +124,12 @@
 /obj/machinery/mineral/stacking_machine{
 	input_dir = 2
 	},
-/obj/structure/window/reinforced{
-	dir = 4
-	},
+/obj/structure/window/reinforced/spawner/directional/east,
 /obj/machinery/conveyor{
 	dir = 8;
 	id = "garbage"
 	},
-/obj/structure/window/reinforced,
+/obj/structure/window/reinforced/spawner/directional/south,
 /turf/open/floor/iron/dark,
 /area/shuttle/shipstation)
 "bh" = (
@@ -148,9 +140,7 @@
 /obj/machinery/computer/security{
 	dir = 4
 	},
-/obj/structure/window/reinforced{
-	dir = 8
-	},
+/obj/structure/window/reinforced/spawner/directional/west,
 /turf/open/floor/mineral/plastitanium,
 /area/shuttle/shipstation)
 "bo" = (
@@ -171,12 +161,8 @@
 /turf/open/floor/iron/dark,
 /area/shuttle/shipstation)
 "bx" = (
-/obj/structure/window/reinforced{
-	dir = 1
-	},
-/obj/structure/window/reinforced{
-	dir = 4
-	},
+/obj/structure/window/reinforced/spawner/directional/north,
+/obj/structure/window/reinforced/spawner/directional/east,
 /obj/machinery/computer/operating{
 	dir = 8
 	},
@@ -194,9 +180,7 @@
 /area/shuttle/shipstation)
 "bA" = (
 /obj/structure/closet/secure_closet/hos,
-/obj/structure/window/reinforced{
-	dir = 1
-	},
+/obj/structure/window/reinforced/spawner/directional/north,
 /obj/effect/turf_decal/delivery,
 /obj/item/multitool,
 /turf/open/floor/mineral/plastitanium,
@@ -219,9 +203,7 @@
 /obj/effect/turf_decal/trimline/blue/filled/line{
 	dir = 9
 	},
-/obj/structure/window/reinforced{
-	dir = 8
-	},
+/obj/structure/window/reinforced/spawner/directional/west,
 /turf/open/floor/iron/dark,
 /area/shuttle/shipstation)
 "bH" = (
@@ -278,9 +260,7 @@
 /turf/open/floor/iron/dark,
 /area/shuttle/shipstation)
 "bY" = (
-/obj/structure/window/reinforced{
-	dir = 8
-	},
+/obj/structure/window/reinforced/spawner/directional/west,
 /obj/machinery/chem_dispenser,
 /obj/effect/turf_decal/trimline/blue/filled/line{
 	dir = 8
@@ -308,9 +288,7 @@
 /obj/effect/turf_decal/trimline/blue/filled/line{
 	dir = 10
 	},
-/obj/structure/window/reinforced{
-	dir = 8
-	},
+/obj/structure/window/reinforced/spawner/directional/west,
 /turf/open/floor/iron/dark,
 /area/shuttle/shipstation)
 "cg" = (
@@ -338,10 +316,8 @@
 /turf/open/floor/iron/dark,
 /area/shuttle/shipstation)
 "cq" = (
-/obj/structure/window/reinforced,
-/obj/structure/window/reinforced{
-	dir = 8
-	},
+/obj/structure/window/reinforced/spawner/directional/south,
+/obj/structure/window/reinforced/spawner/directional/west,
 /obj/machinery/vending/medical{
 	onstation_override = 1
 	},
@@ -358,7 +334,7 @@
 /turf/open/floor/iron/dark,
 /area/shuttle/shipstation)
 "cr" = (
-/obj/structure/window/reinforced,
+/obj/structure/window/reinforced/spawner/directional/south,
 /obj/structure/closet/secure_closet/chief_medical,
 /obj/effect/turf_decal/tile/blue{
 	dir = 4
@@ -383,10 +359,8 @@
 /turf/open/floor/iron,
 /area/shuttle/shipstation)
 "ct" = (
-/obj/structure/window/reinforced{
-	dir = 1
-	},
-/obj/structure/window/reinforced,
+/obj/structure/window/reinforced/spawner/directional/north,
+/obj/structure/window/reinforced/spawner/directional/south,
 /obj/structure/chair/comfy/shuttle{
 	dir = 4
 	},
@@ -406,9 +380,7 @@
 /obj/structure/disposalpipe/segment{
 	dir = 6
 	},
-/obj/structure/window/reinforced{
-	dir = 4
-	},
+/obj/structure/window/reinforced/spawner/directional/east,
 /obj/machinery/rnd/production/protolathe/department/science,
 /turf/open/floor/iron/dark,
 /area/shuttle/shipstation)
@@ -787,9 +759,7 @@
 /turf/open/floor/iron/dark,
 /area/shuttle/shipstation)
 "fa" = (
-/obj/structure/window/reinforced{
-	dir = 1
-	},
+/obj/structure/window/reinforced/spawner/directional/north,
 /obj/structure/table/glass,
 /obj/item/storage/box/beakers{
 	pixel_x = 2;
@@ -944,12 +914,8 @@
 /turf/open/floor/iron/dark,
 /area/shuttle/shipstation)
 "hh" = (
-/obj/structure/window/reinforced{
-	dir = 8
-	},
-/obj/structure/window/reinforced{
-	dir = 1
-	},
+/obj/structure/window/reinforced/spawner/directional/west,
+/obj/structure/window/reinforced/spawner/directional/north,
 /obj/machinery/computer/rdconsole{
 	dir = 4
 	},
@@ -973,7 +939,7 @@
 /turf/open/floor/iron/dark,
 /area/shuttle/shipstation)
 "hm" = (
-/obj/structure/window/reinforced,
+/obj/structure/window/reinforced/spawner/directional/south,
 /obj/structure/rack,
 /obj/item/clothing/suit/hooded/ablative,
 /obj/item/storage/box/flashes,
@@ -1000,8 +966,8 @@
 /turf/open/floor/iron/dark,
 /area/shuttle/shipstation)
 "hz" = (
-/obj/structure/window/reinforced/spawner/north,
-/obj/structure/window/reinforced/spawner/east,
+/obj/structure/window/reinforced/spawner/directional/north,
+/obj/structure/window/reinforced/spawner/directional/east,
 /obj/structure/flora/bush/flowers_pp,
 /turf/open/floor/grass,
 /area/shuttle/shipstation)
@@ -1156,9 +1122,7 @@
 /turf/open/floor/iron/dark,
 /area/shuttle/shipstation)
 "kH" = (
-/obj/structure/window/reinforced{
-	dir = 1
-	},
+/obj/structure/window/reinforced/spawner/directional/north,
 /obj/effect/turf_decal/tile/blue{
 	dir = 4
 	},
@@ -1221,10 +1185,8 @@
 /turf/open/floor/iron/dark,
 /area/shuttle/shipstation)
 "lo" = (
-/obj/structure/window/reinforced,
-/obj/structure/window/reinforced{
-	dir = 4
-	},
+/obj/structure/window/reinforced/spawner/directional/south,
+/obj/structure/window/reinforced/spawner/directional/east,
 /obj/effect/turf_decal/bot_blue,
 /obj/structure/closet/secure_closet/smartgun,
 /turf/open/floor/mineral/plastitanium,
@@ -1233,17 +1195,13 @@
 /obj/structure/chair/comfy/shuttle{
 	dir = 4
 	},
-/obj/structure/window/reinforced{
-	dir = 1
-	},
-/obj/structure/window/reinforced,
+/obj/structure/window/reinforced/spawner/directional/north,
+/obj/structure/window/reinforced/spawner/directional/south,
 /turf/open/floor/pod/light,
 /area/shuttle/shipstation)
 "lA" = (
-/obj/structure/window/reinforced,
-/obj/structure/window/reinforced{
-	dir = 8
-	},
+/obj/structure/window/reinforced/spawner/directional/south,
+/obj/structure/window/reinforced/spawner/directional/west,
 /obj/item/banner/cargo/mundane,
 /obj/effect/turf_decal/trimline/brown/filled/line{
 	dir = 10
@@ -1333,7 +1291,7 @@
 /turf/open/floor/iron/dark,
 /area/shuttle/shipstation)
 "nH" = (
-/obj/structure/window/reinforced,
+/obj/structure/window/reinforced/spawner/directional/south,
 /obj/machinery/computer/piratepad_control/civilian{
 	dir = 1
 	},
@@ -1361,9 +1319,7 @@
 /turf/open/floor/iron/dark,
 /area/shuttle/shipstation)
 "oe" = (
-/obj/structure/window/reinforced{
-	dir = 8
-	},
+/obj/structure/window/reinforced/spawner/directional/west,
 /obj/structure/table/glass,
 /obj/machinery/reagentgrinder{
 	pixel_y = 8
@@ -1457,7 +1413,7 @@
 /obj/effect/turf_decal/trimline/blue/filled/line{
 	dir = 1
 	},
-/obj/machinery/atmospherics/components/unary/cryo_cell{
+/obj/machinery/cryo_cell{
 	dir = 4
 	},
 /turf/open/floor/iron/dark,
@@ -1515,9 +1471,7 @@
 /turf/open/floor/engine,
 /area/shuttle/shipstation)
 "pT" = (
-/obj/structure/window/reinforced{
-	dir = 8
-	},
+/obj/structure/window/reinforced/spawner/directional/west,
 /obj/machinery/rnd/destructive_analyzer,
 /obj/effect/turf_decal/tile/purple{
 	dir = 1
@@ -1568,12 +1522,8 @@
 /turf/open/floor/iron/dark,
 /area/shuttle/shipstation)
 "qP" = (
-/obj/structure/window/reinforced{
-	dir = 1
-	},
-/obj/structure/window/reinforced{
-	dir = 8
-	},
+/obj/structure/window/reinforced/spawner/directional/north,
+/obj/structure/window/reinforced/spawner/directional/west,
 /obj/structure/table/glass,
 /obj/item/reagent_containers/cup/beaker/large,
 /obj/item/reagent_containers/cup/beaker{
@@ -1586,9 +1536,7 @@
 /turf/open/floor/iron/dark,
 /area/shuttle/shipstation)
 "qY" = (
-/obj/structure/window/reinforced{
-	dir = 8
-	},
+/obj/structure/window/reinforced/spawner/directional/west,
 /obj/machinery/vending/wardrobe/jani_wardrobe{
 	onstation_override = 1
 	},
@@ -1669,9 +1617,7 @@
 "sb" = (
 /obj/effect/turf_decal/trimline/purple/filled/line,
 /obj/structure/disposalpipe/segment,
-/obj/structure/window/reinforced{
-	dir = 4
-	},
+/obj/structure/window/reinforced/spawner/directional/east,
 /obj/machinery/rnd/production/circuit_imprinter/department/science,
 /turf/open/floor/iron/dark,
 /area/shuttle/shipstation)
@@ -1737,10 +1683,8 @@
 /turf/open/floor/iron/dark,
 /area/shuttle/shipstation)
 "sL" = (
-/obj/structure/window/reinforced,
-/obj/structure/window/reinforced{
-	dir = 4
-	},
+/obj/structure/window/reinforced/spawner/directional/south,
+/obj/structure/window/reinforced/spawner/directional/east,
 /obj/item/banner/cargo/mundane,
 /obj/effect/turf_decal/trimline/brown/filled/line{
 	dir = 6
@@ -1778,12 +1722,8 @@
 "te" = (
 /obj/structure/fans/tiny,
 /obj/machinery/door/firedoor,
-/obj/structure/window/reinforced{
-	dir = 8
-	},
-/obj/structure/window/reinforced{
-	dir = 4
-	},
+/obj/structure/window/reinforced/spawner/directional/west,
+/obj/structure/window/reinforced/spawner/directional/east,
 /obj/effect/turf_decal/tile/brown{
 	dir = 8
 	},
@@ -1801,10 +1741,8 @@
 /turf/open/floor/iron/dark,
 /area/shuttle/shipstation)
 "th" = (
-/obj/structure/window/reinforced,
-/obj/structure/window/reinforced{
-	dir = 8
-	},
+/obj/structure/window/reinforced/spawner/directional/south,
+/obj/structure/window/reinforced/spawner/directional/west,
 /obj/structure/closet/crate/freezer/surplus_limbs,
 /obj/effect/turf_decal/tile/blue{
 	dir = 4
@@ -1857,7 +1795,9 @@
 /turf/open/floor/iron/dark,
 /area/shuttle/shipstation)
 "tN" = (
-/obj/machinery/recycler,
+/obj/machinery/recycler{
+	dir = 8
+	},
 /obj/machinery/conveyor{
 	dir = 4;
 	id = "garbage"
@@ -1933,9 +1873,7 @@
 /turf/open/floor/iron/dark,
 /area/shuttle/shipstation)
 "vd" = (
-/obj/structure/window/reinforced{
-	dir = 8
-	},
+/obj/structure/window/reinforced/spawner/directional/west,
 /obj/machinery/chem_heater,
 /obj/effect/turf_decal/trimline/blue/filled/line{
 	dir = 8
@@ -1947,7 +1885,7 @@
 /turf/closed/wall/mineral/titanium/nodiagonal,
 /area/shuttle/shipstation)
 "vt" = (
-/obj/structure/window/reinforced,
+/obj/structure/window/reinforced/spawner/directional/south,
 /obj/machinery/autolathe,
 /obj/effect/turf_decal/trimline/brown/filled/line,
 /turf/open/floor/engine,
@@ -1955,8 +1893,7 @@
 "vD" = (
 /obj/machinery/atmospherics/components/unary/vent_pump/on/layer4,
 /obj/structure/disposalpipe/segment,
-/obj/structure/window/reinforced{
-	dir = 1;
+/obj/structure/window/reinforced/spawner/directional/north{
 	layer = 2.9
 	},
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
@@ -2030,10 +1967,8 @@
 /turf/open/floor/iron/dark,
 /area/shuttle/shipstation)
 "xl" = (
-/obj/structure/window/reinforced,
-/obj/structure/window/reinforced{
-	dir = 4
-	},
+/obj/structure/window/reinforced/spawner/directional/south,
+/obj/structure/window/reinforced/spawner/directional/east,
 /obj/machinery/computer/operating{
 	dir = 8
 	},
@@ -2084,13 +2019,11 @@
 /area/shuttle/shipstation)
 "xx" = (
 /obj/effect/landmark/start/ai/secondary,
-/obj/structure/window/reinforced,
+/obj/structure/window/reinforced/spawner/directional/south,
 /turf/open/floor/mineral/plastitanium,
 /area/shuttle/shipstation)
 "xF" = (
-/obj/structure/window/reinforced{
-	dir = 8
-	},
+/obj/structure/window/reinforced/spawner/directional/west,
 /turf/open/floor/mineral/plastitanium,
 /area/shuttle/shipstation)
 "yp" = (
@@ -2101,10 +2034,8 @@
 /turf/open/floor/iron/dark,
 /area/shuttle/shipstation)
 "yq" = (
-/obj/structure/window/reinforced,
-/obj/structure/window/reinforced{
-	dir = 8
-	},
+/obj/structure/window/reinforced/spawner/directional/south,
+/obj/structure/window/reinforced/spawner/directional/west,
 /obj/machinery/chem_master,
 /obj/effect/turf_decal/trimline/blue/filled/line{
 	dir = 10
@@ -2168,9 +2099,7 @@
 /area/shuttle/shipstation)
 "zh" = (
 /obj/effect/landmark/start/ai,
-/obj/structure/window/reinforced{
-	dir = 1
-	},
+/obj/structure/window/reinforced/spawner/directional/north,
 /turf/open/floor/mineral/plastitanium,
 /area/shuttle/shipstation)
 "zj" = (
@@ -2287,9 +2216,7 @@
 /turf/open/floor/iron/dark,
 /area/shuttle/shipstation)
 "Bw" = (
-/obj/structure/window/reinforced{
-	dir = 1
-	},
+/obj/structure/window/reinforced/spawner/directional/north,
 /obj/machinery/rnd/production/techfab/department/cargo,
 /obj/effect/turf_decal/trimline/brown/filled/line{
 	dir = 1
@@ -2341,7 +2268,7 @@
 /obj/effect/turf_decal/trimline/blue/filled/line{
 	dir = 1
 	},
-/obj/machinery/modular_computer/console/preset/id{
+/obj/machinery/modular_computer/preset/id{
 	dir = 8
 	},
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
@@ -2413,13 +2340,11 @@
 /obj/machinery/portable_atmospherics/pump,
 /obj/effect/turf_decal/delivery,
 /obj/machinery/atmospherics/components/unary/portables_connector/visible/layer4,
-/obj/structure/window/reinforced{
-	dir = 8
-	},
+/obj/structure/window/reinforced/spawner/directional/west,
 /turf/open/floor/iron/dark,
 /area/shuttle/shipstation)
 "Df" = (
-/mob/living/simple_animal/pet/cat/runtime,
+/mob/living/basic/pet/cat/runtime,
 /obj/machinery/atmospherics/components/unary/vent_scrubber/on/layer2{
 	dir = 8
 	},
@@ -2455,10 +2380,8 @@
 /turf/open/floor/iron/dark,
 /area/shuttle/shipstation)
 "DF" = (
-/obj/structure/window/reinforced{
-	dir = 4
-	},
-/obj/structure/window/reinforced,
+/obj/structure/window/reinforced/spawner/directional/east,
+/obj/structure/window/reinforced/spawner/directional/south,
 /obj/machinery/suit_storage_unit/cmo,
 /obj/effect/turf_decal/tile/blue{
 	dir = 4
@@ -2619,12 +2542,8 @@
 /turf/open/floor/iron/dark,
 /area/shuttle/shipstation)
 "FF" = (
-/obj/structure/window/reinforced{
-	dir = 1
-	},
-/obj/structure/window/reinforced{
-	dir = 4
-	},
+/obj/structure/window/reinforced/spawner/directional/north,
+/obj/structure/window/reinforced/spawner/directional/east,
 /mob/living/carbon/human/species/monkey/angry,
 /obj/effect/turf_decal/trimline/blue/filled/line{
 	dir = 8
@@ -2632,8 +2551,8 @@
 /turf/open/floor/iron/dark,
 /area/shuttle/shipstation)
 "FO" = (
-/obj/structure/window/reinforced/spawner/west,
-/obj/structure/window/reinforced/spawner/north,
+/obj/structure/window/reinforced/spawner/directional/west,
+/obj/structure/window/reinforced/spawner/directional/north,
 /obj/structure/flora/bush/sparsegrass,
 /turf/open/floor/grass,
 /area/shuttle/shipstation)
@@ -2667,12 +2586,8 @@
 /turf/open/floor/iron/dark,
 /area/shuttle/shipstation)
 "Gx" = (
-/obj/structure/window/reinforced{
-	dir = 1
-	},
-/obj/structure/window/reinforced{
-	dir = 8
-	},
+/obj/structure/window/reinforced/spawner/directional/north,
+/obj/structure/window/reinforced/spawner/directional/west,
 /obj/structure/closet/crate/freezer/blood,
 /obj/effect/turf_decal/tile/blue{
 	dir = 4
@@ -2926,9 +2841,7 @@
 /turf/open/floor/iron/dark,
 /area/shuttle/shipstation)
 "JA" = (
-/obj/structure/window/reinforced{
-	dir = 1
-	},
+/obj/structure/window/reinforced/spawner/directional/north,
 /obj/structure/table/glass,
 /obj/machinery/door/window/left/directional/east{
 	dir = 2
@@ -2981,9 +2894,7 @@
 /turf/open/floor/iron/dark,
 /area/shuttle/shipstation)
 "Ko" = (
-/obj/structure/window/reinforced{
-	dir = 4
-	},
+/obj/structure/window/reinforced/spawner/directional/east,
 /obj/structure/table,
 /obj/item/mop,
 /obj/item/reagent_containers/cup/bucket,
@@ -3000,12 +2911,8 @@
 /turf/open/floor/iron/dark,
 /area/shuttle/shipstation)
 "Ks" = (
-/obj/structure/window/reinforced{
-	dir = 4
-	},
-/obj/structure/window/reinforced{
-	dir = 1
-	},
+/obj/structure/window/reinforced/spawner/directional/east,
+/obj/structure/window/reinforced/spawner/directional/north,
 /obj/machinery/suit_storage_unit/cmo,
 /obj/effect/turf_decal/tile/blue{
 	dir = 4
@@ -3020,14 +2927,10 @@
 /turf/open/floor/iron/dark,
 /area/shuttle/shipstation)
 "KD" = (
-/obj/structure/window/reinforced{
-	dir = 1
-	},
-/obj/structure/window/reinforced{
-	dir = 8
-	},
+/obj/structure/window/reinforced/spawner/directional/north,
+/obj/structure/window/reinforced/spawner/directional/west,
 /obj/structure/table/glass,
-/obj/structure/window/reinforced,
+/obj/structure/window/reinforced/spawner/directional/south,
 /obj/item/storage/medkit/fire{
 	pixel_x = -3;
 	pixel_y = -3
@@ -3167,7 +3070,7 @@
 /turf/open/floor/iron/dark,
 /area/shuttle/shipstation)
 "LF" = (
-/obj/structure/window/reinforced,
+/obj/structure/window/reinforced/spawner/directional/south,
 /obj/machinery/piratepad/civilian,
 /obj/effect/turf_decal/trimline/brown/filled/line,
 /turf/open/floor/engine,
@@ -3234,7 +3137,7 @@
 /obj/machinery/mineral/stacking_unit_console{
 	pixel_y = -32
 	},
-/obj/structure/window/reinforced,
+/obj/structure/window/reinforced/spawner/directional/south,
 /turf/open/floor/iron/dark,
 /area/shuttle/shipstation)
 "MW" = (
@@ -3305,12 +3208,8 @@
 /turf/open/floor/iron/dark,
 /area/shuttle/shipstation)
 "OL" = (
-/obj/structure/window/reinforced{
-	dir = 1
-	},
-/obj/structure/window/reinforced{
-	dir = 8
-	},
+/obj/structure/window/reinforced/spawner/directional/north,
+/obj/structure/window/reinforced/spawner/directional/west,
 /obj/effect/turf_decal/trimline/brown/filled/line{
 	dir = 9
 	},
@@ -3343,12 +3242,8 @@
 /turf/open/floor/iron/dark,
 /area/shuttle/shipstation)
 "PC" = (
-/obj/structure/window/reinforced{
-	dir = 1
-	},
-/obj/structure/window/reinforced{
-	dir = 4
-	},
+/obj/structure/window/reinforced/spawner/directional/north,
+/obj/structure/window/reinforced/spawner/directional/east,
 /obj/effect/turf_decal/trimline/brown/filled/line{
 	dir = 5
 	},
@@ -3363,9 +3258,7 @@
 /area/shuttle/shipstation)
 "PS" = (
 /obj/structure/closet/secure_closet/warden,
-/obj/structure/window/reinforced{
-	dir = 1
-	},
+/obj/structure/window/reinforced/spawner/directional/north,
 /obj/effect/turf_decal/delivery,
 /turf/open/floor/mineral/plastitanium,
 /area/shuttle/shipstation)
@@ -3446,7 +3339,7 @@
 /turf/open/floor/iron/dark,
 /area/shuttle/shipstation)
 "RN" = (
-/obj/structure/window/reinforced,
+/obj/structure/window/reinforced/spawner/directional/south,
 /obj/effect/turf_decal/tile/blue{
 	dir = 4
 	},
@@ -3461,10 +3354,8 @@
 /turf/open/floor/iron/dark,
 /area/shuttle/shipstation)
 "RP" = (
-/obj/structure/window/reinforced,
-/obj/structure/window/reinforced{
-	dir = 4
-	},
+/obj/structure/window/reinforced/spawner/directional/south,
+/obj/structure/window/reinforced/spawner/directional/east,
 /obj/machinery/rnd/production/techfab/department/medical,
 /obj/effect/turf_decal/tile/blue{
 	dir = 4
@@ -3553,9 +3444,7 @@
 /turf/open/floor/iron/dark,
 /area/shuttle/shipstation)
 "TG" = (
-/obj/structure/window/reinforced{
-	dir = 4
-	},
+/obj/structure/window/reinforced/spawner/directional/east,
 /obj/machinery/suit_storage_unit/cmo,
 /obj/effect/turf_decal/tile/blue{
 	dir = 4
@@ -3576,9 +3465,7 @@
 	},
 /obj/machinery/space_heater,
 /obj/effect/turf_decal/delivery,
-/obj/structure/window/reinforced{
-	dir = 8
-	},
+/obj/structure/window/reinforced/spawner/directional/west,
 /turf/open/floor/iron/dark,
 /area/shuttle/shipstation)
 "TL" = (
@@ -3586,7 +3473,7 @@
 /turf/open/floor/wood,
 /area/shuttle/shipstation)
 "TQ" = (
-/obj/structure/window/reinforced,
+/obj/structure/window/reinforced/spawner/directional/south,
 /obj/effect/turf_decal/trimline/blue/filled/line{
 	dir = 6
 	},
@@ -3610,9 +3497,7 @@
 /area/shuttle/shipstation)
 "Uh" = (
 /obj/machinery/blackbox_recorder,
-/obj/structure/window/reinforced{
-	dir = 8
-	},
+/obj/structure/window/reinforced/spawner/directional/west,
 /obj/machinery/door/window{
 	base_state = "leftsecure";
 	icon_state = "leftsecure";
@@ -3623,9 +3508,7 @@
 /turf/open/floor/mineral/plastitanium,
 /area/shuttle/shipstation)
 "Ul" = (
-/obj/structure/window/reinforced{
-	dir = 1
-	},
+/obj/structure/window/reinforced/spawner/directional/north,
 /obj/structure/closet/secure_closet/quartermaster,
 /obj/effect/turf_decal/trimline/brown/filled/line{
 	dir = 1
@@ -3677,9 +3560,7 @@
 "UU" = (
 /obj/effect/turf_decal/trimline/yellow/filled/line,
 /obj/effect/turf_decal/delivery,
-/obj/structure/window/reinforced{
-	dir = 4
-	},
+/obj/structure/window/reinforced/spawner/directional/east,
 /obj/machinery/portable_atmospherics/canister/air,
 /obj/machinery/camera/autoname/directional/south,
 /turf/open/floor/iron/dark,
@@ -3731,18 +3612,14 @@
 /turf/open/floor/iron/dark,
 /area/shuttle/shipstation)
 "Vr" = (
-/obj/structure/window/reinforced{
-	dir = 1
-	},
-/obj/structure/window/reinforced{
-	dir = 4
-	},
+/obj/structure/window/reinforced/spawner/directional/north,
+/obj/structure/window/reinforced/spawner/directional/east,
 /obj/structure/table/glass,
-/obj/structure/window/reinforced,
+/obj/structure/window/reinforced/spawner/directional/south,
 /obj/item/defibrillator/loaded,
 /obj/item/defibrillator/loaded,
-/obj/item/storage/backpack/duffelbag/med/surgery,
-/obj/item/storage/backpack/duffelbag/med/surgery,
+/obj/item/surgery_tray/full,
+/obj/item/surgery_tray/full,
 /obj/item/gun/syringe,
 /obj/item/clothing/glasses/hud/health,
 /obj/item/clothing/glasses/hud/health,
@@ -3808,13 +3685,12 @@
 /area/shuttle/shipstation)
 "VP" = (
 /obj/machinery/spaceship_navigation_beacon,
-/obj/structure/window/reinforced,
+/obj/structure/window/reinforced/spawner/directional/south,
 /obj/machinery/camera/directional/north,
 /turf/open/floor/mineral/plastitanium,
 /area/shuttle/shipstation)
 "Wc" = (
-/obj/structure/window/reinforced{
-	dir = 1;
+/obj/structure/window/reinforced/spawner/directional/north{
 	layer = 2.9
 	},
 /obj/machinery/conveyor_switch/oneway{
@@ -3851,11 +3727,9 @@
 /turf/open/floor/iron/dark,
 /area/shuttle/shipstation)
 "WC" = (
-/obj/structure/window/reinforced,
+/obj/structure/window/reinforced/spawner/directional/south,
 /obj/machinery/ntnet_relay,
-/obj/structure/window/reinforced{
-	dir = 8
-	},
+/obj/structure/window/reinforced/spawner/directional/west,
 /turf/open/floor/mineral/plastitanium,
 /area/shuttle/shipstation)
 "WT" = (
@@ -3893,7 +3767,7 @@
 /obj/machinery/telecomms/allinone{
 	id = "tcommsat"
 	},
-/obj/structure/window/reinforced,
+/obj/structure/window/reinforced/spawner/directional/south,
 /turf/open/floor/mineral/plastitanium,
 /area/shuttle/shipstation)
 "XP" = (
@@ -3905,18 +3779,15 @@
 	dir = 4
 	},
 /obj/structure/disposalpipe/trunk,
-/obj/structure/window/reinforced{
-	dir = 1;
+/obj/structure/window/reinforced/spawner/directional/north{
 	layer = 2.9
 	},
 /obj/machinery/conveyor{
 	dir = 8;
 	id = "garbage"
 	},
-/obj/structure/window/reinforced{
-	dir = 8
-	},
-/obj/structure/window/reinforced,
+/obj/structure/window/reinforced/spawner/directional/west,
+/obj/structure/window/reinforced/spawner/directional/south,
 /turf/open/floor/iron/dark,
 /area/shuttle/shipstation)
 "Yc" = (
@@ -3934,9 +3805,7 @@
 /obj/machinery/power/shuttle_engine/heater{
 	dir = 8
 	},
-/obj/structure/window/reinforced{
-	dir = 4
-	},
+/obj/structure/window/reinforced/spawner/directional/east,
 /turf/open/floor/plating/airless,
 /area/shuttle/shipstation)
 "Yi" = (
@@ -3969,9 +3838,7 @@
 	},
 /obj/structure/reagent_dispensers/foamtank,
 /obj/effect/turf_decal/delivery,
-/obj/structure/window/reinforced{
-	dir = 4
-	},
+/obj/structure/window/reinforced/spawner/directional/east,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /turf/open/floor/iron/dark,
 /area/shuttle/shipstation)
@@ -3985,9 +3852,7 @@
 /turf/open/floor/iron/dark,
 /area/shuttle/shipstation)
 "Zg" = (
-/obj/structure/window/reinforced{
-	dir = 1
-	},
+/obj/structure/window/reinforced/spawner/directional/north,
 /obj/machinery/computer/cargo/express,
 /obj/item/disk/cargo/bluespace_pod,
 /obj/effect/turf_decal/trimline/brown/filled/line{
