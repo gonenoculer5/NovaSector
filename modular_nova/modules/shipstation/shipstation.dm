@@ -14,6 +14,20 @@
 	name = "NTSS 'Blue Moon'"
 	//requires_power = TRUE
 
+/obj/docking_port/mobile/shipstation
+	callTime = 150
+	can_move_docking_ports = 1
+	dheight = 1
+	dwidth = 12
+	height = 21
+	shuttle_id = "station"
+	launch_status = 0
+	movement_force = list("KNOCKDOWN"=0,"THROW"=0)
+	name = "NTSS 'Blue Moon'"
+	port_direction = 4
+	preferred_direction = 4
+	width = 40
+
 /obj/effect/landmark/start/shuttle_pilot
 	name = "Shuttle Pilot"
 	icon_state = "Security Officer"
@@ -42,6 +56,9 @@
 		/turf/open/floor/plating,
 		/turf/open/lava,
 		/turf/closed/mineral,
+		/turf/open/misc/asteroid/basalt/lava_land_surface,
+		/turf/open/lava/smooth/lava_land_surface,
+		/turf/closed/mineral/random/volcanic,
 	)
 	view_range = 12
 	designate_time = 50
@@ -60,11 +77,6 @@
 	spawn_positions = 0 // Set in config
 	supervisors = SUPERVISOR_CAPTAIN
 	req_admin_notify = 1
-	minimal_player_age = 14
-	exp_requirements = 180
-	exp_required_type = EXP_TYPE_CREW
-	exp_required_type_department = EXP_TYPE_COMMAND
-	exp_granted_type = EXP_TYPE_CREW
 
 	outfit = /datum/outfit/job/shuttle_pilot
 	plasmaman_outfit = /datum/outfit/plasmaman/shuttle_pilot

@@ -632,20 +632,7 @@
 	name = "Exit"
 	},
 /obj/machinery/door/firedoor,
-/obj/docking_port/mobile{
-	callTime = 150;
-	can_move_docking_ports = 1;
-	dheight = 1;
-	dwidth = 12;
-	height = 21;
-	shuttle_id = "station";
-	launch_status = 0;
-	movement_force = list("KNOCKDOWN"=0,"THROW"=0);
-	name = "NTSS 'Companionship'";
-	port_direction = 4;
-	preferred_direction = 4;
-	width = 40
-	},
+/obj/docking_port/mobile/shipstation,
 /obj/structure/fans/tiny,
 /turf/open/floor/iron,
 /area/shuttle/shipstation)
