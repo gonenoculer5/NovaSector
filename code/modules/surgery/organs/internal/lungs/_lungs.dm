@@ -502,13 +502,15 @@
 /// Causes random euphoria and giggling. Large amounts knock you down
 /obj/item/organ/internal/lungs/proc/too_much_n2o(mob/living/carbon/breather, datum/gas_mixture/breath, n2o_pp, old_n2o_pp)
 	if(n2o_pp < n2o_para_min)
+		// Bluemoon edit - Weaker N2O
 		// Small amount of N2O, small side-effects.
-		if(n2o_pp <= 0.01)
-			if(old_n2o_pp > 0.01)
+		if(n2o_pp <= 0.1)
+			if(old_n2o_pp > 0.1)
 				return BREATH_LOST
 			return
+		// Bluemoon edit - Weaker N2O
 		// No alert for small amounts, but the mob randomly feels euphoric.
-		if(old_n2o_pp >= n2o_para_min || old_n2o_pp <= 0.01)
+		if(old_n2o_pp >= n2o_para_min || old_n2o_pp <= 0.1)
 			breather.clear_alert(ALERT_TOO_MUCH_N2O)
 
 		if(prob(20))
