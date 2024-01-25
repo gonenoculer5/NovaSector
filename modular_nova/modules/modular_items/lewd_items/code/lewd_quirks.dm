@@ -61,12 +61,18 @@
 		human_owner.set_eye_blur_if_lower(20 SECONDS)
 		lust_message = "You vision begins to blur, the heat beginning to rise..."
 	if(stress >= 180)
+		// Bluemoon edit - Remove Hallucinations from Amorous quirk
+		/*
 		owner.adjust_hallucinations(60 SECONDS)
-		lust_message = "You begin to fantasize of what you could do to someone..."
+		*/
+		// Bluemoon edit - Fixed problematic Amorous flavortext
+		lust_message = "You begin to fantasize of what you could with someone..."
 	if(stress >= 240)
 		human_owner.adjustStaminaLoss(30)
 		lust_message = "You body feels so very hot, almost unwilling to cooperate..."
 	// Bluemoon edit - Make Amorous non-lethal
+	if(stress >= 300)
+		lust_message = "You feel your neck tightening, straining..."
 	/*
 	if(stress >= 300)
 		human_owner.adjustOxyLoss(40)
@@ -81,7 +87,8 @@
 /datum/brain_trauma/very_special/amorous/proc/check_climaxed()
 	if(owner.has_status_effect(/datum/status_effect/climax))
 		stress = 0
-		satisfaction = 300
+		// Bluemoon edit - Higher Amorous satisfaction
+		satisfaction = min(satisfaction + 300, 1000)
 		return TRUE
 	return FALSE
 
@@ -93,7 +100,8 @@
 		return
 	//if we are satisfied, slowly lower satisfaction as well as stress
 	if(satisfaction)
-		satisfaction = clamp(satisfaction - 1, 0, 300)
+		// Bluemoon edit - Higher Amorous satisfaction
+		satisfaction = clamp(satisfaction - 1, 0, 1000)
 		stress = clamp(stress - 1, 0, 300)
 	//since we are not satisfied, increase our stress
 	else
@@ -128,7 +136,8 @@
 			to_chat(human_owner, span_purple("Your clothes are feeling tight."))
 		if(201 to 250)
 			to_chat(human_owner, span_purple("Desire fogs your decisions."))
-		if(251 to 1000)
+		// Bluemoon edit - Suppress Amorous messages when satisifed
+		if(251 to 300)
 			to_chat(human_owner, span_purple("Jeez, it's hot in here.."))
 
 /**
