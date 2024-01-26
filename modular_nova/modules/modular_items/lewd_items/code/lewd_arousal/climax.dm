@@ -126,8 +126,8 @@
 						span_userlove("You shoot string after string of hot cum, hitting the floor!"))
 					testicles.transfer_internal_fluid(null, testicles.internal_fluid_count * 0.6)
 				else
-					visible_message(span_userlove("[src] shoots [self_their] sticky load into [target_choice]!"), \
-						span_userlove("You shoot string after string of hot cum into [target_choice]!"))
+					visible_message(span_userlove("[src] shoots [self_their] sticky load into the [target_choice]!"), \
+						span_userlove("You shoot string after string of hot cum into the [target_choice]!"))
 					var/obj/item/reagent_containers/container = fillable_inrange_containers[target_choice]
 					testicles.transfer_internal_fluid(container.reagents, testicles.internal_fluid_count * 0.6)
 			else
