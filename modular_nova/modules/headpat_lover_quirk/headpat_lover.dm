@@ -17,7 +17,7 @@
 	QDEL_NULL(headpat_component)
 
 /datum/mood_event/headpat_lover
-	description = "I LOVE HEADPATS! YES PLEASE!! OH GOD YES!!!"
+	description = "I LOVE HEADPATS! YES!!!"
 	mood_change = 50
 	timeout = 1 MINUTES
 	special_screen_obj = "mood_happiness_good"
@@ -33,13 +33,12 @@
 	var/mob/living/carbon/human/human_parent = parent
 	human_parent.clear_mood_event("headpat_lover")
 
-/datum/component/headpat_lover/proc/check_headpat(mob/living/carbon/human/human_petter)
+/datum/component/headpat_lover/proc/check_headpat(mob/living/carbon/human/human_parent, mob/living/carbon/human/human_petter)
 	SIGNAL_HANDLER
 
 	if(!(istype(human_petter)))
 		return
 
-	var/mob/living/carbon/human/human_parent = parent
 	if(check_zone(human_petter.zone_selected) == BODY_ZONE_HEAD && human_parent.get_bodypart(BODY_ZONE_HEAD))
 		new /obj/effect/temp_visual/heart(human_parent.loc)
 		// Avoid blocking from TGUI alerting.
@@ -48,5 +47,5 @@
 // Needed because adjust_arousal (and etc.) call blocking TGUI procs which can't be executed from a signal handler.
 /datum/component/headpat_lover/proc/pleasure_pet(mob/living/carbon/human/human_pet)
 	human_pet.add_mood_event("headpat_lover", /datum/mood_event/headpat_lover)
-	human_pet.adjust_arousal(4)
-	human_pet.adjust_pleasure(6)
+	human_pet.adjust_arousal(2)
+	human_pet.adjust_pleasure(3)
