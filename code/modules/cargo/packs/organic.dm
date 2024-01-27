@@ -195,8 +195,11 @@
 	for(var/i in 1 to 5)
 		if(add_anomalous(new_crate))
 			continue
+		// Bluemoon edit - Remove bomb from pizza orders
+		/*
 		if(add_boombox(new_crate))
 			continue
+		*/
 		add_normal_pizza(new_crate, rng_pizza_list)
 
 /// adds the chance for an infinite pizza box

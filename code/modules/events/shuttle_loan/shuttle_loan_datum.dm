@@ -165,10 +165,17 @@
 	logging_desc = "Pizza delivery"
 
 /datum/shuttle_loan_situation/pizza_delivery/spawn_items(list/spawn_list, list/empty_shuttle_turfs, list/blocked_shutte_turfs)
+	// Bluemoon edit - Remove bomb from pizza orders
+	/*
 	var/naughtypizza = list(/obj/item/pizzabox/bomb) // oh look another blacklist, for pizza nonetheless! removes borg pizza // NOVA EDIT CHANGE - ORIGINAL: var/naughtypizza = list(/obj/item/pizzabox/bomb, /obj/item/pizzabox/margherita/robo)
+	*/
 	var/nicepizza = list(/obj/item/pizzabox/margherita, /obj/item/pizzabox/meat, /obj/item/pizzabox/vegetable, /obj/item/pizzabox/mushroom)
 	for(var/i in 1 to 6)
+		// Bluemoon edit - Remove bomb from pizza orders
+		spawn_list.Add(pick(nicepizza))
+		/*
 		spawn_list.Add(pick(prob(5) ? naughtypizza : nicepizza))
+		*/
 
 /datum/shuttle_loan_situation/russian_party
 	sender = "CentCom Russian Outreach Program"
