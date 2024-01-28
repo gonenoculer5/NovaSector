@@ -1,7 +1,8 @@
 
 /datum/component/interactable
+	// Bluemoon edit - Cyborg interactions
 	/// A hard reference to the parent
-	var/mob/living/carbon/human/self = null
+	var/mob/living/self = null
 	/// A list of interactions that the user can engage in.
 	var/list/datum/interaction/interactions
 	var/interact_last = 0
@@ -11,8 +12,8 @@
 	if(QDELETED(parent))
 		qdel(src)
 		return
-
-	if(!ishuman(parent))
+	// Bluemoon edit - Cyborg interactions
+	if(!ishuman(parent) && !iscyborg(parent))
 		return COMPONENT_INCOMPATIBLE
 
 	self = parent
@@ -42,12 +43,14 @@
 	return ..()
 
 /datum/component/interactable/proc/open_interaction_menu(datum/source, mob/user)
-	if(!ishuman(user))
+	// Bluemoon edit - Cyborg interactions
+	if(!ishuman(user) && !iscyborg(user))
 		return
 	build_interactions_list()
 	ui_interact(user)
 
-/datum/component/interactable/proc/can_interact(datum/interaction/interaction, mob/living/carbon/human/target)
+// Bluemoon edit - Cyborg interactions
+/datum/component/interactable/proc/can_interact(datum/interaction/interaction, mob/living/target)
 	if(!interaction.allow_act(target, self))
 		return FALSE
 	if(interaction.lewd && !target.client?.prefs?.read_preference(/datum/preference/toggle/erp))
@@ -68,7 +71,7 @@
 		ui.open()
 
 /datum/component/interactable/ui_status(mob/user, datum/ui_state/state)
-	if(!ishuman(user))
+	if(!ishuman(user) && !iscyborg(user))
 		return UI_CLOSE
 
 	return UI_INTERACTIVE // This UI is always interactive as we handle distance flags via can_interact
@@ -103,15 +106,17 @@
 
 	var/list/parts = list()
 
-	if(ishuman(user) && can_lewd_strip(user, self))
-		if(self.client?.prefs?.read_preference(/datum/preference/toggle/erp/sex_toy))
-			if(self.has_vagina())
-				parts += list(generate_strip_entry(ORGAN_SLOT_VAGINA, self, user, self.vagina))
-			if(self.has_penis())
-				parts += list(generate_strip_entry(ORGAN_SLOT_PENIS, self, user, self.penis))
-			if(self.has_anus())
-				parts += list(generate_strip_entry(ORGAN_SLOT_ANUS, self, user, self.anus))
-			parts += list(generate_strip_entry(ORGAN_SLOT_NIPPLES, self, user, self.nipples))
+	// Bluemoon edit - Cyborg interactions
+	if(ishuman(self) && can_lewd_strip(user, self))
+		var/mob/living/carbon/human/human_self = self
+		if(human_self.client?.prefs?.read_preference(/datum/preference/toggle/erp/sex_toy))
+			if(human_self.has_vagina())
+				parts += list(generate_strip_entry(ORGAN_SLOT_VAGINA, self, user, human_self.vagina))
+			if(human_self.has_penis())
+				parts += list(generate_strip_entry(ORGAN_SLOT_PENIS, self, user, human_self.penis))
+			if(human_self.has_anus())
+				parts += list(generate_strip_entry(ORGAN_SLOT_ANUS, self, user, human_self.anus))
+			parts += list(generate_strip_entry(ORGAN_SLOT_NIPPLES, self, user, human_self.nipples))
 
 	data["lewd_slots"] = parts
 
@@ -138,13 +143,15 @@
 	if(.)
 		return
 
-	if(!ishuman(usr))
+	// Bluemoon edit - Cyborg interactions
+	if(!ishuman(usr) && !iscyborg(usr))
 		return
 
 	if(params["interaction"])
 		var/interaction_id = params["interaction"]
 		if(GLOB.interaction_instances[interaction_id])
-			var/mob/living/carbon/human/user = locate(params["userref"])
+			// Bluemoon edit - Cyborg interactions
+			var/mob/living/user = locate(params["userref"])
 			if(!can_interact(GLOB.interaction_instances[interaction_id], user))
 				return FALSE
 			GLOB.interaction_instances[interaction_id].act(user, locate(params["selfref"]))
@@ -157,8 +164,9 @@
 	if(params["item_slot"])
 		// This code should be easy enough to follow... I hope.
 		var/item_index = params["item_slot"]
-		var/mob/living/carbon/human/source = locate(params["userref"])
-		var/mob/living/carbon/human/target = locate(params["selfref"])
+		// Bluemoon edit - Cyborg interactions
+		var/mob/living/source = locate(params["userref"])
+		var/mob/living/target = locate(params["selfref"])
 		var/obj/item/clothing/sextoy/new_item = source.get_active_held_item()
 		var/obj/item/clothing/sextoy/existing_item = target.vars[item_index]
 
@@ -170,7 +178,9 @@
 			source.show_message(span_warning("The item you're holding is not a toy!"))
 			return
 
-		if(can_lewd_strip(source, target, item_index) && is_toy_compatible(new_item, item_index))
+		// Bluemoon edit - Cyborg interactions
+		if(ishuman(target) && can_lewd_strip(source, target, item_index) && is_toy_compatible(new_item, item_index))
+			var/mob/living/carbon/human/human_target = target
 			var/internal = (item_index in list(ORGAN_SLOT_VAGINA, ORGAN_SLOT_ANUS))
 			var/insert_or_attach = internal ? "insert" : "attach"
 			var/into_or_onto = internal ? "into" : "onto"
@@ -190,14 +200,14 @@
 
 				if(existing_item)
 					source.visible_message(span_purple("[source.name] removes [existing_item.name] from [target.name]'s [item_index]."), span_purple("You remove [existing_item.name] from [target.name]'s [item_index]."), span_purple("You hear someone remove something from someone nearby."), vision_distance = 1)
-					target.dropItemToGround(existing_item, force = TRUE) // Force is true, cause nodrop shouldn't affect lewd items.
+					human_target.dropItemToGround(existing_item, force = TRUE) // Force is true, cause nodrop shouldn't affect lewd items.
 					target.vars[item_index] = null
 				else if (new_item)
 					source.visible_message(span_purple("[source.name] [internal ? "inserts" : "attaches"] the [new_item.name] [into_or_onto] [target.name]'s [item_index]."), span_purple("You [insert_or_attach] the [new_item.name] [into_or_onto] [target.name]'s [item_index]."), span_purple("You hear someone [insert_or_attach] something [into_or_onto] someone nearby."), vision_distance = 1)
-					target.vars[item_index] = new_item
+					human_target.vars[item_index] = new_item
 					new_item.forceMove(target)
 					new_item.lewd_equipped(target, item_index)
-				target.update_inv_lewd()
+				human_target.update_inv_lewd()
 
 		else
 			source.show_message(span_warning("Failed to adjust [target.name]'s toys!"))

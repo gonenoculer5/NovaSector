@@ -54,7 +54,7 @@ GLOBAL_LIST_EMPTY_TYPED(interaction_instances, /datum/interaction)
 	/// What sexuality preference do we display for.
 	var/sexuality = ""
 
-/datum/interaction/proc/allow_act(mob/living/carbon/human/user, mob/living/carbon/human/target)
+/datum/interaction/proc/allow_act(mob/living/user, mob/living/target)
 	if(target == user && usage == INTERACTION_OTHER)
 		return FALSE
 
@@ -62,17 +62,25 @@ GLOBAL_LIST_EMPTY_TYPED(interaction_instances, /datum/interaction)
 	if(target != user && usage == INTERACTION_SELF)
 		return FALSE
 
-	if(user_required_parts.len)
+	var/mob/living/carbon/human/human_user
+	if(ishuman(user))
+		human_user = user
+
+	var/mob/living/carbon/human/human_target
+	if(ishuman(target))
+		human_target = target
+
+	if(human_user && user_required_parts.len)
 		for(var/thing in user_required_parts)
-			var/obj/item/organ/external/genital/required_part = user.get_organ_slot(thing)
+			var/obj/item/organ/external/genital/required_part = human_user.get_organ_slot(thing)
 			if(isnull(required_part))
 				return FALSE
 			if(!required_part.is_exposed())
 				return FALSE
 
-	if(target_required_parts.len)
+	if(human_target && target_required_parts.len)
 		for(var/thing in target_required_parts)
-			var/obj/item/organ/external/genital/required_part = target.get_organ_slot(thing)
+			var/obj/item/organ/external/genital/required_part = human_target.get_organ_slot(thing)
 			if(isnull(required_part))
 				return FALSE
 			if(!required_part.is_exposed())
@@ -82,23 +90,23 @@ GLOBAL_LIST_EMPTY_TYPED(interaction_instances, /datum/interaction)
 		switch(requirement)
 			// Bluemoon edit - Flexible quirk
 			if(INTERACTION_REQUIRE_SELF_FLEXIBLE)
-				if(!HAS_TRAIT(user, TRAIT_FLEXIBLE))
+				if(human_user && !HAS_TRAIT(human_user, TRAIT_FLEXIBLE))
 					return
 			if(INTERACTION_REQUIRE_TARGET_FLEXIBLE)
-				if(!HAS_TRAIT(target, TRAIT_FLEXIBLE))
+				if(human_target && !HAS_TRAIT(human_target, TRAIT_FLEXIBLE))
 					return
 			if(INTERACTION_REQUIRE_SELF_HAND)
-				if(!user.get_active_hand())
+				if(human_user && !human_user.get_active_hand())
 					return FALSE
 			if(INTERACTION_REQUIRE_TARGET_HAND)
-				if(!target.get_active_hand())
+				if(human_target && !human_target.get_active_hand())
 					return FALSE
 			
 			else
 				CRASH("Unimplemented interaction requirement '[requirement]'")
 	return TRUE
 
-/datum/interaction/proc/act(mob/living/carbon/human/user, mob/living/carbon/human/target)
+/datum/interaction/proc/act(mob/living/user, mob/living/target)
 	if(!allow_act(user, target))
 		return
 	if(!message)

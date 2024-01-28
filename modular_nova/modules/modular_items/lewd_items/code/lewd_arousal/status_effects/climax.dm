@@ -11,12 +11,14 @@
 	alert_type = null
 
 /datum/status_effect/climax/tick(seconds_between_ticks)
-	if(!owner.client?.prefs?.read_preference(/datum/preference/toggle/erp/sex_toy))
+	// Bluemoon edit - Cyborg interactions
+	if(!owner.client?.prefs?.read_preference(/datum/preference/toggle/erp))
 		return
 
 	var/mob/living/carbon/human/affected_mob = owner
 
-	owner.reagents.add_reagent(/datum/reagent/drug/aphrodisiac/dopamine, 0.5)
+	// Bluemoon edit - Cyborg interactions
+	owner?.reagents.add_reagent(/datum/reagent/drug/aphrodisiac/dopamine, 0.5)
 	owner.adjustStaminaLoss(STAMINA_REMOVAL_AMOUNT_EXTERNAL)
 	affected_mob.adjust_arousal(AROUSAL_REMOVAL_AMOUNT)
 	affected_mob.adjust_pleasure(AROUSAL_REMOVAL_AMOUNT)
@@ -48,6 +50,10 @@
 	alert_type = null
 
 /datum/status_effect/climax_cooldown/tick(seconds_between_ticks)
+	// Bluemoon edit - Cyborg interactions
+	if(!ishuman(owner))
+		return
+
 	var/obj/item/organ/external/genital/vagina/vagina = owner.get_organ_slot(ORGAN_SLOT_VAGINA)
 	var/obj/item/organ/external/genital/testicles/balls = owner.get_organ_slot(ORGAN_SLOT_TESTICLES)
 	var/obj/item/organ/external/genital/penis/penis = owner.get_organ_slot(ORGAN_SLOT_PENIS)
