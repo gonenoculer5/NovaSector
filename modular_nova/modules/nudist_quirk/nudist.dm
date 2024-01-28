@@ -2,7 +2,7 @@
 	name = "Nudist"
 	desc = "You hate wearing tight-fitting uniforms! Caution: The practice of nudism is a notable deviation from the normative behaviors observed in Human societies."
 	value = 0
-	gain_text = span_notice("Your skin feels terribly sensitive under tight clothing.")
+	gain_text = span_userdanger("Your skin feels terribly sensitive under tight clothing.")
 	lose_text = span_notice("Your sensitivity to tight clothes seems to fade away!")
 	medical_record_text = "Subject has sensitive skin and refuses to wear clothing."
 	quirk_flags = QUIRK_HUMAN_ONLY | QUIRK_MOODLET_BASED
@@ -53,6 +53,7 @@
 	var/obj/item/uniform = human_parent.get_item_by_slot(ITEM_SLOT_ICLOTHING)
 
 	if(!uniform || is_type_in_list(uniform, clothing_whitelist))
+		uniform_type_cache = uniform ? uniform.type : null
 		human_parent.clear_mood_event("tight_clothes")
 		return
 
@@ -61,5 +62,7 @@
 
 	uniform_type_cache = uniform.type
 	new /obj/effect/temp_visual/annoyed(human_parent.loc)
+	human_parent.visible_message(src, span_danger("[src] looks very uncomfortable in the [uniform]."),
+		span_userdanger("The [uniform] feels very tight and uncomfortable!"))
 	human_parent.add_mood_event("tight_clothes", /datum/mood_event/tight_clothes)
 
