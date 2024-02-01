@@ -2,7 +2,7 @@
 	name = "Nudist"
 	desc = "You hate wearing tight-fitting uniforms! Caution: The practice of nudism is a notable deviation from the normative behaviors observed in Human societies."
 	value = 0
-	gain_text = span_userdanger("Your skin feels terribly sensitive under tight clothing.")
+	gain_text = span_danger("Your skin feels terribly sensitive under tight clothing.")
 	lose_text = span_notice("Your sensitivity to tight clothes seems to fade away!")
 	medical_record_text = "Subject has sensitive skin and refuses to wear clothing."
 	quirk_flags = QUIRK_HUMAN_ONLY | QUIRK_MOODLET_BASED
