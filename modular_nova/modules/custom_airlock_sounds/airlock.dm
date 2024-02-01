@@ -1,33 +1,64 @@
+#define AIRLOCK_SOUNDPATH(filename) "modular_nova/modules/custom_airlock_sounds/sound/" + ##filename
+#define INT_AIRLOCK_SOUNDPATH(filename) AIRLOCK_SOUNDPATH("airlock/" + ##filename)
+#define EXT_AIRLOCK_SOUNDPATH(filename) AIRLOCK_SOUNDPATH("external_airlock/" + ##filename)
+#define VAULT_SOUNDPATH(filename) AIRLOCK_SOUNDPATH("vault_airlock/" + ##filename)
+#define FIREDOOR_SOUNDPATH(filename) AIRLOCK_SOUNDPATH("fire_door/" + ##filename)
+
 // Bluemoon addition - Custom airlock sounds
 /obj/machinery/door/airlock
-	doorOpen = 'modular_nova/modules/custom_airlock_sounds/sound/airlock/airlock.ogg'
-	doorClose = 'modular_nova/modules/custom_airlock_sounds/sound/airlock/airlockclose.ogg'
-	boltUp = 'modular_nova/modules/custom_airlock_sounds/sound/airlock/boltsup.ogg'
-	boltDown = 'modular_nova/modules/custom_airlock_sounds/sound/airlock/boltsdown.ogg'
-	var/forcedOpen = 'modular_nova/modules/custom_airlock_sounds/sound/airlock/open_force.ogg'
-	var/forcedClosed = 'modular_nova/modules/custom_airlock_sounds/sound/airlock/close_force.ogg'
+	doorOpen = INT_AIRLOCK_SOUNDPATH("airlock.ogg")
+	doorClose = INT_AIRLOCK_SOUNDPATH("airlockclose.ogg")
+	boltUp = INT_AIRLOCK_SOUNDPATH("boltsup.ogg")
+	boltDown = INT_AIRLOCK_SOUNDPATH("boltsdown.ogg")
 
 /obj/machinery/door/airlock/external
-	doorOpen = 'modular_nova/modules/custom_airlock_sounds/sound/external_airlock/airlock.ogg'
-	doorClose = 'modular_nova/modules/custom_airlock_sounds/sound/external_airlock/airlockclose.ogg'
-	doorDeni = 'modular_nova/modules/custom_airlock_sounds/sound/external_airlock/deniedbeep.ogg'
+	doorOpen = EXT_AIRLOCK_SOUNDPATH("airlock.ogg")
+	doorClose = EXT_AIRLOCK_SOUNDPATH("airlockclose.ogg")
+	doorDeni = EXT_AIRLOCK_SOUNDPATH("deniedbeep.ogg")
+	forcedOpen = EXT_AIRLOCK_SOUNDPATH("open_force.ogg")
+	forcedClosed = EXT_AIRLOCK_SOUNDPATH("close_force.ogg")
 
 /obj/machinery/door/airlock/shuttle
-	doorOpen = 'modular_nova/modules/custom_airlock_sounds/sound/external_airlock/airlock.ogg'
-	doorClose = 'modular_nova/modules/custom_airlock_sounds/sound/external_airlock/airlockclose.ogg'
-	doorDeni = 'modular_nova/modules/custom_airlock_sounds/sound/external_airlock/deniedbeep.ogg'
+	doorOpen = EXT_AIRLOCK_SOUNDPATH("airlock.ogg")
+	doorClose = EXT_AIRLOCK_SOUNDPATH("airlockclose.ogg")
+	doorDeni = EXT_AIRLOCK_SOUNDPATH("deniedbeep.ogg")
+	forcedOpen = EXT_AIRLOCK_SOUNDPATH("open_force.ogg")
+	forcedClosed = EXT_AIRLOCK_SOUNDPATH("close_force.ogg")
 
 /obj/machinery/door/airlock/titanium
-	doorOpen = 'modular_nova/modules/custom_airlock_sounds/sound/external_airlock/airlock.ogg'
-	doorClose = 'modular_nova/modules/custom_airlock_sounds/sound/external_airlock/airlockclose.ogg'
-	doorDeni = 'modular_nova/modules/custom_airlock_sounds/sound/external_airlock/deniedbeep.ogg'
+	doorOpen = EXT_AIRLOCK_SOUNDPATH("airlock.ogg")
+	doorClose = EXT_AIRLOCK_SOUNDPATH("airlockclose.ogg")
+	doorDeni = EXT_AIRLOCK_SOUNDPATH("deniedbeep.ogg")
+	forcedOpen = EXT_AIRLOCK_SOUNDPATH("open_force.ogg")
+	forcedClosed = EXT_AIRLOCK_SOUNDPATH("close_force.ogg")
 
 /obj/machinery/door/airlock/multi_tile
-	doorOpen = 'modular_nova/modules/custom_airlock_sounds/sound/external_airlock/airlock.ogg'
-	doorClose = 'modular_nova/modules/custom_airlock_sounds/sound/external_airlock/airlockclose.ogg'
+	doorOpen = VAULT_SOUNDPATH("airlock.ogg")
+	doorClose = VAULT_SOUNDPATH("airlockclose.ogg")
+	forcedOpen = VAULT_SOUNDPATH("open_force.ogg")
+	forcedClosed = VAULT_SOUNDPATH("close_force.ogg")
+
+/obj/machinery/door/airlock/vault
+	doorOpen = VAULT_SOUNDPATH("airlock.ogg")
+	doorClose = VAULT_SOUNDPATH("airlockclose.ogg")
+	doorDeni = VAULT_SOUNDPATH("deniedbeep.ogg")
+	forcedOpen = VAULT_SOUNDPATH("open_force.ogg")
+	forcedClosed = VAULT_SOUNDPATH("close_force.ogg")
+
+/obj/machinery/door/airlock/command
+	doorDeni = VAULT_SOUNDPATH("deniedbeep.ogg")
+
+/obj/machinery/door/airlock/security
+	doorDeni = VAULT_SOUNDPATH("deniedbeep.ogg")
 
 /*
 /obj/machinery/door/firedoor
-	var/door_open_sound = 'modular_nova/modules/custom_airlock_sounds/sound/external_airlock/airlock.ogg'
-	var/door_close_sound = 'modular_nova/modules/custom_airlock_sounds/sound/external_airlock/airlockclose.ogg'
+	var/door_open_sound = FIREDOOR_SOUNDPATH("airlock.ogg")
+	var/door_close_sound = FIREDOOR_SOUNDPATH("airlockclose.ogg")
 */
+
+#undef AIRLOCK_SOUNDPATH
+#undef INT_AIRLOCK_SOUNDPATH
+#undef EXT_AIRLOCK_SOUNDPATH
+#undef VAULT_SOUNDPATH
+#undef FIREDOOR_SOUNDPATH
