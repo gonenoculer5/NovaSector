@@ -6,8 +6,9 @@
 
 // Are HIGH_IMPACT_RULESETs allowed to stack?
 GLOBAL_VAR_INIT(dynamic_no_stacking, TRUE)
+// Bluemoon edit - Forced extended rounds
 // If enabled does not accept or execute any rulesets.
-GLOBAL_VAR_INIT(dynamic_forced_extended, FALSE)
+GLOBAL_VAR_INIT(dynamic_forced_extended, TRUE)
 // How high threat is required for HIGH_IMPACT_RULESETs stacking.
 // This is independent of dynamic_no_stacking.
 GLOBAL_VAR_INIT(dynamic_stacking_limit, 90)
