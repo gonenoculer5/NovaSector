@@ -5,10 +5,10 @@
 	doorClose = 'modular_nova/modules/aesthetics/airlock/sound/close.ogg'
 	boltUp = 'modular_nova/modules/aesthetics/airlock/sound/bolts_up.ogg'
 	boltDown = 'modular_nova/modules/aesthetics/airlock/sound/bolts_down.ogg'
+	*/
 	//noPower = 'sound/machines/doorclick.ogg'
 	var/forcedOpen = 'modular_nova/modules/aesthetics/airlock/sound/open_force.ogg' //Come on guys, why aren't all the sound files like this.
 	var/forcedClosed = 'modular_nova/modules/aesthetics/airlock/sound/close_force.ogg'
-	*/
 
 	/// For those airlocks you might want to have varying "fillings" for, without having to
 	/// have an icon file per door with a different filling.

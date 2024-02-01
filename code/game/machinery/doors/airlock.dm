@@ -1124,7 +1124,11 @@
 		to_chat(user, span_warning("You don't have the dexterity to remove the seal!"))
 		return TRUE
 	user.visible_message(span_notice("[user] begins removing the seal from [src]."), span_notice("You begin removing [src]'s pneumatic seal."))
+	// Bluemoon edit - Custom airlock sounds
+	playsound(src, forcedClosed, 30, TRUE)
+	/*
 	playsound(src, 'sound/machines/airlockforced.ogg', 30, TRUE)
+	*/
 	if(!do_after(user, airlockseal.unseal_time, target = src))
 		return TRUE
 	if(!seal)
@@ -1272,19 +1276,22 @@
 			if(!hasPower() || wires.is_cut(WIRE_OPEN) || (obj_flags & EMAGGED))
 				return FALSE
 			use_power(50)
-			playsound(src, doorOpen, 30, TRUE)
+			// Bluemoon edit - Custom airlock sounds
+			playsound(src, doorOpen, 30, FALSE)
 			return TRUE
 
 		if(FORCING_DOOR_CHECKS) // Only one check.
 			if(obj_flags & EMAGGED)
 				return FALSE
 			use_power(50)
-			playsound(src, doorOpen, 30, TRUE)
+			// Bluemoon edit - Custom airlock sounds
+			playsound(src, doorOpen, 30, FALSE)
 			return TRUE
 
 		if(BYPASS_DOOR_CHECKS) // No power usage, special sound, get it open.
 			//playsound(src, 'sound/machines/airlockforced.ogg', 30, TRUE) - ORIGINAL
-			playsound(src, forcedOpen, 30, TRUE) //NOVA EDIT CHANGE - AESTHETICS
+			// Bluemoon edit - Custom airlock sounds
+			playsound(src, forcedOpen, 30, FALSE) //NOVA EDIT CHANGE - AESTHETICS
 			return TRUE
 
 		else
@@ -1355,11 +1362,16 @@
 			if(obj_flags & EMAGGED)
 				return FALSE
 			use_power(50)
-			playsound(src, doorClose, 30, TRUE)
+			// Bluemoon edit - Custom airlock sounds
+			playsound(src, doorClose, 30, FALSE)
 			return TRUE
 
 		if(BYPASS_DOOR_CHECKS)
+			// Bluemoon edit - Custom airlock sounds
+			playsound(src, forcedClosed, 30, FALSE)
+			/*
 			playsound(src, 'sound/machines/airlockforced.ogg', 30, TRUE)
+			*/
 			return TRUE
 
 		else
