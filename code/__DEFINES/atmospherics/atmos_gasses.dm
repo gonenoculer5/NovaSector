@@ -19,3 +19,6 @@
 #define GAS_HELIUM "helium"
 #define GAS_ANTINOBLIUM "antinoblium"
 #define GAS_HALON "halon"
+
+// Bluemoon edit - Methane gas
+#define GAS_METHANE "methane"

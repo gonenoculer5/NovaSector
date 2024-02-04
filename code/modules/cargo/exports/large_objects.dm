@@ -140,6 +140,8 @@
 								/datum/gas/helium,
 								/datum/gas/antinoblium,
 								/datum/gas/halon,
+								// Bluemoon edit - Methane gas
+								/datum/gas/methane,
 								)
 
 	for(var/gasID in gases_to_check)

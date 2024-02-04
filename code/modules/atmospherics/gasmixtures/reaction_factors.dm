@@ -206,3 +206,14 @@
 		"Hallucinations" = "This reaction can cause various carbon based lifeforms in the vicinity to hallucinate.",
 		"Nuclear Particles" = "This reaction emits extremely high energy nuclear particles, up to [2 * PN_BZASE_NUCLEAR_PARTICLE_MAXIMUM] per second per unique gas mixture.",
 	)
+
+// Bluemoon edit - Methane gas
+/datum/gas_reaction/methanefire/init_factors()
+	factor = list(
+		/datum/gas/oxygen = "Oxygen is consumed at 2 moles per mole of methane consumed. Higher oxygen concentration up to [METHANE_OXYGEN_FULLBURN] times the methane increases the methane consumption rate.",
+		/datum/gas/methane = "Methane is consumed as long as there's enough oxygen to allow combustion.",
+		/datum/gas/water_vapor = "Water vapor is produced at 2 mole per mole of methane combusted.",
+		/datum/gas/carbon_dioxide = "Carbon dioxide is produced at 1 mole per mole of methane combusted.",
+		"Temperature" = "Minimum temperature of [FIRE_MINIMUM_TEMPERATURE_TO_EXIST] kelvin to occur",
+		"Energy" = "[FIRE_METHANE_ENERGY_RELEASED] joules of energy is released per mol of hydrogen consumed.",
+	)

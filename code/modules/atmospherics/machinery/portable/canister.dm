@@ -249,6 +249,14 @@
 	greyscale_config = /datum/greyscale_config/canister/double_stripe
 	greyscale_colors = "#009a00#006600"
 
+// Bluemoon edit - Methane gas
+/obj/machinery/portable_atmospherics/canister/methane
+	name = "Methane canister"
+	gas_type = /datum/gas/methane
+	filled = 1
+	greyscale_config = /datum/greyscale_config/canister/double_stripe
+	greyscale_colors = "#fa6416#d41313"
+
 // Special canisters below here
 
 /obj/machinery/portable_atmospherics/canister/fusion_test

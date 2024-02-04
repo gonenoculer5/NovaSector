@@ -257,3 +257,14 @@
 #define PN_BZASE_NUCLEAR_PARTICLE_MAXIMUM 6
 /// How much radiation in consumed amount does a nuclear particle take from radiation when proto-nitrate breaks down BZ.
 #define PN_BZASE_NUCLEAR_PARTICLE_RADIATION_ENERGY_CONVERSION 2.5
+
+// Bluemoon edit - Methane gas
+// - Methane:
+/// The minimum temperature methane combusts at. (580 °C or 853 K)
+#define METHANE_MINIMUM_BURN_TEMPERATURE 580+T0C
+/// The amount of energy released by burning one mole of methane. (890.4 kJ)
+#define FIRE_METHANE_ENERGY_RELEASED 8.904e5
+/// Multiplier for methane fire with O2 moles * METHANE_OXYGEN_FULLBURN for the maximum fuel consumption
+#define METHANE_OXYGEN_FULLBURN 10
+/// The divisor for the maximum methane burn rate. (1/9 of the methane can burn in one reaction tick.)
+#define FIRE_METHANE_BURN_RATE_DELTA 9

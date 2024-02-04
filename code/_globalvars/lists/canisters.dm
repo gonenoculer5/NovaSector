@@ -25,5 +25,7 @@ GLOBAL_LIST_INIT(gas_id_to_canister, init_gas_id_to_canister())
 		GAS_ZAUKER = /obj/machinery/portable_atmospherics/canister/zauker,
 		GAS_HELIUM = /obj/machinery/portable_atmospherics/canister/helium,
 		GAS_ANTINOBLIUM = /obj/machinery/portable_atmospherics/canister/antinoblium,
-		GAS_HALON = /obj/machinery/portable_atmospherics/canister/halon
+		GAS_HALON = /obj/machinery/portable_atmospherics/canister/halon,
+		// Bluemoon edit - Methane gas
+		GAS_METHANE = /obj/machinery/portable_atmospherics/canister/methane,
 	))

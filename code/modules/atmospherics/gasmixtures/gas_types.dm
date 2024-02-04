@@ -305,6 +305,17 @@
 	desc = "We still don't know what it does, but it sells for a lot."
 	primary_color = "#800000"
 
+// Bluemoon edit - Methane gas
+/datum/gas/methane
+	id = GAS_METHANE
+	specific_heat = 15
+	name = "Methane"
+	dangerous = TRUE
+	rarity = 600
+	base_value = 1
+	desc = "A highly flammable gas normally used in gas turbines."
+	primary_color = "#ffffff"
+
 /obj/effect/overlay/gas
 	icon = 'icons/effects/atmospherics.dmi'
 	mouse_opacity = MOUSE_OPACITY_TRANSPARENT

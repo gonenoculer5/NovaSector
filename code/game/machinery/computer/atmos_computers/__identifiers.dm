@@ -31,6 +31,8 @@
 #define ATMOS_GAS_MONITOR_DISTRO "distro"
 #define ATMOS_GAS_MONITOR_WASTE "waste"
 #define ATMOS_GAS_MONITOR_ENGINE "engine"
+// Bluemoon edit - Methane gas
+#define ATMOS_GAS_MONITOR_METHANE GAS_METHANE
 
 ///maps an air sensor's chamber id to its input valve[ i.e. outlet_injector] id
 #define CHAMBER_INPUT_FROM_ID(chamber_id) ((chamber_id) + "_in")
@@ -70,4 +72,6 @@ GLOBAL_LIST_INIT(station_gas_chambers, list(
 	ATMOS_GAS_MONITOR_DISTRO = "Distribution Loop",
 	ATMOS_GAS_MONITOR_WASTE = "Waste Loop",
 	ATMOS_GAS_MONITOR_ENGINE = "Supermatter Engine Chamber",
+	// Bluemoon edit - Methane gas
+	ATMOS_GAS_MONITOR_METHANE = "Methane Supply",
 ))

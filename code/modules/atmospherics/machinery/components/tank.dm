@@ -428,6 +428,10 @@
 /obj/machinery/atmospherics/components/tank/antinoblium
 	gas_type = /datum/gas/antinoblium
 
+// Bluemoon edit - Methane gas
+/obj/machinery/atmospherics/components/tank/methane
+	gas_type = /datum/gas/methane
+
 ///////////////////////////////////////////////////////////////////
 // Tank Frame Structure
 
