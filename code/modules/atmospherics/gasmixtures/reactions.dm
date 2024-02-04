@@ -1165,7 +1165,7 @@
 	name = "Methane Combustion"
 	id = "methanefire"
 	expands_hotspot = TRUE
-	desc = "Combustion of methane with oxygen. Can be extremely fast and energetic if a few conditions are fulfilled."
+	desc = "Combustion of methane with oxygen. Extremely exothermic, which makes it very useful as a fuel source."
 
 /datum/gas_reaction/methanefire/init_reqs()
 	requirements = list(
@@ -1206,5 +1206,56 @@
 			location.hotspot_expose(temperature, CELL_VOLUME)
 
 	return burned_fuel ? REACTING : NO_REACTION
+
+// Bluemoon edit - Methane gas
+/**
+ * Methane to Hydrogen Reforming:
+ *
+ * Formation of Hydrogen from Methane and H2O.
+ * Endothermic.
+ * Requires water vapor heated between temperatures 700°C - 1,000°C, and pressure between 20kPa - 172kPa.
+ */
+/datum/gas_reaction/methane_reformation
+	priority_group = PRIORITY_FORMATION
+	name = "Methane Reformation"
+	id = "methanereformation"
+	desc = "Reforming of methane into hydrogen with high-temperature H2O as a catalyst."
+
+/datum/gas_reaction/methane_reformation/init_reqs()
+	requirements = list(
+		/datum/gas/methane = MINIMUM_MOLE_COUNT,
+		/datum/gas/water_vapor = MINIMUM_MOLE_COUNT,
+		"MIN_TEMP" = METHANE_REFORMATION_MIN_TEMPERATURE,
+		"MAX_TEMP" = METHANE_REFORMATION_MAX_TEMPERATURE,
+	)
+
+/datum/gas_reaction/methane_reformation/react(datum/gas_mixture/air)
+	var/pressure = air.return_pressure()
+	if(pressure < METHANE_REFORMATION_MIN_PRESSURE || pressure > METHANE_REFORMATION_MAX_PRESSURE)
+		return NO_REACTION
+
+	var/list/cached_gases = air.gases
+	var/temperature = air.temperature
+	var/volume = air.return_volume()
+	var/environment_effciency = volume/pressure
+	var/heat_efficency = min(temperature * 0.005 * environment_effciency, cached_gases[/datum/gas/methane][MOLES], cached_gases[/datum/gas/water_vapor][MOLES])
+	if ((cached_gases[/datum/gas/methane][MOLES] - heat_efficency * 0.5 < 0 ) || (cached_gases[/datum/gas/water_vapor][MOLES] - heat_efficency < 0))
+		return NO_REACTION // Shouldn't produce gas from nothing.
+
+	var/old_heat_capacity = air.heat_capacity()
+	cached_gases[/datum/gas/methane][MOLES] -= heat_efficency
+	cached_gases[/datum/gas/water_vapor][MOLES] -= heat_efficency
+	ASSERT_GAS(/datum/gas/hydrogen, air)
+	ASSERT_GAS(/datum/gas/carbon_dioxide, air)
+	cached_gases[/datum/gas/hydrogen][MOLES] += heat_efficency * METHANE_REFORMATION_RATIO
+	cached_gases[/datum/gas/carbon_dioxide][MOLES] += heat_efficency
+
+	SET_REACTION_RESULTS(heat_efficency * METHANE_REFORMATION_RATIO)
+	var/energy_used = heat_efficency * METHANE_REFORMATION_ENERGY
+	var/new_heat_capacity = air.heat_capacity()
+	// The air cools down when reforming.
+	if(new_heat_capacity > MINIMUM_HEAT_CAPACITY)
+		air.temperature = max(((temperature * old_heat_capacity - energy_used) / new_heat_capacity), TCMB)
+	return REACTING
 
 #undef SET_REACTION_RESULTS
