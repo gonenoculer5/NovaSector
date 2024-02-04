@@ -214,6 +214,6 @@
 		/datum/gas/methane = "Methane is consumed as long as there's enough oxygen to allow combustion.",
 		/datum/gas/water_vapor = "Water vapor is produced at 2 mole per mole of methane combusted.",
 		/datum/gas/carbon_dioxide = "Carbon dioxide is produced at 1 mole per mole of methane combusted.",
-		"Temperature" = "Minimum temperature of [FIRE_MINIMUM_TEMPERATURE_TO_EXIST] kelvin to occur",
+		"Temperature" = "Minimum temperature of [FIRE_MINIMUM_TEMPERATURE_TO_EXIST] kelvin to occur.",
 		"Energy" = "[FIRE_METHANE_ENERGY_RELEASED] joules of energy is released per mol of hydrogen consumed.",
 	)
