@@ -122,6 +122,8 @@
 
 /obj/machinery/light/LateInitialize()
 	. = ..()
+	// Bluemoon edit - Reliable light bulbs
+	/*
 	switch(fitting)
 		if("tube")
 			if(prob(2))
@@ -129,6 +131,7 @@
 		if("bulb")
 			if(prob(5))
 				break_light_tube(TRUE)
+	*/
 	update(trigger = FALSE)
 
 /obj/machinery/light/Destroy()
@@ -506,10 +509,13 @@
 	if(!has_emergency_power(power_usage_amount))
 		return FALSE
 	var/obj/item/stock_parts/cell/real_cell = get_cell()
+	// Bluemoon edit - Reliable light bulbs
+	/*
 	if(real_cell.charge > 300) //it's meant to handle 120 W, ya doofus
 		visible_message(span_warning("[src] short-circuits from too powerful of a power cell!"))
 		burn_out()
 		return FALSE
+	*/
 	real_cell.use(power_usage_amount)
 	set_light(
 		l_range = brightness * bulb_low_power_brightness_mul,

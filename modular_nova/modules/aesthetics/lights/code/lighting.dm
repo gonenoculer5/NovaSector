@@ -58,6 +58,13 @@
 	var/matching = light && new_brightness == light.light_range && new_power == light.light_power && new_color == light.light_color
 	if(!matching)
 		switchcount++
+		// Bluemoon edit - Reliable light bulbs
+		use_power = ACTIVE_POWER_USE
+		set_light(new_brightness, new_power, new_color)
+		if(play_sound)
+			playsound(src.loc, 'modular_nova/modules/aesthetics/lights/sound/light_on.ogg', 65, 1)
+		/*
+		switchcount++
 		if( prob( min(60, (switchcount**2)*0.01) ) )
 			if(trigger)
 				burn_out()
@@ -66,6 +73,7 @@
 			set_light(new_brightness, new_power, new_color)
 			if(play_sound)
 				playsound(src.loc, 'modular_nova/modules/aesthetics/lights/sound/light_on.ogg', 65, 1)
+		*/
 
 /obj/machinery/light/proc/start_flickering()
 	on = FALSE
