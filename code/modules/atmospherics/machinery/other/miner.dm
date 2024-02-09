@@ -244,12 +244,6 @@
 	overlay_color = "#022e00"
 	spawn_id = /datum/gas/antinoblium
 
-// Bluemoon edit - Methane gas
-/obj/machinery/atmospherics/miner/methane
-	name = "\improper Methane Gas Miner"
-	overlay_color = "#ffffff"
-	spawn_id = /datum/gas/methane
-
 #undef GASMINER_POWER_NONE
 #undef GASMINER_POWER_STATIC
 #undef GASMINER_POWER_MOLES
