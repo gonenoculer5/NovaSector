@@ -116,3 +116,16 @@
 	icon_state = "radiation-w"
 
 // MISC END
+
+// Bluemoon edit - Methane gas
+/obj/effect/turf_decal/vg_decals/atmos/methane
+	icon = 'modular_nova/modules/mapping/icons/turf/decals/bluemoon_decals.dmi'
+	icon_state = "methane"
+
+/obj/effect/turf_decal/vg_decals/atmos/hydrogen
+	icon = 'modular_nova/modules/mapping/icons/turf/decals/bluemoon_decals.dmi'
+	icon_state = "hydrogen"
+
+/obj/effect/turf_decal/vg_decals/atmos/water_vapor
+	icon = 'modular_nova/modules/mapping/icons/turf/decals/bluemoon_decals.dmi'
+	icon_state = "water_vapor"
