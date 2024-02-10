@@ -30,11 +30,11 @@
 
 	// Copy pasted from TG's /obj/machinery/light/update() proc - only way to avoid this would to be to refactor this portion upstream to be in its own proc.
 	if( prob( min(60, (switchcount**2)*0.01) ) )
+		// Bluemoon edit - Reliable light bulbs
+		/*
 		if(trigger)
-			// Bluemoon edit - Reliable light bulbs
-			/*
 			burn_out()
-			*/
+		*/
 	else
 		use_power = ACTIVE_POWER_USE
 		set_light(
