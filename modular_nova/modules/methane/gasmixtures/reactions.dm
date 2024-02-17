@@ -153,7 +153,7 @@
 
 	var/energy_used = heat_efficency * SABATIER_REFORMATION_ENERGY
 	var/new_heat_capacity = air.heat_capacity()
-	// The air cools down when reforming.
+	// The heats up when reforming.
 	if(new_heat_capacity > MINIMUM_HEAT_CAPACITY)
-		air.temperature = max(((temperature * old_heat_capacity - energy_used) / new_heat_capacity), TCMB)
+		air.temperature = max(((temperature * old_heat_capacity + energy_used) / new_heat_capacity), TCMB)
 	return REACTING
