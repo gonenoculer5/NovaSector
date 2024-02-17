@@ -23,3 +23,20 @@
 #define METHANE_REFORMATION_ENERGY 2.06e5
 /// The amount of hydrogen moles released per mole of methane reformed.
 #define METHANE_REFORMATION_RATIO 3
+
+// Bluemoon edit - Methane gas
+// Sabatier reaction. CO2 and Hydrogen reformation into methane.
+/// The minimum temperature at which methane can form from CO2 and H2.
+#define SABATIER_REFORMATION_MIN_TEMPERATURE 298+T0C
+/// The maximum temperature at which methane can form from CO2 and H2.
+#define SABATIER_REFORMATION_MAX_TEMPERATURE 358+T0C
+/// The minimum pressure at which methane can form from CO2 and H2.
+#define SABATIER_REFORMATION_MIN_PRESSURE 100
+/// The maximum pressure at which methane can form from CO2 and H2.
+#define SABATIER_REFORMATION_MAX_PRESSURE 10000
+/// The amount of energy consumed when 4 moles of hydrogen and 1 mole of CO2 form into methane. (165 kJ)
+#define SABATIER_REFORMATION_ENERGY 1.65e5
+/// The amount of methane moles released per 4 moles of hydrogen and 1 moles of CO2 reformed.
+#define SABATIER_REFORMATION_METHANE_RATIO 1
+/// The amount of H2O moles released per 4 moles of hydrogen and 1 moles of CO2 reformed.
+#define SABATIER_REFORMATION_H2O_RATIO 2

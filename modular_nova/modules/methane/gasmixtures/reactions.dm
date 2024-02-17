@@ -30,7 +30,7 @@
 		return NO_REACTION
 
 	cached_gases[/datum/gas/methane][MOLES] -= burned_fuel
-	cached_gases[/datum/gas/oxygen][MOLES] -= burned_fuel * 0.5
+	cached_gases[/datum/gas/oxygen][MOLES] -= burned_fuel * 2
 	ASSERT_GAS(/datum/gas/water_vapor, air)
 	ASSERT_GAS(/datum/gas/carbon_dioxide, air)
 	cached_gases[/datum/gas/water_vapor][MOLES] += burned_fuel * 2
@@ -82,6 +82,7 @@
 	var/list/cached_gases = air.gases
 	var/temperature = air.temperature
 	var/volume = air.return_volume()
+	// More volume and less pressure gives better rates
 	var/environment_effciency = volume/pressure
 	var/heat_efficency = min(temperature * 0.005 * environment_effciency, cached_gases[/datum/gas/methane][MOLES], cached_gases[/datum/gas/water_vapor][MOLES])
 	if ((cached_gases[/datum/gas/methane][MOLES] - heat_efficency * 0.5 < 0 ) || (cached_gases[/datum/gas/water_vapor][MOLES] - heat_efficency < 0))
@@ -98,6 +99,59 @@
 	air.reaction_results[type] = heat_efficency * METHANE_REFORMATION_RATIO
 
 	var/energy_used = heat_efficency * METHANE_REFORMATION_ENERGY
+	var/new_heat_capacity = air.heat_capacity()
+	// The air cools down when reforming.
+	if(new_heat_capacity > MINIMUM_HEAT_CAPACITY)
+		air.temperature = max(((temperature * old_heat_capacity - energy_used) / new_heat_capacity), TCMB)
+	return REACTING
+
+
+// Bluemoon edit - Methane gas
+/**
+ * Sabatier reaction. CO2/Hydrogen to Methane Reforming:
+ *
+ * Formation of Methane from CO2 and Hydrogen.
+ * Exothermic.
+ */
+/datum/gas_reaction/sabatier_reaction
+	priority_group = PRIORITY_FORMATION
+	name = "Sabatier Reaction"
+	id = "co2h2reformation"
+	desc = "Reforming of CO2 and hydrogen into methane with high temperature."
+
+/datum/gas_reaction/sabatier_reaction/init_reqs()
+	requirements = list(
+		/datum/gas/hydrogen = MINIMUM_MOLE_COUNT * 4,
+		/datum/gas/carbon_dioxide = MINIMUM_MOLE_COUNT,
+		"MIN_TEMP" = SABATIER_REFORMATION_MIN_TEMPERATURE,
+		"MAX_TEMP" = SABATIER_REFORMATION_MAX_TEMPERATURE,
+	)
+
+/datum/gas_reaction/sabatier_reaction/react(datum/gas_mixture/air)
+	var/pressure = air.return_pressure()
+	if(pressure < SABATIER_REFORMATION_MIN_PRESSURE || pressure > SABATIER_REFORMATION_MAX_PRESSURE)
+		return NO_REACTION
+
+	var/list/cached_gases = air.gases
+	var/temperature = air.temperature
+	var/volume = air.return_volume()
+	// More pressure and less volume gives better rates
+	var/environment_effciency = pressure/volume
+	var/heat_efficency = min(temperature * 0.005 * environment_effciency, cached_gases[/datum/gas/hydrogen][MOLES], cached_gases[/datum/gas/carbon_dioxide][MOLES])
+	if ((cached_gases[/datum/gas/hydrogen][MOLES] - heat_efficency * 0.5 < 0 ) || (cached_gases[/datum/gas/carbon_dioxide][MOLES] - heat_efficency < 0))
+		return NO_REACTION // Shouldn't produce gas from nothing.
+
+	var/old_heat_capacity = air.heat_capacity()
+	cached_gases[/datum/gas/hydrogen][MOLES] -= heat_efficency * 4
+	cached_gases[/datum/gas/carbon_dioxide][MOLES] -= heat_efficency
+	ASSERT_GAS(/datum/gas/methane, air)
+	ASSERT_GAS(/datum/gas/water_vapor, air)
+	cached_gases[/datum/gas/methane][MOLES] += heat_efficency * SABATIER_REFORMATION_METHANE_RATIO
+	cached_gases[/datum/gas/water_vapor][MOLES] += heat_efficency * SABATIER_REFORMATION_H2O_RATIO
+
+	air.reaction_results[type] = heat_efficency * (SABATIER_REFORMATION_H2O_RATIO + SABATIER_REFORMATION_METHANE_RATIO)
+
+	var/energy_used = heat_efficency * SABATIER_REFORMATION_ENERGY
 	var/new_heat_capacity = air.heat_capacity()
 	// The air cools down when reforming.
 	if(new_heat_capacity > MINIMUM_HEAT_CAPACITY)
