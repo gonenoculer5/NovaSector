@@ -16,32 +16,34 @@ endmap
 # Production-level maps.
 
 map birdshot
-	disabled
-	maxplayers 0
+	#default
+	maxplayers 66
+	votable
 endmap
 
 map deltastation
-	minplayers 0
+	minplayers 50
 	votable
 endmap
 
 map icebox
-	minplayers 0
+	minplayers 25
 	votable
 endmap
 
 map metastation
-	minplayers 0
+	minplayers 25
+	#voteweight 0.5
 	votable
 endmap
 
-#map northstar
-	disabled
-	minplayers 0
+map northstar
+	minplayers 50
+	votable
 endmap
 
 map tramstation
-	minplayers 0
+	minplayers 35
 	votable
 endmap
 
@@ -59,24 +61,11 @@ endmap
 ##NOVA SECTOR MAPS##
 
 map voidraptor
-	maxplayers 0
+	maxplayers 100
 	votable
 endmap
 
 map blueshift
-	minplayers 0
-	votable
-endmap
-
-# Bluemoon edit - Add Kilostation map
-map kilostation
-	default
-	minplayers 0
-	votable
-endmap
-
-# Bluemoon edit - Add Shipstation map
-map shipstation
-	minplayers 0
+	minplayers 70
 	votable
 endmap

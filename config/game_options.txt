@@ -50,7 +50,7 @@ MULTIPLICATIVE_MOVESPEED /mob/living/basic 0
 
 ## NAMES ###
 ## If uncommented this adds a random surname to a player's name if they only specify one name.
-#HUMANS_NEED_SURNAMES
+HUMANS_NEED_SURNAMES
 
 ## If uncommented, this forces all players to use random names !and appearances!.
 #FORCE_RANDOM_NAMES
@@ -130,14 +130,14 @@ ALLOW_LATEJOIN_ANTAGONISTS
 #DISABLE_WAROPS
 
 ## Uncomment to enable dynamic ruleset config file.
-#DYNAMIC_CONFIG_ENABLED
+DYNAMIC_CONFIG_ENABLED
 
 ## RANDOM EVENTS ###
 ## Comment this out to disable random events during the round.
-#ALLOW_RANDOM_EVENTS
+ALLOW_RANDOM_EVENTS
 
 ## Uncomment this to disable station traits.
-FORBID_STATION_TRAITS
+#FORBID_STATION_TRAITS
 
 ## Multiplier for earliest start time of dangerous events.
 ## Set to 0 to make dangerous events avaliable from round start.
@@ -187,16 +187,16 @@ MINIMAL_ACCESS_THRESHOLD 20
 ## This is intended for servers with low populations - where there are not enough
 ## players to fill all roles, so players need to do more than just one job.
 ## This option is ignored if MINIMAL_ACCESS_THRESHOLD is used.
-JOBS_HAVE_MINIMAL_ACCESS
+#JOBS_HAVE_MINIMAL_ACCESS
 
 ## Uncomment to give assistants maint access.
-ASSISTANTS_HAVE_MAINT_ACCESS
+#ASSISTANTS_HAVE_MAINT_ACCESS
 
 ## Uncoment to give security maint access. Note that if you dectivate JOBS_HAVE_MINIMAL_ACCESS security already gets maint from that.
-SECURITY_HAS_MAINT_ACCESS
+#SECURITY_HAS_MAINT_ACCESS
 
 ## Uncomment to give everyone maint access.
-EVERYONE_HAS_MAINT_ACCESS
+#EVERYONE_HAS_MAINT_ACCESS
 
 ## Comment this out this to make security officers spawn in departmental security posts
 #SEC_START_BRIG
@@ -205,7 +205,7 @@ EVERYONE_HAS_MAINT_ACCESS
 ## Set to 0/commented out for "off", Departmental Security Officers will never get additional room-specific access (beyond general departmental doors).
 ## Set to 1 if you want to enable "Scaling Access", where Departmental Security Officers will get access to most rooms within a department depending on how many security officers there are relative to the number of people on a station.
 ## Set to 2 if you want Departmental Security Officers to always have access to all rooms in a department.
-DEPSEC_ACCESS_LEVEL 2
+DEPSEC_ACCESS_LEVEL 1
 
 
 ## GHOST INTERACTION ###
@@ -352,17 +352,17 @@ ROUNDSTART_RACES human
 ROUNDSTART_RACES felinid
 ROUNDSTART_RACES lizard
 ROUNDSTART_RACES felinid
-ROUNDSTART_RACES fly
+#ROUNDSTART_RACES fly
 ROUNDSTART_RACES moth
 ROUNDSTART_RACES plasmaman
-ROUNDSTART_RACES shadow
+#ROUNDSTART_RACES shadow
 ROUNDSTART_RACES teshari
 ROUNDSTART_RACES hemophage
 ROUNDSTART_RACES snail
 
 ## Races that are better than humans in some ways, but worse in others
 ROUNDSTART_RACES ethereal
-ROUNDSTART_RACES jelly
+#ROUNDSTART_RACES jelly
 #ROUNDSTART_RACES abductor
 #ROUNDSTART_RACES synth
 
@@ -395,10 +395,10 @@ ROUNDSTART_RACES jelly
 #ROUNDSTART_RACES metallic_hydrogen_golem
 
 ## Races that are straight upgrades. If these are on expect powergamers to always pick them
-ROUNDSTART_RACES skeleton
+#ROUNDSTART_RACES skeleton
 #ROUNDSTART_RACES zombie
-ROUNDSTART_RACES slime
-ROUNDSTART_RACES pod
+#ROUNDSTART_RACES slime
+#ROUNDSTART_RACES pod
 #ROUNDSTART_RACES military_synth
 #ROUNDSTART_RACES agent
 
@@ -509,7 +509,7 @@ ARRIVALS_SHUTTLE_DOCK_WINDOW 55
 
 ## How many wirechewing rodents you want to spawn on exposed maintenane wires at the start of the round. You may wish to set this to 0 if you're testing powernets.
 
-MICE_ROUNDSTART 0
+MICE_ROUNDSTART 10
 
 ## If the percentage of players alive (doesn't count conversions) drops below this threshold the emergency shuttle will be forcefully called (provided it can be)
 #EMERGENCY_SHUTTLE_AUTOCALL_THRESHOLD 0.2
@@ -522,19 +522,19 @@ ROUNDSTART_TRAITS
 #DISABLE_HUMAN_MOOD
 
 ## Enable night shifts
-ENABLE_NIGHT_SHIFTS
+#ENABLE_NIGHT_SHIFTS
 
 ## The shift start hour in 24-hour (0-23) notation
 SHIFT_TIME_START_HOUR 7
 
 ## Sets shift time to server time at roundstart. Overrides SHIFT_TIME_START_HOUR
-SHIFT_TIME_REALTIME
+#SHIFT_TIME_REALTIME
 
 ## Enable randomized shift start times. Overrides SHIFT_TIME_REALTIME and SHIFT_TIME_START_HOUR
 #RANDOMIZE_SHIFT_TIME
 
 ## A cap on how many monkeys may be created via monkey cubes
-MONKEYCAP 128
+MONKEYCAP 64
 
 ## A cap on how many mice can be bred via cheese wedges
 RATCAP 64
@@ -557,7 +557,7 @@ MAXFINE 2000
 
 ## Comment if you wish to enable title music playing at the lobby screen. This flag is disabled by default to facilitate better code testing on local machines.
 ## Do keep in mind that this flag will not affect individual player's preferences: if they opt-out on your server, it will never play for them.
-#DISALLOW_TITLE_MUSIC
+DISALLOW_TITLE_MUSIC
 
 ## If enabled, then when the database is disabled, all players will get tutorials.
 ## This is primarily useful for developing tutorials. If you have a proper DB setup, you
