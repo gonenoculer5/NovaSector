@@ -7406,7 +7406,6 @@
 /obj/effect/decal/cleanable/cobweb/cobweb2,
 /obj/machinery/airalarm/directional/east,
 /obj/effect/landmark/start/assistant,
-/obj/item/bedsheet/dorms,
 /obj/effect/landmark/start/hangover,
 /obj/machinery/button/door/directional/north{
 	id = "Cabin_2";
@@ -7416,6 +7415,7 @@
 	},
 /obj/effect/mapping_helpers/broken_floor,
 /obj/item/pillow/random,
+/obj/effect/spawner/random/bedsheet,
 /turf/open/floor/wood,
 /area/station/commons/locker)
 "czH" = (
@@ -21477,9 +21477,6 @@
 	},
 /obj/machinery/airalarm/directional/west,
 /obj/effect/landmark/start/assistant,
-/obj/item/bedsheet/dorms{
-	dir = 4
-	},
 /obj/effect/landmark/start/hangover,
 /obj/machinery/button/door/directional/north{
 	id = "Cabin_3";
@@ -21488,6 +21485,9 @@
 	specialfunctions = 4
 	},
 /obj/item/pillow/random,
+/obj/effect/spawner/random/bedsheet{
+	dir = 4
+	},
 /turf/open/floor/wood,
 /area/station/commons/locker)
 "hfP" = (
@@ -53901,6 +53901,11 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/misc/asteroid,
 /area/space/nearstation)
+"rLJ" = (
+/obj/effect/turf_decal/tile/neutral/fourcorners,
+/obj/structure/disposalpipe/segment,
+/turf/open/floor/iron,
+/area/station/hallway/primary/fore)
 "rLN" = (
 /obj/effect/turf_decal/bot,
 /obj/item/radio/intercom/directional/north,
@@ -54131,11 +54136,11 @@
 	dir = 4
 	},
 /obj/effect/landmark/start/assistant,
-/obj/item/bedsheet/dorms{
-	dir = 4
-	},
 /obj/effect/landmark/start/hangover,
 /obj/item/pillow/random,
+/obj/effect/spawner/random/bedsheet{
+	dir = 4
+	},
 /turf/open/floor/wood,
 /area/station/commons/locker)
 "rPy" = (
@@ -65601,13 +65606,11 @@
 /area/station/hallway/primary/fore)
 "vxf" = (
 /obj/structure/cable,
-/obj/structure/disposalpipe/segment{
-	dir = 10
-	},
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /obj/effect/turf_decal/tile/neutral{
 	dir = 8
 	},
+/obj/structure/disposalpipe/junction,
 /turf/open/floor/iron,
 /area/station/hallway/primary/fore)
 "vxr" = (
@@ -70903,7 +70906,10 @@
 /area/station/science/xenobiology)
 "xcj" = (
 /obj/effect/turf_decal/siding/green,
-/obj/machinery/door/firedoor/border_only/closed,
+/obj/machinery/door/window/left/directional/south{
+	req_access = list("maint_tunnels");
+	name = "Animal Pen"
+	},
 /turf/open/misc/sandy_dirt,
 /area/station/service/hydroponics/garden)
 "xck" = (
@@ -70988,9 +70994,9 @@
 "xds" = (
 /obj/structure/bed,
 /obj/effect/landmark/start/assistant,
-/obj/item/bedsheet/dorms,
 /obj/effect/landmark/start/hangover,
 /obj/item/pillow/random,
+/obj/effect/spawner/random/bedsheet,
 /turf/open/floor/wood,
 /area/station/commons/locker)
 "xdv" = (
@@ -98122,7 +98128,7 @@ qlC
 ehY
 qlC
 fSY
-eFR
+rLJ
 vxf
 aSX
 kPf
