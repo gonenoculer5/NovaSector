@@ -92,9 +92,8 @@ export type Quirk = {
   value: number;
   customizable: boolean;
   customization_options?: string[];
-  veteran_only: boolean; // NOVA EDIT - Veteran quirks
-  // Bluemoon edit - ERP quirk color
-  erp_quirk: boolean;
+  veteran_only: boolean; // NOVA EDIT ADDITION - Veteran quirks
+  erp_quirk: boolean; // NOVA EDIT ADDITION - Purple ERP quirks
 };
 
 // NOVA EDIT START

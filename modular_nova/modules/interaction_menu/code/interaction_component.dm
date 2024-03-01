@@ -43,11 +43,13 @@
 	return ..()
 
 /datum/component/interactable/proc/open_interaction_menu(datum/source, mob/user)
+	SIGNAL_HANDLER
+	
 	// Bluemoon edit - Cyborg interactions
 	if(!ishuman(user) && !iscyborg(user))
 		return
 	build_interactions_list()
-	ui_interact(user)
+	INVOKE_ASYNC(src, PROC_REF(ui_interact), user)
 
 // Bluemoon edit - Cyborg interactions
 /datum/component/interactable/proc/can_interact(datum/interaction/interaction, mob/living/target)

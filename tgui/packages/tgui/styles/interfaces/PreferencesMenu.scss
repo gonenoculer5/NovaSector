@@ -2,6 +2,7 @@
 @use 'sass:map';
 @use '../components/Button.scss';
 @use '../colors.scss';
+@use '../base.scss';
 
 $department_map: (
   'Assistant': colors.$grey,
@@ -15,6 +16,10 @@ $department_map: (
   'Service': colors.$green,
   'Silicon': colors.$pink,
 );
+
+.ChoicedSelection {
+  background-color: base.$color-bg;
+}
 
 .PreferencesMenu {
   &__Antags {
@@ -234,10 +239,11 @@ $department_map: (
 
         $quality_map: (
           'positive': colors.$green,
-          // Bluemoon edit - ERP quirk color
-          'erp_quirk': colors.$purple,
           'neutral': colors.$white,
           'negative': colors.$red,
+          // NOVA EDIT ADDITION START - Purple ERP quirks
+          'erp_quirk': colors.$purple,
+          // NOVA EDIT ADDITION END
         );
 
         @each $quality, $color-value in $quality_map {

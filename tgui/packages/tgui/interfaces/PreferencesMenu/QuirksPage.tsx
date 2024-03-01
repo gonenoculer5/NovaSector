@@ -8,29 +8,19 @@ import { getRandomization, PreferenceList } from './MainPage';
 import { ServerPreferencesFetcher } from './ServerPreferencesFetcher';
 import { useRandomToggleState } from './useRandomToggleState';
 
-// Bluemoon edit - ERP quirk color
-function getValueClass(quirk: Quirk) {
+function getColorValueClass(quirk: Quirk) {
   if (quirk.value > 0) {
     return 'positive';
   } else if (quirk.value < 0) {
     return 'negative';
+    // NOVA EDIT ADDITION BEGIN - Purple ERP quirks
   } else if (quirk.erp_quirk) {
     return 'erp_quirk';
+    // NOVA EDIT ADDITION END
   } else {
     return 'neutral';
   }
 }
-/*
-function getValueClass(value: number) {
-  if (value > 0) {
-    return 'positive';
-  } else if (value < 0) {
-    return 'negative';
-  } else {
-    return 'neutral';
-  }
-}
-*/
 
 function getCorrespondingPreferences(
   customization_options: string[],
@@ -145,7 +135,7 @@ function QuirkDisplay(props: QuirkDisplayProps) {
         >
           <Stack vertical fill>
             <Stack.Item
-              className={`${className}--${getValueClass(quirk)}`}
+              className={`${className}--${getColorValueClass(quirk)}`}
               style={{
                 borderBottom: '1px solid black',
                 padding: '2px',
