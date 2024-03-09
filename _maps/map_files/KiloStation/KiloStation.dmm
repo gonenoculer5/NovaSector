@@ -3552,20 +3552,16 @@
 /turf/open/floor/wood,
 /area/station/maintenance/port/fore)
 "bkT" = (
-/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
-/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/obj/machinery/status_display/ai/directional/north,
 /obj/machinery/camera/directional/north{
 	c_tag = "Locker Room";
 	name = "recreation camera"
 	},
-/obj/machinery/status_display/ai/directional/north,
-/obj/effect/turf_decal/tile/red{
-	dir = 1
-	},
-/obj/effect/turf_decal/tile/blue{
+/obj/effect/turf_decal/tile/neutral/half/contrasted,
+/obj/effect/turf_decal/stripes/corner{
 	dir = 4
 	},
-/turf/open/floor/iron,
+/turf/open/floor/iron/dark,
 /area/station/commons/locker)
 "bla" = (
 /obj/effect/turf_decal/tile/purple,
@@ -22103,7 +22099,6 @@
 	dir = 4
 	},
 /obj/structure/cable,
-/obj/machinery/power/apc/auto_name/directional/south,
 /obj/effect/turf_decal/tile/red,
 /obj/effect/turf_decal/tile/blue{
 	dir = 8
@@ -27743,6 +27738,9 @@
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /obj/effect/turf_decal/tile/blue{
 	dir = 4
+	},
+/obj/effect/turf_decal/tile/red{
+	dir = 1
 	},
 /turf/open/floor/iron,
 /area/station/commons/locker)
@@ -53990,9 +53988,12 @@
 /turf/open/floor/iron,
 /area/station/maintenance/disposal/incinerator)
 "rNo" = (
-/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
-/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
-/turf/open/floor/iron,
+/obj/machinery/power/apc/auto_name/directional/south,
+/obj/effect/turf_decal/tile/neutral/half/contrasted{
+	dir = 1
+	},
+/obj/structure/cable,
+/turf/open/floor/iron/dark,
 /area/station/commons/locker)
 "rNx" = (
 /turf/closed/wall/r_wall/rust,
@@ -95337,7 +95338,7 @@ fMn
 udI
 dEF
 nZZ
-rNo
+nKh
 xOq
 uHv
 vgm
@@ -95594,7 +95595,7 @@ pOb
 veV
 hkp
 lqM
-rNo
+nKh
 vPX
 dQC
 uAF
@@ -96364,12 +96365,12 @@ hkp
 dEF
 dEF
 dEF
-rhN
 bkT
+nKh
 jTc
 hoE
+rNo
 rhN
-esq
 rhN
 cee
 pqD
