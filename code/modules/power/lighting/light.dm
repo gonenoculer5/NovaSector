@@ -122,6 +122,7 @@
 
 /obj/machinery/light/LateInitialize()
 	. = ..()
+#ifndef MAP_TEST
 	// Bluemoon edit - Reliable light bulbs
 	/*
 	switch(fitting)
@@ -132,6 +133,7 @@
 			if(prob(5))
 				break_light_tube(TRUE)
 	*/
+#endif
 	update(trigger = FALSE)
 
 /obj/machinery/light/Destroy()
