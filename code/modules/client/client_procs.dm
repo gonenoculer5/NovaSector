@@ -161,8 +161,6 @@ GLOBAL_LIST_INIT(blacklisted_builds, list(
 		return FALSE
 	*/
 
-	return TRUE
-
 /client/proc/is_localhost()
 	var/static/localhost_addresses = list(
 		"127.0.0.1",
