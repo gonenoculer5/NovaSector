@@ -7,6 +7,10 @@
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /turf/open/floor/catwalk_floor/iron_dark,
 /area/shuttle/shipstation)
+"ae" = (
+/obj/effect/landmark/start/bartender,
+/turf/open/floor/iron/checker,
+/area/shuttle/shipstation)
 "af" = (
 /obj/structure/disposalpipe/segment{
 	dir = 4
@@ -385,6 +389,7 @@
 /obj/structure/chair/comfy/shuttle{
 	dir = 8
 	},
+/obj/effect/landmark/start/bouncer,
 /turf/open/floor/iron/dark/side{
 	dir = 1
 	},
@@ -486,6 +491,7 @@
 /obj/structure/chair/comfy/shuttle{
 	dir = 4
 	},
+/obj/effect/landmark/start/chemist,
 /turf/open/floor/iron/dark/corner,
 /area/shuttle/shipstation)
 "cR" = (
@@ -678,6 +684,7 @@
 	dir = 4
 	},
 /obj/effect/turf_decal/stripes/red/box,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden,
 /turf/open/floor/plating/reinforced,
 /area/shuttle/shipstation)
 "dO" = (
@@ -1759,6 +1766,7 @@
 /obj/machinery/atmospherics/components/unary/vent_pump/on/layer4{
 	dir = 1
 	},
+/mob/living/basic/mothroach/brigroach,
 /turf/open/floor/mineral/titanium/tiled/white,
 /area/shuttle/shipstation)
 "nz" = (
@@ -2046,6 +2054,15 @@
 	dir = 10
 	},
 /turf/open/floor/catwalk_floor/iron_dark,
+/area/shuttle/shipstation)
+"qA" = (
+/obj/machinery/atmospherics/components/unary/vent_scrubber/on/layer2{
+	dir = 4
+	},
+/obj/effect/landmark/start/librarian,
+/turf/open/floor/iron/dark/smooth_corner{
+	dir = 4
+	},
 /area/shuttle/shipstation)
 "qP" = (
 /obj/machinery/duct,
@@ -2542,6 +2559,9 @@
 /obj/structure/closet/secure_closet/warden,
 /obj/item/storage/box/deputy,
 /obj/effect/turf_decal/bot,
+/obj/item/oar{
+	name = "war oar"
+	},
 /turf/open/floor/pod/light,
 /area/shuttle/shipstation)
 "vD" = (
@@ -2638,7 +2658,6 @@
 /area/shuttle/shipstation)
 "wR" = (
 /obj/structure/bed/double/pod,
-/obj/item/bedsheet/random/double,
 /turf/open/floor/iron/dark/smooth_corner,
 /area/shuttle/shipstation)
 "wS" = (
@@ -2657,6 +2676,7 @@
 /obj/structure/chair/comfy/shuttle{
 	dir = 8
 	},
+/obj/effect/landmark/start/medical_doctor,
 /turf/open/floor/iron/dark/corner{
 	dir = 1
 	},
@@ -3004,7 +3024,7 @@
 /turf/open/floor/mineral/plastitanium,
 /area/shuttle/shipstation)
 "Ax" = (
-/obj/effect/landmark/start/medical_doctor,
+/obj/effect/landmark/start/bartender,
 /turf/open/floor/iron/checker{
 	dir = 8
 	},
@@ -3075,9 +3095,6 @@
 "Bu" = (
 /obj/structure/cable,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
-/obj/machinery/atmospherics/components/binary/volume_pump{
-	name = "Distro to Waste"
-	},
 /turf/open/floor/catwalk_floor/iron_smooth,
 /area/shuttle/shipstation)
 "Bw" = (
@@ -3237,8 +3254,8 @@
 	dir = 5
 	},
 /obj/structure/sign/flag/terragov/directional/north,
-/obj/structure/secure_safe/caps_spare/directional/east,
 /obj/effect/turf_decal/box,
+/obj/structure/secure_safe/directional/east,
 /turf/open/floor/pod/light,
 /area/shuttle/shipstation)
 "CO" = (
@@ -3311,6 +3328,7 @@
 	},
 /obj/structure/window/reinforced/spawner/directional/west,
 /obj/effect/turf_decal/stripes/blue/box,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden,
 /turf/open/floor/plating/reinforced,
 /area/shuttle/shipstation)
 "Dd" = (
@@ -3633,9 +3651,6 @@
 	name = "Airmix to Port";
 	dir = 8
 	},
-/obj/machinery/atmospherics/pipe/smart/manifold/supply/hidden{
-	dir = 8
-	},
 /turf/open/floor/plating/reinforced,
 /area/shuttle/shipstation)
 "Fl" = (
@@ -3648,6 +3663,7 @@
 "Fr" = (
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/obj/effect/landmark/start/librarian,
 /turf/open/floor/iron/dark/smooth_corner{
 	dir = 1
 	},
@@ -3773,9 +3789,6 @@
 	name = "Airmix to Port";
 	dir = 8
 	},
-/obj/machinery/atmospherics/pipe/smart/manifold/scrubbers/hidden{
-	dir = 8
-	},
 /turf/open/floor/plating/reinforced,
 /area/shuttle/shipstation)
 "Gu" = (
@@ -3796,6 +3809,7 @@
 	dir = 4
 	},
 /obj/structure/window/reinforced/survival_pod/spawner/directional/west,
+/obj/effect/landmark/start/roboticist,
 /turf/open/floor/iron/dark/side,
 /area/shuttle/shipstation)
 "Gz" = (
@@ -3828,6 +3842,13 @@
 	id = "bridgedoors";
 	name = "Bridge Access Lockdown";
 	pixel_x = -11;
+	pixel_y = 9;
+	req_access = list("command")
+	},
+/obj/machinery/button/door{
+	id = "stationship_windows";
+	name = "Windows Blast Door Control";
+	pixel_x = -1;
 	pixel_y = 9;
 	req_access = list("command")
 	},
@@ -4000,6 +4021,7 @@
 /area/shuttle/shipstation)
 "HR" = (
 /obj/machinery/light/floor,
+/obj/effect/landmark/start/bouncer,
 /turf/open/floor/iron/checker{
 	dir = 8
 	},
@@ -4675,13 +4697,6 @@
 /turf/open/floor/iron/white/textured_large,
 /area/shuttle/shipstation)
 "NL" = (
-/obj/machinery/button/door{
-	id = "stationship_windows";
-	name = "Windows Blast Door Control";
-	pixel_x = -1;
-	pixel_y = -23;
-	req_access = list("command")
-	},
 /obj/effect/turf_decal/trimline/blue/filled/line{
 	dir = 6
 	},
@@ -4895,7 +4910,6 @@
 "QP" = (
 /obj/machinery/ore_silo,
 /obj/effect/turf_decal/bot,
-/obj/structure/sign/flag/usa/directional/north,
 /turf/open/floor/pod/light,
 /area/shuttle/shipstation)
 "QZ" = (
@@ -5016,6 +5030,7 @@
 	},
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /obj/machinery/light/small/dim/directional/south,
+/obj/effect/landmark/start/chaplain,
 /turf/open/floor/iron/dark/smooth_half,
 /area/shuttle/shipstation)
 "RG" = (
@@ -5093,6 +5108,9 @@
 	name = "Chief Engineer Office"
 	},
 /obj/structure/cable,
+/obj/machinery/atmospherics/components/binary/volume_pump{
+	name = "Distro to Waste"
+	},
 /turf/open/floor/catwalk_floor/iron_smooth,
 /area/shuttle/shipstation)
 "SA" = (
@@ -5177,6 +5195,7 @@
 	dir = 8;
 	name = "Navigation Bridge"
 	},
+/obj/effect/landmark/start/nanotrasen_consultant,
 /turf/open/floor/iron/dark,
 /area/shuttle/shipstation)
 "Tg" = (
@@ -5548,6 +5567,12 @@
 	},
 /obj/structure/window/reinforced/spawner/directional/south,
 /obj/machinery/digital_clock/directional/east,
+/obj/machinery/fax{
+	fax_name = "Head of Personnel's Office";
+	name = "Head of Personnel's Fax Machine";
+	pixel_y = 3
+	},
+/obj/structure/table,
 /turf/open/floor/mineral/plastitanium,
 /area/shuttle/shipstation)
 "VD" = (
@@ -5698,6 +5723,7 @@
 /obj/structure/chair/comfy/shuttle{
 	dir = 8
 	},
+/obj/effect/landmark/start/virologist,
 /turf/open/floor/iron/dark/side,
 /area/shuttle/shipstation)
 "WC" = (
@@ -5838,7 +5864,6 @@
 /area/shuttle/shipstation)
 "XW" = (
 /obj/structure/bed/double/pod,
-/obj/item/bedsheet/random/double,
 /turf/open/floor/iron/dark/smooth_corner{
 	dir = 8
 	},
@@ -6442,7 +6467,7 @@ wd
 ei
 ed
 wR
-DH
+qA
 ZH
 ZH
 ZH
@@ -6720,7 +6745,7 @@ Mg
 af
 Nt
 cG
-uz
+ae
 yN
 uH
 gO
