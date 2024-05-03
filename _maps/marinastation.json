@@ -1,8 +1,8 @@
 {
 	"version": 1,
-	"map_name": "ShipStation",
+	"map_name": "Marina Station",
 	"map_path": "map_files/ShipStation",
-	"map_file": "ShipStation.dmm",
+	"map_file": "ShipStation2.dmm",
 	"shuttles": {
 		"emergency": "emergency_nova",
 		"ferry": "ferry_nova",
@@ -15,5 +15,6 @@
 			"total_positions": 2,
 			"spawn_positions": 2
 		}
-	}
+	},
+	"minetype": "none"
 }
