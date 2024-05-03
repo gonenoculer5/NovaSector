@@ -1,0 +1,7170 @@
+//MAP CONVERTED BY dmm2tgm.py THIS HEADER COMMENT PREVENTS RECONVERSION, DO NOT REMOVE
+"ak" = (
+/obj/machinery/airalarm/directional/east,
+/obj/effect/mapping_helpers/airalarm/all_access,
+/obj/machinery/light/cold/directional/east,
+/obj/machinery/ntnet_relay,
+/turf/open/floor/iron/smooth,
+/area/ruin/space/has_grav/cargodise_freighter/utility)
+"al" = (
+/obj/structure/cable,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/turf/open/floor/catwalk_floor/colony_fabricator,
+/area/ruin/space/has_grav/cargodise_freighter/primaryhall)
+"am" = (
+/obj/effect/turf_decal/tile/blue/half/contrasted,
+/obj/machinery/light/directional/south,
+/obj/machinery/airalarm/directional/south,
+/obj/effect/mapping_helpers/airalarm/all_access,
+/obj/structure/closet/crate/bin,
+/turf/open/floor/iron/dark,
+/area/ruin/space/has_grav/cargodise_freighter/bridge)
+"ao" = (
+/obj/effect/turf_decal/tile/blue/anticorner{
+	dir = 4
+	},
+/obj/structure/table/wood/fancy/blue,
+/obj/machinery/light/directional/north,
+/obj/item/aicard,
+/turf/open/floor/iron/dark,
+/area/ruin/space/has_grav/cargodise_freighter/bridge)
+"ar" = (
+/obj/effect/turf_decal/tile/blue/half/contrasted{
+	dir = 1
+	},
+/obj/machinery/airalarm/directional/north,
+/obj/effect/mapping_helpers/airalarm/all_access,
+/turf/open/floor/iron/white,
+/area/ruin/space/has_grav/cargodise_freighter/trauma)
+"ax" = (
+/obj/machinery/light/floor,
+/turf/open/floor/plating,
+/area/ruin/space/has_grav/cargodise_freighter/utility)
+"ay" = (
+/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/turf/open/floor/light/colour_cycle/dancefloor_a,
+/area/ruin/space/has_grav/cargodise_freighter/bridge)
+"aI" = (
+/obj/effect/turf_decal/trimline/blue/line{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
+/turf/open/floor/iron/dark/textured_half{
+	dir = 1
+	},
+/area/ruin/space/has_grav/cargodise_freighter/bridge)
+"aJ" = (
+/obj/structure/window/reinforced/survival_pod/spawner/directional/west,
+/turf/open/floor/carpet/red,
+/area/ruin/space/has_grav/cargodise_freighter/bridge)
+"aK" = (
+/obj/effect/turf_decal/tile/blue/anticorner/contrasted{
+	dir = 8
+	},
+/obj/item/kirbyplants/random,
+/obj/machinery/light_switch/directional/west,
+/turf/open/floor/iron/dark,
+/area/ruin/space/has_grav/cargodise_freighter/bridge)
+"aN" = (
+/obj/machinery/atmospherics/pipe/layer_manifold/scrubbers/hidden,
+/turf/open/floor/iron/smooth,
+/area/ruin/space/has_grav/cargodise_freighter/utility)
+"aR" = (
+/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/turf/open/floor/iron/kitchen,
+/area/ruin/space/has_grav/cargodise_freighter/kitchen)
+"aT" = (
+/obj/structure/table/optable,
+/obj/effect/turf_decal/tile/blue/anticorner/contrasted,
+/turf/open/floor/iron/white,
+/area/ruin/space/has_grav/cargodise_freighter/trauma)
+"aV" = (
+/obj/machinery/light/cold/directional/north,
+/turf/open/floor/iron/freezer,
+/area/ruin/space/has_grav/cargodise_freighter/quarters)
+"bg" = (
+/obj/structure/chair/comfy/brown{
+	dir = 8
+	},
+/turf/open/floor/wood/parquet,
+/area/ruin/space/has_grav/cargodise_freighter/quarters)
+"bi" = (
+/obj/machinery/vending/dorms,
+/obj/machinery/door/poddoor/shutters/colony_fabricator{
+	id = "lustwishes"
+	},
+/turf/open/floor/carpet/neon/simple/teal,
+/area/ruin/space/has_grav/cargodise_freighter/quarters)
+"bu" = (
+/obj/effect/turf_decal/tile/yellow/half{
+	dir = 1
+	},
+/obj/machinery/door/firedoor,
+/turf/open/floor/glass,
+/area/ruin/space/has_grav/cargodise_freighter/primaryhall)
+"bz" = (
+/obj/machinery/atmospherics/components/unary/vent_scrubber/on/layer2{
+	dir = 1
+	},
+/obj/machinery/atmospherics/components/unary/vent_pump/on/layer4{
+	dir = 1
+	},
+/turf/open/floor/plating,
+/area/ruin/space/has_grav/cargodise_freighter/primaryhall)
+"bA" = (
+/obj/machinery/firealarm/directional/west,
+/mob/living/basic/bot/cleanbot/autopatrol,
+/turf/open/floor/glass,
+/area/ruin/space/has_grav/cargodise_freighter/primaryhall)
+"bC" = (
+/obj/machinery/door/airlock/multi_tile{
+	id_tag = "comdorm7"
+	},
+/obj/machinery/door/poddoor/shutters/colony_fabricator/preopen{
+	id = "comdorm7"
+	},
+/turf/open/floor/carpet/neon/simple/teal,
+/area/ruin/space/has_grav/cargodise_freighter/quarters)
+"bJ" = (
+/obj/structure/weightmachine/weightlifter,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/turf/open/floor/carpet/cyan,
+/area/ruin/space/has_grav/cargodise_freighter/bridge)
+"bM" = (
+/obj/structure/table/wood/fancy/blue,
+/obj/effect/turf_decal/tile/blue/half/contrasted{
+	dir = 4
+	},
+/turf/open/floor/iron/dark,
+/area/ruin/space/has_grav/cargodise_freighter/bridge)
+"bN" = (
+/obj/structure/sign/flag/nanotrasen/directional/south,
+/turf/open/floor/glass,
+/area/ruin/space/has_grav/cargodise_freighter/primaryhall)
+"bW" = (
+/obj/effect/turf_decal/tile/yellow,
+/obj/machinery/light/directional/east,
+/turf/open/floor/iron/colony/white,
+/area/ruin/space/has_grav/cargodise_freighter/primaryhall)
+"cc" = (
+/obj/machinery/atmospherics/components/binary/valve/digital/layer2{
+	dir = 4;
+	name = "Waste Release"
+	},
+/obj/item/storage/belt/janitor/full,
+/turf/open/floor/plating,
+/area/ruin/space/has_grav/cargodise_freighter/utility)
+"cl" = (
+/obj/machinery/photocopier/gratis,
+/turf/open/floor/wood/parquet,
+/area/ruin/space/has_grav/cargodise_freighter/bridge)
+"cq" = (
+/obj/machinery/light_switch/directional/east,
+/turf/open/floor/bamboo/tatami{
+	dir = 4
+	},
+/area/ruin/space/has_grav/cargodise_freighter/hydroponics)
+"ct" = (
+/obj/structure/stripper_pole,
+/turf/open/floor/light,
+/area/ruin/space/has_grav/cargodise_freighter/bridge)
+"cG" = (
+/obj/structure/table/wood,
+/obj/item/paper_bin/carbon,
+/obj/item/pen/fourcolor,
+/turf/open/floor/carpet/stellar,
+/area/ruin/space/has_grav/cargodise_freighter/bridge)
+"cI" = (
+/obj/machinery/door/airlock/silver/glass,
+/obj/structure/cable,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/turf/open/floor/iron/dark,
+/area/ruin/space/has_grav/cargodise_freighter/kitchen)
+"cM" = (
+/obj/machinery/computer/accounting{
+	dir = 8
+	},
+/obj/effect/turf_decal/tile/blue/half/contrasted{
+	dir = 4
+	},
+/turf/open/floor/iron/dark/textured_half{
+	dir = 4
+	},
+/area/ruin/space/has_grav/cargodise_freighter/bridge)
+"cP" = (
+/obj/machinery/computer/crew,
+/obj/effect/turf_decal/tile/blue/half/contrasted{
+	dir = 1
+	},
+/turf/open/floor/iron/dark,
+/area/ruin/space/has_grav/cargodise_freighter/bridge)
+"cR" = (
+/obj/machinery/light/directional/west,
+/turf/open/floor/carpet/stellar,
+/area/ruin/space/has_grav/cargodise_freighter/bridge)
+"cT" = (
+/turf/closed/wall/prefab_plastic,
+/area/ruin/space/has_grav/cargodise_freighter/quarters)
+"cV" = (
+/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
+/turf/open/floor/iron/dark,
+/area/ruin/space/has_grav/cargodise_freighter/bridge)
+"cX" = (
+/obj/machinery/firealarm/directional/south,
+/turf/open/floor/carpet/stellar,
+/area/ruin/space/has_grav/cargodise_freighter/bridge)
+"da" = (
+/obj/structure/reagent_dispensers/water_cooler/directional,
+/obj/machinery/light/directional/east,
+/turf/open/floor/carpet/stellar,
+/area/ruin/space/has_grav/cargodise_freighter/bridge)
+"dc" = (
+/obj/machinery/atmospherics/components/unary/vent_scrubber/on/layer2{
+	dir = 8
+	},
+/turf/open/floor/carpet/cyan,
+/area/ruin/space/has_grav/cargodise_freighter/bridge)
+"di" = (
+/obj/structure/chair/sofa/corp{
+	dir = 1
+	},
+/obj/machinery/light/directional/south,
+/turf/open/floor/carpet/neon/simple/pink,
+/area/ruin/space/has_grav/cargodise_freighter/bridge)
+"dj" = (
+/obj/structure/window/fulltile/colony_fabricator,
+/obj/machinery/door/firedoor,
+/obj/machinery/door/poddoor/preopen{
+	id = "bridgelockdown"
+	},
+/obj/structure/grille,
+/turf/open/floor/plating,
+/area/ruin/space/has_grav/cargodise_freighter/bridge)
+"do" = (
+/obj/structure/cable,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/turf/open/floor/iron/dark,
+/area/ruin/space/has_grav/cargodise_freighter/kitchen)
+"dp" = (
+/obj/item/reagent_containers/cocainebrick,
+/obj/item/reagent_containers/cocainebrick,
+/obj/item/reagent_containers/cocainebrick,
+/obj/item/reagent_containers/cocainebrick,
+/obj/item/reagent_containers/cocainebrick,
+/obj/item/reagent_containers/cocainebrick,
+/obj/item/reagent_containers/cocainebrick,
+/obj/item/reagent_containers/cocainebrick,
+/obj/structure/closet/crate/secure,
+/obj/item/reagent_containers/hashbrick,
+/obj/item/reagent_containers/hashbrick,
+/obj/item/reagent_containers/hashbrick,
+/obj/item/reagent_containers/hashbrick,
+/obj/item/reagent_containers/hashbrick,
+/obj/item/reagent_containers/hashbrick,
+/obj/item/reagent_containers/crackbrick,
+/obj/item/reagent_containers/crackbrick,
+/obj/item/reagent_containers/crackbrick,
+/obj/item/reagent_containers/crackbrick,
+/obj/item/reagent_containers/crackbrick,
+/obj/item/reagent_containers/crackbrick,
+/obj/item/reagent_containers/crackbrick,
+/obj/item/reagent_containers/crackbrick,
+/obj/item/reagent_containers/crackbrick,
+/turf/open/floor/plating,
+/area/ruin/space/has_grav/cargodise_freighter/utility)
+"dt" = (
+/obj/effect/turf_decal/tile/yellow/half{
+	dir = 8
+	},
+/turf/open/floor/glass,
+/area/ruin/space/has_grav/cargodise_freighter/primaryhall)
+"dy" = (
+/obj/machinery/atmospherics/components/unary/vent_pump/on/layer4{
+	dir = 1
+	},
+/turf/open/floor/carpet/neon/simple/teal,
+/area/ruin/space/has_grav/cargodise_freighter/quarters)
+"dz" = (
+/obj/machinery/atmospherics/components/unary/vent_pump/on/layer4,
+/turf/open/floor/circuit/red,
+/area/ruin/space/has_grav/cargodise_freighter/vault)
+"dC" = (
+/obj/structure/cable,
+/obj/machinery/power/smes/battery_pack/precharged,
+/turf/open/floor/plating,
+/area/ruin/space/has_grav/cargodise_freighter/utility)
+"dD" = (
+/obj/effect/turf_decal/tile/yellow/half{
+	dir = 8
+	},
+/obj/structure/cable,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/turf/open/floor/iron/colony/white,
+/area/ruin/space/has_grav/cargodise_freighter/primaryhall)
+"dE" = (
+/obj/structure/chair/plastic{
+	dir = 4
+	},
+/turf/open/floor/iron/dark,
+/area/ruin/space/has_grav/cargodise_freighter/bridge)
+"dJ" = (
+/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
+/turf/open/floor/carpet/neon/simple/teal,
+/area/ruin/space/has_grav/cargodise_freighter/quarters)
+"dQ" = (
+/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
+/turf/open/floor/wood,
+/area/ruin/space/has_grav/cargodise_freighter/bridge)
+"dR" = (
+/obj/effect/turf_decal/tile/blue/half/contrasted{
+	dir = 4
+	},
+/obj/machinery/firealarm/directional/east,
+/turf/open/floor/iron/white,
+/area/ruin/space/has_grav/cargodise_freighter/trauma)
+"dU" = (
+/obj/machinery/door/firedoor,
+/obj/machinery/door/airlock/colony_prefab{
+	id_tag = "comdorm3"
+	},
+/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/obj/machinery/door/poddoor/shutters/colony_fabricator/preopen{
+	id = "comdorm3"
+	},
+/turf/open/floor/iron/dark,
+/area/ruin/space/has_grav/cargodise_freighter/kitchen)
+"dX" = (
+/obj/structure/railing{
+	dir = 1
+	},
+/obj/structure/table/reinforced/plastitaniumglass,
+/obj/machinery/door/poddoor/shutters/colony_fabricator{
+	id = "lustwishes"
+	},
+/turf/open/floor/light/colour_cycle/dancefloor_b,
+/area/ruin/space/has_grav/cargodise_freighter/bridge)
+"ef" = (
+/obj/effect/turf_decal/tile/blue/half/contrasted{
+	dir = 1
+	},
+/obj/item/kirbyplants/random,
+/obj/machinery/light/directional/north,
+/obj/structure/closet/firecloset/wall{
+	pixel_y = 26
+	},
+/turf/open/floor/iron/dark,
+/area/ruin/space/has_grav/cargodise_freighter/bridge)
+"ei" = (
+/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/turf/open/floor/wood,
+/area/ruin/space/has_grav/cargodise_freighter/bridge)
+"ek" = (
+/obj/structure/chair/comfy/black{
+	dir = 1
+	},
+/turf/open/floor/carpet/stellar,
+/area/ruin/space/has_grav/cargodise_freighter/bridge)
+"eu" = (
+/obj/machinery/door/window/survival_pod/left/directional/east,
+/obj/structure/cable,
+/turf/open/floor/iron/colony/texture,
+/area/ruin/space/has_grav/cargodise_freighter/utility)
+"ez" = (
+/obj/effect/turf_decal/tile/blue/half/contrasted{
+	dir = 4
+	},
+/obj/machinery/light/directional/east,
+/obj/machinery/atmospherics/components/unary/vent_pump/on/layer4{
+	dir = 1
+	},
+/turf/open/floor/iron/white,
+/area/ruin/space/has_grav/cargodise_freighter/trauma)
+"eA" = (
+/obj/machinery/door/airlock/colony_prefab{
+	id_tag = "comdorm1"
+	},
+/obj/machinery/door/firedoor,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/obj/machinery/door/poddoor/shutters/colony_fabricator/preopen{
+	id = "comdorm1"
+	},
+/turf/open/floor/iron/dark,
+/area/ruin/space/has_grav/cargodise_freighter/kitchen)
+"eC" = (
+/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
+/turf/open/floor/iron/dark,
+/area/ruin/space/has_grav/cargodise_freighter/kitchen)
+"eE" = (
+/obj/machinery/modular_computer/preset/command{
+	dir = 8
+	},
+/turf/open/floor/carpet/stellar,
+/area/ruin/space/has_grav/cargodise_freighter/bridge)
+"eF" = (
+/obj/machinery/airalarm/directional/south,
+/obj/effect/mapping_helpers/airalarm/all_access,
+/obj/machinery/light/cold/directional/south,
+/turf/open/floor/carpet/neon/simple/teal,
+/area/ruin/space/has_grav/cargodise_freighter/quarters)
+"eK" = (
+/obj/machinery/door/airlock/command{
+	name = "Cockpit"
+	},
+/obj/machinery/door/firedoor,
+/obj/machinery/door/poddoor/preopen{
+	id = "bridgelockdown"
+	},
+/turf/open/floor/iron/dark,
+/area/ruin/space/has_grav/cargodise_freighter/bridge)
+"eM" = (
+/obj/structure/cat_house,
+/turf/open/floor/iron/dark,
+/area/ruin/space/has_grav/cargodise_freighter/kitchen)
+"eQ" = (
+/obj/structure/cable,
+/obj/machinery/computer/monitor{
+	dir = 8
+	},
+/turf/open/floor/plating,
+/area/ruin/space/has_grav/cargodise_freighter/utility)
+"eR" = (
+/obj/machinery/firealarm/directional/south,
+/turf/open/floor/glass/reinforced,
+/area/ruin/space/has_grav/cargodise_freighter/vault)
+"eV" = (
+/obj/structure/window/reinforced/survival_pod/spawner/directional/south,
+/turf/open/floor/carpet/blue,
+/area/ruin/space/has_grav/cargodise_freighter/bridge)
+"eX" = (
+/obj/structure/window/reinforced/survival_pod/spawner/directional/west,
+/obj/structure/window/reinforced/survival_pod/spawner/directional/south,
+/turf/open/floor/carpet/purple,
+/area/ruin/space/has_grav/cargodise_freighter/bridge)
+"fc" = (
+/obj/structure/curtain/bounty/start_closed,
+/obj/machinery/light/cold/directional/south,
+/turf/open/floor/iron/freezer,
+/area/ruin/space/has_grav/cargodise_freighter/quarters)
+"fi" = (
+/obj/structure/railing{
+	dir = 4
+	},
+/turf/open/water/hot_spring/cafe,
+/area/ruin/space/has_grav/cargodise_freighter/kitchen)
+"fl" = (
+/obj/effect/turf_decal/tile/yellow/half{
+	dir = 1
+	},
+/turf/open/floor/iron/colony/white,
+/area/ruin/space/has_grav/cargodise_freighter/primaryhall)
+"fr" = (
+/obj/effect/turf_decal/tile/yellow/half{
+	dir = 1
+	},
+/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/turf/open/floor/glass,
+/area/ruin/space/has_grav/cargodise_freighter/primaryhall)
+"fv" = (
+/obj/machinery/atmospherics/components/unary/vent_pump/on/layer4,
+/turf/open/floor/carpet/stellar,
+/area/ruin/space/has_grav/cargodise_freighter/bridge)
+"fx" = (
+/obj/machinery/recharge_station,
+/obj/machinery/light/directional/west,
+/turf/open/floor/wood,
+/area/ruin/space/has_grav/cargodise_freighter/bridge)
+"fF" = (
+/obj/structure/cable,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
+/obj/machinery/light/cold/directional/north,
+/turf/open/floor/carpet/neon/simple/teal,
+/area/ruin/space/has_grav/cargodise_freighter/quarters)
+"fI" = (
+/obj/machinery/door/firedoor,
+/obj/structure/table/reinforced/rglass,
+/obj/structure/desk_bell,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/obj/machinery/door/poddoor/shutters/window/preopen{
+	id = "freighterkitchen"
+	},
+/turf/open/floor/iron/dark/smooth_half,
+/area/ruin/space/has_grav/cargodise_freighter/kitchen)
+"fO" = (
+/obj/effect/turf_decal/siding/wood{
+	dir = 8
+	},
+/turf/open/floor/wood/parquet,
+/area/ruin/space/has_grav/cargodise_freighter/bridge)
+"fQ" = (
+/obj/structure/railing{
+	dir = 4
+	},
+/obj/structure/table/reinforced/plastitaniumglass,
+/obj/machinery/door/poddoor/shutters/colony_fabricator{
+	id = "lustwishes"
+	},
+/turf/open/floor/light/colour_cycle/dancefloor_a,
+/area/ruin/space/has_grav/cargodise_freighter/bridge)
+"fV" = (
+/obj/machinery/door/airlock/multi_tile{
+	id_tag = "comdorm13"
+	},
+/obj/machinery/door/poddoor/shutters/colony_fabricator/preopen{
+	id = "comdorm13"
+	},
+/turf/open/floor/carpet/neon/simple/teal,
+/area/ruin/space/has_grav/cargodise_freighter/quarters)
+"fZ" = (
+/obj/machinery/atmospherics/components/unary/vent_pump/on/layer4,
+/turf/open/floor/wood/parquet,
+/area/ruin/space/has_grav/cargodise_freighter/quarters)
+"gc" = (
+/obj/machinery/oven/range_frontier,
+/turf/open/floor/iron/kitchen,
+/area/ruin/space/has_grav/cargodise_freighter/kitchen)
+"ge" = (
+/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/turf/open/floor/glass,
+/area/ruin/space/has_grav/cargodise_freighter/primaryhall)
+"gf" = (
+/obj/machinery/computer/operating{
+	dir = 1
+	},
+/obj/effect/turf_decal/tile/blue/half/contrasted,
+/turf/open/floor/iron/white,
+/area/ruin/space/has_grav/cargodise_freighter/trauma)
+"gh" = (
+/obj/machinery/atmospherics/components/unary/vent_pump/on/layer4{
+	dir = 4
+	},
+/turf/open/floor/glass,
+/area/ruin/space/has_grav/cargodise_freighter/primaryhall)
+"gl" = (
+/obj/machinery/firealarm/directional/north,
+/obj/machinery/light/cold/directional/north,
+/obj/effect/turf_decal/tile/yellow{
+	dir = 4
+	},
+/turf/open/floor/glass,
+/area/ruin/space/has_grav/cargodise_freighter/primaryhall)
+"gm" = (
+/obj/machinery/door/firedoor,
+/obj/structure/cable,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
+/turf/open/floor/carpet/neon/simple/teal,
+/area/ruin/space/has_grav/cargodise_freighter/quarters)
+"gA" = (
+/obj/machinery/door/airlock/multi_tile{
+	id_tag = "comdorm9"
+	},
+/obj/machinery/door/poddoor/shutters/colony_fabricator/preopen{
+	id = "comdorm9"
+	},
+/turf/open/floor/carpet/neon/simple/teal,
+/area/ruin/space/has_grav/cargodise_freighter/quarters)
+"gC" = (
+/turf/open/floor/carpet/cyan,
+/area/ruin/space/has_grav/cargodise_freighter/bridge)
+"gD" = (
+/obj/structure/closet/crate/bin,
+/turf/open/floor/carpet/stellar,
+/area/ruin/space/has_grav/cargodise_freighter/bridge)
+"gH" = (
+/obj/structure/chair/plastic{
+	dir = 8
+	},
+/turf/open/floor/iron/dark,
+/area/ruin/space/has_grav/cargodise_freighter/bridge)
+"gJ" = (
+/obj/machinery/atmospherics/components/unary/vent_pump/on/layer4,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/turf/open/floor/iron/freezer,
+/area/ruin/space/has_grav/cargodise_freighter/quarters)
+"gS" = (
+/turf/closed/wall/prefab_plastic,
+/area/ruin/space/has_grav/cargodise_freighter/hydroponics)
+"gX" = (
+/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
+/turf/open/floor/iron/dark,
+/area/ruin/space/has_grav/cargodise_freighter/bridge)
+"hg" = (
+/obj/machinery/button/door/directional/north{
+	id = "comdorm11"
+	},
+/obj/structure/closet/crate/bin,
+/turf/open/floor/wood/parquet,
+/area/ruin/space/has_grav/cargodise_freighter/quarters)
+"hm" = (
+/obj/machinery/light/cold/directional/east,
+/obj/machinery/hydroponics/constructable,
+/turf/open/floor/grass,
+/area/ruin/space/has_grav/cargodise_freighter/hydroponics)
+"hu" = (
+/obj/machinery/ore_silo/colony_lathe,
+/turf/open/floor/circuit,
+/area/ruin/space/has_grav/cargodise_freighter/vault)
+"hx" = (
+/obj/structure/cable,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
+/turf/open/floor/wood,
+/area/ruin/space/has_grav/cargodise_freighter/bridge)
+"hC" = (
+/obj/effect/turf_decal/trimline/blue/corner{
+	dir = 1
+	},
+/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/turf/open/floor/iron/dark/smooth_corner{
+	dir = 1
+	},
+/area/ruin/space/has_grav/cargodise_freighter/bridge)
+"hD" = (
+/obj/structure/railing,
+/obj/structure/hedge,
+/turf/open/floor/plating,
+/area/ruin/space/has_grav/cargodise_freighter/hydroponics)
+"hE" = (
+/obj/structure/cable,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/turf/open/floor/circuit/red,
+/area/ruin/space/has_grav/cargodise_freighter/vault)
+"hH" = (
+/obj/structure/chair/sofa/corp/left{
+	dir = 8
+	},
+/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/turf/open/floor/wood,
+/area/ruin/space/has_grav/cargodise_freighter/bridge)
+"hK" = (
+/obj/structure/closet/crate/bin,
+/turf/open/floor/wood/parquet,
+/area/ruin/space/has_grav/cargodise_freighter/bridge)
+"hL" = (
+/obj/machinery/computer/centcom_announcement/nri_raider{
+	dir = 8;
+	desc = "A console used for making priority Nanotrasen Diplomacy reports.";
+	command_name = "NTDS Hedon Starship Telegram";
+	name = "diplomatic mission announcement console"
+	},
+/obj/effect/turf_decal/tile/blue/anticorner/contrasted,
+/turf/open/floor/iron/dark,
+/area/ruin/space/has_grav/cargodise_freighter/bridge)
+"hM" = (
+/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/obj/vehicle/ridden/janicart/upgraded/vacuum,
+/obj/item/key/janitor,
+/turf/open/floor/iron/smooth,
+/area/ruin/space/has_grav/cargodise_freighter/utility)
+"hO" = (
+/obj/machinery/atmospherics/components/unary/vent_scrubber/on/layer2,
+/obj/machinery/button/door/directional/east{
+	id = "comdorm3"
+	},
+/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
+/turf/open/floor/wood/parquet,
+/area/ruin/space/has_grav/cargodise_freighter/kitchen)
+"hQ" = (
+/obj/structure/cable,
+/obj/structure/closet/emcloset/wall{
+	pixel_y = -26
+	},
+/obj/machinery/power/smes/battery_pack/precharged,
+/turf/open/floor/plating,
+/area/ruin/space/has_grav/cargodise_freighter/utility)
+"hT" = (
+/obj/effect/turf_decal/tile/blue{
+	dir = 4
+	},
+/turf/open/floor/iron/dark,
+/area/ruin/space/has_grav/cargodise_freighter/bridge)
+"hV" = (
+/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
+/obj/machinery/firealarm/directional/east,
+/turf/open/floor/iron/dark,
+/area/ruin/space/has_grav/cargodise_freighter/kitchen)
+"ic" = (
+/obj/machinery/atmospherics/components/unary/vent_pump/on/layer4{
+	dir = 8
+	},
+/obj/machinery/firealarm/directional/north,
+/turf/open/floor/iron/dark,
+/area/ruin/space/has_grav/cargodise_freighter/kitchen)
+"ih" = (
+/obj/machinery/door/firedoor,
+/obj/structure/table/reinforced/rglass,
+/obj/machinery/door/poddoor/shutters/window/preopen{
+	id = "freighterkitchen"
+	},
+/turf/open/floor/iron/dark/smooth_half,
+/area/ruin/space/has_grav/cargodise_freighter/kitchen)
+"il" = (
+/obj/machinery/power/apc/auto_name/directional/north,
+/obj/effect/mapping_helpers/apc/cell_10k,
+/obj/effect/mapping_helpers/apc/unlocked,
+/obj/structure/cable,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
+/turf/open/floor/carpet/neon/simple/teal,
+/area/ruin/space/has_grav/cargodise_freighter/quarters)
+"ip" = (
+/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
+/obj/machinery/light/directional/east,
+/turf/open/floor/wood,
+/area/ruin/space/has_grav/cargodise_freighter/bridge)
+"is" = (
+/obj/structure/sauna_oven,
+/turf/open/floor/wood/large,
+/area/ruin/space/has_grav/cargodise_freighter/kitchen)
+"iu" = (
+/obj/machinery/atmospherics/components/unary/vent_pump/on/layer4{
+	dir = 4
+	},
+/turf/open/floor/wood/large,
+/area/ruin/space/has_grav/cargodise_freighter/kitchen)
+"iz" = (
+/obj/machinery/light/directional/south,
+/turf/open/floor/carpet/blue,
+/area/ruin/space/has_grav/cargodise_freighter/bridge)
+"iB" = (
+/obj/structure/cable,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/turf/open/floor/glass,
+/area/ruin/space/has_grav/cargodise_freighter/primaryhall)
+"iG" = (
+/obj/machinery/button/door/directional/south{
+	id = "gym_sex"
+	},
+/obj/machinery/light/directional/south,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/turf/open/floor/carpet/cyan,
+/area/ruin/space/has_grav/cargodise_freighter/bridge)
+"iH" = (
+/obj/machinery/atmospherics/components/unary/vent_scrubber/on/layer2,
+/turf/open/floor/wood/large,
+/area/ruin/space/has_grav/cargodise_freighter/kitchen)
+"iK" = (
+/obj/machinery/computer/camera_advanced,
+/obj/effect/turf_decal/tile/blue/half/contrasted{
+	dir = 1
+	},
+/turf/open/floor/iron/dark,
+/area/ruin/space/has_grav/cargodise_freighter/bridge)
+"iL" = (
+/obj/machinery/airalarm/directional/north,
+/obj/effect/mapping_helpers/airalarm/all_access,
+/turf/open/floor/glass/reinforced,
+/area/ruin/space/has_grav/cargodise_freighter/vault)
+"iM" = (
+/obj/effect/turf_decal/tile/yellow/half,
+/obj/machinery/atmospherics/components/unary/vent_pump/on/layer4{
+	dir = 1
+	},
+/turf/open/floor/iron/colony/white,
+/area/ruin/space/has_grav/cargodise_freighter/primaryhall)
+"iS" = (
+/obj/machinery/door/airlock/vault,
+/obj/machinery/door/firedoor,
+/turf/open/floor/iron/dark,
+/area/ruin/space/has_grav/cargodise_freighter/bridge)
+"iU" = (
+/obj/structure/table/wood/fancy/red,
+/obj/item/paper_bin/carbon,
+/obj/item/pen/fourcolor,
+/turf/open/floor/carpet/stellar,
+/area/ruin/space/has_grav/cargodise_freighter/bridge)
+"iX" = (
+/obj/structure/chair/sofa/corp/right{
+	dir = 1
+	},
+/turf/open/floor/iron/kitchen,
+/area/ruin/space/has_grav/cargodise_freighter/kitchen)
+"jd" = (
+/obj/effect/turf_decal/tile/yellow/half,
+/obj/machinery/light_switch/directional/south,
+/turf/open/floor/glass,
+/area/ruin/space/has_grav/cargodise_freighter/primaryhall)
+"jf" = (
+/obj/effect/turf_decal/tile/blue{
+	dir = 4
+	},
+/obj/structure/cable,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/turf/open/floor/iron/dark,
+/area/ruin/space/has_grav/cargodise_freighter/bridge)
+"jp" = (
+/turf/closed/wall/prefab_plastic,
+/area/ruin/space/has_grav/cargodise_freighter/bridge)
+"ju" = (
+/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
+/turf/open/floor/glass/reinforced,
+/area/ruin/space/has_grav/cargodise_freighter/vault)
+"jB" = (
+/obj/machinery/atmospherics/components/unary/vent_scrubber/on/layer2{
+	dir = 1
+	},
+/turf/open/floor/iron/freezer,
+/area/ruin/space/has_grav/cargodise_freighter/quarters)
+"jC" = (
+/obj/structure/window/fulltile/colony_fabricator,
+/obj/structure/grille,
+/turf/open/floor/plating,
+/area/ruin/space/has_grav/cargodise_freighter/exterior)
+"jE" = (
+/obj/machinery/light_switch/directional/north,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/turf/open/floor/iron/dark,
+/area/ruin/space/has_grav/cargodise_freighter/kitchen)
+"jF" = (
+/obj/machinery/blackbox_recorder,
+/turf/open/floor/circuit/red,
+/area/ruin/space/has_grav/cargodise_freighter/vault)
+"jL" = (
+/obj/structure/table/wood/fancy/green,
+/turf/open/floor/carpet/stellar,
+/area/ruin/space/has_grav/cargodise_freighter/bridge)
+"jR" = (
+/obj/machinery/power/apc/auto_name/directional/north,
+/obj/structure/cable,
+/obj/effect/mapping_helpers/apc/unlocked,
+/obj/effect/mapping_helpers/apc/cell_10k,
+/obj/machinery/atmospherics/pipe/layer_manifold/supply/hidden{
+	dir = 4
+	},
+/turf/open/floor/iron/smooth,
+/area/ruin/space/has_grav/cargodise_freighter/utility)
+"kd" = (
+/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/obj/machinery/door/poddoor/shutters/colony_fabricator/preopen{
+	id = "comdorm8"
+	},
+/turf/open/floor/carpet/neon/simple/teal,
+/area/ruin/space/has_grav/cargodise_freighter/quarters)
+"km" = (
+/obj/effect/turf_decal/tile/yellow{
+	dir = 1
+	},
+/turf/open/floor/iron/colony/white,
+/area/ruin/space/has_grav/cargodise_freighter/primaryhall)
+"kn" = (
+/turf/open/floor/wood,
+/area/ruin/space/has_grav/cargodise_freighter/bridge)
+"kt" = (
+/obj/structure/window/fulltile/colony_fabricator,
+/obj/machinery/door/poddoor/shutters/colony_fabricator/preopen{
+	id = "event_conference_room"
+	},
+/turf/open/floor/plating,
+/area/ruin/space/has_grav/cargodise_freighter/bridge)
+"kF" = (
+/obj/effect/turf_decal/tile/yellow,
+/turf/open/floor/iron/colony/white,
+/area/ruin/space/has_grav/cargodise_freighter/primaryhall)
+"kH" = (
+/obj/structure/weightmachine/weightlifter,
+/turf/open/floor/carpet/cyan,
+/area/ruin/space/has_grav/cargodise_freighter/bridge)
+"kI" = (
+/obj/machinery/recharge_station,
+/turf/open/floor/iron/dark,
+/area/ruin/space/has_grav/cargodise_freighter/kitchen)
+"kN" = (
+/obj/machinery/vending/deforest_medvend,
+/obj/structure/fans/tiny,
+/turf/open/floor/iron/white,
+/area/ruin/space/has_grav/cargodise_freighter/trauma)
+"kR" = (
+/obj/machinery/portable_atmospherics/canister/air,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/turf/open/floor/iron/smooth,
+/area/ruin/space/has_grav/cargodise_freighter/utility)
+"kT" = (
+/obj/machinery/power/shuttle_engine/heater{
+	dir = 8
+	},
+/obj/structure/window/reinforced/tinted/spawner/directional/west,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/brown,
+/obj/structure/window/reinforced/survival_pod/spawner/directional/east,
+/turf/open/floor/plating,
+/area/ruin/space/has_grav/cargodise_freighter/utility)
+"kW" = (
+/turf/closed/wall/mineral/titanium/spaceship/nodiagonal,
+/area/template_noop)
+"kX" = (
+/obj/machinery/atmospherics/components/unary/vent_scrubber/on/layer2,
+/turf/open/floor/wood,
+/area/ruin/space/has_grav/cargodise_freighter/bridge)
+"lg" = (
+/obj/effect/turf_decal/tile/yellow/half{
+	dir = 8
+	},
+/obj/machinery/atmospherics/components/unary/vent_pump/on/layer4{
+	dir = 4
+	},
+/turf/open/floor/glass,
+/area/ruin/space/has_grav/cargodise_freighter/primaryhall)
+"lh" = (
+/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/turf/open/floor/iron/freezer,
+/area/ruin/space/has_grav/cargodise_freighter/quarters)
+"lp" = (
+/obj/structure/table/wood/fancy/blue,
+/obj/effect/turf_decal/tile/blue/half/contrasted{
+	dir = 4
+	},
+/obj/item/clipboard,
+/obj/item/pen/fountain,
+/turf/open/floor/iron/dark,
+/area/ruin/space/has_grav/cargodise_freighter/bridge)
+"lq" = (
+/obj/structure/chair/sofa/corp/right{
+	dir = 8
+	},
+/obj/structure/window/reinforced/survival_pod/spawner/directional/east,
+/obj/machinery/door/poddoor/shutters/colony_fabricator{
+	id = "lustwishes"
+	},
+/turf/open/floor/carpet/neon/simple/pink,
+/area/ruin/space/has_grav/cargodise_freighter/bridge)
+"lt" = (
+/obj/structure/cable,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
+/obj/item/clothing/mask/cigarette/pipe/crackpipe,
+/turf/open/floor/iron/smooth,
+/area/ruin/space/has_grav/cargodise_freighter/utility)
+"lv" = (
+/obj/machinery/vending/hydronutrients,
+/obj/machinery/light/directional/west,
+/turf/open/floor/bamboo/tatami,
+/area/ruin/space/has_grav/cargodise_freighter/hydroponics)
+"lw" = (
+/obj/machinery/atmospherics/components/unary/vent_scrubber/on/layer2,
+/turf/open/floor/wood/parquet,
+/area/ruin/space/has_grav/cargodise_freighter/quarters)
+"lx" = (
+/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
+/obj/effect/turf_decal/siding/dark{
+	dir = 9
+	},
+/turf/open/floor/iron/kitchen,
+/area/ruin/space/has_grav/cargodise_freighter/kitchen)
+"ly" = (
+/obj/machinery/door/airlock/command{
+	name = "Captain's Quarters";
+	id_tag = "whiteship_cap_bolts"
+	},
+/obj/machinery/door/firedoor,
+/obj/machinery/door/poddoor/preopen{
+	id = "bridgelockdown"
+	},
+/turf/open/floor/iron/dark,
+/area/ruin/space/has_grav/cargodise_freighter/bridge)
+"lG" = (
+/obj/effect/turf_decal/siding/wood,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/turf/open/floor/wood/parquet,
+/area/ruin/space/has_grav/cargodise_freighter/bridge)
+"lK" = (
+/obj/machinery/atmospherics/components/unary/vent_scrubber/on/layer2{
+	dir = 1
+	},
+/turf/open/floor/carpet/neon/simple/purple,
+/area/ruin/space/has_grav/cargodise_freighter/bridge)
+"lL" = (
+/obj/structure/chair/comfy/carp{
+	dir = 4
+	},
+/obj/machinery/button/door/directional/west{
+	name = "Stress Relief Shutter Control";
+	id = "lustwishes"
+	},
+/turf/open/floor/carpet/stellar,
+/area/ruin/space/has_grav/cargodise_freighter/bridge)
+"lN" = (
+/obj/machinery/atmospherics/components/unary/vent_pump/on/layer4{
+	dir = 1
+	},
+/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/turf/open/floor/iron/kitchen,
+/area/ruin/space/has_grav/cargodise_freighter/kitchen)
+"lP" = (
+/obj/structure/window/fulltile/colony_fabricator,
+/obj/structure/grille,
+/obj/machinery/door/poddoor/shutters/colony_fabricator/preopen{
+	id = "blueshit"
+	},
+/turf/open/floor/plating,
+/area/ruin/space/has_grav/cargodise_freighter/bridge)
+"lU" = (
+/obj/machinery/light_switch/directional/south,
+/obj/structure/bed/dogbed,
+/obj/item/clothing/neck/kink_collar,
+/turf/open/floor/iron/dark,
+/area/ruin/space/has_grav/cargodise_freighter/kitchen)
+"ma" = (
+/obj/machinery/atmospherics/components/unary/vent_pump/on/layer4,
+/turf/open/floor/carpet/cyan,
+/area/ruin/space/has_grav/cargodise_freighter/bridge)
+"mb" = (
+/obj/machinery/power/apc/auto_name/directional/north,
+/obj/effect/mapping_helpers/apc/cell_10k,
+/obj/effect/mapping_helpers/apc/unlocked,
+/obj/structure/cable,
+/turf/open/floor/bamboo/tatami,
+/area/ruin/space/has_grav/cargodise_freighter/hydroponics)
+"mf" = (
+/obj/effect/turf_decal/tile/blue/half/contrasted,
+/obj/item/kirbyplants/random,
+/turf/open/floor/iron/dark,
+/area/ruin/space/has_grav/cargodise_freighter/bridge)
+"mi" = (
+/obj/structure/chair/sofa/corp/left{
+	dir = 4
+	},
+/turf/open/floor/wood,
+/area/ruin/space/has_grav/cargodise_freighter/bridge)
+"mC" = (
+/obj/structure/railing,
+/obj/structure/hedge,
+/turf/open/floor/plating,
+/area/ruin/space/has_grav/cargodise_freighter/bridge)
+"mR" = (
+/obj/machinery/vending/tool,
+/turf/open/floor/plating,
+/area/ruin/space/has_grav/cargodise_freighter/utility)
+"mX" = (
+/obj/machinery/door/poddoor/shutters/colony_fabricator/preopen{
+	id = "toilet_one"
+	},
+/turf/open/floor/iron/freezer,
+/area/ruin/space/has_grav/cargodise_freighter/quarters)
+"nc" = (
+/obj/structure/table/wood/fancy/blue,
+/obj/item/paper_bin/carbon,
+/obj/item/pen/fourcolor,
+/turf/open/floor/carpet/stellar,
+/area/ruin/space/has_grav/cargodise_freighter/bridge)
+"ng" = (
+/obj/machinery/vending/dorms,
+/obj/machinery/door/poddoor/shutters/colony_fabricator{
+	id = "lustwishes"
+	},
+/turf/open/floor/carpet/cyan,
+/area/ruin/space/has_grav/cargodise_freighter/bridge)
+"nh" = (
+/obj/structure/cable,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
+/turf/open/floor/light/colour_cycle/dancefloor_b,
+/area/ruin/space/has_grav/cargodise_freighter/bridge)
+"ni" = (
+/obj/machinery/airalarm/directional/north,
+/obj/effect/mapping_helpers/airalarm/all_access,
+/obj/machinery/light/directional/north,
+/turf/open/floor/carpet/stellar,
+/area/ruin/space/has_grav/cargodise_freighter/bridge)
+"nv" = (
+/obj/effect/turf_decal/tile/yellow/half{
+	dir = 1
+	},
+/obj/machinery/light/cold/directional/north,
+/turf/open/floor/glass,
+/area/ruin/space/has_grav/cargodise_freighter/primaryhall)
+"nx" = (
+/obj/machinery/portable_atmospherics/scrubber,
+/obj/machinery/light/directional/north,
+/turf/open/floor/plating,
+/area/ruin/space/has_grav/cargodise_freighter/utility)
+"nz" = (
+/turf/open/floor/carpet/neon/simple/teal,
+/area/ruin/space/has_grav/cargodise_freighter/quarters)
+"nB" = (
+/obj/effect/turf_decal/tile/blue/half/contrasted{
+	dir = 8
+	},
+/obj/machinery/firealarm/directional/west,
+/turf/open/floor/iron/dark,
+/area/ruin/space/has_grav/cargodise_freighter/bridge)
+"nC" = (
+/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/obj/item/clothing/mask/cigarette/pipe/crackpipe,
+/turf/open/floor/plating,
+/area/ruin/space/has_grav/cargodise_freighter/utility)
+"nL" = (
+/obj/machinery/autolathe/hacked,
+/turf/open/floor/iron/smooth,
+/area/ruin/space/has_grav/cargodise_freighter/utility)
+"nR" = (
+/obj/machinery/light/directional/east,
+/turf/open/floor/carpet/neon/simple/purple,
+/area/ruin/space/has_grav/cargodise_freighter/bridge)
+"nU" = (
+/obj/effect/turf_decal/stripes/line{
+	dir = 8
+	},
+/turf/open/floor/plating,
+/area/ruin/space/has_grav/cargodise_freighter/exterior)
+"nW" = (
+/obj/structure/cable,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/turf/open/floor/iron/dark,
+/area/ruin/space/has_grav/cargodise_freighter/bridge)
+"nY" = (
+/obj/structure/cable,
+/obj/machinery/door/firedoor,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
+/turf/open/floor/catwalk_floor/colony_fabricator,
+/area/ruin/space/has_grav/cargodise_freighter/primaryhall)
+"og" = (
+/obj/machinery/firealarm/directional/south,
+/obj/structure/closet/secure_closet/personal/cabinet/freighterboss,
+/obj/item/storage/box/nif_ghost_box/ghost_role,
+/obj/structure/reagent_dispensers/beerkeg,
+/turf/open/floor/carpet/blue,
+/area/ruin/space/has_grav/cargodise_freighter/bridge)
+"ok" = (
+/obj/structure/sign/flag/terragov/directional/south,
+/obj/effect/turf_decal/tile/yellow,
+/turf/open/floor/glass,
+/area/ruin/space/has_grav/cargodise_freighter/primaryhall)
+"on" = (
+/obj/structure/railing{
+	dir = 9
+	},
+/obj/structure/table/reinforced/plastitaniumglass,
+/obj/machinery/door/poddoor/shutters/colony_fabricator{
+	id = "lustwishes"
+	},
+/turf/open/floor/light/colour_cycle/dancefloor_a,
+/area/ruin/space/has_grav/cargodise_freighter/bridge)
+"oz" = (
+/obj/effect/turf_decal/tile/blue/half/contrasted,
+/obj/structure/rack/shelf,
+/obj/effect/spawner/random/entertainment/money_medium,
+/turf/open/floor/iron/dark,
+/area/ruin/space/has_grav/cargodise_freighter/bridge)
+"oA" = (
+/obj/structure/table/reinforced/plastitaniumglass,
+/obj/item/storage/fancy/coffee_cart_rack,
+/obj/item/coffee_cartridge/fancy,
+/obj/item/coffee_cartridge/fancy,
+/obj/item/coffee_cartridge/fancy,
+/obj/item/coffee_cartridge/decaf,
+/obj/item/coffee_cartridge/decaf,
+/turf/open/floor/carpet/stellar,
+/area/ruin/space/has_grav/cargodise_freighter/bridge)
+"oC" = (
+/obj/machinery/shower/directional/west,
+/obj/structure/drain,
+/obj/structure/curtain,
+/turf/open/floor/iron/freezer,
+/area/ruin/space/has_grav/cargodise_freighter/quarters)
+"oG" = (
+/obj/structure/closet/emcloset,
+/obj/machinery/light/directional/west,
+/turf/open/floor/plating,
+/area/ruin/space/has_grav/cargodise_freighter/primaryhall)
+"oR" = (
+/obj/machinery/light/directional/north,
+/turf/open/floor/wood,
+/area/ruin/space/has_grav/cargodise_freighter/bridge)
+"oV" = (
+/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/turf/open/floor/plating,
+/area/ruin/space/has_grav/cargodise_freighter/utility)
+"pb" = (
+/obj/structure/chair/sofa/corp/corner{
+	dir = 8
+	},
+/obj/structure/window/reinforced/survival_pod/spawner/directional/east,
+/obj/machinery/door/poddoor/shutters/colony_fabricator{
+	id = "lustwishes"
+	},
+/turf/open/floor/carpet/neon/simple/pink,
+/area/ruin/space/has_grav/cargodise_freighter/bridge)
+"pg" = (
+/turf/open/floor/glass/reinforced,
+/area/ruin/space/has_grav/cargodise_freighter/vault)
+"pm" = (
+/obj/machinery/portable_atmospherics/canister/oxygen,
+/turf/open/floor/iron/smooth,
+/area/ruin/space/has_grav/cargodise_freighter/utility)
+"pn" = (
+/obj/machinery/vending/autodrobe/all_access,
+/turf/open/floor/carpet/cyan,
+/area/ruin/space/has_grav/cargodise_freighter/bridge)
+"pp" = (
+/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/obj/machinery/atmospherics/components/unary/vent_pump/on/layer4{
+	dir = 4
+	},
+/turf/open/floor/iron/dark,
+/area/ruin/space/has_grav/cargodise_freighter/bridge)
+"pq" = (
+/obj/machinery/vending/hotdog,
+/obj/structure/window/reinforced/survival_pod/spawner/directional/west,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
+/turf/open/floor/wood,
+/area/ruin/space/has_grav/cargodise_freighter/bridge)
+"pu" = (
+/obj/machinery/atmospherics/components/unary/vent_pump/on/layer4{
+	dir = 1
+	},
+/turf/open/floor/iron/kitchen,
+/area/ruin/space/has_grav/cargodise_freighter/kitchen)
+"pv" = (
+/obj/structure/closet/crate/secure/engineering,
+/obj/item/storage/toolbox/electrical,
+/obj/item/storage/toolbox/electrical,
+/obj/item/clothing/gloves/color/yellow,
+/obj/item/clothing/gloves/color/yellow,
+/obj/item/construction/rcd/loaded,
+/obj/item/pipe_dispenser,
+/obj/item/construction/plumbing/research,
+/obj/item/construction/plumbing/engineering,
+/obj/item/lightreplacer/blue,
+/obj/item/lightreplacer/blue,
+/turf/open/floor/plating,
+/area/ruin/space/has_grav/cargodise_freighter/utility)
+"pz" = (
+/obj/machinery/airalarm/directional/north,
+/obj/effect/mapping_helpers/airalarm/all_access,
+/turf/open/floor/light/colour_cycle/dancefloor_b,
+/area/ruin/space/has_grav/cargodise_freighter/bridge)
+"pK" = (
+/obj/structure/closet/crate,
+/obj/effect/spawner/random/engineering/material,
+/obj/effect/spawner/random/engineering/material,
+/obj/effect/spawner/random/engineering/material_rare,
+/obj/effect/spawner/random/engineering/material_rare,
+/obj/effect/spawner/random/engineering/material,
+/obj/item/stack/sheet/mineral/uranium/five,
+/obj/item/stack/sheet/mineral/uranium/five,
+/obj/item/stack/sheet/mineral/uranium/five,
+/obj/item/stack/sheet/mineral/uranium/five,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/turf/open/floor/plating,
+/area/ruin/space/has_grav/cargodise_freighter/utility)
+"pO" = (
+/obj/machinery/button/door/directional/north{
+	id = "comdorm12"
+	},
+/obj/structure/closet/crate/bin,
+/turf/open/floor/wood/parquet,
+/area/ruin/space/has_grav/cargodise_freighter/quarters)
+"pP" = (
+/obj/machinery/door/airlock/wood{
+	name = "Sauna"
+	},
+/obj/structure/drain,
+/turf/open/floor/iron/dark,
+/area/ruin/space/has_grav/cargodise_freighter/kitchen)
+"pW" = (
+/turf/open/floor/wood/parquet,
+/area/ruin/space/has_grav/cargodise_freighter/quarters)
+"qc" = (
+/obj/structure/railing,
+/obj/structure/table/reinforced/plastitaniumglass,
+/obj/machinery/door/poddoor/shutters/colony_fabricator{
+	id = "lustwishes"
+	},
+/turf/open/floor/light/colour_cycle/dancefloor_a,
+/area/ruin/space/has_grav/cargodise_freighter/bridge)
+"qd" = (
+/obj/effect/turf_decal/siding/dark/corner,
+/obj/structure/table,
+/obj/machinery/chem_dispenser/drinks/fullupgrade,
+/turf/open/floor/iron/kitchen,
+/area/ruin/space/has_grav/cargodise_freighter/kitchen)
+"qf" = (
+/obj/effect/turf_decal/siding/wood{
+	dir = 4
+	},
+/obj/machinery/button/door/directional/south{
+	id = "whiteship_cap_bolts";
+	name = "Captain's Quarters Bolt Control"
+	},
+/turf/open/floor/wood/parquet,
+/area/ruin/space/has_grav/cargodise_freighter/bridge)
+"qj" = (
+/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/obj/machinery/atmospherics/components/unary/vent_pump/on/layer4{
+	dir = 1
+	},
+/turf/open/floor/iron/freezer,
+/area/ruin/space/has_grav/cargodise_freighter/quarters)
+"qk" = (
+/obj/structure/cable,
+/obj/machinery/power/apc/auto_name/directional/north,
+/obj/effect/mapping_helpers/apc/unlocked,
+/obj/effect/mapping_helpers/apc/cell_10k,
+/turf/open/floor/glass/reinforced,
+/area/ruin/space/has_grav/cargodise_freighter/vault)
+"ql" = (
+/obj/structure/table/reinforced/plastitaniumglass,
+/obj/structure/desk_bell,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/turf/open/floor/wood,
+/area/ruin/space/has_grav/cargodise_freighter/bridge)
+"qn" = (
+/obj/structure/chair/sofa/corp/right{
+	dir = 8
+	},
+/obj/structure/window/reinforced/survival_pod/spawner/directional/east,
+/turf/open/floor/carpet/neon/simple/pink,
+/area/ruin/space/has_grav/cargodise_freighter/bridge)
+"qo" = (
+/obj/machinery/vending/dorms,
+/obj/machinery/door/poddoor/shutters/colony_fabricator{
+	id = "lustwishes"
+	},
+/obj/machinery/light/cold/directional/south,
+/turf/open/floor/iron/freezer,
+/area/ruin/space/has_grav/cargodise_freighter/quarters)
+"qr" = (
+/obj/structure/window/reinforced/survival_pod/spawner/directional/south,
+/obj/structure/window/reinforced/survival_pod/spawner/directional/east,
+/turf/open/floor/plating,
+/area/ruin/space/has_grav/cargodise_freighter/utility)
+"qw" = (
+/obj/machinery/door/airlock/command{
+	name = "Captain's Quarters";
+	id_tag = "whiteship_cap_bolts"
+	},
+/obj/machinery/door/firedoor,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/turf/open/floor/iron/dark,
+/area/ruin/space/has_grav/cargodise_freighter/bridge)
+"qE" = (
+/obj/structure/cable,
+/turf/open/floor/bamboo/tatami,
+/area/ruin/space/has_grav/cargodise_freighter/hydroponics)
+"qK" = (
+/obj/machinery/light/directional/west,
+/obj/machinery/atmospherics/components/unary/vent_scrubber/on/layer2{
+	dir = 1
+	},
+/turf/open/floor/iron/kitchen,
+/area/ruin/space/has_grav/cargodise_freighter/kitchen)
+"qS" = (
+/obj/machinery/light/directional/south,
+/obj/machinery/vending/dorms,
+/obj/machinery/door/poddoor/shutters/colony_fabricator{
+	id = "lustwishes"
+	},
+/turf/open/floor/iron/dark,
+/area/ruin/space/has_grav/cargodise_freighter/kitchen)
+"rb" = (
+/obj/structure/sign/flag/azulea/directional/south,
+/turf/open/floor/glass,
+/area/ruin/space/has_grav/cargodise_freighter/primaryhall)
+"rr" = (
+/obj/effect/turf_decal/tile/yellow/half{
+	dir = 4
+	},
+/obj/machinery/atmospherics/components/unary/vent_scrubber/on/layer2{
+	dir = 8
+	},
+/obj/machinery/light/directional/east,
+/turf/open/floor/iron/colony/white,
+/area/ruin/space/has_grav/cargodise_freighter/primaryhall)
+"rt" = (
+/obj/structure/towel_bin,
+/obj/structure/table/wood,
+/obj/machinery/light/directional/east,
+/turf/open/floor/carpet/cyan,
+/area/ruin/space/has_grav/cargodise_freighter/bridge)
+"rB" = (
+/obj/machinery/door/airlock/multi_tile{
+	id_tag = "comdorm6"
+	},
+/obj/machinery/door/poddoor/shutters/colony_fabricator/preopen{
+	id = "comdorm6"
+	},
+/turf/open/floor/carpet/neon/simple/teal,
+/area/ruin/space/has_grav/cargodise_freighter/quarters)
+"rF" = (
+/obj/structure/closet/crate/bin,
+/turf/open/floor/wood,
+/area/ruin/space/has_grav/cargodise_freighter/bridge)
+"rG" = (
+/obj/machinery/door/firedoor,
+/obj/machinery/door/airlock/multi_tile/metal{
+	dir = 8
+	},
+/turf/open/floor/carpet/neon/simple/teal,
+/area/ruin/space/has_grav/cargodise_freighter/quarters)
+"rH" = (
+/obj/effect/turf_decal/tile/blue/half/contrasted{
+	dir = 8
+	},
+/turf/open/floor/iron/dark,
+/area/ruin/space/has_grav/cargodise_freighter/bridge)
+"rL" = (
+/obj/structure/cable,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/turf/open/floor/iron/dark,
+/area/ruin/space/has_grav/cargodise_freighter/kitchen)
+"rM" = (
+/obj/effect/turf_decal/tile/yellow{
+	dir = 8
+	},
+/obj/machinery/power/apc/auto_name/directional/south,
+/obj/effect/mapping_helpers/apc/unlocked,
+/obj/structure/cable,
+/obj/effect/mapping_helpers/apc/cell_10k,
+/obj/machinery/light/directional/south,
+/turf/open/floor/iron/colony/white,
+/area/ruin/space/has_grav/cargodise_freighter/primaryhall)
+"rN" = (
+/obj/machinery/atmospherics/components/unary/vent_scrubber/on/layer2{
+	dir = 8
+	},
+/turf/open/floor/glass,
+/area/ruin/space/has_grav/cargodise_freighter/primaryhall)
+"rR" = (
+/obj/structure/chair/comfy/shuttle{
+	dir = 1
+	},
+/turf/open/floor/iron/dark,
+/area/ruin/space/has_grav/cargodise_freighter/bridge)
+"rU" = (
+/obj/effect/turf_decal/siding/dark{
+	dir = 8
+	},
+/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/turf/open/floor/iron/kitchen,
+/area/ruin/space/has_grav/cargodise_freighter/kitchen)
+"rZ" = (
+/obj/structure/table/wood/fancy/blue,
+/turf/open/floor/carpet/stellar,
+/area/ruin/space/has_grav/cargodise_freighter/bridge)
+"sk" = (
+/obj/machinery/biogenerator/fullupgrade,
+/turf/open/floor/iron/dark,
+/area/ruin/space/has_grav/cargodise_freighter/hydroponics)
+"sr" = (
+/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
+/obj/machinery/light/cold/directional/east,
+/turf/open/floor/iron/dark,
+/area/ruin/space/has_grav/cargodise_freighter/kitchen)
+"ss" = (
+/obj/effect/turf_decal/tile/yellow/half{
+	dir = 8
+	},
+/obj/machinery/biogenerator/organic_printer,
+/turf/closed/wall/prefab_plastic,
+/area/ruin/space/has_grav/cargodise_freighter/hydroponics)
+"st" = (
+/obj/machinery/light/cold/directional/west,
+/obj/item/storage/box/nif_ghost_box/ghost_role,
+/obj/item/storage/box/nif_ghost_box/ghost_role,
+/obj/item/storage/box/nif_ghost_box/ghost_role,
+/obj/item/storage/box/nif_ghost_box/ghost_role,
+/obj/item/storage/box/nif_ghost_box/ghost_role,
+/obj/item/storage/box/nif_ghost_box/ghost_role,
+/obj/item/storage/box/nif_ghost_box/ghost_role,
+/obj/item/storage/box/nif_ghost_box/ghost_role,
+/obj/item/storage/box/nif_ghost_box/ghost_role,
+/obj/item/storage/box/nif_ghost_box/ghost_role,
+/obj/item/storage/box/nif_ghost_box/ghost_role,
+/obj/item/storage/box/nif_ghost_box/ghost_role,
+/obj/item/storage/box/nif_ghost_box/ghost_role,
+/obj/item/storage/box/nif_ghost_box/ghost_role,
+/obj/item/storage/box/nif_ghost_box/ghost_role,
+/obj/item/storage/box/nif_ghost_box/ghost_role,
+/obj/item/storage/box/nif_ghost_box/ghost_role,
+/obj/item/storage/box/nif_ghost_box/ghost_role,
+/obj/item/storage/box/nif_ghost_box/ghost_role,
+/obj/item/storage/box/nif_ghost_box/ghost_role,
+/obj/item/storage/box/nif_ghost_box/ghost_role,
+/obj/item/storage/box/nif_ghost_box/ghost_role,
+/obj/item/storage/box/nif_ghost_box/ghost_role,
+/obj/item/storage/box/nif_ghost_box/ghost_role,
+/obj/structure/rack,
+/turf/open/floor/iron/dark,
+/area/ruin/space/has_grav/cargodise_freighter/kitchen)
+"sz" = (
+/obj/structure/chair/sofa/bamboo/right,
+/turf/open/floor/wood/large,
+/area/ruin/space/has_grav/cargodise_freighter/kitchen)
+"sC" = (
+/obj/structure/noticeboard/directional/east,
+/obj/structure/table/reinforced/plastitaniumglass,
+/obj/machinery/coffeemaker,
+/turf/open/floor/carpet/stellar,
+/area/ruin/space/has_grav/cargodise_freighter/bridge)
+"sI" = (
+/obj/machinery/atmospherics/components/unary/vent_scrubber/on/layer2,
+/turf/open/floor/iron/freezer,
+/area/ruin/space/has_grav/cargodise_freighter/quarters)
+"sN" = (
+/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/turf/open/floor/light/colour_cycle/dancefloor_b,
+/area/ruin/space/has_grav/cargodise_freighter/bridge)
+"sU" = (
+/obj/structure/chair/sofa/bamboo,
+/turf/open/floor/wood/large,
+/area/ruin/space/has_grav/cargodise_freighter/kitchen)
+"sW" = (
+/obj/structure/railing{
+	dir = 6
+	},
+/turf/open/water/hot_spring/cafe,
+/area/ruin/space/has_grav/cargodise_freighter/kitchen)
+"tb" = (
+/obj/machinery/shower/directional/east,
+/obj/structure/drain,
+/obj/structure/curtain,
+/turf/open/floor/iron/freezer,
+/area/ruin/space/has_grav/cargodise_freighter/quarters)
+"tf" = (
+/obj/machinery/door/airlock/hydroponics/glass{
+	name = "Hydroponics"
+	},
+/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
+/turf/open/floor/iron/dark,
+/area/ruin/space/has_grav/cargodise_freighter/kitchen)
+"th" = (
+/turf/open/floor/iron/dark,
+/area/ruin/space/has_grav/cargodise_freighter/kitchen)
+"ti" = (
+/obj/item/stack/sheet/iron/twenty,
+/obj/item/circuitboard/machine/ore_redemption{
+	pixel_x = 5;
+	pixel_y = -6
+	},
+/obj/item/storage/box/stockparts/deluxe,
+/obj/item/storage/box/stockparts/deluxe,
+/obj/structure/closet/crate,
+/obj/item/storage/toolbox/mechanical,
+/obj/item/stack/sheet/glass/fifty,
+/obj/item/circuitboard/machine/protolathe/offstation,
+/obj/effect/spawner/random/engineering/toolbox,
+/obj/item/circuitboard/machine/circuit_imprinter/department,
+/obj/item/circuitboard/machine/rtg/advanced,
+/obj/item/circuitboard/machine/rtg/advanced,
+/obj/item/circuitboard/machine/rtg/advanced,
+/obj/item/folded_navigation_gigabeacon,
+/obj/structure/cable,
+/obj/item/circuitboard/computer/powermonitor,
+/obj/item/circuitboard/machine/bluespace_miner,
+/obj/item/circuitboard/machine/biogenerator/food_replicator,
+/obj/item/stack/sheet/iron/fifty,
+/obj/item/stack/sheet/iron/fifty,
+/obj/item/flatpacked_machine,
+/obj/item/flatpacked_machine/ore_silo,
+/turf/open/floor/plating,
+/area/ruin/space/has_grav/cargodise_freighter/utility)
+"to" = (
+/obj/machinery/firealarm/directional/south,
+/obj/machinery/atmospherics/components/unary/vent_scrubber/on/layer2{
+	dir = 1
+	},
+/turf/open/floor/carpet/neon/simple/teal,
+/area/ruin/space/has_grav/cargodise_freighter/quarters)
+"tA" = (
+/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
+/obj/machinery/light/directional/south,
+/turf/open/floor/wood/large,
+/area/ruin/space/has_grav/cargodise_freighter/kitchen)
+"tD" = (
+/obj/structure/fans/tiny,
+/obj/machinery/door/airlock/external/wagon,
+/obj/effect/mapping_helpers/airlock/cyclelink_helper{
+	dir = 1
+	},
+/turf/open/floor/plating,
+/area/ruin/space/has_grav/cargodise_freighter/primaryhall)
+"tK" = (
+/obj/machinery/power/shuttle_engine/heater{
+	dir = 8
+	},
+/obj/structure/window/reinforced/tinted/spawner/directional/west,
+/obj/structure/window/reinforced/tinted/spawner/directional/north,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/brown,
+/obj/structure/window/reinforced/survival_pod/spawner/directional/east,
+/turf/open/floor/plating,
+/area/ruin/space/has_grav/cargodise_freighter/utility)
+"tN" = (
+/obj/structure/cable,
+/turf/open/floor/iron/dark,
+/area/ruin/space/has_grav/cargodise_freighter/bridge)
+"tQ" = (
+/obj/effect/turf_decal/tile/blue/half/contrasted{
+	dir = 4
+	},
+/obj/structure/cable,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/turf/open/floor/iron/white,
+/area/ruin/space/has_grav/cargodise_freighter/trauma)
+"tV" = (
+/obj/structure/chair/sofa/corp/left{
+	dir = 1
+	},
+/turf/open/floor/wood,
+/area/ruin/space/has_grav/cargodise_freighter/bridge)
+"tW" = (
+/obj/structure/bed/double,
+/obj/effect/spawner/random/bedsheet/double,
+/turf/open/floor/wood/parquet,
+/area/ruin/space/has_grav/cargodise_freighter/kitchen)
+"ua" = (
+/obj/structure/table/wood/fancy/purple,
+/obj/item/paper_bin/carbon,
+/obj/item/pen/fourcolor,
+/turf/open/floor/carpet/stellar,
+/area/ruin/space/has_grav/cargodise_freighter/bridge)
+"ul" = (
+/obj/structure/window/reinforced/survival_pod/spawner/directional/north,
+/obj/machinery/door/window/survival_pod/left/directional/west,
+/turf/open/floor/carpet/red,
+/area/ruin/space/has_grav/cargodise_freighter/bridge)
+"un" = (
+/obj/machinery/atmospherics/components/unary/vent_scrubber/on/layer2{
+	dir = 4
+	},
+/turf/open/floor/iron/dark,
+/area/ruin/space/has_grav/cargodise_freighter/bridge)
+"uo" = (
+/obj/effect/turf_decal/tile/blue,
+/obj/structure/extinguisher_cabinet/directional/south,
+/obj/machinery/photocopier/gratis,
+/turf/open/floor/iron/dark,
+/area/ruin/space/has_grav/cargodise_freighter/bridge)
+"uq" = (
+/obj/structure/cable,
+/turf/open/floor/plating,
+/area/ruin/space/has_grav/cargodise_freighter/utility)
+"us" = (
+/obj/machinery/door/window/survival_pod/left/directional/north,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/obj/machinery/door/poddoor/shutters/colony_fabricator{
+	id = "lustwishes"
+	},
+/turf/open/floor/carpet/neon/simple/pink,
+/area/ruin/space/has_grav/cargodise_freighter/bridge)
+"uw" = (
+/obj/machinery/vending/boozeomat/all_access,
+/turf/open/floor/carpet/neon/simple/purple,
+/area/ruin/space/has_grav/cargodise_freighter/bridge)
+"ux" = (
+/obj/machinery/door/airlock/freezer{
+	name = "Kitchen Storage"
+	},
+/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/turf/open/floor/iron/kitchen,
+/area/ruin/space/has_grav/cargodise_freighter/kitchen)
+"uD" = (
+/obj/machinery/door/airlock/external/wagon,
+/obj/effect/mapping_helpers/airlock/cyclelink_helper,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
+/turf/open/floor/plating,
+/area/ruin/space/has_grav/cargodise_freighter/primaryhall)
+"uI" = (
+/obj/machinery/door/airlock/multi_tile{
+	id_tag = "comdorm11"
+	},
+/obj/machinery/door/poddoor/shutters/colony_fabricator/preopen{
+	id = "comdorm11"
+	},
+/turf/open/floor/carpet/neon/simple/teal,
+/area/ruin/space/has_grav/cargodise_freighter/quarters)
+"uM" = (
+/obj/machinery/door/poddoor/shutters/colony_fabricator{
+	id = "lustwishes"
+	},
+/obj/machinery/vending/dorms,
+/turf/open/floor/carpet/neon/simple/teal,
+/area/ruin/space/has_grav/cargodise_freighter/quarters)
+"uP" = (
+/obj/structure/table/wood/fancy/orange,
+/obj/item/paper_bin/carbon,
+/obj/item/pen/fourcolor,
+/turf/open/floor/carpet/stellar,
+/area/ruin/space/has_grav/cargodise_freighter/bridge)
+"uQ" = (
+/obj/machinery/door/airlock/multi_tile/metal{
+	dir = 8
+	},
+/turf/open/floor/carpet/neon/simple/teal,
+/area/ruin/space/has_grav/cargodise_freighter/quarters)
+"vb" = (
+/obj/effect/turf_decal/tile/yellow/half,
+/obj/machinery/firealarm/directional/south,
+/turf/open/floor/iron/colony/white,
+/area/ruin/space/has_grav/cargodise_freighter/primaryhall)
+"vd" = (
+/obj/structure/chair/sofa/corp/corner{
+	dir = 1
+	},
+/obj/structure/window/reinforced/survival_pod/spawner/directional/west,
+/turf/open/floor/carpet/neon/simple/pink,
+/area/ruin/space/has_grav/cargodise_freighter/bridge)
+"vo" = (
+/obj/effect/turf_decal/tile/yellow/half{
+	dir = 1
+	},
+/obj/machinery/door/firedoor,
+/obj/machinery/light/cold/directional/north,
+/turf/open/floor/glass,
+/area/ruin/space/has_grav/cargodise_freighter/primaryhall)
+"vs" = (
+/obj/machinery/autolathe/hacked,
+/obj/item/stack/sheet/iron/twenty,
+/obj/item/stack/sheet/glass/fifty,
+/turf/open/floor/iron/kitchen,
+/area/ruin/space/has_grav/cargodise_freighter/kitchen)
+"vt" = (
+/obj/item/clothing/mask/cigarette/pipe/crackpipe,
+/turf/open/floor/iron/smooth,
+/area/ruin/space/has_grav/cargodise_freighter/utility)
+"vx" = (
+/obj/item/gun/energy/floragun,
+/turf/open/floor/bamboo/tatami,
+/area/ruin/space/has_grav/cargodise_freighter/hydroponics)
+"vI" = (
+/obj/structure/noticeboard/directional/west,
+/turf/open/floor/carpet/stellar,
+/area/ruin/space/has_grav/cargodise_freighter/bridge)
+"vM" = (
+/turf/closed/wall/mineral/titanium/spaceship/nodiagonal,
+/area/ruin/space/has_grav/cargodise_freighter/exterior)
+"vP" = (
+/obj/machinery/portable_atmospherics/pump,
+/turf/open/floor/plating,
+/area/ruin/space/has_grav/cargodise_freighter/utility)
+"vV" = (
+/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
+/turf/open/floor/wood,
+/area/ruin/space/has_grav/cargodise_freighter/bridge)
+"wa" = (
+/obj/structure/window/reinforced/survival_pod/spawner/directional/north,
+/obj/structure/window/reinforced/survival_pod/spawner/directional/east,
+/turf/open/floor/plating,
+/area/ruin/space/has_grav/cargodise_freighter/utility)
+"wb" = (
+/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/turf/open/floor/carpet/cyan,
+/area/ruin/space/has_grav/cargodise_freighter/bridge)
+"wi" = (
+/obj/structure/chair/sofa/corp/corner{
+	dir = 8
+	},
+/obj/structure/window/reinforced/survival_pod/spawner/directional/east,
+/turf/open/floor/carpet/neon/simple/pink,
+/area/ruin/space/has_grav/cargodise_freighter/bridge)
+"wk" = (
+/obj/structure/reagent_dispensers/watertank/high,
+/turf/open/floor/bamboo/tatami,
+/area/ruin/space/has_grav/cargodise_freighter/hydroponics)
+"wq" = (
+/obj/effect/turf_decal/tile/blue{
+	dir = 8
+	},
+/turf/open/floor/iron/white,
+/area/ruin/space/has_grav/cargodise_freighter/trauma)
+"ws" = (
+/obj/structure/table/wood/fancy/cyan,
+/obj/item/paper_bin/carbon,
+/obj/item/pen/fourcolor,
+/turf/open/floor/carpet/stellar,
+/area/ruin/space/has_grav/cargodise_freighter/bridge)
+"wv" = (
+/turf/open/water/hot_spring/cafe,
+/area/ruin/space/has_grav/cargodise_freighter/kitchen)
+"wx" = (
+/obj/structure/table/wood/fancy/blue,
+/obj/item/papercutter,
+/obj/machinery/light/directional/north,
+/obj/effect/turf_decal/tile/blue/half/contrasted{
+	dir = 1
+	},
+/turf/open/floor/iron/dark,
+/area/ruin/space/has_grav/cargodise_freighter/bridge)
+"wy" = (
+/obj/structure/closet/secure_closet/wall{
+	pixel_y = -32
+	},
+/turf/open/floor/wood/parquet,
+/area/ruin/space/has_grav/cargodise_freighter/quarters)
+"wB" = (
+/obj/effect/turf_decal/tile/blue/half/contrasted,
+/obj/machinery/light/directional/south,
+/obj/structure/closet/emcloset/wall{
+	pixel_y = -26
+	},
+/turf/open/floor/iron/dark,
+/area/ruin/space/has_grav/cargodise_freighter/bridge)
+"wF" = (
+/obj/machinery/shower/directional/west,
+/obj/structure/window/reinforced/survival_pod/spawner/directional/north,
+/obj/structure/drain,
+/obj/structure/curtain,
+/turf/open/floor/iron/freezer,
+/area/ruin/space/has_grav/cargodise_freighter/quarters)
+"wO" = (
+/turf/open/floor/carpet/purple,
+/area/ruin/space/has_grav/cargodise_freighter/bridge)
+"wQ" = (
+/obj/structure/grille,
+/obj/structure/window/fulltile/colony_fabricator,
+/obj/machinery/door/poddoor/shutters/colony_fabricator/preopen{
+	id = "gym_sex"
+	},
+/turf/open/floor/plating,
+/area/ruin/space/has_grav/cargodise_freighter/bridge)
+"wS" = (
+/obj/machinery/shower/directional/east,
+/obj/structure/window/reinforced/survival_pod/spawner/directional/south,
+/obj/structure/drain,
+/obj/structure/curtain,
+/turf/open/floor/iron/freezer,
+/area/ruin/space/has_grav/cargodise_freighter/quarters)
+"wX" = (
+/obj/effect/turf_decal/tile/blue/anticorner/contrasted{
+	dir = 8
+	},
+/obj/machinery/light_switch/directional/west,
+/obj/machinery/biogenerator/medstation/directional/south{
+	biomass = 2000
+	},
+/obj/structure/closet/crate/bin,
+/turf/open/floor/iron/white,
+/area/ruin/space/has_grav/cargodise_freighter/trauma)
+"xa" = (
+/obj/machinery/light/directional/north,
+/turf/open/water/hot_spring/cafe,
+/area/ruin/space/has_grav/cargodise_freighter/kitchen)
+"xh" = (
+/obj/effect/turf_decal/tile/blue/half/contrasted{
+	dir = 1
+	},
+/obj/structure/rack/shelf,
+/obj/effect/spawner/random/entertainment/money_small,
+/obj/effect/spawner/random/entertainment/money_small,
+/turf/open/floor/iron/dark,
+/area/ruin/space/has_grav/cargodise_freighter/bridge)
+"xi" = (
+/obj/machinery/airalarm/directional/south,
+/obj/effect/mapping_helpers/airalarm/all_access,
+/turf/open/floor/carpet/stellar,
+/area/ruin/space/has_grav/cargodise_freighter/bridge)
+"xl" = (
+/obj/structure/cable,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
+/turf/open/floor/catwalk_floor/colony_fabricator,
+/area/ruin/space/has_grav/cargodise_freighter/primaryhall)
+"xt" = (
+/obj/structure/chair/sofa/corp{
+	dir = 1
+	},
+/turf/open/floor/iron/kitchen,
+/area/ruin/space/has_grav/cargodise_freighter/kitchen)
+"xw" = (
+/turf/closed/wall/prefab_plastic,
+/area/ruin/space/has_grav/cargodise_freighter/primaryhall)
+"xC" = (
+/obj/structure/closet/secure_closet/blueshield,
+/turf/open/floor/iron/dark,
+/area/ruin/space/has_grav/cargodise_freighter/bridge)
+"xD" = (
+/obj/structure/table/reinforced,
+/obj/machinery/light/directional/east,
+/obj/machinery/pollution_scrubber,
+/turf/open/floor/iron/kitchen,
+/area/ruin/space/has_grav/cargodise_freighter/kitchen)
+"xE" = (
+/obj/effect/turf_decal/tile/blue{
+	dir = 1
+	},
+/turf/open/floor/iron/dark,
+/area/ruin/space/has_grav/cargodise_freighter/bridge)
+"xF" = (
+/turf/open/floor/plating,
+/area/ruin/space/has_grav/cargodise_freighter/exterior)
+"xK" = (
+/turf/open/floor/iron/freezer,
+/area/ruin/space/has_grav/cargodise_freighter/quarters)
+"xP" = (
+/obj/effect/turf_decal/tile/yellow/half{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/obj/structure/cable,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
+/turf/open/floor/glass,
+/area/ruin/space/has_grav/cargodise_freighter/primaryhall)
+"xX" = (
+/obj/machinery/atmospherics/components/unary/passive_vent/layer2{
+	dir = 4
+	},
+/turf/open/floor/plating/airless,
+/area/ruin/space/has_grav/cargodise_freighter/exterior)
+"xZ" = (
+/obj/machinery/light/directional/north,
+/obj/machinery/vending/dorms,
+/obj/machinery/door/poddoor/shutters/colony_fabricator{
+	id = "lustwishes"
+	},
+/turf/open/floor/iron/dark,
+/area/ruin/space/has_grav/cargodise_freighter/kitchen)
+"yd" = (
+/obj/structure/window/reinforced/survival_pod/spawner/directional/north,
+/obj/structure/window/reinforced/survival_pod/spawner/directional/east,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
+/turf/open/floor/carpet/purple,
+/area/ruin/space/has_grav/cargodise_freighter/bridge)
+"yj" = (
+/obj/machinery/door/firedoor,
+/obj/machinery/door/airlock/colony_prefab{
+	id_tag = "comdorm5"
+	},
+/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
+/obj/machinery/door/poddoor/shutters/colony_fabricator/preopen{
+	id = "comdorm5"
+	},
+/turf/open/floor/iron/dark,
+/area/ruin/space/has_grav/cargodise_freighter/kitchen)
+"yv" = (
+/obj/machinery/vending/engivend,
+/turf/open/floor/plating,
+/area/ruin/space/has_grav/cargodise_freighter/utility)
+"yx" = (
+/obj/structure/table/reinforced/plastitaniumglass,
+/obj/machinery/light/directional/east,
+/obj/machinery/pollution_scrubber,
+/turf/open/floor/wood,
+/area/ruin/space/has_grav/cargodise_freighter/bridge)
+"yA" = (
+/obj/structure/punching_bag,
+/turf/open/floor/carpet/cyan,
+/area/ruin/space/has_grav/cargodise_freighter/bridge)
+"yU" = (
+/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
+/turf/open/floor/catwalk_floor/colony_fabricator,
+/area/ruin/space/has_grav/cargodise_freighter/primaryhall)
+"yV" = (
+/obj/structure/table/reinforced/plastitaniumglass,
+/obj/effect/turf_decal/siding/wood{
+	dir = 9
+	},
+/turf/open/floor/carpet/neon/simple/purple,
+/area/ruin/space/has_grav/cargodise_freighter/bridge)
+"yW" = (
+/obj/structure/table,
+/obj/machinery/reagentgrinder,
+/turf/open/floor/iron/kitchen,
+/area/ruin/space/has_grav/cargodise_freighter/kitchen)
+"zc" = (
+/obj/effect/turf_decal/trimline/blue/line{
+	dir = 1
+	},
+/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
+/turf/open/floor/iron/dark/textured_half{
+	dir = 4
+	},
+/area/ruin/space/has_grav/cargodise_freighter/bridge)
+"zf" = (
+/obj/machinery/airalarm/directional/west,
+/obj/effect/mapping_helpers/airalarm/all_access,
+/turf/open/floor/iron/freezer,
+/area/ruin/space/has_grav/cargodise_freighter/quarters)
+"zg" = (
+/obj/structure/table/wood/fancy/cyan,
+/turf/open/floor/carpet/stellar,
+/area/ruin/space/has_grav/cargodise_freighter/bridge)
+"zi" = (
+/obj/structure/table/reinforced/plastitaniumglass,
+/obj/structure/desk_bell,
+/obj/effect/turf_decal/siding/wood{
+	dir = 8
+	},
+/turf/open/floor/carpet/neon/simple/purple,
+/area/ruin/space/has_grav/cargodise_freighter/bridge)
+"zl" = (
+/obj/structure/chair/sofa/bamboo{
+	dir = 1
+	},
+/turf/open/floor/wood/large,
+/area/ruin/space/has_grav/cargodise_freighter/kitchen)
+"zn" = (
+/obj/machinery/atmospherics/components/unary/vent_scrubber/on/layer2,
+/turf/open/floor/iron/dark/textured_half{
+	dir = 4
+	},
+/area/ruin/space/has_grav/cargodise_freighter/bridge)
+"zt" = (
+/obj/machinery/button/door/directional/south{
+	id = "comdorm7"
+	},
+/obj/structure/closet/crate/bin,
+/turf/open/floor/wood/parquet,
+/area/ruin/space/has_grav/cargodise_freighter/quarters)
+"zu" = (
+/obj/machinery/holopad,
+/obj/structure/cable,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
+/turf/open/floor/glass/reinforced,
+/area/ruin/space/has_grav/cargodise_freighter/vault)
+"zz" = (
+/obj/structure/cable,
+/obj/item/clothing/mask/cigarette/pipe/crackpipe,
+/turf/open/floor/iron/smooth,
+/area/ruin/space/has_grav/cargodise_freighter/utility)
+"zF" = (
+/turf/open/floor/glass,
+/area/ruin/space/has_grav/cargodise_freighter/primaryhall)
+"zG" = (
+/obj/effect/turf_decal/siding/wood{
+	dir = 4
+	},
+/turf/closed/wall/prefab_plastic,
+/area/ruin/space/has_grav/cargodise_freighter/bridge)
+"zR" = (
+/obj/effect/turf_decal/tile/blue{
+	dir = 8
+	},
+/obj/machinery/power/apc/auto_name/directional/south,
+/obj/structure/cable,
+/obj/effect/mapping_helpers/apc/cell_10k,
+/obj/effect/mapping_helpers/apc/unlocked,
+/turf/open/floor/iron/dark,
+/area/ruin/space/has_grav/cargodise_freighter/bridge)
+"zS" = (
+/obj/machinery/door/window/survival_pod/left/directional/west,
+/obj/effect/turf_decal/siding/wood{
+	dir = 8
+	},
+/turf/open/floor/carpet/neon/simple/purple,
+/area/ruin/space/has_grav/cargodise_freighter/bridge)
+"zV" = (
+/obj/effect/turf_decal/tile/blue/half/contrasted{
+	dir = 1
+	},
+/obj/structure/table/wood/fancy/blue,
+/obj/item/paper_bin,
+/obj/item/pen,
+/obj/item/ai_module/toy_ai,
+/turf/open/floor/iron/dark,
+/area/ruin/space/has_grav/cargodise_freighter/bridge)
+"zW" = (
+/obj/structure/cable,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
+/turf/open/floor/glass/reinforced,
+/area/ruin/space/has_grav/cargodise_freighter/vault)
+"zY" = (
+/obj/structure/bed/double{
+	dir = 1
+	},
+/obj/effect/spawner/random/bedsheet/double{
+	dir = 4
+	},
+/turf/open/floor/wood/parquet,
+/area/ruin/space/has_grav/cargodise_freighter/kitchen)
+"zZ" = (
+/obj/structure/table/reinforced/plastitaniumglass,
+/obj/effect/turf_decal/siding/wood{
+	dir = 8
+	},
+/obj/machinery/pollution_scrubber,
+/turf/open/floor/carpet/neon/simple/purple,
+/area/ruin/space/has_grav/cargodise_freighter/bridge)
+"Aa" = (
+/obj/structure/table,
+/turf/open/floor/iron/dark,
+/area/ruin/space/has_grav/cargodise_freighter/bridge)
+"Ad" = (
+/obj/structure/chair/sofa/bamboo,
+/obj/machinery/light/directional/north,
+/turf/open/floor/wood/large,
+/area/ruin/space/has_grav/cargodise_freighter/kitchen)
+"Ae" = (
+/obj/machinery/atmospherics/components/unary/vent_pump/on/layer4,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/turf/open/floor/wood/parquet,
+/area/ruin/space/has_grav/cargodise_freighter/quarters)
+"Af" = (
+/obj/machinery/hydroponics/constructable,
+/turf/open/floor/grass,
+/area/ruin/space/has_grav/cargodise_freighter/hydroponics)
+"Ah" = (
+/obj/machinery/atmospherics/components/unary/vent_pump/on/layer4,
+/obj/structure/closet/secure_closet/wall{
+	pixel_y = 32
+	},
+/obj/machinery/light/directional/east,
+/obj/item/storage/box/syndie_kit/chameleon/ghostcafe,
+/obj/item/storage/box/syndie_kit/chameleon/ghostcafe,
+/turf/open/floor/wood/parquet,
+/area/ruin/space/has_grav/cargodise_freighter/kitchen)
+"Ai" = (
+/obj/machinery/door/airlock/glass{
+	name = "Kitchen"
+	},
+/obj/machinery/door/firedoor,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
+/turf/open/floor/iron/dark,
+/area/ruin/space/has_grav/cargodise_freighter/kitchen)
+"Aj" = (
+/obj/structure/window/fulltile/colony_fabricator,
+/obj/machinery/door/poddoor/preopen{
+	id = "bridgelockdown"
+	},
+/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
+/obj/structure/grille,
+/turf/open/floor/plating,
+/area/ruin/space/has_grav/cargodise_freighter/bridge)
+"Am" = (
+/obj/structure/cable,
+/obj/item/bong/lungbuster,
+/turf/open/floor/iron/smooth,
+/area/ruin/space/has_grav/cargodise_freighter/utility)
+"Ap" = (
+/obj/structure/table/reinforced/rglass,
+/obj/effect/turf_decal/siding/dark{
+	dir = 1
+	},
+/obj/effect/turf_decal/siding/dark{
+	dir = 1
+	},
+/obj/machinery/door/poddoor/shutters/window/preopen{
+	id = "freighterkitchen"
+	},
+/obj/machinery/door/firedoor,
+/turf/open/floor/iron/kitchen,
+/area/ruin/space/has_grav/cargodise_freighter/kitchen)
+"Aq" = (
+/obj/effect/turf_decal/siding/wood/corner,
+/obj/machinery/atmospherics/components/unary/vent_scrubber/on/layer2{
+	dir = 4
+	},
+/turf/open/floor/wood/parquet,
+/area/ruin/space/has_grav/cargodise_freighter/bridge)
+"Ar" = (
+/obj/structure/closet/crate/freezer/blood,
+/obj/effect/turf_decal/tile/blue/anticorner/contrasted{
+	dir = 1
+	},
+/turf/open/floor/iron/white,
+/area/ruin/space/has_grav/cargodise_freighter/trauma)
+"Av" = (
+/obj/machinery/atmospherics/components/unary/vent_pump/on/layer4{
+	dir = 1
+	},
+/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/turf/open/floor/carpet/neon/simple/purple,
+/area/ruin/space/has_grav/cargodise_freighter/bridge)
+"AA" = (
+/obj/machinery/atmospherics/components/unary/vent_scrubber/on/layer2,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
+/turf/open/floor/carpet/stellar,
+/area/ruin/space/has_grav/cargodise_freighter/bridge)
+"AN" = (
+/turf/open/floor/plating/airless,
+/area/ruin/space/has_grav/cargodise_freighter/exterior)
+"AO" = (
+/obj/structure/toilet{
+	dir = 1
+	},
+/obj/machinery/button/door/directional/east{
+	name = "Toilet Shutter Control";
+	id = "toilet_two"
+	},
+/turf/open/floor/iron/freezer,
+/area/ruin/space/has_grav/cargodise_freighter/quarters)
+"AP" = (
+/obj/structure/table/wood/fancy/orange,
+/turf/open/floor/carpet/stellar,
+/area/ruin/space/has_grav/cargodise_freighter/bridge)
+"Ba" = (
+/obj/effect/turf_decal/siding/wood{
+	dir = 4
+	},
+/obj/structure/chair/office{
+	dir = 8
+	},
+/turf/open/floor/wood/parquet,
+/area/ruin/space/has_grav/cargodise_freighter/bridge)
+"Bc" = (
+/obj/machinery/atmospherics/components/unary/vent_scrubber/on/layer2{
+	dir = 1
+	},
+/turf/open/floor/carpet/neon/simple/teal,
+/area/ruin/space/has_grav/cargodise_freighter/quarters)
+"Bg" = (
+/turf/open/floor/circuit,
+/area/ruin/space/has_grav/cargodise_freighter/vault)
+"Bk" = (
+/obj/structure/weightmachine,
+/turf/open/floor/carpet/cyan,
+/area/ruin/space/has_grav/cargodise_freighter/bridge)
+"Bl" = (
+/obj/structure/table/wood,
+/obj/item/paper_bin,
+/obj/item/pen/fourcolor,
+/obj/machinery/light/cold/directional/west,
+/turf/open/floor/wood/parquet,
+/area/ruin/space/has_grav/cargodise_freighter/quarters)
+"Bs" = (
+/obj/effect/turf_decal/siding/wood,
+/obj/machinery/atmospherics/components/unary/vent_pump/on/layer4{
+	dir = 8
+	},
+/turf/open/floor/wood/parquet,
+/area/ruin/space/has_grav/cargodise_freighter/bridge)
+"By" = (
+/obj/structure/table,
+/obj/machinery/microwave/frontier_printed,
+/turf/open/floor/iron/kitchen,
+/area/ruin/space/has_grav/cargodise_freighter/kitchen)
+"Bz" = (
+/obj/machinery/door/airlock/colony_prefab{
+	id_tag = "blueshit"
+	},
+/obj/machinery/door/poddoor/shutters/colony_fabricator/preopen{
+	id = "blueshit"
+	},
+/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/turf/open/floor/iron/dark,
+/area/ruin/space/has_grav/cargodise_freighter/bridge)
+"BE" = (
+/obj/structure/window/fulltile/colony_fabricator,
+/obj/machinery/door/poddoor/shutters/colony_fabricator/preopen{
+	id = "event_conference_room"
+	},
+/obj/structure/grille,
+/turf/open/floor/plating,
+/area/ruin/space/has_grav/cargodise_freighter/exterior)
+"BS" = (
+/obj/item/reagent_containers/cup/bucket/wooden,
+/obj/machinery/light/directional/south,
+/turf/open/floor/wood/large,
+/area/ruin/space/has_grav/cargodise_freighter/kitchen)
+"BV" = (
+/obj/machinery/vending/cigarette/beach,
+/obj/structure/window/reinforced/survival_pod/spawner/directional/west,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
+/turf/open/floor/wood,
+/area/ruin/space/has_grav/cargodise_freighter/bridge)
+"BW" = (
+/turf/open/floor/wood/large,
+/area/ruin/space/has_grav/cargodise_freighter/kitchen)
+"BZ" = (
+/obj/structure/table,
+/obj/machinery/griddle/frontier_tabletop,
+/obj/item/food/griddle_toast,
+/turf/open/floor/iron/kitchen,
+/area/ruin/space/has_grav/cargodise_freighter/kitchen)
+"Ck" = (
+/obj/machinery/atmospherics/components/unary/vent_pump/on/layer4,
+/turf/open/floor/wood,
+/area/ruin/space/has_grav/cargodise_freighter/bridge)
+"Cn" = (
+/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
+/obj/structure/cable,
+/turf/open/floor/iron/dark,
+/area/ruin/space/has_grav/cargodise_freighter/bridge)
+"Cy" = (
+/turf/open/floor/light/colour_cycle/dancefloor_b,
+/area/ruin/space/has_grav/cargodise_freighter/bridge)
+"Cz" = (
+/obj/structure/sign/flag/nri/directional/south,
+/turf/open/floor/iron/colony/white,
+/area/ruin/space/has_grav/cargodise_freighter/primaryhall)
+"CA" = (
+/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/turf/open/floor/iron/dark,
+/area/ruin/space/has_grav/cargodise_freighter/bridge)
+"CG" = (
+/obj/effect/turf_decal/tile/yellow/half{
+	dir = 8
+	},
+/turf/open/floor/iron/colony/white,
+/area/ruin/space/has_grav/cargodise_freighter/primaryhall)
+"CL" = (
+/obj/machinery/atmospherics/components/unary/vent_pump/on/layer4{
+	dir = 4
+	},
+/turf/open/floor/carpet/cyan,
+/area/ruin/space/has_grav/cargodise_freighter/bridge)
+"CU" = (
+/obj/structure/closet/secure_closet/freezer/meat/all_access,
+/obj/item/choice_beacon/ingredient,
+/obj/item/choice_beacon/ingredient,
+/obj/item/choice_beacon/ingredient,
+/obj/item/choice_beacon/ingredient,
+/obj/item/storage/box/syndie_kit/chameleon/ghostcafe,
+/obj/item/storage/box/syndie_kit/chameleon/ghostcafe,
+/turf/open/floor/iron/kitchen,
+/area/ruin/space/has_grav/cargodise_freighter/kitchen)
+"CZ" = (
+/obj/machinery/door/airlock/colony_prefab,
+/obj/machinery/door/poddoor/shutters/colony_fabricator/preopen{
+	id = "event_conference_room"
+	},
+/turf/open/floor/carpet/stellar,
+/area/ruin/space/has_grav/cargodise_freighter/bridge)
+"Da" = (
+/turf/open/floor/iron/kitchen,
+/area/ruin/space/has_grav/cargodise_freighter/kitchen)
+"Df" = (
+/obj/machinery/atmospherics/components/unary/vent_pump/on/layer4,
+/turf/open/floor/bamboo,
+/area/ruin/space/has_grav/cargodise_freighter/kitchen)
+"Dh" = (
+/obj/structure/sign/flag/interdyne/directional/south,
+/turf/open/floor/iron/colony/white,
+/area/ruin/space/has_grav/cargodise_freighter/primaryhall)
+"Di" = (
+/obj/structure/closet/firecloset/full,
+/obj/machinery/light/directional/east,
+/turf/open/floor/plating,
+/area/ruin/space/has_grav/cargodise_freighter/primaryhall)
+"Dm" = (
+/obj/structure/sink/directional/west,
+/obj/structure/mirror/directional/east,
+/turf/open/floor/iron/freezer,
+/area/ruin/space/has_grav/cargodise_freighter/quarters)
+"Dn" = (
+/obj/effect/turf_decal/tile/blue/anticorner/contrasted{
+	dir = 4
+	},
+/obj/machinery/atmospherics/components/unary/vent_scrubber/on/layer2,
+/obj/machinery/vending/wallmed/directional/east,
+/turf/open/floor/iron/white,
+/area/ruin/space/has_grav/cargodise_freighter/trauma)
+"Do" = (
+/obj/machinery/button/door/directional/north{
+	id = "comdorm13"
+	},
+/obj/structure/closet/crate/bin,
+/turf/open/floor/wood/parquet,
+/area/ruin/space/has_grav/cargodise_freighter/quarters)
+"Du" = (
+/obj/machinery/button/door/directional/north{
+	id = "comdorm10"
+	},
+/obj/structure/closet/crate/bin,
+/turf/open/floor/wood/parquet,
+/area/ruin/space/has_grav/cargodise_freighter/quarters)
+"DA" = (
+/obj/structure/table,
+/obj/item/storage/medkit/brute{
+	pixel_y = 12
+	},
+/obj/item/storage/medkit/advanced{
+	pixel_y = 8
+	},
+/obj/item/storage/medkit/fire{
+	pixel_y = 4
+	},
+/obj/item/storage/medkit/toxin,
+/obj/effect/turf_decal/tile/blue/half/contrasted{
+	dir = 8
+	},
+/obj/machinery/light/cold/directional/west,
+/turf/open/floor/iron/white,
+/area/ruin/space/has_grav/cargodise_freighter/trauma)
+"DD" = (
+/obj/effect/turf_decal/tile/yellow/half,
+/obj/structure/sign/flag/tizira/directional/south,
+/obj/structure/sign/flag/tizira/directional/south,
+/turf/open/floor/glass,
+/area/ruin/space/has_grav/cargodise_freighter/primaryhall)
+"DE" = (
+/turf/open/floor/bamboo/tatami{
+	dir = 4
+	},
+/area/ruin/space/has_grav/cargodise_freighter/hydroponics)
+"DF" = (
+/obj/effect/turf_decal/tile/yellow/half{
+	dir = 4
+	},
+/turf/open/floor/iron/colony/white,
+/area/ruin/space/has_grav/cargodise_freighter/primaryhall)
+"DG" = (
+/obj/structure/chair/sofa/bamboo{
+	dir = 1
+	},
+/obj/machinery/light/directional/south,
+/turf/open/floor/wood/large,
+/area/ruin/space/has_grav/cargodise_freighter/kitchen)
+"DQ" = (
+/obj/structure/table,
+/obj/item/storage/box/condimentbottles{
+	pixel_y = 6
+	},
+/obj/item/storage/box/drinkingglasses{
+	pixel_x = 6
+	},
+/obj/item/storage/box/beakers/variety,
+/turf/open/floor/iron/kitchen,
+/area/ruin/space/has_grav/cargodise_freighter/kitchen)
+"DW" = (
+/obj/structure/chair/sofa/bamboo/left{
+	dir = 1
+	},
+/turf/open/floor/wood/large,
+/area/ruin/space/has_grav/cargodise_freighter/kitchen)
+"DY" = (
+/obj/structure/chair/sofa/bamboo/right{
+	dir = 4
+	},
+/turf/open/floor/wood/large,
+/area/ruin/space/has_grav/cargodise_freighter/kitchen)
+"Ee" = (
+/obj/structure/closet/secure_closet/wall{
+	pixel_y = -32
+	},
+/obj/machinery/atmospherics/components/unary/vent_scrubber/on/layer2{
+	dir = 1
+	},
+/obj/machinery/light/directional/east,
+/obj/item/storage/box/syndie_kit/chameleon/ghostcafe,
+/obj/item/storage/box/syndie_kit/chameleon/ghostcafe,
+/turf/open/floor/wood/parquet,
+/area/ruin/space/has_grav/cargodise_freighter/kitchen)
+"Ef" = (
+/obj/structure/lattice,
+/turf/template_noop,
+/area/ruin/space/has_grav/cargodise_freighter/exterior)
+"Eg" = (
+/obj/machinery/light/floor,
+/obj/item/storage/box/syndie_kit/chameleon/ghostcafe,
+/turf/open/floor/plating,
+/area/ruin/space/has_grav/cargodise_freighter/utility)
+"El" = (
+/obj/effect/turf_decal/tile/yellow/half,
+/obj/machinery/door/firedoor,
+/turf/open/floor/glass,
+/area/ruin/space/has_grav/cargodise_freighter/primaryhall)
+"Er" = (
+/obj/structure/window/fulltile/colony_fabricator,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
+/turf/open/floor/plating,
+/area/ruin/space/has_grav/cargodise_freighter/vault)
+"Et" = (
+/obj/structure/cable,
+/obj/machinery/light/cold/directional/south,
+/obj/machinery/power/port_gen/pacman/super,
+/obj/machinery/light_switch/directional/south,
+/turf/open/floor/plating,
+/area/ruin/space/has_grav/cargodise_freighter/utility)
+"Eu" = (
+/obj/structure/cable,
+/obj/machinery/power/terminal{
+	dir = 4
+	},
+/turf/open/floor/plating,
+/area/ruin/space/has_grav/cargodise_freighter/utility)
+"Ew" = (
+/obj/machinery/airalarm/directional/north,
+/obj/effect/mapping_helpers/airalarm/all_access,
+/turf/open/floor/wood,
+/area/ruin/space/has_grav/cargodise_freighter/bridge)
+"Ex" = (
+/obj/machinery/door/firedoor,
+/obj/machinery/door/airlock/multi_tile/metal{
+	dir = 4
+	},
+/turf/open/floor/carpet/neon/simple/teal,
+/area/ruin/space/has_grav/cargodise_freighter/quarters)
+"Ey" = (
+/obj/structure/dresser,
+/turf/open/floor/wood/parquet,
+/area/ruin/space/has_grav/cargodise_freighter/kitchen)
+"EC" = (
+/obj/structure/window/reinforced/survival_pod/spawner/directional/east,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
+/turf/open/floor/carpet/blue,
+/area/ruin/space/has_grav/cargodise_freighter/bridge)
+"EG" = (
+/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
+/obj/item/bong,
+/turf/open/floor/iron/smooth,
+/area/ruin/space/has_grav/cargodise_freighter/utility)
+"EP" = (
+/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/turf/open/floor/iron/dark,
+/area/ruin/space/has_grav/cargodise_freighter/kitchen)
+"EZ" = (
+/obj/effect/turf_decal/tile/yellow/half{
+	dir = 1
+	},
+/obj/structure/extinguisher_cabinet/directional/north,
+/obj/machinery/atmospherics/components/unary/vent_pump/on/layer4,
+/turf/open/floor/iron/colony/white,
+/area/ruin/space/has_grav/cargodise_freighter/primaryhall)
+"Fc" = (
+/obj/structure/chair/comfy/black,
+/turf/open/floor/carpet/stellar,
+/area/ruin/space/has_grav/cargodise_freighter/bridge)
+"Fk" = (
+/turf/closed/wall/prefab_plastic,
+/area/ruin/space/has_grav/cargodise_freighter/vault)
+"Fm" = (
+/obj/effect/turf_decal/tile/yellow/half{
+	dir = 1
+	},
+/obj/structure/closet/emcloset/wall{
+	pixel_y = 26
+	},
+/turf/open/floor/iron/colony/white,
+/area/ruin/space/has_grav/cargodise_freighter/primaryhall)
+"Fp" = (
+/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/turf/open/floor/catwalk_floor/colony_fabricator,
+/area/ruin/space/has_grav/cargodise_freighter/primaryhall)
+"Fs" = (
+/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
+/obj/machinery/shower/directional/north,
+/obj/structure/drain,
+/turf/open/floor/wood/large,
+/area/ruin/space/has_grav/cargodise_freighter/kitchen)
+"Fw" = (
+/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/turf/open/floor/carpet/neon/simple/teal,
+/area/ruin/space/has_grav/cargodise_freighter/quarters)
+"Fy" = (
+/obj/structure/chair/sofa/corp/right,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/turf/open/floor/wood,
+/area/ruin/space/has_grav/cargodise_freighter/bridge)
+"FD" = (
+/turf/open/floor/bamboo,
+/area/ruin/space/has_grav/cargodise_freighter/kitchen)
+"FJ" = (
+/obj/machinery/airalarm/directional/south,
+/obj/effect/mapping_helpers/airalarm/all_access,
+/obj/machinery/recharge_station,
+/turf/open/floor/wood,
+/area/ruin/space/has_grav/cargodise_freighter/bridge)
+"FL" = (
+/obj/effect/turf_decal/tile/yellow/half,
+/mob/living/basic/bot/cleanbot/autopatrol,
+/turf/open/floor/glass,
+/area/ruin/space/has_grav/cargodise_freighter/primaryhall)
+"FV" = (
+/obj/machinery/atmospherics/components/unary/vent_scrubber/on/layer2,
+/obj/machinery/button/door/directional/east{
+	id = "comdorm2"
+	},
+/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
+/turf/open/floor/wood/parquet,
+/area/ruin/space/has_grav/cargodise_freighter/kitchen)
+"Gd" = (
+/obj/structure/chair/sofa/corp/right{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/turf/open/floor/wood,
+/area/ruin/space/has_grav/cargodise_freighter/bridge)
+"Gf" = (
+/obj/structure/stripper_pole,
+/obj/structure/table/reinforced/plasmarglass,
+/obj/structure/cable,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
+/turf/open/floor/light/colour_cycle/dancefloor_a,
+/area/ruin/space/has_grav/cargodise_freighter/bridge)
+"Gg" = (
+/turf/closed/wall/prefab_plastic,
+/area/ruin/space/has_grav/cargodise_freighter/kitchen)
+"Gh" = (
+/turf/template_noop,
+/area/template_noop)
+"Gj" = (
+/obj/structure/cable,
+/obj/effect/turf_decal/tile/blue{
+	dir = 8
+	},
+/turf/open/floor/iron/dark,
+/area/ruin/space/has_grav/cargodise_freighter/bridge)
+"Gl" = (
+/obj/structure/window/fulltile/colony_fabricator,
+/obj/machinery/door/firedoor,
+/obj/machinery/door/poddoor/preopen{
+	id = "bridgelockdown"
+	},
+/obj/machinery/door/poddoor/shutters/colony_fabricator{
+	id = "lustwishes"
+	},
+/turf/open/floor/plating,
+/area/ruin/space/has_grav/cargodise_freighter/bridge)
+"Gs" = (
+/obj/machinery/firealarm/directional/south,
+/turf/open/floor/carpet/neon/simple/teal,
+/area/ruin/space/has_grav/cargodise_freighter/quarters)
+"GD" = (
+/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/obj/machinery/door/poddoor/shutters/colony_fabricator/preopen{
+	id = "comdorm12"
+	},
+/turf/open/floor/carpet/neon/simple/teal,
+/area/ruin/space/has_grav/cargodise_freighter/quarters)
+"GL" = (
+/turf/open/floor/bamboo/tatami,
+/area/ruin/space/has_grav/cargodise_freighter/hydroponics)
+"GR" = (
+/obj/structure/railing{
+	dir = 1
+	},
+/obj/structure/hedge,
+/turf/open/floor/plating,
+/area/ruin/space/has_grav/cargodise_freighter/trauma)
+"GX" = (
+/obj/structure/cable,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
+/obj/structure/table/reinforced/plastitaniumglass,
+/obj/machinery/door/poddoor/shutters/colony_fabricator{
+	id = "lustwishes"
+	},
+/turf/open/floor/light/colour_cycle/dancefloor_b,
+/area/ruin/space/has_grav/cargodise_freighter/bridge)
+"Ha" = (
+/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/turf/closed/wall/prefab_plastic,
+/area/ruin/space/has_grav/cargodise_freighter/bridge)
+"He" = (
+/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/turf/open/floor/glass/reinforced,
+/area/ruin/space/has_grav/cargodise_freighter/vault)
+"Hi" = (
+/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/obj/machinery/firealarm/directional/south,
+/obj/machinery/light/directional/north,
+/turf/open/floor/iron/dark,
+/area/ruin/space/has_grav/cargodise_freighter/kitchen)
+"Hj" = (
+/obj/effect/turf_decal/tile/yellow/half{
+	dir = 1
+	},
+/turf/open/floor/glass,
+/area/ruin/space/has_grav/cargodise_freighter/primaryhall)
+"Hp" = (
+/obj/structure/chair/sofa/corp/left,
+/turf/open/floor/wood,
+/area/ruin/space/has_grav/cargodise_freighter/bridge)
+"Hr" = (
+/obj/structure/cable,
+/obj/machinery/atmospherics/components/unary/vent_pump/on/layer4{
+	dir = 4
+	},
+/turf/open/floor/bamboo/tatami{
+	dir = 4
+	},
+/area/ruin/space/has_grav/cargodise_freighter/hydroponics)
+"Hv" = (
+/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
+/obj/machinery/door/firedoor,
+/turf/open/floor/carpet/neon/simple/teal,
+/area/ruin/space/has_grav/cargodise_freighter/quarters)
+"Hy" = (
+/obj/structure/closet/secure_closet/hydroponics{
+	req_access = null
+	},
+/turf/open/floor/bamboo/tatami,
+/area/ruin/space/has_grav/cargodise_freighter/hydroponics)
+"HK" = (
+/obj/structure/window/fulltile/colony_fabricator,
+/obj/structure/window/fulltile/colony_fabricator,
+/obj/machinery/door/poddoor/shutters/colony_fabricator/preopen{
+	id = "event_conference_room"
+	},
+/obj/structure/grille,
+/turf/open/floor/plating,
+/area/ruin/space/has_grav/cargodise_freighter/exterior)
+"HM" = (
+/obj/machinery/button/door/directional/south{
+	id = "comdorm9"
+	},
+/obj/structure/closet/crate/bin,
+/turf/open/floor/wood/parquet,
+/area/ruin/space/has_grav/cargodise_freighter/quarters)
+"HN" = (
+/obj/machinery/light/cold/directional/west,
+/turf/open/floor/wood,
+/area/ruin/space/has_grav/cargodise_freighter/bridge)
+"HP" = (
+/obj/machinery/light/directional/north,
+/turf/open/floor/iron/colony/white,
+/area/ruin/space/has_grav/cargodise_freighter/primaryhall)
+"HS" = (
+/obj/structure/reagent_dispensers/beerkeg{
+	reagent_id = /datum/reagent/drug/aphrodisiac/crocin;
+	name = "'beer' keg";
+	desc = "Beer is liquid- This doesn't smell right. This smells... funny."
+	},
+/obj/machinery/light/directional/south,
+/turf/open/floor/carpet/neon/simple/purple,
+/area/ruin/space/has_grav/cargodise_freighter/bridge)
+"HU" = (
+/obj/machinery/light/cold/directional/north,
+/obj/structure/railing,
+/obj/structure/hedge,
+/turf/open/floor/plating,
+/area/ruin/space/has_grav/cargodise_freighter/hydroponics)
+"HY" = (
+/obj/machinery/vending/dorms,
+/obj/structure/window/reinforced/survival_pod/spawner/directional/west,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
+/obj/machinery/door/poddoor/shutters/colony_fabricator{
+	id = "lustwishes"
+	},
+/turf/open/floor/wood,
+/area/ruin/space/has_grav/cargodise_freighter/bridge)
+"HZ" = (
+/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
+/obj/machinery/recharge_station,
+/obj/machinery/light/directional/west,
+/turf/open/floor/wood,
+/area/ruin/space/has_grav/cargodise_freighter/bridge)
+"Ic" = (
+/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
+/obj/machinery/light/cold/directional/north,
+/turf/open/floor/carpet/neon/simple/teal,
+/area/ruin/space/has_grav/cargodise_freighter/quarters)
+"Im" = (
+/obj/effect/turf_decal/trimline/blue/corner,
+/obj/machinery/atmospherics/components/unary/vent_pump/on/layer4{
+	dir = 8
+	},
+/turf/open/floor/iron/dark/smooth_corner,
+/area/ruin/space/has_grav/cargodise_freighter/bridge)
+"In" = (
+/obj/machinery/vending/dorms,
+/obj/machinery/door/poddoor/shutters/colony_fabricator{
+	id = "lustwishes"
+	},
+/turf/open/floor/carpet/stellar,
+/area/ruin/space/has_grav/cargodise_freighter/bridge)
+"Ip" = (
+/obj/structure/table/reinforced,
+/obj/effect/spawner/random/entertainment/cigarette_pack,
+/turf/open/floor/iron/kitchen,
+/area/ruin/space/has_grav/cargodise_freighter/kitchen)
+"Ir" = (
+/obj/structure/cable,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/turf/open/floor/iron/dark,
+/area/ruin/space/has_grav/cargodise_freighter/bridge)
+"It" = (
+/obj/structure/chair/sofa/corp/left{
+	dir = 1
+	},
+/obj/machinery/light/cold/directional/south,
+/turf/open/floor/iron/kitchen,
+/area/ruin/space/has_grav/cargodise_freighter/kitchen)
+"Iy" = (
+/obj/machinery/vending/medical/syndicate_access/cybersun{
+	req_access = null
+	},
+/obj/effect/turf_decal/tile/blue/anticorner/contrasted{
+	dir = 8
+	},
+/turf/open/floor/iron/white,
+/area/ruin/space/has_grav/cargodise_freighter/trauma)
+"IN" = (
+/obj/structure/railing{
+	dir = 8
+	},
+/turf/open/water/hot_spring/cafe,
+/area/ruin/space/has_grav/cargodise_freighter/kitchen)
+"IO" = (
+/obj/machinery/door/airlock/multi_tile{
+	id_tag = "comdorm10"
+	},
+/obj/machinery/door/poddoor/shutters/colony_fabricator/preopen{
+	id = "comdorm10"
+	},
+/turf/open/floor/carpet/neon/simple/teal,
+/area/ruin/space/has_grav/cargodise_freighter/quarters)
+"IP" = (
+/obj/machinery/vending/dinnerware,
+/turf/open/floor/iron/kitchen,
+/area/ruin/space/has_grav/cargodise_freighter/kitchen)
+"IQ" = (
+/mob/living/basic/bot/cleanbot/autopatrol,
+/turf/open/floor/iron/colony/white,
+/area/ruin/space/has_grav/cargodise_freighter/primaryhall)
+"IS" = (
+/obj/machinery/door/airlock/maintenance/glass{
+	name = "Utilities Room"
+	},
+/obj/structure/cable,
+/obj/machinery/door/firedoor,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
+/turf/open/floor/iron/dark,
+/area/ruin/space/has_grav/cargodise_freighter/utility)
+"IY" = (
+/obj/machinery/door/poddoor/shutters/colony_fabricator{
+	id = "lustwishes"
+	},
+/obj/machinery/vending/dorms,
+/turf/open/floor/carpet/neon/simple/purple,
+/area/ruin/space/has_grav/cargodise_freighter/bridge)
+"Jd" = (
+/obj/structure/chair/sofa/corp/right,
+/turf/open/floor/wood,
+/area/ruin/space/has_grav/cargodise_freighter/bridge)
+"Jg" = (
+/obj/machinery/button/door/directional/south{
+	id = "event_conference_room";
+	name = "Conference Room Shutters Control"
+	},
+/obj/machinery/light/directional/south,
+/turf/open/floor/carpet/stellar,
+/area/ruin/space/has_grav/cargodise_freighter/bridge)
+"Jj" = (
+/obj/structure/table/reinforced/rglass,
+/obj/effect/turf_decal/siding/dark{
+	dir = 1
+	},
+/obj/effect/turf_decal/siding/dark{
+	dir = 1
+	},
+/obj/machinery/door/poddoor/shutters/window/preopen{
+	id = "freighterkitchen"
+	},
+/obj/machinery/door/firedoor,
+/obj/structure/desk_bell,
+/turf/open/floor/iron/kitchen,
+/area/ruin/space/has_grav/cargodise_freighter/kitchen)
+"Jm" = (
+/obj/structure/cable,
+/turf/open/floor/glass/reinforced,
+/area/ruin/space/has_grav/cargodise_freighter/vault)
+"Jy" = (
+/obj/structure/chair/sofa/bamboo{
+	dir = 4
+	},
+/turf/open/floor/wood/large,
+/area/ruin/space/has_grav/cargodise_freighter/kitchen)
+"JC" = (
+/obj/structure/dresser,
+/obj/machinery/light/cold/directional/east,
+/turf/open/floor/wood/parquet,
+/area/ruin/space/has_grav/cargodise_freighter/quarters)
+"JN" = (
+/obj/effect/turf_decal/tile/yellow/half,
+/obj/machinery/atmospherics/components/unary/vent_scrubber/on/layer2{
+	dir = 1
+	},
+/obj/machinery/light/directional/south,
+/turf/open/floor/iron/colony/white,
+/area/ruin/space/has_grav/cargodise_freighter/primaryhall)
+"JQ" = (
+/obj/structure/lattice/catwalk,
+/obj/structure/marker_beacon/burgundy,
+/turf/template_noop,
+/area/ruin/space/has_grav/cargodise_freighter/exterior)
+"JX" = (
+/obj/structure/chair/sofa/corp/left{
+	dir = 4
+	},
+/obj/structure/window/reinforced/survival_pod/spawner/directional/west,
+/turf/open/floor/carpet/neon/simple/pink,
+/area/ruin/space/has_grav/cargodise_freighter/bridge)
+"Kb" = (
+/obj/effect/turf_decal/siding/wood,
+/obj/machinery/computer/centcom_announcement/nri_raider{
+	dir = 8;
+	desc = "A console used for making priority Nanotrasen Diplomacy reports.";
+	command_name = "NTDS Hedon Starship Telegram";
+	name = "diplomatic mission announcement console"
+	},
+/turf/open/floor/wood/parquet,
+/area/ruin/space/has_grav/cargodise_freighter/bridge)
+"Kg" = (
+/turf/open/floor/light/colour_cycle/dancefloor_a,
+/area/ruin/space/has_grav/cargodise_freighter/bridge)
+"Ki" = (
+/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/turf/open/floor/plating/airless,
+/area/ruin/space/has_grav/cargodise_freighter/exterior)
+"Kj" = (
+/obj/structure/toilet{
+	dir = 1
+	},
+/obj/machinery/button/door/directional/west{
+	name = "Toilet Shutter Control";
+	id = "toilet_one"
+	},
+/turf/open/floor/iron/freezer,
+/area/ruin/space/has_grav/cargodise_freighter/quarters)
+"Kl" = (
+/obj/machinery/button/door/directional/west{
+	id = "comdorm1"
+	},
+/obj/machinery/atmospherics/components/unary/vent_scrubber/on/layer2,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
+/turf/open/floor/wood/parquet,
+/area/ruin/space/has_grav/cargodise_freighter/kitchen)
+"Km" = (
+/obj/machinery/hydroponics/constructable,
+/obj/machinery/firealarm/directional/south,
+/obj/machinery/light/directional/south,
+/turf/open/floor/grass,
+/area/ruin/space/has_grav/cargodise_freighter/hydroponics)
+"Kp" = (
+/obj/structure/window/fulltile/colony_fabricator,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/obj/structure/grille,
+/turf/open/floor/plating,
+/area/ruin/space/has_grav/cargodise_freighter/hydroponics)
+"Kr" = (
+/obj/structure/table/wood/fancy/red,
+/turf/open/floor/carpet/stellar,
+/area/ruin/space/has_grav/cargodise_freighter/bridge)
+"Ks" = (
+/obj/machinery/button/door/directional/east{
+	name = "Blueshield Officer Door Control";
+	id = "blueshit"
+	},
+/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/turf/open/floor/iron/dark,
+/area/ruin/space/has_grav/cargodise_freighter/bridge)
+"Kw" = (
+/obj/structure/chair/comfy/shuttle{
+	dir = 4
+	},
+/obj/effect/turf_decal/tile/blue/half/contrasted,
+/obj/machinery/button/door/directional/south{
+	id = "bridgelockdown";
+	name = "Bridge Blast Door Control";
+	pixel_x = 6
+	},
+/turf/open/floor/iron/dark,
+/area/ruin/space/has_grav/cargodise_freighter/bridge)
+"KB" = (
+/obj/machinery/door/poddoor/shutters/colony_fabricator/preopen{
+	id = "toilet_two"
+	},
+/turf/open/floor/iron/freezer,
+/area/ruin/space/has_grav/cargodise_freighter/quarters)
+"KH" = (
+/obj/machinery/door/airlock/vault,
+/obj/structure/cable,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/obj/machinery/door/firedoor,
+/turf/open/floor/iron/dark,
+/area/ruin/space/has_grav/cargodise_freighter/bridge)
+"KR" = (
+/obj/machinery/atmospherics/pipe/smart/manifold4w/brown,
+/obj/structure/window/reinforced/survival_pod/spawner/directional/north,
+/obj/machinery/power/micro_reactor,
+/obj/structure/cable,
+/turf/open/floor/iron/colony/texture,
+/area/ruin/space/has_grav/cargodise_freighter/utility)
+"KS" = (
+/obj/effect/turf_decal/stripes/line{
+	dir = 8
+	},
+/turf/open/floor/plating/airless,
+/area/ruin/space/has_grav/cargodise_freighter/exterior)
+"KU" = (
+/obj/structure/table/reinforced/plastitaniumglass,
+/obj/machinery/dish_drive,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
+/obj/effect/turf_decal/siding/wood{
+	dir = 1
+	},
+/turf/open/floor/carpet/neon/simple/purple,
+/area/ruin/space/has_grav/cargodise_freighter/bridge)
+"KY" = (
+/obj/machinery/power/shuttle_engine/propulsion{
+	dir = 8
+	},
+/obj/effect/turf_decal/stripes/line{
+	dir = 8
+	},
+/turf/open/floor/plating,
+/area/ruin/space/has_grav/cargodise_freighter/exterior)
+"La" = (
+/obj/structure/table/wood,
+/obj/item/modular_computer/laptop/preset/civilian/closed,
+/turf/open/floor/wood/parquet,
+/area/ruin/space/has_grav/cargodise_freighter/quarters)
+"Lj" = (
+/obj/machinery/seed_extractor,
+/obj/machinery/airalarm/directional/south,
+/obj/effect/mapping_helpers/airalarm/all_access,
+/turf/open/floor/bamboo/tatami,
+/area/ruin/space/has_grav/cargodise_freighter/hydroponics)
+"Lk" = (
+/obj/effect/turf_decal/tile/yellow{
+	dir = 4
+	},
+/turf/open/floor/iron/colony/white,
+/area/ruin/space/has_grav/cargodise_freighter/primaryhall)
+"Ll" = (
+/obj/structure/table/reinforced,
+/obj/effect/spawner/random/entertainment/deck,
+/turf/open/floor/iron/kitchen,
+/area/ruin/space/has_grav/cargodise_freighter/kitchen)
+"Lm" = (
+/obj/structure/table/reinforced/plastitaniumglass,
+/obj/machinery/pollution_scrubber,
+/turf/open/floor/wood,
+/area/ruin/space/has_grav/cargodise_freighter/bridge)
+"Lp" = (
+/obj/effect/turf_decal/tile/yellow/half{
+	dir = 4
+	},
+/obj/machinery/door/firedoor,
+/turf/open/floor/glass,
+/area/ruin/space/has_grav/cargodise_freighter/primaryhall)
+"Lr" = (
+/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
+/obj/structure/mineral_door/wood,
+/obj/structure/fans/tiny,
+/turf/open/floor/wood/large,
+/area/ruin/space/has_grav/cargodise_freighter/kitchen)
+"Lw" = (
+/obj/structure/towel_bin,
+/obj/structure/table/wood,
+/obj/machinery/light/directional/west,
+/turf/open/floor/carpet/cyan,
+/area/ruin/space/has_grav/cargodise_freighter/bridge)
+"Lz" = (
+/obj/structure/closet/secure_closet/wall{
+	pixel_y = 32
+	},
+/turf/open/floor/wood/parquet,
+/area/ruin/space/has_grav/cargodise_freighter/quarters)
+"LH" = (
+/obj/machinery/door/firedoor,
+/obj/machinery/door/airlock/colony_prefab{
+	id_tag = "comdorm4"
+	},
+/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
+/obj/machinery/door/poddoor/shutters/colony_fabricator/preopen{
+	id = "comdorm4"
+	},
+/turf/open/floor/iron/dark,
+/area/ruin/space/has_grav/cargodise_freighter/kitchen)
+"LX" = (
+/obj/structure/cable,
+/obj/machinery/door/airlock/hydroponics/glass{
+	name = "Hydroponics"
+	},
+/obj/machinery/door/firedoor,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
+/turf/open/floor/catwalk_floor/iron_dark,
+/area/ruin/space/has_grav/cargodise_freighter/hydroponics)
+"Mh" = (
+/obj/machinery/door/airlock/medical/glass{
+	name = "Medbay"
+	},
+/obj/structure/cable,
+/obj/machinery/door/firedoor,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/turf/open/floor/iron/dark,
+/area/ruin/space/has_grav/cargodise_freighter/trauma)
+"Mr" = (
+/obj/structure/window/fulltile/colony_fabricator,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/turf/open/floor/plating,
+/area/ruin/space/has_grav/cargodise_freighter/vault)
+"Mu" = (
+/obj/structure/cable,
+/obj/structure/reagent_dispensers/fueltank/large,
+/turf/open/floor/plating,
+/area/ruin/space/has_grav/cargodise_freighter/utility)
+"ME" = (
+/obj/structure/chair/sofa/corp/right{
+	dir = 8
+	},
+/turf/open/floor/wood,
+/area/ruin/space/has_grav/cargodise_freighter/bridge)
+"MF" = (
+/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/turf/open/floor/carpet/stellar,
+/area/ruin/space/has_grav/cargodise_freighter/bridge)
+"MG" = (
+/obj/machinery/door/firedoor,
+/obj/structure/cable,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/turf/open/floor/catwalk_floor/colony_fabricator,
+/area/ruin/space/has_grav/cargodise_freighter/primaryhall)
+"MI" = (
+/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/turf/open/floor/iron/dark,
+/area/ruin/space/has_grav/cargodise_freighter/bridge)
+"MM" = (
+/obj/effect/turf_decal/tile/yellow/half{
+	dir = 8
+	},
+/obj/machinery/door/firedoor,
+/turf/open/floor/glass,
+/area/ruin/space/has_grav/cargodise_freighter/primaryhall)
+"MN" = (
+/obj/machinery/door/airlock/multi_tile{
+	id_tag = "comdorm8"
+	},
+/obj/machinery/door/poddoor/shutters/colony_fabricator/preopen{
+	id = "comdorm8"
+	},
+/turf/open/floor/carpet/neon/simple/teal,
+/area/ruin/space/has_grav/cargodise_freighter/quarters)
+"MP" = (
+/obj/structure/cable,
+/obj/item/bong/lungbuster,
+/turf/open/floor/plating,
+/area/ruin/space/has_grav/cargodise_freighter/utility)
+"MS" = (
+/obj/structure/mineral_door/manual_colony_door,
+/turf/open/floor/glass,
+/area/ruin/space/has_grav/cargodise_freighter/vault)
+"MU" = (
+/obj/structure/table/reinforced/plastitaniumglass,
+/obj/machinery/chem_dispenser/drinks/fullupgrade,
+/turf/open/floor/carpet/neon/simple/purple,
+/area/ruin/space/has_grav/cargodise_freighter/bridge)
+"MZ" = (
+/obj/structure/extinguisher_cabinet/directional/east,
+/obj/structure/sink/kitchen/directional/west,
+/turf/open/floor/iron/kitchen,
+/area/ruin/space/has_grav/cargodise_freighter/kitchen)
+"Na" = (
+/obj/structure/reagent_dispensers/water_cooler/directional,
+/turf/open/floor/carpet/cyan,
+/area/ruin/space/has_grav/cargodise_freighter/bridge)
+"Ni" = (
+/obj/structure/table,
+/obj/machinery/processor,
+/turf/open/floor/iron/kitchen,
+/area/ruin/space/has_grav/cargodise_freighter/kitchen)
+"Nj" = (
+/obj/machinery/door/airlock/command{
+	name = "Cockpit"
+	},
+/obj/structure/cable,
+/obj/machinery/door/firedoor,
+/obj/machinery/door/poddoor/preopen{
+	id = "bridgelockdown"
+	},
+/turf/open/floor/iron/dark,
+/area/ruin/space/has_grav/cargodise_freighter/bridge)
+"Nr" = (
+/obj/structure/table/wood,
+/turf/open/floor/wood/large,
+/area/ruin/space/has_grav/cargodise_freighter/kitchen)
+"Nt" = (
+/obj/structure/cable,
+/obj/machinery/atmospherics/pipe/layer_manifold/supply/hidden{
+	dir = 4
+	},
+/turf/open/floor/iron/smooth,
+/area/ruin/space/has_grav/cargodise_freighter/utility)
+"Ny" = (
+/obj/machinery/computer/atmos_alert{
+	dir = 8
+	},
+/obj/effect/turf_decal/tile/blue/anticorner/contrasted{
+	dir = 4
+	},
+/turf/open/floor/iron/dark,
+/area/ruin/space/has_grav/cargodise_freighter/bridge)
+"Nz" = (
+/obj/effect/turf_decal/siding/wood{
+	dir = 1
+	},
+/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/turf/open/floor/wood/parquet,
+/area/ruin/space/has_grav/cargodise_freighter/bridge)
+"NE" = (
+/turf/open/floor/carpet/blue,
+/area/ruin/space/has_grav/cargodise_freighter/bridge)
+"NH" = (
+/obj/machinery/light/directional/south,
+/obj/structure/sign/flag/mothic/directional/south,
+/turf/open/floor/iron/colony/white,
+/area/ruin/space/has_grav/cargodise_freighter/primaryhall)
+"NV" = (
+/obj/effect/turf_decal/tile/yellow/half,
+/turf/open/floor/iron/colony/white,
+/area/ruin/space/has_grav/cargodise_freighter/primaryhall)
+"NZ" = (
+/obj/machinery/shower/directional/west,
+/obj/structure/window/reinforced/survival_pod/spawner/directional/south,
+/obj/structure/drain,
+/obj/structure/curtain,
+/turf/open/floor/iron/freezer,
+/area/ruin/space/has_grav/cargodise_freighter/quarters)
+"Oa" = (
+/obj/structure/table/wood/fancy/orange,
+/obj/item/clipboard,
+/obj/item/pen/fountain,
+/obj/item/flashlight/lamp/green{
+	pixel_x = -7;
+	pixel_y = 14
+	},
+/obj/effect/turf_decal/siding/wood/corner{
+	dir = 8
+	},
+/turf/open/floor/wood/parquet,
+/area/ruin/space/has_grav/cargodise_freighter/bridge)
+"Oi" = (
+/obj/structure/railing{
+	dir = 10
+	},
+/turf/open/water/hot_spring/cafe,
+/area/ruin/space/has_grav/cargodise_freighter/kitchen)
+"Oj" = (
+/obj/structure/chair/comfy/shuttle{
+	dir = 4
+	},
+/turf/open/floor/iron/dark/textured_half{
+	dir = 4
+	},
+/area/ruin/space/has_grav/cargodise_freighter/bridge)
+"Or" = (
+/obj/structure/railing{
+	dir = 8
+	},
+/obj/structure/cable,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
+/obj/structure/table/reinforced/plastitaniumglass,
+/obj/machinery/door/poddoor/shutters/colony_fabricator{
+	id = "lustwishes"
+	},
+/turf/open/floor/light/colour_cycle/dancefloor_b,
+/area/ruin/space/has_grav/cargodise_freighter/bridge)
+"Ow" = (
+/obj/effect/turf_decal/tile/yellow/half{
+	dir = 8
+	},
+/obj/machinery/light/directional/west,
+/obj/structure/closet/crate/bin,
+/turf/open/floor/iron/colony/white,
+/area/ruin/space/has_grav/cargodise_freighter/primaryhall)
+"Ox" = (
+/obj/machinery/vending/boozeomat/all_access,
+/turf/open/floor/iron/kitchen,
+/area/ruin/space/has_grav/cargodise_freighter/kitchen)
+"Oy" = (
+/obj/machinery/light/cold/directional/north,
+/turf/open/floor/iron/kitchen,
+/area/ruin/space/has_grav/cargodise_freighter/kitchen)
+"OC" = (
+/turf/open/floor/carpet/neon/simple/purple,
+/area/ruin/space/has_grav/cargodise_freighter/bridge)
+"OF" = (
+/obj/structure/closet/emcloset/wall{
+	pixel_x = 26
+	},
+/turf/open/floor/bamboo/tatami{
+	dir = 4
+	},
+/area/ruin/space/has_grav/cargodise_freighter/hydroponics)
+"OS" = (
+/obj/structure/sign/flag/mars/directional/south,
+/turf/open/floor/glass,
+/area/ruin/space/has_grav/cargodise_freighter/primaryhall)
+"OT" = (
+/obj/machinery/power/shuttle_engine/large{
+	dir = 8
+	},
+/obj/effect/turf_decal/stripes/line{
+	dir = 8
+	},
+/turf/open/floor/plating,
+/area/ruin/space/has_grav/cargodise_freighter/exterior)
+"OY" = (
+/obj/machinery/atmospherics/components/unary/vent_scrubber/on/layer2,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
+/turf/open/floor/wood/parquet,
+/area/ruin/space/has_grav/cargodise_freighter/quarters)
+"Pc" = (
+/obj/machinery/door/poddoor/shutters/colony_fabricator/preopen{
+	id = "comdorm6"
+	},
+/turf/open/floor/carpet/neon/simple/teal,
+/area/ruin/space/has_grav/cargodise_freighter/quarters)
+"Pg" = (
+/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/obj/machinery/door/poddoor/shutters/colony_fabricator/preopen{
+	id = "comdorm9"
+	},
+/turf/open/floor/carpet/neon/simple/teal,
+/area/ruin/space/has_grav/cargodise_freighter/quarters)
+"Pt" = (
+/obj/structure/closet/secure_closet/wall{
+	pixel_y = -32
+	},
+/obj/machinery/atmospherics/components/unary/vent_scrubber/on/layer2{
+	dir = 1
+	},
+/obj/machinery/light/directional/west,
+/obj/item/storage/box/syndie_kit/chameleon/ghostcafe,
+/obj/item/storage/box/syndie_kit/chameleon/ghostcafe,
+/turf/open/floor/wood/parquet,
+/area/ruin/space/has_grav/cargodise_freighter/kitchen)
+"Pv" = (
+/obj/machinery/airalarm/directional/east,
+/obj/machinery/light/cold/directional/east,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/turf/open/floor/iron/dark,
+/area/ruin/space/has_grav/cargodise_freighter/bridge)
+"PE" = (
+/obj/structure/table,
+/obj/machinery/chem_dispenser/drinks/beer/fullupgrade,
+/obj/machinery/light/directional/west,
+/turf/open/floor/iron/kitchen,
+/area/ruin/space/has_grav/cargodise_freighter/kitchen)
+"PH" = (
+/obj/structure/closet/secure_closet/personal/cabinet,
+/obj/item/storage/box/syndie_kit/chameleon/ghostcafe,
+/obj/item/storage/box/syndie_kit/chameleon/ghostcafe,
+/turf/open/floor/wood/parquet,
+/area/ruin/space/has_grav/cargodise_freighter/quarters)
+"PU" = (
+/obj/effect/turf_decal/trimline/blue/corner{
+	dir = 8
+	},
+/turf/open/floor/iron/dark/smooth_corner{
+	dir = 8
+	},
+/area/ruin/space/has_grav/cargodise_freighter/bridge)
+"PW" = (
+/turf/closed/wall/prefab_plastic,
+/area/ruin/space/has_grav/cargodise_freighter/trauma)
+"Qk" = (
+/obj/effect/turf_decal/tile/yellow{
+	dir = 1
+	},
+/obj/machinery/airalarm/directional/north,
+/obj/effect/mapping_helpers/airalarm/all_access,
+/turf/open/floor/iron/colony/white,
+/area/ruin/space/has_grav/cargodise_freighter/primaryhall)
+"Qv" = (
+/obj/structure/window/reinforced/survival_pod/spawner/directional/north,
+/obj/structure/window/reinforced/survival_pod/spawner/directional/east,
+/obj/machinery/atmospherics/components/unary/vent_pump/on/layer4{
+	dir = 8
+	},
+/obj/machinery/door/poddoor/shutters/colony_fabricator{
+	id = "lustwishes"
+	},
+/turf/open/floor/carpet/neon/simple/pink,
+/area/ruin/space/has_grav/cargodise_freighter/bridge)
+"Qw" = (
+/obj/machinery/vending/clothing,
+/turf/open/floor/carpet/cyan,
+/area/ruin/space/has_grav/cargodise_freighter/bridge)
+"Qx" = (
+/obj/structure/table/wood/fancy/purple,
+/turf/open/floor/carpet/stellar,
+/area/ruin/space/has_grav/cargodise_freighter/bridge)
+"QA" = (
+/obj/effect/turf_decal/tile/yellow/half{
+	dir = 1
+	},
+/obj/machinery/atmospherics/components/unary/vent_scrubber/on/layer2,
+/turf/open/floor/iron/colony/white,
+/area/ruin/space/has_grav/cargodise_freighter/primaryhall)
+"QB" = (
+/obj/structure/chair/sofa/bamboo/right{
+	dir = 1
+	},
+/turf/open/floor/wood/large,
+/area/ruin/space/has_grav/cargodise_freighter/kitchen)
+"QH" = (
+/obj/machinery/atmospherics/components/unary/vent_pump/on/layer4{
+	dir = 1
+	},
+/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/turf/open/floor/wood/parquet,
+/area/ruin/space/has_grav/cargodise_freighter/quarters)
+"QI" = (
+/obj/structure/railing{
+	dir = 5
+	},
+/obj/structure/table/reinforced/plastitaniumglass,
+/obj/machinery/door/poddoor/shutters/colony_fabricator{
+	id = "lustwishes"
+	},
+/turf/open/floor/light/colour_cycle/dancefloor_a,
+/area/ruin/space/has_grav/cargodise_freighter/bridge)
+"QS" = (
+/obj/structure/railing{
+	dir = 6
+	},
+/obj/structure/table/reinforced/plastitaniumglass,
+/obj/machinery/door/poddoor/shutters/colony_fabricator{
+	id = "lustwishes"
+	},
+/turf/open/floor/light/colour_cycle/dancefloor_b,
+/area/ruin/space/has_grav/cargodise_freighter/bridge)
+"QU" = (
+/obj/structure/table,
+/obj/item/storage/organbox{
+	pixel_y = 6
+	},
+/obj/item/surgery_tray/full,
+/obj/effect/turf_decal/tile/blue/half/contrasted{
+	dir = 8
+	},
+/turf/open/floor/iron/white,
+/area/ruin/space/has_grav/cargodise_freighter/trauma)
+"QY" = (
+/obj/effect/turf_decal/tile/blue/half/contrasted,
+/obj/structure/rack/shelf,
+/obj/effect/spawner/random/entertainment/money_large,
+/turf/open/floor/iron/dark,
+/area/ruin/space/has_grav/cargodise_freighter/bridge)
+"Ri" = (
+/obj/machinery/button/door/directional/south{
+	id = "comdorm6"
+	},
+/obj/structure/closet/crate/bin,
+/turf/open/floor/wood/parquet,
+/area/ruin/space/has_grav/cargodise_freighter/quarters)
+"Rt" = (
+/obj/effect/turf_decal/tile/yellow/half,
+/obj/structure/sign/flag/ssc/directional/south,
+/turf/open/floor/iron/colony/white,
+/area/ruin/space/has_grav/cargodise_freighter/primaryhall)
+"Ru" = (
+/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
+/turf/open/floor/wood/large,
+/area/ruin/space/has_grav/cargodise_freighter/kitchen)
+"RC" = (
+/obj/structure/cable,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
+/obj/machinery/atmospherics/components/unary/vent_scrubber/on/layer2,
+/turf/open/floor/glass/reinforced,
+/area/ruin/space/has_grav/cargodise_freighter/vault)
+"RH" = (
+/obj/effect/turf_decal/tile/yellow/half{
+	dir = 4
+	},
+/turf/open/floor/glass,
+/area/ruin/space/has_grav/cargodise_freighter/primaryhall)
+"RI" = (
+/obj/structure/cable,
+/obj/machinery/door/airlock/command{
+	name = "Bridge"
+	},
+/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
+/turf/open/floor/catwalk_floor/colony_fabricator,
+/area/ruin/space/has_grav/cargodise_freighter/bridge)
+"RK" = (
+/obj/structure/railing{
+	dir = 10
+	},
+/obj/structure/table/reinforced/plastitaniumglass,
+/obj/machinery/door/poddoor/shutters/colony_fabricator{
+	id = "lustwishes"
+	},
+/turf/open/floor/light/colour_cycle/dancefloor_b,
+/area/ruin/space/has_grav/cargodise_freighter/bridge)
+"RM" = (
+/obj/machinery/atmospherics/components/unary/vent_pump/on/layer4{
+	dir = 4
+	},
+/obj/structure/mop_bucket/janitorialcart,
+/turf/open/floor/plating,
+/area/ruin/space/has_grav/cargodise_freighter/utility)
+"RR" = (
+/obj/structure/noticeboard/directional/east,
+/obj/item/storage/fancy/coffee_condi_display,
+/obj/structure/table/reinforced/plastitaniumglass,
+/obj/machinery/light/directional/east,
+/turf/open/floor/carpet/stellar,
+/area/ruin/space/has_grav/cargodise_freighter/bridge)
+"RU" = (
+/obj/machinery/atmospherics/components/unary/vent_pump/on/layer4{
+	dir = 8
+	},
+/turf/open/floor/bamboo,
+/area/ruin/space/has_grav/cargodise_freighter/kitchen)
+"Sd" = (
+/obj/item/reagent_containers/cup/bucket/wooden,
+/turf/open/floor/wood/large,
+/area/ruin/space/has_grav/cargodise_freighter/kitchen)
+"Sg" = (
+/obj/machinery/atmospherics/components/unary/passive_vent{
+	dir = 4
+	},
+/turf/open/floor/plating/airless,
+/area/ruin/space/has_grav/cargodise_freighter/exterior)
+"Si" = (
+/turf/open/floor/carpet/stellar,
+/area/ruin/space/has_grav/cargodise_freighter/bridge)
+"Sl" = (
+/turf/open/floor/circuit/red,
+/area/ruin/space/has_grav/cargodise_freighter/vault)
+"Ss" = (
+/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
+/turf/open/floor/iron/kitchen,
+/area/ruin/space/has_grav/cargodise_freighter/kitchen)
+"Sv" = (
+/obj/machinery/power/apc/auto_name/directional/north,
+/obj/effect/mapping_helpers/apc/unlocked,
+/obj/structure/cable,
+/obj/effect/mapping_helpers/apc/cell_10k,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/turf/open/floor/iron/dark,
+/area/ruin/space/has_grav/cargodise_freighter/kitchen)
+"Sx" = (
+/obj/machinery/chem_dispenser/mutagensaltpeter,
+/turf/open/floor/bamboo/tatami{
+	dir = 4
+	},
+/area/ruin/space/has_grav/cargodise_freighter/hydroponics)
+"SF" = (
+/obj/machinery/power/shuttle_engine/huge{
+	dir = 8
+	},
+/obj/effect/turf_decal/stripes/line{
+	dir = 8
+	},
+/turf/open/floor/plating/airless,
+/area/ruin/space/has_grav/cargodise_freighter/exterior)
+"SK" = (
+/obj/structure/bed/double,
+/obj/item/bedsheet/captain/double,
+/turf/open/floor/carpet/blue,
+/area/ruin/space/has_grav/cargodise_freighter/bridge)
+"SM" = (
+/obj/machinery/light/directional/west,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
+/obj/machinery/suit_storage_unit{
+	mask_type = /obj/item/clothing/mask/gas/explorer;
+	storage_type = /obj/item/tank/jetpack/oxygen/harness;
+	suit_type = /obj/item/mod/control/pre_equipped/traitor_elite
+	},
+/turf/open/floor/iron/dark,
+/area/ruin/space/has_grav/cargodise_freighter/bridge)
+"SP" = (
+/obj/machinery/atmospherics/components/tank/air{
+	dir = 8
+	},
+/turf/open/floor/iron/smooth,
+/area/ruin/space/has_grav/cargodise_freighter/utility)
+"SU" = (
+/turf/open/floor/iron/dark/textured_half{
+	dir = 4
+	},
+/area/ruin/space/has_grav/cargodise_freighter/bridge)
+"SZ" = (
+/obj/machinery/atmospherics/components/unary/vent_scrubber/on/layer2,
+/turf/open/floor/bamboo,
+/area/ruin/space/has_grav/cargodise_freighter/kitchen)
+"Tb" = (
+/obj/machinery/firealarm/directional/south,
+/obj/machinery/light/cold/directional/south,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/turf/open/floor/wood,
+/area/ruin/space/has_grav/cargodise_freighter/bridge)
+"Tf" = (
+/obj/structure/table/reinforced/plasmarglass,
+/obj/structure/table/reinforced/plasmarglass,
+/turf/open/floor/light/colour_cycle/dancefloor_b,
+/area/ruin/space/has_grav/cargodise_freighter/bridge)
+"Tg" = (
+/turf/closed/wall/prefab_plastic,
+/area/ruin/space/has_grav/cargodise_freighter/utility)
+"Ti" = (
+/obj/machinery/holopad,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
+/turf/open/floor/iron/dark/smooth_large,
+/area/ruin/space/has_grav/cargodise_freighter/bridge)
+"Tk" = (
+/obj/structure/towel_bin,
+/obj/structure/table/wood,
+/turf/open/floor/wood/large,
+/area/ruin/space/has_grav/cargodise_freighter/kitchen)
+"Tm" = (
+/obj/structure/closet/secure_closet/bar/all_access,
+/turf/open/floor/carpet/neon/simple/purple,
+/area/ruin/space/has_grav/cargodise_freighter/bridge)
+"Tn" = (
+/obj/item/stack/sheet/mineral/wood/fifty,
+/obj/structure/table/wood,
+/turf/open/floor/wood/large,
+/area/ruin/space/has_grav/cargodise_freighter/kitchen)
+"Tq" = (
+/obj/structure/reagent_dispensers/watertank/high,
+/turf/open/floor/wood/large,
+/area/ruin/space/has_grav/cargodise_freighter/kitchen)
+"Tt" = (
+/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
+/obj/machinery/door/airlock/wood{
+	name = "Sauna"
+	},
+/obj/structure/drain,
+/turf/open/floor/iron/dark,
+/area/ruin/space/has_grav/cargodise_freighter/kitchen)
+"Tx" = (
+/obj/structure/cable,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
+/obj/machinery/jukebox/no_access,
+/turf/open/floor/wood,
+/area/ruin/space/has_grav/cargodise_freighter/bridge)
+"TA" = (
+/obj/machinery/power/shuttle_engine/propulsion{
+	dir = 8
+	},
+/obj/effect/turf_decal/stripes/line{
+	dir = 8
+	},
+/turf/open/floor/plating/airless,
+/area/ruin/space/has_grav/cargodise_freighter/exterior)
+"TG" = (
+/obj/structure/table/reinforced/plastitaniumglass,
+/obj/machinery/light/directional/south,
+/obj/machinery/pollution_scrubber,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/turf/open/floor/wood,
+/area/ruin/space/has_grav/cargodise_freighter/bridge)
+"TM" = (
+/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/obj/item/reagent_containers/cocainebrick,
+/obj/item/reagent_containers/cocainebrick,
+/obj/item/reagent_containers/cocainebrick,
+/obj/item/reagent_containers/cocainebrick,
+/obj/item/reagent_containers/cocainebrick,
+/obj/item/reagent_containers/cocainebrick,
+/obj/item/reagent_containers/cup/blastoff_ampoule,
+/obj/item/reagent_containers/cup/blastoff_ampoule,
+/obj/item/reagent_containers/cup/blastoff_ampoule,
+/obj/item/reagent_containers/cup/blastoff_ampoule,
+/obj/item/reagent_containers/cup/blastoff_ampoule,
+/obj/item/reagent_containers/cup/blastoff_ampoule,
+/obj/item/reagent_containers/cup/blastoff_ampoule,
+/obj/item/reagent_containers/cocainebrick,
+/obj/item/reagent_containers/cocainebrick,
+/obj/item/storage/pill_bottle/lsd,
+/obj/item/storage/pill_bottle/lsd,
+/obj/item/storage/pill_bottle/lsd,
+/obj/item/storage/pill_bottle/lsd,
+/obj/item/storage/pill_bottle/lsd,
+/obj/item/storage/pill_bottle/lsd,
+/obj/structure/closet/crate/secure,
+/obj/item/reagent_containers/hashbrick,
+/obj/item/reagent_containers/hashbrick,
+/obj/item/reagent_containers/hashbrick,
+/obj/item/reagent_containers/hashbrick,
+/obj/item/reagent_containers/hashbrick,
+/obj/item/reagent_containers/hashbrick,
+/obj/item/reagent_containers/crackbrick,
+/obj/item/reagent_containers/crackbrick,
+/obj/item/reagent_containers/crackbrick,
+/turf/open/floor/plating,
+/area/ruin/space/has_grav/cargodise_freighter/utility)
+"TO" = (
+/obj/machinery/power/micro_reactor,
+/obj/structure/cable,
+/turf/open/floor/iron/colony/texture,
+/area/ruin/space/has_grav/cargodise_freighter/utility)
+"TQ" = (
+/obj/effect/turf_decal/tile/blue/half/contrasted{
+	dir = 1
+	},
+/obj/machinery/power/apc/auto_name/directional/north,
+/obj/structure/cable,
+/obj/effect/mapping_helpers/apc/unlocked,
+/obj/effect/mapping_helpers/apc/cell_10k,
+/obj/machinery/iv_drip,
+/turf/open/floor/iron/white,
+/area/ruin/space/has_grav/cargodise_freighter/trauma)
+"TV" = (
+/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/turf/closed/wall/prefab_plastic,
+/area/ruin/space/has_grav/cargodise_freighter/utility)
+"TZ" = (
+/obj/structure/cable,
+/obj/item/stack/cable_coil/cut,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
+/turf/open/floor/iron/smooth,
+/area/ruin/space/has_grav/cargodise_freighter/utility)
+"Ue" = (
+/obj/structure/window/fulltile/colony_fabricator,
+/turf/open/floor/plating,
+/area/ruin/space/has_grav/cargodise_freighter/trauma)
+"Uh" = (
+/obj/structure/chair{
+	dir = 4
+	},
+/turf/open/floor/iron/kitchen,
+/area/ruin/space/has_grav/cargodise_freighter/kitchen)
+"Ui" = (
+/obj/machinery/recharge_station,
+/obj/machinery/light/directional/north,
+/turf/open/floor/circuit,
+/area/ruin/space/has_grav/cargodise_freighter/vault)
+"Ul" = (
+/obj/structure/cable,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/obj/machinery/airalarm/directional/west,
+/obj/effect/mapping_helpers/airalarm/all_access,
+/turf/open/floor/iron/dark,
+/area/ruin/space/has_grav/cargodise_freighter/kitchen)
+"Up" = (
+/obj/machinery/door/window/survival_pod/left/directional/north,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
+/obj/machinery/door/poddoor/shutters/colony_fabricator{
+	id = "lustwishes"
+	},
+/turf/open/floor/carpet/neon/simple/pink,
+/area/ruin/space/has_grav/cargodise_freighter/bridge)
+"Ur" = (
+/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/obj/machinery/door/poddoor/shutters/colony_fabricator/preopen{
+	id = "comdorm7"
+	},
+/turf/open/floor/carpet/neon/simple/teal,
+/area/ruin/space/has_grav/cargodise_freighter/quarters)
+"Uu" = (
+/obj/structure/cable,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
+/turf/open/floor/carpet/neon/simple/teal,
+/area/ruin/space/has_grav/cargodise_freighter/quarters)
+"Uv" = (
+/obj/structure/cable,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
+/turf/open/floor/light/colour_cycle/dancefloor_a,
+/area/ruin/space/has_grav/cargodise_freighter/bridge)
+"Uy" = (
+/obj/structure/rack/shelf,
+/obj/item/ai_module/core/freeformcore,
+/obj/item/ai_module/core/full/armadyne_safeguard,
+/obj/item/ai_module/core/full/corp,
+/obj/item/ai_module/core/full/custom,
+/obj/item/ai_module/core/full/dagothbot,
+/obj/item/ai_module/core/full/liveandletlive,
+/obj/item/ai_module/core/full/overlord,
+/obj/item/ai_module/core/full/robocop,
+/obj/item/ai_module/core/full/ten_commandments,
+/obj/item/ai_module/core/full/texas,
+/obj/item/ai_module/core/full/tyrant,
+/obj/item/ai_module/reset/purge,
+/turf/open/floor/circuit/red,
+/area/ruin/space/has_grav/cargodise_freighter/vault)
+"UC" = (
+/obj/item/stack/cable_coil/cut,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
+/obj/item/bong,
+/turf/open/floor/iron/smooth,
+/area/ruin/space/has_grav/cargodise_freighter/utility)
+"UF" = (
+/obj/machinery/light/directional/south,
+/turf/open/floor/glass/reinforced,
+/area/ruin/space/has_grav/cargodise_freighter/vault)
+"UH" = (
+/obj/machinery/power/shuttle_engine/large{
+	dir = 8
+	},
+/obj/effect/turf_decal/stripes/line{
+	dir = 8
+	},
+/turf/open/floor/plating/airless,
+/area/ruin/space/has_grav/cargodise_freighter/exterior)
+"UJ" = (
+/obj/machinery/vending/dorms,
+/obj/machinery/door/poddoor/shutters/colony_fabricator{
+	id = "lustwishes"
+	},
+/turf/open/floor/wood,
+/area/ruin/space/has_grav/cargodise_freighter/bridge)
+"UK" = (
+/obj/effect/turf_decal/siding/dark{
+	dir = 8
+	},
+/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/obj/structure/closet/crate/bin,
+/turf/open/floor/iron/kitchen,
+/area/ruin/space/has_grav/cargodise_freighter/kitchen)
+"UL" = (
+/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
+/obj/effect/turf_decal/siding/dark{
+	dir = 1
+	},
+/turf/open/floor/iron/kitchen,
+/area/ruin/space/has_grav/cargodise_freighter/kitchen)
+"UN" = (
+/obj/machinery/button/door/directional/south{
+	id = "freighterkitchen";
+	name = "Kitchen Shutters"
+	},
+/obj/machinery/light/directional/south,
+/obj/machinery/biogenerator/foodricator{
+	biomass = 2000
+	},
+/obj/structure/table,
+/turf/open/floor/iron/kitchen,
+/area/ruin/space/has_grav/cargodise_freighter/kitchen)
+"UP" = (
+/obj/effect/turf_decal/trimline/blue/line,
+/turf/open/floor/iron/dark/textured_half{
+	dir = 4
+	},
+/area/ruin/space/has_grav/cargodise_freighter/bridge)
+"Vh" = (
+/obj/machinery/atmospherics/pipe/smart/manifold4w/brown,
+/obj/structure/window/reinforced/survival_pod/spawner/directional/south,
+/obj/machinery/power/micro_reactor,
+/obj/structure/cable,
+/turf/open/floor/iron/colony/texture,
+/area/ruin/space/has_grav/cargodise_freighter/utility)
+"Vj" = (
+/obj/structure/closet/boxinggloves,
+/turf/open/floor/carpet/cyan,
+/area/ruin/space/has_grav/cargodise_freighter/bridge)
+"Vn" = (
+/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/obj/machinery/door/poddoor/shutters/colony_fabricator/preopen{
+	id = "comdorm11"
+	},
+/turf/open/floor/carpet/neon/simple/teal,
+/area/ruin/space/has_grav/cargodise_freighter/quarters)
+"VB" = (
+/obj/structure/chair/sofa/corp/right{
+	dir = 1
+	},
+/turf/open/floor/wood,
+/area/ruin/space/has_grav/cargodise_freighter/bridge)
+"VD" = (
+/obj/structure/cable,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
+/turf/open/floor/bamboo/tatami{
+	dir = 4
+	},
+/area/ruin/space/has_grav/cargodise_freighter/hydroponics)
+"VG" = (
+/obj/effect/turf_decal/tile/yellow{
+	dir = 8
+	},
+/obj/machinery/light/directional/west,
+/obj/machinery/light_switch/directional/west,
+/turf/open/floor/iron/colony/white,
+/area/ruin/space/has_grav/cargodise_freighter/primaryhall)
+"VH" = (
+/obj/effect/turf_decal/trimline/blue/corner{
+	dir = 4
+	},
+/obj/structure/cable,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/turf/open/floor/iron/dark/smooth_corner{
+	dir = 4
+	},
+/area/ruin/space/has_grav/cargodise_freighter/bridge)
+"VI" = (
+/obj/structure/weightmachine,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
+/turf/open/floor/carpet/cyan,
+/area/ruin/space/has_grav/cargodise_freighter/bridge)
+"VP" = (
+/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
+/obj/machinery/door/poddoor/shutters/colony_fabricator/preopen{
+	id = "comdorm13"
+	},
+/turf/open/floor/carpet/neon/simple/teal,
+/area/ruin/space/has_grav/cargodise_freighter/quarters)
+"VY" = (
+/obj/structure/table/wood/fancy/green,
+/obj/item/paper_bin/carbon,
+/obj/item/pen/fourcolor,
+/turf/open/floor/carpet/stellar,
+/area/ruin/space/has_grav/cargodise_freighter/bridge)
+"Wc" = (
+/obj/machinery/button/door/directional/west{
+	id = "comdorm4"
+	},
+/obj/machinery/atmospherics/components/unary/vent_pump/on/layer4{
+	dir = 1
+	},
+/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/turf/open/floor/wood/parquet,
+/area/ruin/space/has_grav/cargodise_freighter/kitchen)
+"We" = (
+/obj/machinery/atmospherics/components/unary/vent_scrubber/on/layer2,
+/turf/open/floor/circuit/red,
+/area/ruin/space/has_grav/cargodise_freighter/vault)
+"Wf" = (
+/obj/machinery/button/door/directional/east{
+	id = "comdorm5"
+	},
+/obj/machinery/atmospherics/components/unary/vent_pump/on/layer4{
+	dir = 1
+	},
+/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/turf/open/floor/wood/parquet,
+/area/ruin/space/has_grav/cargodise_freighter/kitchen)
+"Wi" = (
+/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/obj/item/bong,
+/turf/open/floor/iron/smooth,
+/area/ruin/space/has_grav/cargodise_freighter/utility)
+"Wk" = (
+/obj/machinery/button/door/directional/south{
+	id = "comdorm8"
+	},
+/obj/structure/closet/crate/bin,
+/turf/open/floor/wood/parquet,
+/area/ruin/space/has_grav/cargodise_freighter/quarters)
+"Wp" = (
+/obj/structure/table/wood/fancy/orange,
+/obj/item/modular_computer/laptop/preset/civilian,
+/obj/item/storage/fancy/cigarettes/cigpack_robustgold,
+/turf/open/floor/wood/parquet,
+/area/ruin/space/has_grav/cargodise_freighter/bridge)
+"Wt" = (
+/obj/structure/chair/comfy/shuttle{
+	dir = 4
+	},
+/obj/effect/turf_decal/tile/blue/half/contrasted{
+	dir = 1
+	},
+/turf/open/floor/iron/dark,
+/area/ruin/space/has_grav/cargodise_freighter/bridge)
+"Wv" = (
+/obj/structure/cable,
+/obj/machinery/door/firedoor,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/turf/open/floor/catwalk_floor/colony_fabricator,
+/area/ruin/space/has_grav/cargodise_freighter/primaryhall)
+"Ww" = (
+/obj/machinery/atmospherics/components/unary/vent_scrubber/on/layer2{
+	dir = 1
+	},
+/obj/structure/table,
+/obj/item/flatpacked_machine/sustenance_machine,
+/turf/open/floor/iron/kitchen,
+/area/ruin/space/has_grav/cargodise_freighter/kitchen)
+"WB" = (
+/obj/structure/bed/double,
+/obj/effect/spawner/random/bedsheet/double,
+/turf/open/floor/wood/parquet,
+/area/ruin/space/has_grav/cargodise_freighter/quarters)
+"WC" = (
+/obj/structure/table/reinforced/plastitaniumglass,
+/obj/machinery/chem_dispenser/drinks/beer/fullupgrade,
+/turf/open/floor/carpet/neon/simple/purple,
+/area/ruin/space/has_grav/cargodise_freighter/bridge)
+"WJ" = (
+/obj/machinery/door/firedoor,
+/obj/effect/turf_decal/tile/yellow/half{
+	dir = 4
+	},
+/turf/open/floor/glass,
+/area/ruin/space/has_grav/cargodise_freighter/primaryhall)
+"WN" = (
+/obj/structure/cable,
+/obj/structure/closet/crate,
+/obj/item/stack/sheet/mineral/silver,
+/obj/item/stack/sheet/mineral/silver,
+/obj/item/stack/sheet/mineral/silver,
+/obj/item/stack/sheet/mineral/silver,
+/obj/item/stack/sheet/mineral/silver,
+/obj/item/stack/sheet/plastic/fifty,
+/obj/item/stack/sheet/mineral/plasma/thirty,
+/obj/item/stack/sheet/mineral/uranium/five{
+	amount = 25
+	},
+/obj/item/stack/sheet/mineral/uranium/five{
+	amount = 25
+	},
+/obj/effect/spawner/random/engineering/material,
+/obj/effect/spawner/random/engineering/material,
+/obj/effect/spawner/random/engineering/material,
+/obj/effect/spawner/random/engineering/material_rare,
+/obj/effect/spawner/random/engineering/material_rare,
+/obj/effect/spawner/random/engineering/material_rare,
+/turf/open/floor/plating,
+/area/ruin/space/has_grav/cargodise_freighter/utility)
+"WP" = (
+/obj/machinery/atmospherics/components/unary/vent_pump/on/layer4{
+	dir = 8
+	},
+/turf/open/floor/glass/reinforced,
+/area/ruin/space/has_grav/cargodise_freighter/vault)
+"WS" = (
+/obj/structure/cable,
+/turf/open/floor/iron/white,
+/area/ruin/space/has_grav/cargodise_freighter/trauma)
+"WT" = (
+/turf/open/floor/iron/dark,
+/area/ruin/space/has_grav/cargodise_freighter/bridge)
+"WX" = (
+/obj/machinery/atmospherics/components/unary/vent_scrubber/on/layer2{
+	dir = 8
+	},
+/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
+/obj/item/bong,
+/turf/open/floor/iron/smooth,
+/area/ruin/space/has_grav/cargodise_freighter/utility)
+"WZ" = (
+/obj/effect/turf_decal/tile/yellow/half,
+/turf/open/floor/glass,
+/area/ruin/space/has_grav/cargodise_freighter/primaryhall)
+"Xc" = (
+/obj/structure/sink/directional/east,
+/obj/structure/mirror/directional/west,
+/turf/open/floor/iron/freezer,
+/area/ruin/space/has_grav/cargodise_freighter/quarters)
+"Xf" = (
+/obj/machinery/door/firedoor,
+/obj/effect/turf_decal/tile/yellow/half{
+	dir = 8
+	},
+/turf/open/floor/glass,
+/area/ruin/space/has_grav/cargodise_freighter/primaryhall)
+"Xh" = (
+/obj/structure/reagent_dispensers/water_cooler/directional/north,
+/turf/open/floor/iron/dark,
+/area/ruin/space/has_grav/cargodise_freighter/kitchen)
+"Xj" = (
+/obj/structure/noticeboard/directional/west,
+/obj/machinery/light/directional/west,
+/turf/open/floor/carpet/stellar,
+/area/ruin/space/has_grav/cargodise_freighter/bridge)
+"Xx" = (
+/obj/structure/window/reinforced/survival_pod/spawner/directional/north,
+/obj/structure/window/reinforced/survival_pod/spawner/directional/west,
+/obj/machinery/atmospherics/components/unary/vent_scrubber/on/layer2{
+	dir = 4
+	},
+/obj/machinery/door/poddoor/shutters/colony_fabricator{
+	id = "lustwishes"
+	},
+/turf/open/floor/carpet/neon/simple/pink,
+/area/ruin/space/has_grav/cargodise_freighter/bridge)
+"Xz" = (
+/obj/machinery/atmospherics/components/unary/vent_scrubber/on/layer2{
+	dir = 8
+	},
+/obj/effect/turf_decal/siding/dark/corner{
+	dir = 1
+	},
+/turf/open/floor/iron/kitchen,
+/area/ruin/space/has_grav/cargodise_freighter/kitchen)
+"XB" = (
+/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/obj/machinery/light_switch/directional/west,
+/turf/open/floor/glass/reinforced,
+/area/ruin/space/has_grav/cargodise_freighter/vault)
+"XD" = (
+/obj/machinery/photocopier/gratis,
+/turf/open/floor/carpet/stellar,
+/area/ruin/space/has_grav/cargodise_freighter/bridge)
+"XI" = (
+/obj/effect/turf_decal/trimline/blue/line{
+	dir = 8
+	},
+/turf/open/floor/iron/dark/smooth_edge{
+	dir = 4
+	},
+/area/ruin/space/has_grav/cargodise_freighter/bridge)
+"XR" = (
+/obj/structure/table/reinforced/plastitaniumglass,
+/obj/item/storage/box/zipties,
+/turf/open/floor/iron/dark,
+/area/ruin/space/has_grav/cargodise_freighter/bridge)
+"XZ" = (
+/obj/machinery/vending/dorms,
+/obj/machinery/door/poddoor/shutters/colony_fabricator{
+	id = "lustwishes"
+	},
+/turf/open/floor/iron/dark/textured_half{
+	dir = 4
+	},
+/area/ruin/space/has_grav/cargodise_freighter/bridge)
+"Ye" = (
+/obj/structure/railing{
+	dir = 8
+	},
+/obj/structure/table/reinforced/plastitaniumglass,
+/obj/machinery/door/poddoor/shutters/colony_fabricator{
+	id = "lustwishes"
+	},
+/turf/open/floor/light/colour_cycle/dancefloor_a,
+/area/ruin/space/has_grav/cargodise_freighter/bridge)
+"Yf" = (
+/obj/machinery/power/shuttle_engine/heater{
+	dir = 8
+	},
+/obj/structure/window/reinforced/tinted/spawner/directional/west,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/brown,
+/turf/open/floor/plating,
+/area/ruin/space/has_grav/cargodise_freighter/utility)
+"Yg" = (
+/obj/machinery/power/shuttle_engine/heater{
+	dir = 8
+	},
+/obj/structure/window/reinforced/tinted/spawner/directional/west,
+/obj/structure/window/reinforced/tinted/spawner/directional/south,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/brown,
+/obj/structure/window/reinforced/survival_pod/spawner/directional/east,
+/turf/open/floor/plating,
+/area/ruin/space/has_grav/cargodise_freighter/utility)
+"Ym" = (
+/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
+/obj/structure/closet/crate/bin,
+/obj/machinery/firealarm/directional/west,
+/turf/open/floor/wood,
+/area/ruin/space/has_grav/cargodise_freighter/bridge)
+"Yn" = (
+/obj/machinery/chem_master/condimaster,
+/obj/machinery/light/directional/east,
+/turf/open/floor/iron/kitchen,
+/area/ruin/space/has_grav/cargodise_freighter/kitchen)
+"Yp" = (
+/obj/structure/closet/secure_closet/personal,
+/turf/open/floor/carpet/cyan,
+/area/ruin/space/has_grav/cargodise_freighter/bridge)
+"Yq" = (
+/obj/structure/extinguisher_cabinet/directional/north,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
+/obj/machinery/recharge_station,
+/turf/open/floor/iron/smooth,
+/area/ruin/space/has_grav/cargodise_freighter/utility)
+"Yr" = (
+/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/turf/open/floor/wood/large,
+/area/ruin/space/has_grav/cargodise_freighter/kitchen)
+"Yz" = (
+/turf/open/floor/iron/white,
+/area/ruin/space/has_grav/cargodise_freighter/trauma)
+"YD" = (
+/obj/machinery/door/airlock/multi_tile{
+	id_tag = "comdorm12"
+	},
+/obj/machinery/door/poddoor/shutters/colony_fabricator/preopen{
+	id = "comdorm12"
+	},
+/turf/open/floor/carpet/neon/simple/teal,
+/area/ruin/space/has_grav/cargodise_freighter/quarters)
+"YK" = (
+/obj/machinery/light/directional/north,
+/turf/open/floor/carpet/cyan,
+/area/ruin/space/has_grav/cargodise_freighter/bridge)
+"YL" = (
+/obj/machinery/atmospherics/components/unary/vent_scrubber/on/layer2{
+	dir = 1
+	},
+/turf/open/floor/wood/parquet,
+/area/ruin/space/has_grav/cargodise_freighter/quarters)
+"YM" = (
+/obj/structure/dresser,
+/obj/effect/turf_decal/siding/wood/corner{
+	dir = 1
+	},
+/turf/open/floor/wood/parquet,
+/area/ruin/space/has_grav/cargodise_freighter/bridge)
+"YO" = (
+/obj/machinery/atmospherics/components/unary/vent_scrubber/on/layer2{
+	dir = 8
+	},
+/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
+/turf/open/floor/bamboo/tatami{
+	dir = 4
+	},
+/area/ruin/space/has_grav/cargodise_freighter/hydroponics)
+"YR" = (
+/obj/machinery/vending/hydroseeds,
+/turf/open/floor/bamboo/tatami,
+/area/ruin/space/has_grav/cargodise_freighter/hydroponics)
+"YS" = (
+/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/turf/open/floor/wood,
+/area/ruin/space/has_grav/cargodise_freighter/bridge)
+"YT" = (
+/turf/open/floor/iron/colony/white,
+/area/ruin/space/has_grav/cargodise_freighter/primaryhall)
+"YV" = (
+/obj/structure/closet/secure_closet/wall{
+	pixel_y = 32
+	},
+/obj/machinery/atmospherics/components/unary/vent_pump/on/layer4,
+/obj/machinery/light/directional/west,
+/obj/item/storage/box/syndie_kit/chameleon/ghostcafe,
+/obj/item/storage/box/syndie_kit/chameleon/ghostcafe,
+/turf/open/floor/wood/parquet,
+/area/ruin/space/has_grav/cargodise_freighter/kitchen)
+"Ze" = (
+/obj/machinery/door/airlock/colony_prefab,
+/turf/open/floor/carpet/cyan,
+/area/ruin/space/has_grav/cargodise_freighter/bridge)
+"Zk" = (
+/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
+/turf/open/floor/iron/freezer,
+/area/ruin/space/has_grav/cargodise_freighter/quarters)
+"Zn" = (
+/obj/machinery/shower/directional/east,
+/obj/structure/window/reinforced/survival_pod/spawner/directional/north,
+/obj/structure/drain,
+/obj/structure/curtain,
+/turf/open/floor/iron/freezer,
+/area/ruin/space/has_grav/cargodise_freighter/quarters)
+"Zt" = (
+/obj/structure/window/reinforced/survival_pod/spawner/directional/north,
+/turf/open/floor/carpet/red,
+/area/ruin/space/has_grav/cargodise_freighter/bridge)
+"Zu" = (
+/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/obj/machinery/door/poddoor/shutters/colony_fabricator/preopen{
+	id = "comdorm10"
+	},
+/turf/open/floor/carpet/neon/simple/teal,
+/area/ruin/space/has_grav/cargodise_freighter/quarters)
+"ZC" = (
+/obj/machinery/atmospherics/components/unary/vent_scrubber/on/layer2{
+	dir = 1
+	},
+/turf/open/floor/iron/dark,
+/area/ruin/space/has_grav/cargodise_freighter/kitchen)
+"ZD" = (
+/obj/structure/chair/sofa/bamboo/left{
+	dir = 4
+	},
+/turf/open/floor/wood/large,
+/area/ruin/space/has_grav/cargodise_freighter/kitchen)
+"ZH" = (
+/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
+/obj/machinery/firealarm/directional/south,
+/turf/open/floor/wood/large,
+/area/ruin/space/has_grav/cargodise_freighter/kitchen)
+"ZI" = (
+/obj/structure/chair/sofa/bamboo/left,
+/turf/open/floor/wood/large,
+/area/ruin/space/has_grav/cargodise_freighter/kitchen)
+"ZN" = (
+/obj/effect/turf_decal/siding/wood/corner{
+	dir = 4
+	},
+/obj/machinery/light/directional/north,
+/obj/machinery/light_switch/directional/north,
+/obj/machinery/computer/cargo/express,
+/turf/open/floor/wood/parquet,
+/area/ruin/space/has_grav/cargodise_freighter/bridge)
+"ZO" = (
+/obj/structure/window/fulltile/colony_fabricator,
+/obj/machinery/door/poddoor/shutters/colony_fabricator/preopen{
+	id = "event_conference_room"
+	},
+/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/turf/open/floor/plating,
+/area/ruin/space/has_grav/cargodise_freighter/bridge)
+"ZR" = (
+/obj/item/storage/box/shibari_stand,
+/obj/structure/table/reinforced/plastitaniumglass,
+/obj/machinery/light/cold/directional/south,
+/turf/open/floor/iron/dark,
+/area/ruin/space/has_grav/cargodise_freighter/bridge)
+"ZU" = (
+/obj/structure/window/reinforced/survival_pod/spawner/directional/south,
+/obj/machinery/door/window/survival_pod/left/directional/east,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
+/turf/open/floor/carpet/blue,
+/area/ruin/space/has_grav/cargodise_freighter/bridge)
+"ZW" = (
+/obj/structure/table/reinforced/plastitaniumglass,
+/obj/item/storage/bag/tray,
+/obj/item/food/croissant,
+/obj/item/food/croissant,
+/obj/item/food/croissant,
+/obj/item/food/croissant,
+/obj/item/food/croissant,
+/turf/open/floor/carpet/stellar,
+/area/ruin/space/has_grav/cargodise_freighter/bridge)
+"ZY" = (
+/obj/machinery/door/airlock/colony_prefab{
+	id_tag = "comdorm2"
+	},
+/obj/machinery/door/firedoor,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/obj/machinery/door/poddoor/shutters/colony_fabricator/preopen{
+	id = "comdorm2"
+	},
+/turf/open/floor/iron/dark,
+/area/ruin/space/has_grav/cargodise_freighter/kitchen)
+"ZZ" = (
+/obj/structure/table/reinforced/plastitaniumglass,
+/obj/structure/desk_bell,
+/turf/open/floor/wood,
+/area/ruin/space/has_grav/cargodise_freighter/bridge)
+
+(1,1,1) = {"
+Gh
+Gh
+Gh
+Gh
+Gh
+Gh
+Gh
+Gh
+Gh
+Gh
+Gh
+Gh
+Gh
+Gh
+Gh
+Gh
+Gh
+KS
+KS
+SF
+Gh
+Gh
+Gh
+Gh
+Gh
+Gh
+Gh
+Gh
+Gh
+Gh
+Gh
+Gh
+Gh
+Gh
+Gh
+Gh
+Gh
+"}
+(2,1,1) = {"
+Gh
+Gh
+Gh
+Gh
+Gh
+Gh
+Gh
+Gh
+Gh
+Gh
+Gh
+Gh
+Gh
+Gh
+Gh
+Gh
+Gh
+AN
+AN
+AN
+Gh
+Gh
+Gh
+Gh
+Gh
+Gh
+Gh
+Gh
+Gh
+Gh
+Gh
+Gh
+Gh
+Gh
+Gh
+Gh
+Gh
+"}
+(3,1,1) = {"
+Gh
+Gh
+Gh
+Gh
+Gh
+Gh
+Gh
+Gh
+Gh
+Gh
+Gh
+Gh
+JQ
+vM
+vM
+KS
+UH
+AN
+AN
+AN
+KS
+UH
+kW
+kW
+JQ
+Gh
+Gh
+Gh
+Gh
+Gh
+Gh
+Gh
+Gh
+Gh
+Gh
+Gh
+Gh
+"}
+(4,1,1) = {"
+Gh
+Gh
+Gh
+Gh
+Gh
+Gh
+Gh
+Gh
+Gh
+Gh
+Gh
+Gh
+Ef
+vM
+Tg
+AN
+AN
+tK
+kT
+Yg
+AN
+AN
+Tg
+kW
+Ef
+Gh
+Gh
+Gh
+Gh
+Gh
+Gh
+Gh
+Gh
+Gh
+Gh
+Gh
+Gh
+"}
+(5,1,1) = {"
+Gh
+Gh
+Gh
+Gh
+Gh
+Gh
+Gh
+Gh
+Gh
+Gh
+Gh
+Gh
+Ef
+vM
+Tg
+Yf
+Yf
+KR
+TO
+Vh
+Yf
+Yf
+Tg
+kW
+Ef
+Gh
+Gh
+Gh
+Gh
+Gh
+Gh
+Gh
+Gh
+Gh
+Gh
+Gh
+Gh
+"}
+(6,1,1) = {"
+Gh
+Gh
+Gh
+Gh
+Gh
+Gh
+Gh
+Gh
+Gh
+nU
+OT
+Gh
+xX
+vM
+Tg
+vP
+Eg
+wa
+eu
+qr
+ax
+yv
+Tg
+kW
+Ef
+Gh
+KS
+UH
+Gh
+Gh
+Gh
+Gh
+Gh
+Gh
+Gh
+Gh
+Gh
+"}
+(7,1,1) = {"
+Gh
+Gh
+Gh
+Gh
+Gh
+Gh
+Gh
+vM
+KY
+xF
+xF
+KY
+Ki
+Tg
+Tg
+nx
+vt
+nL
+Am
+WN
+ti
+mR
+PW
+PW
+Sg
+TA
+AN
+AN
+TA
+vM
+Gh
+Gh
+Gh
+Gh
+Gh
+Gh
+Gh
+"}
+(8,1,1) = {"
+Gh
+Gh
+Gh
+Gh
+Gh
+Gh
+Gh
+vM
+gS
+gS
+gS
+gS
+Kp
+TV
+TV
+kR
+hM
+aN
+Wi
+pv
+uq
+Et
+PW
+PW
+Ue
+PW
+PW
+PW
+PW
+vM
+Gh
+Gh
+Gh
+Gh
+Gh
+Gh
+Gh
+"}
+(9,1,1) = {"
+Gh
+Gh
+Gh
+Gh
+Gh
+Gh
+Gh
+vM
+gS
+gS
+YR
+lv
+Hy
+wk
+Tg
+pm
+cc
+RM
+nC
+TM
+dp
+Mu
+PW
+Ar
+QU
+DA
+wX
+PW
+PW
+vM
+Gh
+Gh
+Gh
+Gh
+Gh
+Gh
+Gh
+"}
+(10,1,1) = {"
+Gh
+Gh
+Gh
+Gh
+Gh
+Gh
+Gh
+jC
+hD
+Af
+GL
+vx
+GL
+Af
+Tg
+Yq
+EG
+UC
+WX
+pK
+MP
+uq
+PW
+ar
+Yz
+Yz
+wq
+Iy
+GR
+jC
+Gh
+Gh
+Gh
+Gh
+Gh
+Gh
+Gh
+"}
+(11,1,1) = {"
+Gh
+Gh
+Gh
+Gh
+Gh
+Gh
+Gh
+jC
+HU
+Af
+DE
+Af
+DE
+Af
+Tg
+jR
+zz
+Nt
+lt
+oV
+Eu
+Eu
+PW
+TQ
+WS
+Yz
+Yz
+gf
+GR
+jC
+Gh
+Gh
+Gh
+Gh
+Gh
+Gh
+Gh
+"}
+(12,1,1) = {"
+Gh
+Gh
+Gh
+Gh
+Gh
+Gh
+Gh
+jC
+hD
+Af
+DE
+Af
+DE
+Km
+gS
+SP
+ak
+SP
+TZ
+eQ
+dC
+hQ
+PW
+Dn
+tQ
+ez
+dR
+aT
+GR
+jC
+Gh
+Gh
+Gh
+Gh
+Gh
+Gh
+Gh
+"}
+(13,1,1) = {"
+Gh
+Gh
+Gh
+Gh
+JQ
+Ef
+Ef
+vM
+gS
+mb
+qE
+qE
+qE
+Lj
+gS
+Tg
+Tg
+Tg
+IS
+Tg
+Tg
+Tg
+PW
+PW
+Mh
+kN
+PW
+PW
+PW
+PW
+PW
+xw
+xw
+xw
+Gh
+Gh
+Gh
+"}
+(14,1,1) = {"
+Gh
+Gh
+Gh
+Gh
+Gh
+Gh
+Gh
+vM
+gS
+Af
+DE
+Af
+Hr
+Sx
+ss
+Xf
+km
+gh
+xl
+bA
+VG
+MM
+CG
+lg
+dD
+dt
+CG
+dt
+Ow
+dt
+CG
+xw
+oG
+xw
+Gh
+Gh
+Gh
+"}
+(15,1,1) = {"
+Gh
+vM
+vM
+vM
+vM
+vM
+vM
+vM
+gS
+Af
+DE
+Af
+VD
+VD
+LX
+nY
+xl
+xl
+xl
+al
+al
+MG
+al
+al
+al
+al
+al
+al
+Fp
+yU
+yU
+uD
+bz
+tD
+Gh
+Gh
+Gh
+"}
+(16,1,1) = {"
+Gh
+vM
+Gg
+Gg
+Gg
+Gg
+Gg
+Gg
+gS
+Af
+OF
+hm
+YO
+cq
+sk
+WJ
+Lk
+rN
+xl
+zF
+bW
+Lp
+DF
+RH
+DF
+xP
+DF
+RH
+rr
+RH
+DF
+xw
+Di
+xw
+Gh
+Gh
+Gh
+"}
+(17,1,1) = {"
+Gh
+vM
+Gg
+Nr
+ZD
+Jy
+DY
+Nr
+Gg
+Gg
+Gg
+Gg
+tf
+Gg
+Gg
+Gg
+Gg
+Lk
+al
+kF
+cT
+cT
+cT
+cT
+cT
+gm
+Ex
+cT
+cT
+cT
+cT
+xw
+xw
+xw
+Gh
+Gh
+Gh
+"}
+(18,1,1) = {"
+Gh
+vM
+Gg
+sz
+BW
+BW
+BW
+DW
+Gg
+YV
+Kl
+eA
+EP
+LH
+Wc
+Pt
+Gg
+bu
+Wv
+El
+cT
+La
+Bl
+PH
+cT
+Uu
+nz
+cT
+PH
+Bl
+La
+cT
+vM
+Gh
+Gh
+Gh
+Gh
+"}
+(19,1,1) = {"
+Gh
+vM
+Gg
+sU
+BW
+is
+iu
+zl
+Gg
+tW
+Ey
+Gg
+jE
+Gg
+Ey
+tW
+Gg
+fl
+al
+vb
+cT
+bg
+pW
+pW
+rB
+Uu
+nz
+IO
+pW
+pW
+bg
+cT
+vM
+Gh
+Gh
+Gh
+Gh
+"}
+(20,1,1) = {"
+JQ
+vM
+Gg
+Ad
+BW
+Tn
+Yr
+DG
+Gg
+Gg
+Gg
+Gg
+Hi
+Gg
+Gg
+Gg
+Gg
+nv
+al
+jd
+cT
+Lz
+fZ
+OY
+Pc
+Uu
+Fw
+Zu
+QH
+YL
+wy
+cT
+vM
+Gh
+Gh
+Gh
+Gh
+"}
+(21,1,1) = {"
+Gh
+vM
+Gg
+sU
+BW
+is
+Ru
+zl
+Gg
+zY
+Ey
+Gg
+EP
+Gg
+Ey
+zY
+Gg
+QA
+al
+iM
+cT
+WB
+JC
+Ri
+cT
+Uu
+dy
+cT
+Du
+JC
+WB
+cT
+vM
+Gh
+Gh
+Gh
+Gh
+"}
+(22,1,1) = {"
+Gh
+vM
+Gg
+ZI
+BW
+iH
+Ru
+QB
+Gg
+Ah
+FV
+ZY
+EP
+yj
+Wf
+Ee
+Gg
+Hj
+al
+WZ
+cT
+cT
+cT
+cT
+cT
+fF
+to
+cT
+cT
+cT
+cT
+cT
+vM
+Gh
+Gh
+Gh
+Gh
+"}
+(23,1,1) = {"
+Gh
+vM
+Gg
+Gg
+Gg
+Gg
+Lr
+Gg
+Gg
+Gg
+Gg
+Gg
+Sv
+Gg
+Gg
+Gg
+Gg
+Qk
+al
+rM
+cT
+La
+Bl
+PH
+cT
+Uu
+uM
+cT
+PH
+Bl
+La
+cT
+vM
+Gh
+Gh
+Gh
+Gh
+"}
+(24,1,1) = {"
+Gh
+vM
+Gg
+Tk
+Nr
+Tk
+Ru
+Ru
+Gg
+zY
+Ey
+Gg
+do
+Ul
+rL
+rL
+cI
+iB
+al
+zF
+cT
+bg
+pW
+pW
+bC
+Uu
+nz
+uI
+pW
+pW
+bg
+cT
+vM
+Gh
+Gh
+Gh
+Gh
+"}
+(25,1,1) = {"
+Gh
+vM
+Gg
+FD
+FD
+FD
+RU
+tA
+Gg
+Ah
+hO
+dU
+EP
+eC
+th
+qS
+Gg
+HP
+al
+IQ
+cT
+Lz
+lw
+Ae
+Ur
+Uu
+Fw
+Vn
+QH
+YL
+wy
+cT
+vM
+Gh
+Gh
+Gh
+Gh
+"}
+(26,1,1) = {"
+Gh
+vM
+Gg
+IN
+wv
+Oi
+SZ
+ZH
+Gg
+Gg
+Gg
+Gg
+ic
+eC
+ZC
+lU
+Gg
+zF
+al
+rb
+cT
+WB
+JC
+zt
+cT
+Uu
+nz
+cT
+hg
+JC
+WB
+cT
+vM
+Gh
+Gh
+Gh
+Gh
+"}
+(27,1,1) = {"
+Gh
+vM
+Gg
+wv
+wv
+wv
+FD
+Fs
+Gg
+kI
+th
+st
+th
+eC
+th
+eM
+Gg
+YT
+al
+Dh
+cT
+cT
+cT
+cT
+cT
+il
+eF
+cT
+cT
+cT
+cT
+cT
+vM
+Gh
+Gh
+Gh
+Gh
+"}
+(28,1,1) = {"
+Gh
+vM
+Gg
+wv
+wv
+wv
+FD
+Fs
+Gg
+xZ
+th
+th
+th
+lx
+rU
+UK
+fI
+ge
+al
+OS
+cT
+La
+Bl
+PH
+cT
+dJ
+Bc
+cT
+PH
+Bl
+La
+cT
+vM
+Gh
+Gh
+Gh
+Gh
+"}
+(29,1,1) = {"
+Gh
+vM
+Gg
+xa
+wv
+wv
+FD
+Ru
+pP
+th
+th
+th
+th
+UL
+Da
+Da
+ih
+YT
+al
+NH
+cT
+bg
+pW
+pW
+MN
+dJ
+dy
+YD
+pW
+pW
+bg
+cT
+vM
+Gh
+Gh
+Gh
+Gh
+"}
+(30,1,1) = {"
+Gh
+vM
+Gg
+fi
+wv
+sW
+Df
+Fs
+Gg
+Xh
+th
+th
+th
+UL
+Da
+Da
+ih
+zF
+al
+bN
+cT
+Lz
+lw
+Ae
+kd
+dJ
+Fw
+GD
+QH
+YL
+wy
+cT
+vM
+Gh
+Gh
+Gh
+Gh
+"}
+(31,1,1) = {"
+Gh
+vM
+Gg
+FD
+FD
+FD
+SZ
+Ru
+Tt
+eC
+hV
+sr
+eC
+UL
+pu
+Da
+ih
+YT
+al
+Cz
+cT
+WB
+JC
+Wk
+cT
+dJ
+nz
+cT
+pO
+JC
+WB
+cT
+vM
+Gh
+Gh
+Gh
+Gh
+"}
+(32,1,1) = {"
+Gh
+vM
+Gg
+BW
+BW
+Sd
+BW
+Gg
+Gg
+Ai
+Gg
+Gg
+Gg
+Xz
+Uh
+Da
+Gg
+gl
+al
+ok
+cT
+cT
+cT
+cT
+cT
+Ic
+Gs
+cT
+cT
+cT
+cT
+cT
+vM
+Gh
+Gh
+Gh
+Gh
+"}
+(33,1,1) = {"
+Gh
+vM
+Gg
+Gg
+BW
+Tq
+BS
+Gg
+Ox
+Ss
+PE
+qd
+Gg
+Oy
+Ll
+It
+Gg
+Fm
+al
+Rt
+cT
+La
+Bl
+PH
+cT
+dJ
+bi
+cT
+PH
+Bl
+La
+cT
+vM
+Gh
+Gh
+Gh
+Gh
+"}
+(34,1,1) = {"
+Gh
+vM
+vM
+Gg
+Gg
+Gg
+Tq
+Gg
+yW
+Ss
+Da
+Da
+Jj
+Da
+Ip
+xt
+Gg
+Hj
+al
+DD
+cT
+bg
+pW
+pW
+gA
+dJ
+nz
+fV
+pW
+pW
+bg
+cT
+vM
+Gh
+Gh
+Gh
+Gh
+"}
+(35,1,1) = {"
+Gh
+Gh
+vM
+vM
+vM
+Gg
+Gg
+Gg
+By
+Ss
+pu
+Da
+Ap
+Da
+xD
+iX
+Gg
+EZ
+al
+JN
+cT
+Lz
+lw
+Ae
+Pg
+dJ
+dJ
+VP
+QH
+YL
+wy
+cT
+vM
+Gh
+Gh
+Gh
+Gh
+"}
+(36,1,1) = {"
+Gh
+Gh
+Gh
+Gh
+vM
+vM
+Gg
+Gg
+Ni
+Ss
+Ww
+UN
+Gg
+Gg
+Gg
+Gg
+Gg
+Hj
+al
+FL
+cT
+WB
+JC
+HM
+cT
+dJ
+nz
+cT
+Do
+JC
+WB
+cT
+vM
+Gh
+Gh
+Gh
+Gh
+"}
+(37,1,1) = {"
+Gh
+Gh
+Gh
+Gh
+Gh
+vM
+vM
+Gg
+gc
+aR
+aR
+aR
+ux
+lN
+qK
+IP
+Gg
+fl
+al
+NV
+cT
+cT
+cT
+cT
+cT
+dJ
+uQ
+cT
+cT
+cT
+cT
+cT
+vM
+Gh
+Gh
+Gh
+Gh
+"}
+(38,1,1) = {"
+Gh
+Gh
+Gh
+Gh
+Gh
+Gh
+vM
+Gg
+BZ
+MZ
+Yn
+DQ
+Gg
+CU
+vs
+Gg
+Gg
+vo
+Wv
+El
+cT
+tb
+tb
+Zn
+wS
+Zk
+xK
+Xc
+zf
+mX
+Kj
+cT
+vM
+Gh
+Gh
+Gh
+Gh
+"}
+(39,1,1) = {"
+Gh
+Gh
+Gh
+Gh
+JQ
+Ef
+vM
+Gg
+Gg
+Gg
+Gg
+Gg
+Gg
+Gg
+Gg
+Gg
+Gg
+Hj
+al
+WZ
+cT
+aV
+sI
+gJ
+lh
+Zk
+qj
+jB
+qo
+cT
+fc
+cT
+vM
+Gh
+Gh
+Gh
+Gh
+"}
+(40,1,1) = {"
+Gh
+Gh
+Gh
+Gh
+Gh
+Gh
+vM
+jp
+Yp
+Yp
+Yp
+Lw
+yA
+yA
+gC
+Vj
+wQ
+fl
+al
+NV
+cT
+oC
+oC
+wF
+NZ
+Zk
+xK
+Dm
+xK
+KB
+AO
+cT
+vM
+Gh
+Gh
+Gh
+Gh
+"}
+(41,1,1) = {"
+Gh
+Gh
+Gh
+Gh
+Gh
+Gh
+vM
+jp
+gC
+gC
+gC
+gC
+gC
+gC
+gC
+gC
+wQ
+vo
+Wv
+El
+cT
+cT
+cT
+cT
+cT
+Hv
+rG
+cT
+cT
+cT
+cT
+cT
+vM
+Gh
+Gh
+Gh
+Gh
+"}
+(42,1,1) = {"
+Gh
+Gh
+Gh
+Gh
+Gh
+Gh
+vM
+jp
+gC
+ul
+aJ
+eX
+Bk
+gC
+kH
+gC
+wQ
+Hj
+al
+WZ
+jp
+Jd
+Lm
+tV
+HN
+vV
+kn
+Xx
+JX
+vd
+jp
+vM
+vM
+Gh
+Gh
+Gh
+Gh
+"}
+(43,1,1) = {"
+Gh
+Gh
+Gh
+Gh
+Gh
+Gh
+vM
+jp
+YK
+Zt
+wO
+eV
+gC
+CL
+gC
+gC
+Ze
+fl
+al
+NV
+jp
+Hp
+ZZ
+VB
+kn
+YS
+YS
+us
+ct
+di
+jp
+vM
+Gh
+Gh
+Gh
+Gh
+Gh
+"}
+(44,1,1) = {"
+Gh
+Gh
+Gh
+Gh
+Gh
+Gh
+vM
+jp
+ma
+yd
+EC
+ZU
+VI
+wb
+bJ
+iG
+Ha
+fr
+al
+WZ
+jp
+Ew
+kX
+ei
+ei
+vV
+kn
+Qv
+qn
+wi
+jp
+vM
+Gh
+Gh
+Gh
+Gh
+Gh
+"}
+(45,1,1) = {"
+Gh
+Gh
+Gh
+Gh
+Gh
+Gh
+vM
+jp
+gC
+dc
+gC
+gC
+gC
+dc
+gC
+gC
+Ze
+fl
+al
+NV
+jp
+oR
+Ck
+dQ
+dQ
+YS
+kn
+Xx
+JX
+vd
+jp
+vM
+Gh
+Gh
+Gh
+Gh
+Gh
+"}
+(46,1,1) = {"
+Gh
+Gh
+Gh
+Gh
+Gh
+Gh
+vM
+jp
+Yp
+Yp
+Yp
+rt
+Na
+pn
+Qw
+ng
+jp
+vo
+Wv
+El
+jp
+Jd
+ZZ
+tV
+kn
+vV
+YS
+us
+ct
+di
+jp
+vM
+Gh
+Gh
+Gh
+Gh
+Gh
+"}
+(47,1,1) = {"
+Gh
+Gh
+Gh
+Gh
+Gh
+Gh
+vM
+jp
+jp
+jp
+jp
+jp
+jp
+jp
+jp
+jp
+jp
+jp
+RI
+jp
+jp
+Hp
+Lm
+VB
+kn
+vV
+kn
+Qv
+qn
+wi
+jp
+vM
+Ef
+JQ
+Gh
+Gh
+Gh
+"}
+(48,1,1) = {"
+Gh
+Gh
+Gh
+Gh
+Gh
+Gh
+vM
+jp
+Si
+cR
+vI
+lL
+Xj
+cX
+jp
+UJ
+fx
+rF
+hx
+Ym
+HZ
+HY
+BV
+pq
+vV
+vV
+kn
+Xx
+JX
+vd
+jp
+vM
+Gh
+Gh
+Gh
+Gh
+Gh
+"}
+(49,1,1) = {"
+Gh
+Gh
+Gh
+Gh
+Gh
+Gh
+BE
+mC
+Si
+gD
+XD
+eE
+cG
+Si
+kt
+kn
+kn
+kn
+hx
+kn
+kn
+kn
+kn
+kn
+kn
+vV
+YS
+Up
+ct
+di
+jp
+vM
+Gh
+Gh
+Gh
+Gh
+Gh
+"}
+(50,1,1) = {"
+Gh
+Gh
+Gh
+Gh
+Gh
+Gh
+BE
+mC
+Si
+Si
+fv
+AA
+MF
+MF
+ZO
+sN
+sN
+ay
+nh
+Kg
+Cy
+Kg
+Cy
+kn
+kn
+YS
+kn
+Qv
+lq
+pb
+jp
+vM
+Gh
+Gh
+Gh
+Gh
+Gh
+"}
+(51,1,1) = {"
+Gh
+Gh
+Gh
+Gh
+Gh
+Gh
+BE
+mC
+Si
+Fc
+rZ
+Kr
+ek
+Si
+jp
+pz
+Kg
+Cy
+Uv
+Cy
+Kg
+Cy
+Kg
+kn
+kn
+YS
+kn
+kn
+FJ
+jp
+jp
+vM
+Gh
+Gh
+Gh
+Gh
+Gh
+"}
+(52,1,1) = {"
+Gh
+Gh
+Gh
+Gh
+Gh
+Gh
+BE
+mC
+Si
+Fc
+nc
+iU
+ek
+Si
+CZ
+Kg
+Cy
+on
+Or
+Ye
+RK
+Kg
+Cy
+kn
+mi
+Gd
+jp
+lP
+lP
+jp
+jp
+vM
+Gh
+Gh
+Gh
+Gh
+Gh
+"}
+(53,1,1) = {"
+Gh
+Gh
+Gh
+Gh
+Gh
+Gh
+vM
+jp
+ni
+Fc
+Qx
+AP
+ek
+Jg
+jp
+Cy
+Kg
+dX
+Gf
+Tf
+qc
+Cy
+Kg
+kn
+ZZ
+TG
+lP
+dE
+WT
+xC
+jp
+vM
+Gh
+Gh
+Gh
+Gh
+Gh
+"}
+(54,1,1) = {"
+Gh
+Gh
+Gh
+Gh
+Gh
+Gh
+BE
+mC
+Si
+Fc
+ua
+uP
+ek
+Si
+CZ
+Kg
+Cy
+QI
+GX
+fQ
+QS
+Kg
+Cy
+kn
+ME
+hH
+lP
+Aa
+un
+ZR
+jp
+vM
+Gh
+Gh
+Gh
+Gh
+Gh
+"}
+(55,1,1) = {"
+Gh
+Gh
+Gh
+Gh
+Gh
+Gh
+HK
+mC
+Si
+Fc
+zg
+jL
+ek
+xi
+jp
+Cy
+Kg
+Cy
+Uv
+Cy
+Kg
+Cy
+Kg
+kn
+kn
+Tb
+jp
+gH
+pp
+XR
+jp
+vM
+Gh
+Gh
+Gh
+Gh
+Gh
+"}
+(56,1,1) = {"
+Gh
+Gh
+Gh
+Gh
+Gh
+Gh
+BE
+mC
+Si
+Fc
+ws
+VY
+ek
+Si
+kt
+Cy
+Cy
+Kg
+nh
+Kg
+Cy
+Kg
+Cy
+kn
+kn
+YS
+Bz
+Ks
+Pv
+xC
+jp
+vM
+Gh
+Gh
+Gh
+Gh
+Gh
+"}
+(57,1,1) = {"
+Gh
+Gh
+Gh
+Gh
+Gh
+Gh
+BE
+mC
+Si
+Si
+fv
+AA
+MF
+MF
+ZO
+Fy
+ql
+YS
+hx
+kn
+kn
+kn
+yV
+zZ
+zi
+zS
+zG
+jp
+jp
+jp
+jp
+vM
+Ef
+JQ
+Gh
+Gh
+Gh
+"}
+(58,1,1) = {"
+Gh
+Gh
+Gh
+Gh
+Gh
+Gh
+vM
+jp
+In
+da
+sC
+oA
+RR
+ZW
+jp
+Hp
+yx
+kn
+Tx
+hx
+ip
+vV
+KU
+Av
+lK
+OC
+Tm
+jp
+vM
+vM
+vM
+vM
+Gh
+Gh
+Gh
+Gh
+Gh
+"}
+(59,1,1) = {"
+Gh
+Gh
+Gh
+Gh
+Gh
+Gh
+vM
+jp
+jp
+jp
+jp
+jp
+jp
+jp
+jp
+jp
+jp
+eK
+Aj
+Nj
+jp
+jp
+MU
+OC
+OC
+OC
+HS
+jp
+vM
+Gh
+Gh
+Gh
+Gh
+Gh
+Gh
+Gh
+Gh
+"}
+(60,1,1) = {"
+Gh
+Gh
+Gh
+Gh
+Gh
+Gh
+vM
+vM
+Fk
+We
+Mr
+He
+He
+XB
+iS
+rH
+nB
+xE
+SM
+Gj
+aK
+jp
+WC
+nR
+IY
+OC
+uw
+jp
+vM
+Gh
+Gh
+Gh
+Gh
+Gh
+Gh
+Gh
+Gh
+"}
+(61,1,1) = {"
+Gh
+Gh
+Gh
+Gh
+Gh
+Gh
+Gh
+vM
+Fk
+Sl
+MS
+Bg
+RC
+hE
+KH
+jf
+Ir
+Ir
+Cn
+tN
+oz
+jp
+jp
+jp
+jp
+ly
+jp
+jp
+vM
+JQ
+Gh
+Gh
+Gh
+Gh
+Gh
+Gh
+Gh
+"}
+(62,1,1) = {"
+Gh
+Gh
+Gh
+Gh
+Gh
+Gh
+Gh
+vM
+Fk
+dz
+Er
+ju
+zW
+UF
+jp
+wx
+WT
+cV
+gX
+nW
+wB
+jp
+hK
+Wp
+Oa
+fO
+jp
+jp
+vM
+Gh
+Gh
+Gh
+Gh
+Gh
+Gh
+Gh
+Gh
+"}
+(63,1,1) = {"
+Gh
+Gh
+Gh
+Gh
+Gh
+Gh
+Gh
+vM
+Fk
+Fk
+Fk
+Ui
+zW
+Uy
+Gl
+cP
+rR
+Im
+aI
+VH
+zR
+jp
+ZN
+Aq
+Ba
+qf
+jp
+vM
+vM
+Gh
+Gh
+Gh
+Gh
+Gh
+Gh
+Gh
+Gh
+"}
+(64,1,1) = {"
+Gh
+Gh
+Gh
+Gh
+Gh
+Gh
+Gh
+vM
+vM
+Fk
+qk
+Jm
+zu
+pg
+Gl
+zV
+WT
+UP
+Ti
+zc
+CA
+qw
+Nz
+lG
+NE
+iz
+jp
+vM
+Gh
+Gh
+Gh
+Gh
+Gh
+Gh
+Gh
+Gh
+Gh
+"}
+(65,1,1) = {"
+Gh
+Gh
+Gh
+Gh
+Gh
+Gh
+Gh
+Gh
+vM
+Fk
+Fk
+hu
+ju
+jF
+Gl
+iK
+rR
+PU
+XI
+hC
+uo
+jp
+YM
+Bs
+NE
+SK
+jp
+vM
+Gh
+Gh
+Gh
+Gh
+Gh
+Gh
+Gh
+Gh
+Gh
+"}
+(66,1,1) = {"
+Gh
+Gh
+Gh
+Gh
+Gh
+Gh
+Gh
+Gh
+vM
+vM
+Fk
+Fk
+WP
+eR
+jp
+ao
+hT
+WT
+zn
+MI
+am
+jp
+cl
+Kb
+og
+jp
+jp
+vM
+Gh
+Gh
+Gh
+Gh
+Gh
+Gh
+Gh
+Gh
+Gh
+"}
+(67,1,1) = {"
+Gh
+Gh
+Gh
+Gh
+Gh
+Gh
+Gh
+Gh
+Gh
+vM
+vM
+Fk
+Fk
+iL
+jp
+jp
+xh
+WT
+XZ
+WT
+QY
+jp
+jp
+jp
+jp
+jp
+vM
+vM
+Gh
+Gh
+Gh
+Gh
+Gh
+Gh
+Gh
+Gh
+Gh
+"}
+(68,1,1) = {"
+Gh
+Gh
+Gh
+Gh
+Gh
+Gh
+Gh
+Gh
+Gh
+JQ
+vM
+vM
+Fk
+Fk
+jp
+jp
+ef
+WT
+SU
+WT
+mf
+jp
+jp
+vM
+vM
+vM
+vM
+Gh
+Gh
+Gh
+Gh
+Gh
+Gh
+Gh
+Gh
+Gh
+Gh
+"}
+(69,1,1) = {"
+Gh
+Gh
+Gh
+Gh
+Gh
+Gh
+Gh
+Gh
+Gh
+Gh
+Gh
+vM
+vM
+Fk
+Fk
+jp
+Wt
+WT
+Oj
+WT
+Kw
+jp
+vM
+vM
+Ef
+Gh
+Gh
+Gh
+Gh
+Gh
+Gh
+Gh
+Gh
+Gh
+Gh
+Gh
+Gh
+"}
+(70,1,1) = {"
+Gh
+Gh
+Gh
+Gh
+Gh
+Gh
+Gh
+Gh
+Gh
+Gh
+Gh
+Gh
+vM
+vM
+vM
+jp
+Ny
+lp
+cM
+bM
+hL
+jp
+vM
+Gh
+JQ
+Gh
+Gh
+Gh
+Gh
+Gh
+Gh
+Gh
+Gh
+Gh
+Gh
+Gh
+Gh
+"}
+(71,1,1) = {"
+Gh
+Gh
+Gh
+Gh
+Gh
+Gh
+Gh
+Gh
+Gh
+Gh
+Gh
+Gh
+Gh
+Gh
+vM
+jp
+dj
+dj
+dj
+dj
+dj
+jp
+vM
+Gh
+Gh
+Gh
+Gh
+Gh
+Gh
+Gh
+Gh
+Gh
+Gh
+Gh
+Gh
+Gh
+Gh
+"}
