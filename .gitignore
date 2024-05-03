@@ -248,5 +248,10 @@ define_sanity_output.txt
 /db/
 /config/ezdb.txt
 
+<<<<<<< HEAD
 # Ignore possibly NSFW interactions
 config/nova/interactions/
+=======
+# Running OpenDream locally
+tgstation.json
+>>>>>>> 15cf8a57d35972db62ad76e928c5f14f1ee03253

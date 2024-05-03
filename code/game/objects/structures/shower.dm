@@ -123,7 +123,7 @@ MAPPING_DIRECTIONAL_HELPERS(/obj/machinery/shower, (-16))
 //NOVA EDIT ADDITION
 /obj/machinery/shower/plunger_act(obj/item/plunger/P, mob/living/user, reinforced)
 	if(do_after(user, 3 SECONDS, src))
-		reagents.remove_any(reagents.total_volume)
+		reagents.remove_all(reagents.total_volume)
 		balloon_alert(user, "reservoir emptied")
 //NOVA EDIT END
 
@@ -191,9 +191,6 @@ MAPPING_DIRECTIONAL_HELPERS(/obj/machinery/shower, (-16))
 
 /obj/machinery/shower/wrench_act(mob/living/user, obj/item/I)
 	. = ..()
-	if(obj_flags & NO_DECONSTRUCTION)
-		return
-
 	I.play_tool_sound(src)
 	deconstruct()
 	return TRUE
@@ -322,7 +319,7 @@ MAPPING_DIRECTIONAL_HELPERS(/obj/machinery/shower, (-16))
 
 	// Bluemoon edit - Infinite showers
 	/*
-	reagents.remove_any(SHOWER_SPRAY_VOLUME)
+	reagents.remove_all(SHOWER_SPRAY_VOLUME)
 	*/
 
 /obj/machinery/shower/on_deconstruction(disassembled = TRUE)
@@ -379,8 +376,6 @@ MAPPING_DIRECTIONAL_HELPERS(/obj/machinery/shower, (-16))
 	deconstruct()
 	return TRUE
 
-/obj/structure/showerframe/AltClick(mob/user)
-	return ..() // This hotkey is BLACKLISTED since it's used by /datum/component/simple_rotation
 
 /obj/effect/mist
 	name = "mist"

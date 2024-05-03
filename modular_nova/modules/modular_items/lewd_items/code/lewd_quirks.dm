@@ -169,17 +169,17 @@
 	owner.add_mood_event("amorous", /datum/mood_event/amorous)
 	if(!HAS_TRAIT_FROM(owner, TRAIT_AMOROUS, TRAIT_LEWDCHEM))
 		ADD_TRAIT(owner, TRAIT_AMOROUS, TRAIT_LEWDCHEM)
-	RegisterSignal(owner, COMSIG_MOB_SAY, PROC_REF(handle_speech))
 	if(!HAS_TRAIT_FROM(owner, TRAIT_MASOCHISM, TRAIT_APHRO))
 		ADD_TRAIT(owner, TRAIT_MASOCHISM, TRAIT_APHRO)
+	RegisterSignal(owner, COMSIG_MOB_SAY, PROC_REF(handle_speech), override=TRUE)
 
 /datum/brain_trauma/very_special/amorous/on_lose()
 	owner.clear_mood_event("amorous")
 	if(HAS_TRAIT_FROM(owner, TRAIT_AMOROUS, TRAIT_LEWDCHEM))
 		REMOVE_TRAIT(owner, TRAIT_AMOROUS, TRAIT_LEWDCHEM)
-	UnregisterSignal(owner, COMSIG_MOB_SAY)
 	if(HAS_TRAIT_FROM(owner, TRAIT_MASOCHISM, TRAIT_APHRO))
 		REMOVE_TRAIT(owner, TRAIT_MASOCHISM, TRAIT_APHRO)
+	UnregisterSignal(owner, COMSIG_MOB_SAY)
 
 //Mood boost
 /datum/mood_event/amorous
@@ -230,10 +230,12 @@
 	resilience = TRAUMA_RESILIENCE_ABSOLUTE
 
 /datum/brain_trauma/very_special/neverboner/on_gain()
+	. = ..()
 	var/mob/living/carbon/human/affected_human = owner
 	ADD_TRAIT(affected_human, TRAIT_NEVERBONER, TRAIT_APHRO)
 
 /datum/brain_trauma/very_special/neverboner/on_lose()
+	. = ..()
 	var/mob/living/carbon/human/affected_human = owner
 	REMOVE_TRAIT(affected_human, TRAIT_NEVERBONER, TRAIT_APHRO)
 
