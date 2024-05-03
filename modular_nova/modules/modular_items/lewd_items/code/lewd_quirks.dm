@@ -166,6 +166,7 @@
 	speech_args[SPEECH_MESSAGE] = message
 
 /datum/brain_trauma/very_special/amorous/on_gain()
+	. = ..()
 	owner.add_mood_event("amorous", /datum/mood_event/amorous)
 	if(!HAS_TRAIT_FROM(owner, TRAIT_AMOROUS, TRAIT_LEWDCHEM))
 		ADD_TRAIT(owner, TRAIT_AMOROUS, TRAIT_LEWDCHEM)
@@ -174,6 +175,7 @@
 	RegisterSignal(owner, COMSIG_MOB_SAY, PROC_REF(handle_speech), override=TRUE)
 
 /datum/brain_trauma/very_special/amorous/on_lose()
+	. = ..()
 	owner.clear_mood_event("amorous")
 	if(HAS_TRAIT_FROM(owner, TRAIT_AMOROUS, TRAIT_LEWDCHEM))
 		REMOVE_TRAIT(owner, TRAIT_AMOROUS, TRAIT_LEWDCHEM)
