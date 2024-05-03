@@ -1359,14 +1359,9 @@
 		if(DEFAULT_DOOR_CHECKS to FORCING_DOOR_CHECKS)
 			if(obj_flags & EMAGGED)
 				return FALSE
-<<<<<<< HEAD
-			use_power(50)
+			use_power(50 JOULES)
 			// Bluemoon edit - Custom airlock sounds
 			playsound(src, doorClose, 30, FALSE)
-=======
-			use_energy(50 JOULES)
-			playsound(src, doorClose, 30, TRUE)
->>>>>>> 15cf8a57d35972db62ad76e928c5f14f1ee03253
 			return TRUE
 
 		if(BYPASS_DOOR_CHECKS)
