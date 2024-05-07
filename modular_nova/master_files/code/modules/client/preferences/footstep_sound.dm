@@ -8,7 +8,7 @@
 /datum/preference/choiced/footstep_sound/init_possible_values()
 	return list("Default", "Boots", "Claws")
 
-/datum/preference/numeric/footstep_sound/create_default_value()
+/datum/preference/choiced/footstep_sound/create_default_value()
 	return "Default"
 
 /datum/preference/choiced/footstep_sound/apply_to_human(mob/living/carbon/human/target, value)
