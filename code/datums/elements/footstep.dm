@@ -155,6 +155,13 @@
 
 		if(source.dna.species.special_step_sounds)
 			heard_clients = playsound(source.loc, pick(source.dna.species.special_step_sounds), 50, TRUE, falloff_distance = 1, vary = sound_vary)
+		// Bluemoon edit - Custom footstep sounds
+		else if(source.footstep_type == "claws")
+			var/barefoot_type = prepared_steps[FOOTSTEP_MOB_CLAW]
+			heard_clients = playsound(source.loc, pick(GLOB.clawfootstep[barefoot_type][1]), 50, TRUE, falloff_distance = 1, vary = sound_vary)
+		else if(source.footstep_type == "boots")
+			var/barefoot_type = prepared_steps[FOOTSTEP_MOB_SHOE]
+			heard_clients = playsound(source.loc, pick(GLOB.footstep[barefoot_type][1]), 50, TRUE, falloff_distance = 1, vary = sound_vary)
 		else
 			var/barefoot_type = prepared_steps[FOOTSTEP_MOB_BAREFOOT]
 			var/bare_footstep_sounds = GLOB.barefootstep
