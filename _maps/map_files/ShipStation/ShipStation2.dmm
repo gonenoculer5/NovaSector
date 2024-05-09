@@ -5119,7 +5119,7 @@
 /obj/docking_port/stationary{
 	dwidth = 4;
 	height = 7;
-	shuttle_id = "supply_home";
+	shuttle_id = "cargo_home";
 	name = "Cargo Bay";
 	width = 12
 	},
