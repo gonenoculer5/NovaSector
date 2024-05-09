@@ -110,9 +110,13 @@
 			new_track.song_beat = text2num(track_data[3])
 			config_songs[new_track.song_name] = new_track
 
+		// Bluemoon edit - More default jukebox tracks
+		/*
 		if(!length(config_songs))
-			var/datum/track/default/default_track = new()
-			config_songs[default_track.song_name] = default_track
+		*/
+		var/list/defaultTracks = typesof(/datum/track/default);
+		for(var/datum/track/default/default_track as anything in defaultTracks)
+			config_songs[default_track.song_name] = new default_track()
 
 	// returns a copy so it can mutate if desired.
 	return config_songs.Copy()
@@ -403,4 +407,17 @@
 	song_path = 'sound/ambience/title3.ogg'
 	song_name = "Tintin on the Moon"
 	song_length = 3 MINUTES + 52 SECONDS
+	song_beat = 1 SECONDS
+
+// Bluemoon edit - More default jukebox tracks
+/datum/track/default/title2
+	song_path = 'sound/ambience/title2.ogg'
+	song_name = "Chef Boyardee - Robocop"
+	song_length = 1 MINUTES + 58 SECONDS
+	song_beat = 1 SECONDS
+
+/datum/track/default/title0
+	song_path = 'sound/ambience/title0.ogg'
+	song_name = "Solus - Endless Space Expanded"
+	song_length = 3 MINUTES + 33 SECONDS
 	song_beat = 1 SECONDS
