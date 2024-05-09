@@ -33,7 +33,6 @@
 	},
 /area/shuttle/shipstation)
 "an" = (
-/obj/machinery/light/directional/north,
 /obj/machinery/door/airlock/public/glass{
 	name = "Kitchen"
 	},
@@ -243,6 +242,7 @@
 /obj/structure/chair/comfy/shuttle{
 	dir = 8
 	},
+/obj/effect/landmark/start/cargo_technician,
 /turf/open/floor/iron/dark/corner{
 	dir = 8
 	},
@@ -292,7 +292,7 @@
 /obj/effect/turf_decal/trimline/blue/filled/corner,
 /obj/effect/turf_decal/trimline/dark_blue/filled/corner,
 /obj/structure/window/reinforced/survival_pod/spawner/directional/west,
-/turf/open/floor/iron/dark,
+/turf/open/floor/iron/dark/herringbone,
 /area/shuttle/shipstation)
 "bT" = (
 /obj/machinery/door/airlock/engineering/glass{
@@ -307,13 +307,19 @@
 /turf/open/floor/catwalk_floor/iron_smooth,
 /area/shuttle/shipstation)
 "bU" = (
-/obj/effect/turf_decal/stripes/white/line,
+/obj/effect/turf_decal/stripes/white/line{
+	dir = 4
+	},
 /obj/effect/turf_decal/stripes/red/corner{
 	dir = 1
 	},
 /obj/effect/turf_decal/stripes/white/line{
 	dir = 9
 	},
+/obj/structure/window/reinforced/survival_pod/spawner/directional/south{
+	pixel_y = -4
+	},
+/obj/structure/window/reinforced/survival_pod/spawner/directional/east,
 /turf/open/floor/engine,
 /area/shuttle/shipstation)
 "bV" = (
@@ -333,12 +339,12 @@
 	},
 /area/shuttle/shipstation)
 "bZ" = (
-/obj/machinery/light/directional/south,
-/obj/machinery/door/airlock/public/glass{
-	name = "Kitchen"
+/obj/effect/turf_decal/trimline/blue/filled/corner{
+	dir = 1
 	},
-/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
-/turf/open/floor/pod/light,
+/obj/structure/bed/dogbed/runtime,
+/mob/living/basic/pet/cat/runtime,
+/turf/open/floor/iron/white/textured_large,
 /area/shuttle/shipstation)
 "cb" = (
 /obj/structure/plaque/static_plaque/golden/commission/shipstation,
@@ -405,7 +411,7 @@
 	nightshift_allowed = 0;
 	fire_colour = "#ff1100"
 	},
-/turf/open/floor/iron/dark,
+/turf/open/floor/iron/dark/herringbone,
 /area/shuttle/shipstation)
 "cs" = (
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
@@ -426,9 +432,6 @@
 "cv" = (
 /obj/structure/table/reinforced/titaniumglass,
 /obj/machinery/vending/boozeomat/all_access,
-/obj/machinery/coffeemaker{
-	pixel_y = 23
-	},
 /turf/open/floor/iron/checker,
 /area/shuttle/shipstation)
 "cw" = (
@@ -465,7 +468,7 @@
 /obj/structure/window/reinforced/survival_pod/spawner/directional/north,
 /obj/machinery/chem_dispenser/drinks/beer/fullupgrade,
 /obj/item/reagent_containers/cup/glass/shaker,
-/obj/structure/table,
+/obj/structure/table/reinforced/titaniumglass,
 /turf/open/floor/iron/dark/side,
 /area/shuttle/shipstation)
 "cI" = (
@@ -485,6 +488,13 @@
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /obj/item/book/manual/wiki/security_space_law,
 /turf/open/floor/mineral/titanium/tiled/white,
+/area/shuttle/shipstation)
+"cO" = (
+/obj/structure/disposalpipe/segment{
+	dir = 8
+	},
+/obj/machinery/duct,
+/turf/open/floor/catwalk_floor/iron_dark,
 /area/shuttle/shipstation)
 "cQ" = (
 /obj/structure/window/reinforced/survival_pod/spawner/directional/north,
@@ -656,11 +666,15 @@
 /turf/open/floor/pod/light,
 /area/shuttle/shipstation)
 "dB" = (
-/obj/structure/curtain,
 /obj/structure/toilet{
 	dir = 8
 	},
 /obj/machinery/light/small/directional/north,
+/obj/structure/curtain/cloth,
+/obj/machinery/door/window/survival_pod{
+	pixel_y = -3;
+	name = "Toilet"
+	},
 /turf/open/floor/iron/freezer,
 /area/shuttle/shipstation)
 "dD" = (
@@ -722,8 +736,6 @@
 /obj/effect/turf_decal/trimline/blue/filled/line{
 	dir = 10
 	},
-/obj/structure/bed/dogbed/runtime,
-/mob/living/basic/pet/cat/runtime,
 /turf/open/floor/iron/white/textured_edge{
 	dir = 1
 	},
@@ -953,7 +965,7 @@
 /obj/effect/turf_decal/trimline/dark_blue/filled/line{
 	dir = 5
 	},
-/turf/open/floor/iron/dark,
+/turf/open/floor/iron/dark/herringbone,
 /area/shuttle/shipstation)
 "fa" = (
 /obj/structure/sign/logo{
@@ -1207,9 +1219,9 @@
 "hd" = (
 /obj/structure/window/reinforced/tinted/frosted/spawner/directional/south,
 /obj/effect/turf_decal/delivery,
+/obj/effect/turf_decal/trimline/brown/filled/warning,
 /obj/structure/closet/crate,
 /obj/effect/spawner/random/maintenance/eight,
-/obj/effect/turf_decal/trimline/brown/filled/warning,
 /turf/open/floor/mineral/plastitanium,
 /area/shuttle/shipstation)
 "hh" = (
@@ -1230,7 +1242,6 @@
 /obj/effect/turf_decal/stripes/red/corner{
 	dir = 8
 	},
-/obj/item/supplypod_beacon,
 /turf/open/floor/engine,
 /area/shuttle/shipstation)
 "hm" = (
@@ -1508,6 +1519,7 @@
 	dir = 6
 	},
 /obj/effect/turf_decal/stripes/red/corner,
+/obj/structure/window/reinforced/survival_pod/spawner/directional/west,
 /turf/open/floor/engine,
 /area/shuttle/shipstation)
 "kL" = (
@@ -1637,7 +1649,7 @@
 	dir = 4;
 	name = "pilot seat"
 	},
-/turf/open/floor/iron/dark,
+/turf/open/floor/iron/dark/herringbone,
 /area/shuttle/shipstation)
 "ml" = (
 /obj/machinery/rnd/production/techfab/department/cargo,
@@ -1652,6 +1664,9 @@
 "mx" = (
 /obj/effect/turf_decal/stripes/red/line{
 	dir = 8
+	},
+/obj/effect/turf_decal/stripes/white/line{
+	dir = 4
 	},
 /turf/open/floor/engine,
 /area/shuttle/shipstation)
@@ -1694,6 +1709,11 @@
 /obj/effect/turf_decal/stripes/red/corner{
 	dir = 4
 	},
+/obj/effect/turf_decal/stripes/white/line,
+/obj/effect/turf_decal/caution/stand_clear/white,
+/obj/structure/window/reinforced/survival_pod/spawner/directional/south{
+	pixel_y = -4
+	},
 /turf/open/floor/engine,
 /area/shuttle/shipstation)
 "mP" = (
@@ -1704,7 +1724,6 @@
 /turf/template_noop,
 /area/shuttle/shipstation)
 "mS" = (
-/obj/structure/window/reinforced/survival_pod/spawner/directional/west,
 /turf/open/floor/iron/dark/textured,
 /area/shuttle/shipstation)
 "mW" = (
@@ -1960,8 +1979,8 @@
 /area/shuttle/shipstation)
 "pz" = (
 /obj/structure/window/reinforced/survival_pod/spawner/directional/north,
-/obj/structure/table,
 /obj/machinery/chem_dispenser/drinks,
+/obj/structure/table/reinforced/titaniumglass,
 /turf/open/floor/iron/dark/side,
 /area/shuttle/shipstation)
 "pG" = (
@@ -2625,8 +2644,8 @@
 /area/shuttle/shipstation)
 "wf" = (
 /obj/structure/window/reinforced/survival_pod/spawner/directional/south,
-/obj/structure/table,
-/obj/machinery/processor{
+/obj/structure/table/reinforced/titaniumglass,
+/obj/machinery/coffeemaker{
 	pixel_y = 8
 	},
 /turf/open/floor/iron/checker{
@@ -2693,10 +2712,10 @@
 /turf/open/floor/mineral/plastitanium,
 /area/shuttle/shipstation)
 "xu" = (
-/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /obj/effect/turf_decal/trimline/blue/filled/line{
 	dir = 9
 	},
+/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /turf/open/floor/mineral/titanium/white,
 /area/shuttle/shipstation)
 "xv" = (
@@ -3117,6 +3136,10 @@
 /obj/effect/turf_decal/stripes/red/corner{
 	dir = 4
 	},
+/obj/structure/window/reinforced/survival_pod/spawner/directional/south{
+	pixel_y = -4
+	},
+/obj/structure/window/reinforced/survival_pod/spawner/directional/west,
 /turf/open/floor/engine,
 /area/shuttle/shipstation)
 "BD" = (
@@ -3575,7 +3598,11 @@
 /turf/open/floor/catwalk_floor/iron_dark,
 /area/shuttle/shipstation)
 "EM" = (
-/mob/living/basic/lizard/wags_his_tail,
+/obj/machinery/processor{
+	pixel_y = 8
+	},
+/obj/structure/table/reinforced/titaniumglass,
+/obj/structure/window/reinforced/survival_pod/spawner/directional/south,
 /turf/open/floor/iron/checker{
 	dir = 8
 	},
@@ -3985,7 +4012,7 @@
 	nightshift_allowed = 0;
 	fire_colour = "#ff1100"
 	},
-/turf/open/floor/iron/dark,
+/turf/open/floor/iron/dark/herringbone,
 /area/shuttle/shipstation)
 "HI" = (
 /obj/structure/closet/secure_closet/wall{
@@ -4292,7 +4319,7 @@
 	dir = 4;
 	name = "co-pilot seat"
 	},
-/turf/open/floor/iron/dark,
+/turf/open/floor/iron/dark/herringbone,
 /area/shuttle/shipstation)
 "Kv" = (
 /obj/effect/turf_decal/delivery,
@@ -4487,13 +4514,13 @@
 /area/shuttle/shipstation)
 "Mf" = (
 /obj/structure/window/reinforced/survival_pod/spawner/directional/north,
-/obj/structure/table,
 /obj/machinery/microwave{
 	pixel_y = 4
 	},
 /obj/effect/spawner/random/food_or_drink/donkpockets{
 	pixel_y = 5
 	},
+/obj/structure/table/reinforced/titaniumglass,
 /turf/open/floor/iron/dark/side,
 /area/shuttle/shipstation)
 "Mg" = (
@@ -4703,7 +4730,7 @@
 /obj/effect/turf_decal/trimline/dark_blue/filled/line{
 	dir = 6
 	},
-/turf/open/floor/iron/dark,
+/turf/open/floor/iron/dark/herringbone,
 /area/shuttle/shipstation)
 "NQ" = (
 /obj/structure/closet/secure_closet/research_director,
@@ -4812,6 +4839,7 @@
 "PL" = (
 /obj/machinery/duct,
 /obj/effect/landmark/start/janitor,
+/mob/living/basic/lizard/wags_his_tail,
 /turf/open/floor/iron/checker{
 	dir = 8
 	},
@@ -4936,6 +4964,11 @@
 	},
 /obj/effect/turf_decal/trimline/brown/filled/warning,
 /obj/effect/turf_decal/delivery,
+/obj/structure/closet/cardboard,
+/obj/item/toy/plush/lizard_plushie/space/green{
+	name = "Guards-The-Crates";
+	pixel_y = 8
+	},
 /turf/open/floor/mineral/plastitanium,
 /area/shuttle/shipstation)
 "Re" = (
@@ -4976,15 +5009,14 @@
 /turf/open/floor/iron/smooth_large,
 /area/shuttle/shipstation)
 "Ro" = (
-/obj/structure/window/reinforced/tinted/frosted/spawner/directional/south,
-/obj/effect/turf_decal/delivery,
-/obj/item/toy/plush/lizard_plushie/space/green{
-	name = "Guards-The-Crates";
-	pixel_y = 8
+/obj/structure/window/reinforced/spawner/directional/east,
+/obj/structure/chair/comfy/shuttle{
+	dir = 8
 	},
-/obj/structure/closet/cardboard,
-/obj/effect/turf_decal/trimline/brown/filled/warning,
-/turf/open/floor/mineral/plastitanium,
+/obj/effect/landmark/start/cargo_technician,
+/turf/open/floor/iron/dark/smooth_half{
+	dir = 1
+	},
 /area/shuttle/shipstation)
 "Ru" = (
 /obj/machinery/time_clock/directional/west,
@@ -5001,7 +5033,7 @@
 	dir = 4
 	},
 /obj/structure/window/reinforced/survival_pod/spawner/directional/west,
-/turf/open/floor/iron/dark,
+/turf/open/floor/iron/dark/herringbone,
 /area/shuttle/shipstation)
 "RA" = (
 /obj/effect/turf_decal/trimline/blue/filled/corner{
@@ -5196,7 +5228,7 @@
 	name = "Navigation Bridge"
 	},
 /obj/effect/landmark/start/nanotrasen_consultant,
-/turf/open/floor/iron/dark,
+/turf/open/floor/iron/dark/herringbone,
 /area/shuttle/shipstation)
 "Tg" = (
 /obj/effect/turf_decal/trimline/purple/filled/line{
@@ -5277,6 +5309,7 @@
 /obj/effect/turf_decal/stripes/white/line{
 	dir = 10
 	},
+/obj/structure/window/reinforced/survival_pod/spawner/directional/east,
 /turf/open/floor/engine,
 /area/shuttle/shipstation)
 "TS" = (
@@ -5454,6 +5487,9 @@
 "UZ" = (
 /obj/effect/turf_decal/stripes/red/line{
 	dir = 4
+	},
+/obj/effect/turf_decal/stripes/white/line{
+	dir = 8
 	},
 /turf/open/floor/engine,
 /area/shuttle/shipstation)
@@ -5744,10 +5780,8 @@
 	},
 /area/shuttle/shipstation)
 "WT" = (
-/obj/structure/window/reinforced/tinted/frosted/spawner/directional/south,
 /obj/effect/turf_decal/delivery,
 /obj/structure/closet/crate/freezer/blood,
-/obj/effect/turf_decal/trimline/brown/filled/warning,
 /turf/open/floor/mineral/plastitanium,
 /area/shuttle/shipstation)
 "Xe" = (
@@ -6203,7 +6237,7 @@ Ko
 lo
 rK
 Eu
-XP
+WT
 Am
 Po
 xt
@@ -6233,7 +6267,7 @@ ml
 kK
 UZ
 Bz
-IZ
+hd
 jX
 jt
 Jy
@@ -6260,7 +6294,7 @@ Bw
 fP
 hj
 mM
-Ro
+IZ
 el
 jG
 KX
@@ -6287,7 +6321,7 @@ dU
 TQ
 mx
 bU
-WT
+IZ
 MH
 jG
 pl
@@ -6314,7 +6348,7 @@ nq
 XP
 Am
 Po
-hd
+IZ
 BD
 Gz
 En
@@ -6472,12 +6506,12 @@ ZH
 ZH
 ZH
 ZH
-sq
+cO
 it
 ZH
 an
 NU
-bZ
+DF
 ZH
 Lz
 pw
@@ -6499,7 +6533,7 @@ ZH
 wR
 DH
 ZH
-sq
+cO
 Nt
 cQ
 gu
@@ -6810,7 +6844,7 @@ lQ
 Xe
 RE
 ST
-aJ
+bZ
 gc
 ed
 "}
@@ -6964,7 +6998,7 @@ kq
 US
 Jf
 Df
-bY
+Ro
 GU
 AK
 ZH
