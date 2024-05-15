@@ -880,6 +880,14 @@
 /obj/machinery/atmospherics/pipe/smart/simple/green/visible,
 /turf/open/floor/engine/n2,
 /area/station/engineering/atmos)
+"eh" = (
+/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2{
+	dir = 6
+	},
+/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
+/obj/structure/cable,
+/turf/open/floor/catwalk_floor,
+/area/station/engineering/main)
 "ei" = (
 /obj/structure/lattice/catwalk,
 /obj/machinery/atmospherics/pipe/smart/simple/scrubbers/visible/layer2{
@@ -39202,13 +39210,13 @@ uG
 yr
 li
 FL
-RL
-mp
+PE
+AR
 hf
 Su
 mm
 Su
-Su
+RL
 Su
 Ux
 nv
@@ -39460,7 +39468,7 @@ jg
 sH
 dK
 mp
-AR
+eh
 jg
 mp
 tC
