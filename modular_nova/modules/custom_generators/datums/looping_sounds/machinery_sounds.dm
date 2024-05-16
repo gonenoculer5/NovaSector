@@ -2,7 +2,11 @@
 /datum/looping_sound/turbine
 	start_sound = 'modular_nova/modules/custom_generators/sound/turbine_spinup.ogg'
 	start_length = 4.7 SECONDS
-	mid_sounds = list('modular_nova/modules/custom_generators/sound/turbine_run1.ogg' = 1, 'modular_nova/modules/custom_generators/sound/turbine_run2.ogg' = 1, 'modular_nova/modules/custom_generators/sound/turbine_run3.ogg' = 1)
+	mid_sounds = list(
+		'modular_nova/modules/custom_generators/sound/turbine_run1.ogg' = 1,
+		'modular_nova/modules/custom_generators/sound/turbine_run2.ogg' = 1,
+		'modular_nova/modules/custom_generators/sound/turbine_run3.ogg' = 1
+	)
 	mid_length = 1.1 SECONDS
 	end_sound = 'modular_nova/modules/custom_generators/sound/turbine_spindown.ogg'
 	volume = 75
