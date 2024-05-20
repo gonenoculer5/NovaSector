@@ -447,7 +447,7 @@
 #define DOOR_CRUSH_DAMAGE 15 //the amount of damage that airlocks deal when they crush you
 
 // Bluemoon edit - Reduce hunger factor from 0.05 to 0.03
-#define HUNGER_FACTOR 0.05
+#define HUNGER_FACTOR 0.03
 /*
 #define HUNGER_FACTOR 0.05 //factor at which mob nutrition decreases
 */
