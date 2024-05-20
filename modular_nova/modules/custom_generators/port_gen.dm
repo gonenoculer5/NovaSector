@@ -18,5 +18,5 @@
 	circuit = /obj/item/circuitboard/machine/pacman/bluespace
 	sheet_path = /obj/item/stack/sheet/bluespace_crystal
 	power_gen = 40000
-	time_per_sheet = 120
+	time_per_sheet = 1800
 	use_custom_soundloop = FALSE
