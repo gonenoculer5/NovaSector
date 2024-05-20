@@ -8,7 +8,7 @@
 	base_lighting_color = "#FFFFCC"
 	requires_power = FALSE
 	has_gravity = STANDARD_GRAVITY
-	ambient_buzz = 'modular_blue/sound/ambience_forest.ogg'
+	ambient_buzz = 'modular_nova/modules/custom_awaymissions/forest/sound/ambience_forest.ogg'
 	forced_ambience = TRUE
 	ambient_buzz_vol = 25
 	ambience_index = null
@@ -18,7 +18,7 @@
 /area/awaymission/forest/beach
 	name = "Beach"
 	icon_state = "away5"
-	ambient_buzz = 'modular_blue/sound/ambience_beach.ogg'
+	ambient_buzz = 'modular_nova/modules/custom_awaymissions/forest/sound/ambience_beach.ogg'
 	ambient_buzz_vol = 30
 
 /area/awaymission/forest/glowing
@@ -44,7 +44,7 @@
 	static_lighting = TRUE
 	requires_power = FALSE
 	has_gravity = STANDARD_GRAVITY
-	ambient_buzz = 'modular_blue/sound/ambience_cave.ogg'
+	ambient_buzz = 'modular_nova/modules/custom_awaymissions/forest/sound/ambience_cave.ogg'
 	ambient_buzz_vol = 45
 
 //Turfs
@@ -74,8 +74,8 @@
 
 /obj/structure/flora/tree/sif
 	name = "glowing tree"
-	desc = "It's a tree, except this one seems quite alien.  It glows a deep blue."
-	icon = 'modular_blue/obj/sif.dmi'
+	desc = "It's a tree, except this one seems quite alien. It glows a deep blue."
+	icon = 'modular_nova/modules/custom_awaymissions/forest/icons/obj/sif.dmi'
 	icon_state = "tree_sif"
 
 /obj/structure/flora/tree/sif/Initialize(mapload)
