@@ -49,10 +49,13 @@
 		to_chat(user, span_warning("[src] is still recharging."))
 		return
 	//NOVA EDIT BEGIN
+	// Bluemoon edit - Allow more teleporter destinations
+	/*
 	var/turf/my_turf = get_turf(src)
 	if(is_away_level(my_turf.z))
 		to_chat(user, "<span class='warning'>[src] cannot be used here!</span>")
 		return
+	*/
 	//NOVA EDIT END
 	if(QDELETED(linked_swapper))
 		to_chat(user, span_warning("[src] is not linked with another swapper."))

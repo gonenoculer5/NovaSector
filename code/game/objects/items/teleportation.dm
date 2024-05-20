@@ -170,11 +170,14 @@
 /obj/item/hand_tele/attack_self(mob/user)
 	if (!can_teleport_notifies(user))
 		return
+	// Bluemoon edit - Allow more teleporter destinations
 	//NOVA EDIT BEGIN
+	/*
 	var/turf/my_turf = get_turf(src)
 	if(is_away_level(my_turf.z))
 		to_chat(user, "<span class='warning'>[src] cannot be used here!</span>")
 		return
+	*/
 	//NOVA EDIT END
 	var/list/locations = list()
 	for(var/obj/machinery/computer/teleporter/computer as anything in SSmachines.get_machines_by_type_and_subtypes(/obj/machinery/computer/teleporter))
@@ -278,8 +281,12 @@
 
 /obj/item/hand_tele/proc/can_teleport_notifies(mob/user)
 	var/turf/current_location = get_turf(user)
+	// Bluemoon edit - Allow more teleporter destinations
+	/*
 	var/area/current_area = current_location.loc
-	if (!current_location || (current_area.area_flags & NOTELEPORT) || is_away_level(current_location.z) || !isturf(user.loc))
+	*/
+	// Bluemoon edit - Allow more teleporter destinations
+	if (!current_location || /*(current_area.area_flags & NOTELEPORT) || is_away_level(current_location.z) ||*/ !isturf(user.loc))
 		to_chat(user, span_notice("[src] is malfunctioning."))
 		return FALSE
 
@@ -438,9 +445,14 @@
 		playsound(destination, 'sound/effects/portal_travel.ogg', 50, 1, SHORT_RANGE_SOUND_EXTRARANGE)
 
 /obj/item/syndicate_teleporter/proc/malfunctioning(mob/guy_teleporting, turf/current_location)
+	// Bluemoon edit - Allow more teleporter destinations
+	/*
 	var/area/current_area = get_area(current_location)
+	*/
 	if(!current_location)
 		return TRUE
+	// Bluemoon edit - Allow more teleporter destinations
+	/*
 	if(current_area.area_flags & NOTELEPORT)
 		return TRUE
 	if(is_away_level(current_location.z))
@@ -449,6 +461,7 @@
 		return TRUE
 	if(is_reserved_level(current_location.z))
 		return TRUE
+	*/
 	if(!isturf(guy_teleporting.loc))
 		return TRUE
 	return FALSE
