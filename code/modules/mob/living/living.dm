@@ -1375,8 +1375,11 @@
 	var/turf/T = loc
 	if(is_centcom_level(T.z)) //dont detect mobs on centcom
 		return FALSE
+	// Bluemoon edit - Allow camera tracking on away levels
+	/*
 	if(is_away_level(T.z))
 		return FALSE
+	*/
 	if(onSyndieBase() && !(ROLE_SYNDICATE in user?.faction))
 		return FALSE
 	// Now, are they viewable by a camera? (This is last because it's the most intensive check)
