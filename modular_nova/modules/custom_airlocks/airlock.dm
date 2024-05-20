@@ -1,4 +1,4 @@
-#define AIRLOCK_SOUNDPATH(filename) "modular_nova/modules/custom_airlock_sounds/sound/" + ##filename
+#define AIRLOCK_SOUNDPATH(filename) "modular_nova/modules/custom_airlocks/sound/" + ##filename
 #define INT_AIRLOCK_SOUNDPATH(filename) AIRLOCK_SOUNDPATH("airlock/" + ##filename)
 #define EXT_AIRLOCK_SOUNDPATH(filename) AIRLOCK_SOUNDPATH("external_airlock/" + ##filename)
 #define VAULT_SOUNDPATH(filename) AIRLOCK_SOUNDPATH("vault_airlock/" + ##filename)
@@ -49,6 +49,13 @@
 	doorDeni = VAULT_SOUNDPATH("deniedbeep.ogg")
 
 /obj/machinery/door/airlock/security
+	doorDeni = VAULT_SOUNDPATH("deniedbeep.ogg")
+
+/obj/machinery/door/airlock/external/wagon
+	opacity = FALSE
+	glass = TRUE
+
+/obj/machinery/door/airlock/external/wagon/command
 	doorDeni = VAULT_SOUNDPATH("deniedbeep.ogg")
 
 /*

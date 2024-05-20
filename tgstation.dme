@@ -7138,7 +7138,7 @@
 #include "modular_nova\modules\cryosleep\code\mood.dm"
 #include "modular_nova\modules\curatorbundle\Mushy.dm"
 #include "modular_nova\modules\curatorbundle\Ronin.dm"
-#include "modular_nova\modules\custom_airlock_sounds\airlock.dm"
+#include "modular_nova\modules\custom_airlocks\airlock.dm"
 #include "modular_nova\modules\custom_awaymissions\areas.dm"
 #include "modular_nova\modules\custom_awaymissions\forest\forest.dm"
 #include "modular_nova\modules\custom_footstep_sounds\human.dm"
