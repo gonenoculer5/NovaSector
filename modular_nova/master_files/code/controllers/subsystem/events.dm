@@ -17,6 +17,10 @@
 		reschedule()
 
 /datum/controller/subsystem/events/reschedule()
+	// Bluemoon edit - Skip event rescheduling when random events are disabled
+	if(!CONFIG_GET(flag/allow_random_events))
+		return
+
 	var/filter_threshold = get_active_player_count(alive_check = TRUE, afk_check = TRUE, human_check = TRUE)
 
 	if(!SSticker.HasRoundStarted()) // Roundstart
