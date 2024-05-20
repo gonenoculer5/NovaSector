@@ -17,6 +17,8 @@
 	var/constant_flickering = FALSE // Are we always flickering?
 	var/flicker_timer = null
 	var/roundstart_flicker = FALSE
+	// Bluemoon edit - Flicker-proof lights
+	var/flicker_proof = FALSE
 
 
 /obj/machinery/light/proc/delayed_turn_on(trigger, play_sound = TRUE, color_set, power_set, brightness_set)
@@ -44,6 +46,10 @@
 			playsound(src.loc, 'modular_nova/modules/aesthetics/lights/sound/light_on.ogg', 65, 1)
 
 /obj/machinery/light/proc/start_flickering()
+	// Bluemoon edit - Flicker-proof lights
+	if(flicker_proof)
+		return
+
 	on = FALSE
 	update(FALSE, TRUE, FALSE)
 
