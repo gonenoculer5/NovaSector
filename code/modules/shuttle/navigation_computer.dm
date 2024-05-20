@@ -18,12 +18,16 @@
 	/// The mobile docking port of the connected shuttle
 	var/obj/docking_port/mobile/shuttle_port
 	// Traits forbided for custom docking
+	// Bluemoon edit - Allow more shuttle destinations
+	var/list/locked_traits = list()
+	/*
 	var/list/locked_traits = list(ZTRAIT_RESERVED, ZTRAIT_CENTCOM, ZTRAIT_AWAY)
+	*/
 	var/view_range = 0
 	var/x_offset = 0
 	var/y_offset = 0
-	// Bluemoon edit - Add Shipstation map
-	var/list/whitelist_turfs = list(/turf/open/space, /turf/open/floor/plating, /turf/open/lava, /turf/open/openspace, /turf/closed/mineral/, /turf/open/misc/asteroid/)
+	// Bluemoon edit - Allow more shuttle destinations
+	var/list/whitelist_turfs = list(/turf/open/misc, /turf/open/floor, /turf/open/space, /turf/open/lava, /turf/open/openspace, /turf/closed/mineral/)
 	/*
 	var/list/whitelist_turfs = list(/turf/open/space, /turf/open/floor/plating, /turf/open/lava, /turf/open/openspace)
 	*/
