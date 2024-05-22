@@ -72,7 +72,7 @@
 	. = ..()
 	if(. > 0 && istype(remote_ai))
 		to_chat(remote_ai, span_danger("Your core is under attack!"))
-	
+
 
 /obj/structure/ai_core/deactivated
 	icon_state = "ai-empty"
@@ -131,8 +131,11 @@
 		return FALSE
 	if(!A.power_equip)
 		return FALSE
+	// Bluemoon edit - Allow latejoin AI on any Z-level
+	/*
 	if(!SSmapping.level_trait(T.z,ZTRAIT_STATION))
 		return FALSE
+	*/
 	if(!isfloorturf(T))
 		return FALSE
 	return TRUE
