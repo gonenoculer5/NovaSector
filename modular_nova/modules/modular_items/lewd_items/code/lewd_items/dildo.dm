@@ -89,9 +89,15 @@
 		user.adjust_arousal(1 * seconds_per_tick)
 		user.adjust_pleasure(1 * seconds_per_tick)
 
-/obj/item/clothing/sextoy/dildo/attack(mob/living/carbon/human/target, mob/living/carbon/human/user)
+// Bluemoon edit - Make dildo more ergonomic & Cyborg romance
+/obj/item/clothing/sextoy/dildo/attack(mob/living/target, mob/living/carbon/human/user, params)
 	. = ..()
-	if(!ishuman(target) || (target.stat == DEAD)) //Don't.
+	// Bluemoon edit - Cyborg romance
+	var/mob/living/carbon/human/target_human
+	if(ishuman(target))
+		target_human = target
+
+	if((!target_human && !issilicon(target)) || (target.stat == DEAD)) //Don't.
 		return
 
 	var/message = ""
@@ -104,17 +110,24 @@
 	var/emote_probability = 20
 	var/list/possible_emotes = list("moan")
 	switch(user.zone_selected) //to let code know what part of body we gonna fuck
+		// Bluemoon edit - Make dildo more ergonomic
 		if(BODY_ZONE_PRECISE_GROIN)
-			var/obj/item/organ/external/genital/vagina = target.get_organ_slot(ORGAN_SLOT_VAGINA)
-			if(!vagina)
-				to_chat(user, span_danger("[target] don't have suitable genitalia for that!"))
-				return FALSE
-
-			if(!(target.is_bottomless() || vagina.visibility_preference == GENITAL_ALWAYS_SHOW))
+			if(!target_human.is_bottomless() && !target_human.has_anus(REQUIRE_GENITAL_EXPOSED) && !target_human.has_vagina(REQUIRE_GENITAL_EXPOSED))
 				to_chat(user, span_danger("[target]'s groin is covered!"))
 				return FALSE
 
-			message = (user == target) ? pick("rubs [target.p_their()] vagina with [src]", "gently jams [target.p_their()] pussy with [src]", "fucks [target.p_their()] vagina with a [src]") : pick("delicately rubs [target]'s vagina with [src]", "uses [src] to fuck [target]'s vagina", "jams [target]'s pussy with [src]", "teasing [target]'s pussy with [src]")
+			var/vagina = !target_human || target_human.has_vagina(REQUIRE_GENITAL_EXPOSED)
+			var/anus = !target_human || target_human.has_anus(REQUIRE_GENITAL_EXPOSED)
+
+			if(target_human && (!vagina && !anus))
+				to_chat(user, span_danger("[target] doesn't have suitable genitalia for that!"))
+				return FALSE
+
+			// Bluemoon edit - Make dildo more ergonomic
+			if(anus && (LAZYACCESS(params2list(params), RIGHT_CLICK) || !vagina))
+				message = (user == target) ? pick("puts [src] into [target.p_their()] anus", "slowly inserts [src] into [target.p_their()] ass") : pick("fucks [target]'s ass with [src]", "uses [src] to fuck [target]'s anus", "jams [target]'s ass with [src]", "roughly fucks [target]'s ass with [src], making [target.p_their()] eyes roll back")
+			else if (vagina)
+				message = (user == target) ? pick("rubs [target.p_their()] vagina with [src]", "gently jams [target.p_their()] pussy with [src]", "fucks [target.p_their()] vagina with a [src]") : pick("delicately rubs [target]'s vagina with [src]", "uses [src] to fuck [target]'s vagina", "jams [target]'s pussy with [src]", "teasing [target]'s pussy with [src]")
 
 			if(poly_size == "medium")
 				arousal_adjustment = 6
@@ -144,6 +157,8 @@
 			emote_probability = 70
 			possible_emotes = list("gasp", "moan")
 
+		// Bluemoon edit - Make dildo more ergonomic
+		/*
 		else
 			if(!target.is_bottomless())
 				to_chat(user, span_danger("[target]'s anus is covered!"))
@@ -154,11 +169,13 @@
 			pleasure_adjustment = 5
 			emote_probability = 60
 			possible_emotes = list("twitch_s", "moan", "shiver")
+		*/
 
 	target.adjust_arousal(arousal_adjustment)
 	target.adjust_pleasure(pleasure_adjustment)
-	if(prob(emote_probability))
-		target.try_lewd_autoemote(pick(possible_emotes))
+	// Bluemoon edit - Make dildo more ergonomic
+	if(target_human && prob(emote_probability))
+		target_human.try_lewd_autoemote(pick(possible_emotes))
 
 	user.visible_message(span_purple("[user] [message]!"))
 	play_lewd_sound(loc, pick('modular_nova/modules/modular_items/lewd_items/sounds/bang1.ogg',
