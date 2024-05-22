@@ -135,6 +135,8 @@
 				/obj/item/reagent_containers/cup/bottle/camphor = 3,
 				/obj/item/reagent_containers/cup/bottle/succubus_milk = 6, //Those are legal 'cause you can just turn off prefs in round in "CLOWN SMOKE MACHINE+PENIS ENLARGEMENT CHEMICAL CASE". Yes, i have special code-phrase for this. I've seen some shit.
 				/obj/item/reagent_containers/cup/bottle/incubus_draft = 6,
+				/obj/item/reagent_containers/cup/bottle/prospacillin = 3, // Only three available because its harder to make.
+				/obj/item/reagent_containers/cup/bottle/dimicillin = 3,
 			),
 		),
 		list(
