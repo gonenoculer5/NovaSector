@@ -5,6 +5,10 @@
 		/area/misc/hilbertshotel,\
 )
 
+/*
+ * THIS IS THE WRONG WAY TO USE A COMPONENT PROCEED DIRECTLY TO HELL DO NOT PASS GO DO NOT COLLECT 200 BOTTOMS -francinum
+ */
+
 /obj/item/clothing/neck/size_collar
 	name = "size collar"
 	desc = "A shiny black collar embeded with technology that allows the user to change their own size."
@@ -17,6 +21,8 @@
 	var/datum/component/temporary_size/size_component
 	/// What size do we want to set the wearer to when they wear the collar?
 	var/target_size = 1
+	/// Cache of valid areas for examine
+	var/examine_area_cache
 
 /obj/item/clothing/neck/size_collar/attack_self(mob/user, modifiers)
 	. = ..()
@@ -61,16 +67,18 @@
 /obj/item/clothing/neck/size_collar/examine(mob/user)
 	. = ..()
 	var/list/area_names = list()
-	for(var/area_index in SIZE_WHITELISTED_AREAS) //We can't do this typed.
-		var/area/area_type = area_index //So we have to assign it to a typed variable after we get it from the loop.
-		var/area_name = initial(area_type.name)
-		if(!area_name)
-			continue
+	if(!examine_area_cache)
+		for(var/area/area_index as anything in SIZE_WHITELISTED_AREAS) //We can't do this typed.
+			var/area_name = initial(area_index.name)
+			if(!area_name)
+				continue
 
-		area_names += area_name
-
-	if(length(area_names))
-		. += span_cyan("This collar will work in the following areas: [english_list(area_names)]")
+			area_names += area_name
+		if(!area_names)
+			examine_area_cache = 1 //Not A String. Just a trigger value.
+		examine_area_cache = english_list(area_names)
+	if(istext(examine_area_cache))
+		. += span_cyan("This collar will work in the following areas: [examine_area_cache]")
 
 	return .
 

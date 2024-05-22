@@ -27,7 +27,7 @@ export const bimbofication_pref: FeatureToggle = {
   name: 'Bimbofication',
   category: 'ERP',
   description:
-    'Toggles if you are able to react to the effects of bimbofication.',
+'Toggles if you are able to react to the effects of bimbofication.',
   component: CheckboxInput,
 };
 
@@ -137,5 +137,14 @@ export const new_genitalia_growth_pref: FeatureToggle = {
   category: 'ERP',
   description:
     'If checked, allows drugs to grow new genitalia on your character.',
+  component: CheckboxInput,
+};
+
+// BLUEMOON PREFS
+
+export const sizeplay_pref: FeatureToggle = {
+  name: 'Sizeplay',
+  category: 'ERP',
+  description: 'Toggles whether your height can be changed by chems.',
   component: CheckboxInput,
 };

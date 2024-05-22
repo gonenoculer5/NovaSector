@@ -64,8 +64,8 @@
 #define MAXIMUM_MARKINGS_PER_LIMB 3
 
 #define BODY_SIZE_NORMAL 1.00
-#define BODY_SIZE_MAX 1.5
-#define BODY_SIZE_MIN 0.8
+#define BODY_SIZE_MAX 3.0 //BLUEMOON EDIT - SIZEPLAY - Increased to 3.0 to provide a wider array of size options in the editor. Heights above 18' must be achieved with Prospacillin.
+#define BODY_SIZE_MIN 0.5 //BLUEMOON EDIT - SIZEPLAY - Decreased to 0.5 to provide a wider array of size options in the editor. Heights below 3' must be achieved with Dimicillin.
 
 //In inches
 #define PENIS_MIN_GIRTH PENIS_MIN_LENGTH
