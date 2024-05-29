@@ -461,7 +461,7 @@
 /obj/item/organ/external/genital/breasts/get_sprite_size_string()
 	var/max_size = 5
 	if(genital_type == "pair")
-		max_size = 16
+		max_size = 18 //BLUEMOON EDIT - CHANGED FROM 16 TO 18 TO PROVIDE SUPPORT FOR NEW SIZES.
 	var/current_size = FLOOR(genital_size, 1)
 	if(current_size < 0)
 		current_size = 0
