@@ -255,7 +255,11 @@
 	if(locked)
 		return
 	set_bolt(TRUE)
-	playsound(src,boltDown,30,FALSE,3)
+	// Bluemoon edit - Louder airlock bolts
+	if(loud_bolts)
+		playsound(src,boltDown,50,FALSE,3)
+	else
+		playsound(src,boltDown,30,FALSE,3)
 	audible_message(span_hear("You hear a click from the bottom of the door."), null,  1)
 	update_appearance()
 
@@ -273,7 +277,11 @@
 	if(!locked)
 		return
 	set_bolt(FALSE)
-	playsound(src,boltUp,30,FALSE,3)
+	// Bluemoon edit - Louder airlock bolts
+	if(loud_bolts)
+		playsound(src,boltUp,50,FALSE,3)
+	else
+		playsound(src,boltUp,30,FALSE,3)
 	audible_message(span_hear("You hear a click from the bottom of the door."), null,  1)
 	update_appearance()
 
@@ -1036,7 +1044,8 @@
 			to_chat(user, span_warning("[src] has already been sealed!"))
 			return
 		user.visible_message(span_notice("[user] begins sealing [src]."), span_notice("You begin sealing [src]."))
-		playsound(src, 'sound/items/jaws_pry.ogg', 30, TRUE)
+		// Bluemoon edit - Custom airlock sounds
+		playsound(src, 'sound/items/jaws_pry.ogg', 30, TRUE, ignore_walls = FALSE)
 		if(!do_after(user, airlockseal.seal_time, target = src))
 			return
 		if(!density)
@@ -1048,7 +1057,8 @@
 		if(!user.transferItemToLoc(airlockseal, src))
 			to_chat(user, span_warning("For some reason, you can't attach [airlockseal]!"))
 			return
-		playsound(src, 'sound/machines/airlockforced.ogg', 30, TRUE)
+		// Bluemoon edit - Custom airlock sounds
+		playsound(src, 'sound/machines/airlockforced.ogg', 30, TRUE, ignore_walls = FALSE)
 		user.visible_message(span_notice("[user] finishes sealing [src]."), span_notice("You finish sealing [src]."))
 		seal = airlockseal
 		modify_max_integrity(max_integrity * AIRLOCK_SEAL_MULTIPLIER)
@@ -1123,7 +1133,7 @@
 		return TRUE
 	user.visible_message(span_notice("[user] begins removing the seal from [src]."), span_notice("You begin removing [src]'s pneumatic seal."))
 	// Bluemoon edit - Custom airlock sounds
-	playsound(src, forcedClosed, 30, TRUE)
+	playsound(src, forcedClosed, 30, TRUE, ignore_walls = FALSE)
 	/*
 	playsound(src, 'sound/machines/airlockforced.ogg', 30, TRUE)
 	*/
@@ -1131,7 +1141,8 @@
 		return TRUE
 	if(!seal)
 		return TRUE
-	playsound(src, 'sound/items/jaws_pry.ogg', 30, TRUE)
+	// Bluemoon edit - Custom airlock sounds
+	playsound(src, 'sound/items/jaws_pry.ogg', 30, TRUE, ignore_walls = FALSE)
 	airlockseal.forceMove(get_turf(user))
 	user.visible_message(span_notice("[user] finishes removing the seal from [src]."), span_notice("You finish removing [src]'s pneumatic seal."))
 	seal = null
@@ -1191,7 +1202,8 @@
 
 			if(!prying_so_hard)
 				var/time_to_open = 50
-				playsound(src, 'sound/machines/airlock_alien_prying.ogg', 100, TRUE) //is it aliens or just the CE being a dick?
+				// Bluemoon edit - Custom airlock sounds
+				playsound(src, 'sound/machines/airlock_alien_prying.ogg', 100, TRUE, ignore_walls = FALSE) //is it aliens or just the CE being a dick?
 				prying_so_hard = TRUE
 				if(do_after(user, time_to_open, src))
 					if(check_electrified && shock(user,100))
@@ -1275,7 +1287,7 @@
 				return FALSE
 			use_energy(50 JOULES)
 			// Bluemoon edit - Custom airlock sounds
-			playsound(src, doorOpen, 30, FALSE)
+			playsound(src, doorOpen, 25, FALSE, ignore_walls = FALSE)
 			return TRUE
 
 		if(FORCING_DOOR_CHECKS) // Only one check.
@@ -1283,13 +1295,13 @@
 				return FALSE
 			use_energy(50 JOULES)
 			// Bluemoon edit - Custom airlock sounds
-			playsound(src, doorOpen, 30, FALSE)
+			playsound(src, doorOpen, 25, FALSE, ignore_walls = FALSE)
 			return TRUE
 
 		if(BYPASS_DOOR_CHECKS) // No power usage, special sound, get it open.
 			//playsound(src, 'sound/machines/airlockforced.ogg', 30, TRUE) - ORIGINAL
 			// Bluemoon edit - Custom airlock sounds
-			playsound(src, forcedOpen, 30, FALSE) //NOVA EDIT CHANGE - AESTHETICS
+			playsound(src, forcedOpen, 30, FALSE, ignore_walls = FALSE) //NOVA EDIT CHANGE - AESTHETICS
 			return TRUE
 
 		else
@@ -1361,12 +1373,12 @@
 				return FALSE
 			use_energy(50 JOULES)
 			// Bluemoon edit - Custom airlock sounds
-			playsound(src, doorClose, 30, FALSE)
+			playsound(src, doorClose, 30, FALSE, ignore_walls = TRUE)
 			return TRUE
 
 		if(BYPASS_DOOR_CHECKS)
 			// Bluemoon edit - Custom airlock sounds
-			playsound(src, forcedClosed, 30, FALSE)
+			playsound(src, forcedClosed, 30, FALSE, ignore_walls = TRUE)
 			/*
 			playsound(src, 'sound/machines/airlockforced.ogg', 30, TRUE)
 			*/
@@ -1462,7 +1474,8 @@
 	var/time_to_open = 5 //half a second
 	if(hasPower())
 		time_to_open = 5 SECONDS //Powered airlocks take longer to open, and are loud.
-		playsound(src, 'sound/machines/airlock_alien_prying.ogg', 100, TRUE)
+		// Bluemoon edit - Custom airlock sounds
+		playsound(src, 'sound/machines/airlock_alien_prying.ogg', 100, TRUE, ignore_walls = TRUE)
 
 
 	if(do_after(user, time_to_open, src))
