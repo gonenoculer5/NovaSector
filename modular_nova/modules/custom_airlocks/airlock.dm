@@ -2,9 +2,13 @@
 #define INT_AIRLOCK_SOUNDPATH(filename) AIRLOCK_SOUNDPATH("airlock/" + ##filename)
 #define EXT_AIRLOCK_SOUNDPATH(filename) AIRLOCK_SOUNDPATH("external_airlock/" + ##filename)
 #define VAULT_SOUNDPATH(filename) AIRLOCK_SOUNDPATH("vault_airlock/" + ##filename)
+#define PREFAB_SOUNDPATH(filename) AIRLOCK_SOUNDPATH("colony_prefab/" + ##filename)
 #define FIREDOOR_SOUNDPATH(filename) AIRLOCK_SOUNDPATH("fire_door/" + ##filename)
 
 // Bluemoon addition - Custom airlock sounds
+/obj/machinery/door/airlock
+	var/loud_bolts = FALSE
+
 /obj/machinery/door/airlock
 	doorOpen = INT_AIRLOCK_SOUNDPATH("airlock.ogg")
 	doorClose = INT_AIRLOCK_SOUNDPATH("airlockclose.ogg")
@@ -58,6 +62,14 @@
 /obj/machinery/door/airlock/external/wagon/command
 	doorDeni = VAULT_SOUNDPATH("deniedbeep.ogg")
 
+/obj/machinery/door/airlock/colony_prefab
+	doorOpen = PREFAB_SOUNDPATH("airlock.ogg")
+	doorClose = PREFAB_SOUNDPATH("airlockclose.ogg")
+	doorDeni = PREFAB_SOUNDPATH("deniedbeep.ogg")
+	boltUp = PREFAB_SOUNDPATH("boltsup.ogg")
+	boltDown = PREFAB_SOUNDPATH("boltsdown.ogg")
+	loud_bolts = TRUE
+
 /*
 /obj/machinery/door/firedoor
 	var/door_open_sound = FIREDOOR_SOUNDPATH("airlock.ogg")
@@ -68,4 +80,5 @@
 #undef INT_AIRLOCK_SOUNDPATH
 #undef EXT_AIRLOCK_SOUNDPATH
 #undef VAULT_SOUNDPATH
+#undef PREFAB_SOUNDPATH
 #undef FIREDOOR_SOUNDPATH
