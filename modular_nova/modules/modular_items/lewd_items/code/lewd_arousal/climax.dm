@@ -11,7 +11,8 @@
 	/// Used to prevent nightmare scenarios.
 	var/refractory_period
 
-/mob/living/carbon/human/proc/climax(manual = TRUE)
+// Bluemoon edit - Forced orgasms
+/mob/living/carbon/human/proc/climax(manual = TRUE, is_forced = FALSE)
 	if (CONFIG_GET(flag/disable_erp_preferences))
 		return
 
@@ -30,7 +31,14 @@
 		return TRUE
 
 	// Reduce pop-ups and make it slightly more frictionless (lewd).
-	var/climax_choice = has_penis() ? CLIMAX_PENIS : CLIMAX_VAGINA
+	// Bluemoon edit - Allow two automatic orgasms at once
+	var/climax_choice
+	if(has_penis())
+		climax_choice = CLIMAX_PENIS
+		if(has_vagina())
+			climax_choice = CLIMAX_BOTH
+	else if(has_vagina())
+		climax_choice = CLIMAX_VAGINA
 
 	if(manual)
 		var/list/genitals = list()
@@ -108,7 +116,12 @@
 			if(fillable_inrange_containers.len)
 				buttons += CLIMAX_IN_CONTAINER
 
-			var/penis_climax_choice = tgui_alert(src, "Choose where to shoot your load.", "Load preference!", buttons)
+			// Bluemoon edit - Forced orgasms
+			var/penis_climax_choice
+			if(is_forced)
+				penis_climax_choice = CLIMAX_ON_FLOOR
+			else
+				penis_climax_choice = tgui_alert(src, "Choose where to shoot your load.", "Load preference!", buttons)
 
 			var/create_cum_decal = FALSE
 
@@ -144,7 +157,7 @@
 					var/mob/living/carbon/human/target_human
 					if(ishuman(target))
 						target_human = target
-					
+
 					var/target_them = target.p_them()
 
 					var/list/target_buttons = list()
@@ -195,7 +208,16 @@
 			testicles.transfer_internal_fluid(null, testicles.internal_fluid_count * 0.6) // yep. we are sending semen to nullspace
 			*/
 			if(create_cum_decal)
+				// Bluemoon edit - Add reagents to cum decals
+				if(testicles)
+					var/amount = testicles.internal_fluid_count * 0.6
+					testicles.adjust_internal_fluid(-amount)
+					add_cum_splatter_floor(get_turf(src), amount = amount)
+				else
+					add_cum_splatter_floor(get_turf(src))
+				/*
 				add_cum_splatter_floor(get_turf(src))
+				*/
 
 		try_lewd_autoemote("moan")
 		if(climax_choice == CLIMAX_PENIS)
@@ -209,13 +231,16 @@
 		var/obj/item/organ/external/genital/vagina/vagina = get_organ_slot(ORGAN_SLOT_VAGINA)
 		if(is_bottomless() || vagina.visibility_preference == GENITAL_ALWAYS_SHOW)
 			visible_message(span_userlove("[src] twitches and moans as [p_they()] climax from their vagina!"), span_userlove("You twitch and moan as you climax from your vagina!"))
-			add_cum_splatter_floor(get_turf(src), female = TRUE)
+			// Bluemoon edit - Add reagents to cum decals
+			var/amount = vagina.internal_fluid_count * 0.6
+			vagina.adjust_internal_fluid(-amount)
+			add_cum_splatter_floor(get_turf(src), female = TRUE, amount = amount)
 		else
 			visible_message(span_userlove("[src] cums in [self_their] underwear from [self_their] vagina!"), \
 						span_userlove("You cum in your underwear from your vagina! Eww."))
 			self_orgasm = TRUE
-
-	apply_status_effect(/datum/status_effect/climax)
+	// Bluemoon edit - Forced orgasms
+	apply_status_effect(/datum/status_effect/climax, is_forced)
 	apply_status_effect(/datum/status_effect/climax_cooldown)
 	if(self_orgasm)
 		add_mood_event("orgasm", /datum/mood_event/climaxself)
