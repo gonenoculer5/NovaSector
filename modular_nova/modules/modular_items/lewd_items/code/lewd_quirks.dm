@@ -358,6 +358,16 @@
 	if(examiner.client?.prefs?.read_preference(/datum/preference/toggle/erp))
 		var/arousal_message
 		switch(arousal)
+			// Bluemoon edit - Fixed lewd Empath examine text
+			if(AROUSAL_MINIMUM_DETECTABLE to AROUSAL_LOW)
+				arousal_message = span_purple("[p_They()] [p_are()] feeling slightly sexually excited.") + "\n"
+			if(AROUSAL_LOW to AROUSAL_MEDIUM)
+				arousal_message = span_purple("[p_They()] [p_are()] feeling fully sexually aroused, and [p_are()] thinking of lewd thoughts.") + "\n"
+			if(AROUSAL_HIGH to AROUSAL_AUTO_CLIMAX_THRESHOLD)
+				arousal_message = span_purple("[p_They()] [p_are()] feeling extremely horny.") + "\n"
+			if(AROUSAL_AUTO_CLIMAX_THRESHOLD to INFINITY)
+				arousal_message = span_purple("[p_They()] [p_are()] feeling extremely horny, and [p_are()] being pushed to [p_their()] limits!") + "\n"
+			/*
 			if(AROUSAL_MINIMUM_DETECTABLE to AROUSAL_LOW)
 				arousal_message = span_purple("[p_they()] [p_are()] slightly blushed.") + "\n"
 			if(AROUSAL_LOW to AROUSAL_MEDIUM)
@@ -366,6 +376,7 @@
 				arousal_message = span_purple("[p_they()] [p_are()] aroused as hell.") + "\n"
 			if(AROUSAL_AUTO_CLIMAX_THRESHOLD to INFINITY)
 				arousal_message = span_purple("[p_they()] [p_are()] extremely excited, exhausting from entolerable desire.") + "\n"
+		*/
 		if(arousal_message)
 			. += arousal_message
 	else if(arousal > AROUSAL_MINIMUM_DETECTABLE)
