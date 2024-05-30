@@ -33,6 +33,9 @@
 	var/heal_flag_necessary = HEAL_STATUS
 	/// A particle effect, for things like embers - Should be set on update_particles()
 	VAR_FINAL/obj/effect/abstract/particle_holder/particle_effect
+	// Bluemoon edit - Allow pausing of status effect expiration
+	/// If pause_expiry is TRUE, the effect will not remove itself when its duration is reached. Can be set to FALSE to unpause expiry at any time.
+	var/pause_expiry = FALSE
 
 /datum/status_effect/New(list/arguments)
 	on_creation(arglist(arguments))
@@ -116,7 +119,8 @@
 			return
 
 	if(duration != -1)
-		if(duration < world.time)
+		// Bluemoon edit - Pause automatic status effect expiration
+		if((duration < world.time) && !pause_expiry)
 			qdel(src)
 			return
 		update_shown_duration()
@@ -198,7 +202,8 @@
 		return FALSE
 
 	duration -= seconds
-	if(duration <= world.time)
+	// Bluemoon edit - Pause automatic status effect expiration
+	if((duration <= world.time) && !pause_expiry)
 		qdel(src)
 		return TRUE
 

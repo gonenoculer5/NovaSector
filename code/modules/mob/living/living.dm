@@ -608,8 +608,16 @@
 		to_chat(src, span_warning("You are already sleeping!"))
 		return
 	else
+		// Bluemoon edit - Timed sleeping
+		var/duration = tgui_input_number(src, "How many minutes do you want to sleep for? Enter 0 to sleep indefinitely. Resist to wake up.", "Sleep: Duration", max_value = INFINITY, min_value = 0, default = 1)
+		if(duration == 0)
+			PermaSleeping(is_voluntary = TRUE)
+		else
+			SetSleeping(duration MINUTES, is_voluntary = TRUE)
+		/*
 		if(tgui_alert(usr, "You sure you want to sleep for a while?", "Sleep", list("Yes", "No")) == "Yes")
 			SetSleeping(400) //Short nap
+		*/
 
 
 /mob/proc/get_contents()
@@ -1187,6 +1195,10 @@
 	if(next_move > world.time)
 		return FALSE
 	if(HAS_TRAIT(src, TRAIT_INCAPACITATED))
+		// Bluemoon edit - Allow waking from voluntary sleeping
+		var/datum/status_effect/incapacitating/sleeping/sleep_effect = IsSleeping()
+		if(sleep_effect)
+			return sleep_effect.voluntary
 		return FALSE
 	return TRUE
 
@@ -1203,6 +1215,12 @@
 	changeNext_move(CLICK_CD_RESIST)
 
 	SEND_SIGNAL(src, COMSIG_LIVING_RESIST, src)
+
+	// Bluemoon edit - Allow waking from voluntary sleeping
+	if(IsSleeping())
+		SetSleeping(0)
+		return
+
 	//resisting grabs (as if it helps anyone...)
 	if(!HAS_TRAIT(src, TRAIT_RESTRAINED) && pulledby)
 		log_combat(src, pulledby, "resisted grab")
