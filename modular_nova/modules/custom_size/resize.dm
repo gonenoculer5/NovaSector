@@ -1,3 +1,4 @@
+// Bluemoon addition - Custom mob size
 /// This file contains all the code relating to actually handling size changes, such as modifying the mob's scale transform.
 /// Created primarily by gonenoculer5; co-authored by Francinum for assistance with prefkeys and some of the transform arithmetic.
 
