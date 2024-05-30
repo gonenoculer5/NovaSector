@@ -27,6 +27,9 @@
 	if(!vagina)
 		return FALSE
 
+	// Bluemoon edit - Fix infinite body fluid regen bug
+	if(vagina.internal_fluid_full())
+		return FALSE
 	if(affected_human.arousal > AROUSAL_LOW)
 		var/regen = (affected_human.arousal / AROUSAL_MULTIPLIER) * (vagina.internal_fluid_maximum / VAGINA_MULTIPLIER) * BASE_MULTIPLIER
 		vagina.adjust_internal_fluid(regen)
@@ -44,9 +47,15 @@
 	var/obj/item/organ/external/genital/testicles/testes = owner.get_organ_slot(ORGAN_SLOT_TESTICLES)
 	if(!testes || (affected_human.arousal < AROUSAL_LOW))
 		return FALSE
-
+	// Bluemoon edit - Fix infinite body fluid regen bug
+	if(testes.internal_fluid_full())
+		return FALSE
 	var/regen = (affected_human.arousal / AROUSAL_MULTIPLIER) * (testes.internal_fluid_maximum / TESTES_MULTIPLIER) * BASE_MULTIPLIER
+	// Bluemoon edit - Fix infinite body fluid regen bug
+	testes.adjust_internal_fluid(regen)
+	/*
 	testes.internal_fluid_count += regen
+	*/
 
 /datum/status_effect/body_fluid_regen/breasts
 	id = " breast milk regen"
