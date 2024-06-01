@@ -85,6 +85,9 @@ HELPER(pink, COLOR_LIGHT_PINK)
 HELPER_NAMED(scrubbers, "scrubbers pipe", COLOR_RED)
 HELPER_NAMED(supply, "air supply pipe", COLOR_BLUE)
 
+// Bluemoon edit - Pure oxygen supply pipe
+HELPER_NAMED(o2supply, "oxygen supply pipe", COLOR_VIBRANT_LIME)
+
 #undef HELPER_NAMED
 #undef HELPER
 #undef HELPER_PARTIAL_NAMED
