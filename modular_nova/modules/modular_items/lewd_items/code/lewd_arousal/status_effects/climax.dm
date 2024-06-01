@@ -10,12 +10,28 @@
 	duration = 10 SECONDS
 	alert_type = null
 
+	// Bluemoon edit - Forced orgasms
+	var/forced = FALSE
+
+// Bluemoon edit - Forced orgasms
+/datum/status_effect/climax/on_creation(is_forced)
+	forced = is_forced
+	return ..()
+
 /datum/status_effect/climax/tick(seconds_between_ticks)
 	// Bluemoon edit - Cyborg interactions
 	if(!owner.client?.prefs?.read_preference(/datum/preference/toggle/erp))
 		return
 
 	var/mob/living/carbon/human/affected_mob = owner
+
+	// Bluemoon edit - Forced orgasms
+	if(forced)
+		owner?.reagents.add_reagent(/datum/reagent/drug/aphrodisiac/dopamine, 0.3)
+		owner.adjustStaminaLoss(STAMINA_REMOVAL_AMOUNT_EXTERNAL * 1.2)
+		affected_mob.adjust_arousal(AROUSAL_REMOVAL_AMOUNT * 0.5)
+		affected_mob.adjust_pleasure(AROUSAL_REMOVAL_AMOUNT * 0.5)
+		return
 
 	// Bluemoon edit - Cyborg interactions
 	owner?.reagents.add_reagent(/datum/reagent/drug/aphrodisiac/dopamine, 0.5)

@@ -21,11 +21,12 @@
 	if(refractory_period > REALTIMEOFDAY)
 		return
 	refractory_period = REALTIMEOFDAY + 30 SECONDS
-	// Bluemoon edit - Fix ERP pref
-	if(has_status_effect(/datum/status_effect/climax_cooldown) || !client?.prefs?.read_preference(/datum/preference/toggle/erp))
+	// Bluemoon edit - Forced orgasms, Fix ERP pref
+	if((!is_forced && has_status_effect(/datum/status_effect/climax_cooldown)) || !client?.prefs?.read_preference(/datum/preference/toggle/erp))
 		return
 
-	if(HAS_TRAIT(src, TRAIT_NEVERBONER) || has_status_effect(/datum/status_effect/climax_cooldown) || (!has_vagina() && !has_penis()))
+	// Bluemoon edit - Forced orgasms
+	if(HAS_TRAIT(src, TRAIT_NEVERBONER) || (!is_forced && has_status_effect(/datum/status_effect/climax_cooldown)) || (!has_vagina() && !has_penis()))
 		visible_message(span_purple("[src] twitches, trying to cum, but with no result."), \
 			span_purple("You can't have an orgasm!"))
 		return TRUE
@@ -66,13 +67,18 @@
 
 	if(climax_choice == CLIMAX_PENIS || climax_choice == CLIMAX_BOTH)
 		var/obj/item/organ/external/genital/penis/penis = get_organ_slot(ORGAN_SLOT_PENIS)
-		if(!get_organ_slot(ORGAN_SLOT_TESTICLES)) //If we have no god damn balls, we can't cum anywhere... GET BALLS!
+		// Bluemoon edit - Climax in containers
+		var/obj/item/organ/external/genital/testicles/testicles = get_organ_slot(ORGAN_SLOT_TESTICLES)
+		if(!testicles) //If we have no god damn balls, we can't cum anywhere... GET BALLS!
 			visible_message(span_userlove("[src] orgasms, but nothing comes out of [self_their] penis!"), \
 				span_userlove("You orgasm, it feels great, but nothing comes out of your penis!"))
 
 		else if(is_wearing_condom())
 			var/obj/item/clothing/sextoy/condom/condom = get_item_by_slot(LEWD_SLOT_PENIS)
 			condom.condom_use()
+			// Bluemoon edit - Climax in containers
+			var/amount = testicles.internal_fluid_count * 0.6
+			testicles.adjust_internal_fluid(-amount)
 			visible_message(span_userlove("[src] shoots [self_their] load into the [condom], filling it up!"), \
 				span_userlove("You shoot your thick load into the [condom] and it catches it all!"))
 
@@ -125,9 +131,6 @@
 
 			var/create_cum_decal = FALSE
 
-			// Bluemoon edit - Climax in containers
-			var/obj/item/organ/external/genital/testicles/testicles = get_organ_slot(ORGAN_SLOT_TESTICLES)
-
 			if(!penis_climax_choice || penis_climax_choice == CLIMAX_ON_FLOOR)
 				create_cum_decal = TRUE
 				visible_message(span_userlove("[src] shoots [self_their] sticky load onto the floor!"), \
@@ -140,7 +143,6 @@
 					create_cum_decal = TRUE
 					visible_message(span_userlove("[src] shoots [self_their] sticky load onto the floor!"), \
 						span_userlove("You shoot string after string of hot cum, hitting the floor!"))
-					testicles.transfer_internal_fluid(null, testicles.internal_fluid_count * 0.6)
 				else
 					visible_message(span_userlove("[src] shoots [self_their] sticky load into the [target_choice]!"), \
 						span_userlove("You shoot string after string of hot cum into the [target_choice]!"))
@@ -182,14 +184,10 @@
 						create_cum_decal = TRUE
 						visible_message(span_userlove("[src] shoots their sticky load onto the floor!"), \
 							span_userlove("You shoot string after string of hot cum, hitting the floor!"))
-						// Bluemoon edit - Climax in containers
-						testicles.transfer_internal_fluid(null, testicles.internal_fluid_count * 0.6)
 					else if(climax_into_choice == "On [target_them]")
 						create_cum_decal = TRUE
 						visible_message(span_userlove("[src] shoots their sticky load onto [target]!"), \
 							span_userlove("You shoot string after string of hot cum onto [target]!"))
-						// Bluemoon edit - Climax in containers
-						testicles.transfer_internal_fluid(null, testicles.internal_fluid_count * 0.6)
 					else
 						visible_message(span_userlove("[src] hilts [self_their] cock into [target]'s [climax_into_choice], shooting cum into [target_them]!"), \
 							span_userlove("You hilt your cock into [target]'s [climax_into_choice], shooting cum into [target_them]!"))
@@ -221,8 +219,10 @@
 
 		try_lewd_autoemote("moan")
 		if(climax_choice == CLIMAX_PENIS)
-			apply_status_effect(/datum/status_effect/climax)
-			apply_status_effect(/datum/status_effect/climax_cooldown)
+			// Bluemoon edit - Forced orgasms
+			apply_status_effect(/datum/status_effect/climax, is_forced)
+			if(!is_forced)
+				apply_status_effect(/datum/status_effect/climax_cooldown)
 			if(self_orgasm)
 				add_mood_event("orgasm", /datum/mood_event/climaxself)
 			return TRUE
@@ -241,7 +241,8 @@
 			self_orgasm = TRUE
 	// Bluemoon edit - Forced orgasms
 	apply_status_effect(/datum/status_effect/climax, is_forced)
-	apply_status_effect(/datum/status_effect/climax_cooldown)
+	if(!is_forced)
+		apply_status_effect(/datum/status_effect/climax_cooldown)
 	if(self_orgasm)
 		add_mood_event("orgasm", /datum/mood_event/climaxself)
 	return TRUE
