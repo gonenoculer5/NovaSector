@@ -7156,8 +7156,7 @@
 #include "modular_nova\modules\custom_generators\datums\looping_sounds\machinery_sounds.dm"
 #include "modular_nova\modules\custom_mapping\code\bluemoon_decals.dm"
 #include "modular_nova\modules\custom_mapping\code\bluemoon_signs.dm"
-#include "modular_nova\modules\custom_reagents\dopamine.dm"
-#include "modular_nova\modules\custom_reagents\rutt.dm"
+#include "modular_nova\modules\custom_mapping\code\mapping_helpers.dm"
 #include "modular_nova\modules\custom_size\resize.dm"
 #include "modular_nova\modules\custom_size\resize_chems.dm"
 #include "modular_nova\modules\custom_size\resize_prefs.dm"
@@ -8399,4 +8398,6 @@
 #include "modular_nova\modules\xenos_nova_redo\code\xeno_types\sentinel.dm"
 #include "modular_nova\modules\xenos_nova_redo\code\xeno_types\spitter.dm"
 #include "modular_nova\modules\xenos_nova_redo\code\xeno_types\warrior.dm"
+#include "modular_nova\modules_bluemoon\custom_reagents\dopamine.dm"
+#include "modular_nova\modules_bluemoon\custom_reagents\rutt.dm"
 // END_INCLUDE
