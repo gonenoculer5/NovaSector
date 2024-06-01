@@ -45,7 +45,8 @@
 		return FALSE
 
 	var/obj/item/organ/external/genital/testicles/testes = owner.get_organ_slot(ORGAN_SLOT_TESTICLES)
-	if(!testes || (affected_human.arousal < AROUSAL_LOW))
+	// Bluemoon edit - Always-active body fluid regen
+	if(!testes /*|| (affected_human.arousal < AROUSAL_LOW)*/)
 		return FALSE
 	// Bluemoon edit - Fix infinite body fluid regen bug
 	if(testes.internal_fluid_full())

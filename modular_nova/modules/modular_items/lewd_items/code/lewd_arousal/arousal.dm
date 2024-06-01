@@ -32,6 +32,8 @@
 		if(!arousal)
 			remove_status_effect(/datum/status_effect/aroused)
 
+		// Bluemoon edit - Always-active body fluid regen
+		/*
 		remove_status_effect(/datum/status_effect/body_fluid_regen/testes)
 		remove_status_effect(/datum/status_effect/body_fluid_regen/vagina)
 
@@ -41,6 +43,7 @@
 
 		if(get_organ_slot(ORGAN_SLOT_VAGINA) && !has_status_effect(/datum/status_effect/body_fluid_regen/vagina))
 			apply_status_effect(/datum/status_effect/body_fluid_regen/vagina)
+		*/
 
 	var/obj/item/organ/external/genital/breasts/breasts = get_organ_slot(ORGAN_SLOT_BREASTS)
 
