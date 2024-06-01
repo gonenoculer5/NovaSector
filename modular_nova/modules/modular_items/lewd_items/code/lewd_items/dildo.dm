@@ -111,6 +111,9 @@
 	var/list/possible_emotes = list("moan")
 	switch(user.zone_selected) //to let code know what part of body we gonna fuck
 		// Bluemoon edit - Make dildo more ergonomic
+		if(BODY_ZONE_CHEST)
+			return FALSE
+
 		if(BODY_ZONE_PRECISE_GROIN)
 			if(!target_human.is_bottomless() && !target_human.has_anus(REQUIRE_GENITAL_EXPOSED) && !target_human.has_vagina(REQUIRE_GENITAL_EXPOSED))
 				to_chat(user, span_danger("[target]'s groin is covered!"))
@@ -127,7 +130,7 @@
 			if(anus && (LAZYACCESS(params2list(params), RIGHT_CLICK) || !vagina))
 				message = (user == target) ? pick("puts [src] into [target.p_their()] anus", "slowly inserts [src] into [target.p_their()] ass") : pick("fucks [target]'s ass with [src]", "uses [src] to fuck [target]'s anus", "jams [target]'s ass with [src]", "roughly fucks [target]'s ass with [src], making [target.p_their()] eyes roll back")
 			else if (vagina)
-				message = (user == target) ? pick("rubs [target.p_their()] vagina with [src]", "gently jams [target.p_their()] pussy with [src]", "fucks [target.p_their()] vagina with a [src]") : pick("delicately rubs [target]'s vagina with [src]", "uses [src] to fuck [target]'s vagina", "jams [target]'s pussy with [src]", "teasing [target]'s pussy with [src]")
+				message = (user == target) ? pick("rubs [target.p_their()] vagina with [src]", "gently jams [target.p_their()] pussy with [src]", "fucks [target.p_their()] vagina with [src]") : pick("delicately rubs [target]'s vagina with [src]", "uses [src] to fuck [target]'s vagina", "jams [target]'s pussy with [src]", "teasing [target]'s pussy with [src]")
 
 			if(poly_size == "medium")
 				arousal_adjustment = 6
