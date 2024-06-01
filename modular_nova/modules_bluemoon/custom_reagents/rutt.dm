@@ -1,53 +1,62 @@
 /datum/reagent/drug/aphrodisiac/rutt
-	name = "R.U.T.T."
+	name = "\improper R.U.T.T."
 	description = "Chemically condensed dopamine, sexual proteins, estrogens, and adrenalines. This aphrodisiac is an extremely powerful narcotic which may cause unintended climax."
-	taste_description = "salty peanuts"
+	taste_description = "potent and floral sexual musk"
 	reagent_state = LIQUID
 	color = "#ffa9a9"
 	chemical_flags = REAGENT_CAN_BE_SYNTHESIZED
-
-	arousal_adjust_amount = 25
-	pleasure_adjust_amount = 25
-
-	var/possible_aroused_thoughts = list(
-		"You feel extremely horny and euphoric!",
-		"You suddenly feel alarmingly pent-up and aroused!",
-		"You feel a sudden and intense warmth in your loins!",
-		"You're hit with an intense wave of sexual pleasure!"
-	)
+	var/maximum_pleasure = 15
 
 /datum/glass_style/drinking_glass/rutt
 	required_drink_type = /datum/reagent/drug/aphrodisiac/rutt
-	name = "glass of rutt"
+	name = "glass of R.U.T.T."
 	desc = "A glass of frothy pink juice. It smells floral and musky."
+
+/obj/item/reagent_containers/cup/bottle/rutt
+	name = "\improper R.U.T.T. bottle"
+	desc = "A bottle of frothy pink juice. It smells floral and musky."
+	list_reagents = list(/datum/reagent/drug/aphrodisiac/rutt = 30)
+
+/obj/item/reagent_containers/pill/rutt
+	name = "\improper R.U.T.T. pill (25u)"
+	desc = "This aphrodisiac is an extremely powerful narcotic which may cause unintended climax."
+	icon = 'modular_nova/modules/modular_items/lewd_items/icons/obj/lewd_items/lewd_pills.dmi'
+	icon_state = "dopamine"
+	list_reagents = list(/datum/reagent/drug/aphrodisiac/rutt = 10)
 
 /datum/reagent/drug/aphrodisiac/rutt/on_mob_add(mob/living/carbon/human/exposed_mob)
 	if(!(exposed_mob.client?.prefs.read_preference(/datum/preference/toggle/erp/aphro)))
 		return ..()
-	var/displayed_thought = pick(possible_aroused_thoughts)
-	to_chat(exposed_mob, span_pink("[displayed_thought]"))
+	to_chat(exposed_mob, span_userlove("You're hit with an intense wave of sexual pleasure!"))
 	return ..()
 
 /datum/reagent/drug/aphrodisiac/rutt/on_mob_life(mob/living/carbon/human/exposed_mob, seconds_per_tick, times_fired)
 	. = ..()
 	if(!ishuman(exposed_mob))
 		return
+	if(!(exposed_mob.client?.prefs.read_preference(/datum/preference/toggle/erp/aphro)))
+		return ..()
 	if(exposed_mob.has_status_effect(/datum/status_effect/climax) || !exposed_mob?.client?.prefs?.read_preference(/datum/preference/toggle/erp))
 		return
 
-	if(current_cycle > 13)
+	if(current_cycle > 10)
 		exposed_mob.adjust_arousal(arousal_adjust_amount)
-		exposed_mob.adjust_pleasure(pleasure_adjust_amount)
+
+	if(current_cycle > 25)
+		var/pleasure_amount = clamp(current_cycle * 0.5, 1, maximum_pleasure)
+		exposed_mob.adjust_pleasure(pleasure_amount, is_forced = TRUE)
 
 	switch(current_cycle)
-		if(6)
-			to_chat(exposed_mob, span_pink("Your groin starts to feel really good..."))
-		if(15)
-			to_chat(exposed_mob, span_pink("You feel really close to orgasm!"))
-		if(25 to INFINITY)
-			if(prob(0.5))
+		if(10)
+			to_chat(exposed_mob, span_userlove("Your groin starts to feel really good..."))
+		if(25)
+			to_chat(exposed_mob, span_userlove("Your feel an orgasm building up..."))
+		if(45 to INFINITY)
+			if(SPT_PROB(20, seconds_per_tick))
+				exposed_mob.try_lewd_autoemote(pick("drool", "shiver", "twitch"))
+			if(SPT_PROB(2, seconds_per_tick))
 				to_chat(exposed_mob, span_userlove("You can't stop cumming!"))
-				exposed_mob.climax(is_forced = TRUE)
+				exposed_mob.climax(manual = FALSE, is_forced = TRUE)
 
 /datum/chemical_reaction/rutt
 	results = list(/datum/reagent/drug/aphrodisiac/rutt = 20)

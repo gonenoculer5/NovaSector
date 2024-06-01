@@ -137,8 +137,12 @@
 				/obj/item/reagent_containers/cup/bottle/incubus_draft = 6,
 
 				// Bluemoon edit - Custom mob size
-				/obj/item/reagent_containers/cup/bottle/prospacillin = 3, // Only three available because its harder to make.
-				/obj/item/reagent_containers/cup/bottle/dimicillin = 3,
+				/obj/item/reagent_containers/cup/bottle/prospacillin = 6,
+				/obj/item/reagent_containers/cup/bottle/dimicillin = 6,
+
+				// Bluemoon edit - RUTT reagent
+				/obj/item/reagent_containers/pill/rutt = 20,
+				/obj/item/reagent_containers/cup/bottle/rutt = 6,
 			),
 		),
 		list(
