@@ -83,6 +83,8 @@
 	else
 		. += span_notice("The blinking green light on the front indicates that this beacon is operating normally.")
 
+// Bluemoon edit - Disable navigation beacon radio messages
+/*
 /obj/machinery/spaceship_navigation_beacon/process(seconds_per_tick)
 	if(COOLDOWN_FINISHED(src, next_automatic_message_time) && radio)
 		var/automatic_nav_message = "[src], Sector [z], [locked ? "Beacon Locked" : "Beacon Operational"], Grid Coordinates, [x] East, [y] North."
@@ -90,6 +92,7 @@
 		radio.talk_into(src, "[automatic_nav_message]")
 
 		COOLDOWN_START(src, next_automatic_message_time, automatic_message_cooldown)
+*/
 
 // Item used to actually make nav beacons
 
