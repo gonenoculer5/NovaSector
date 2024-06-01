@@ -14,14 +14,15 @@
 // Bluemoon edit - Add reagents to cum decals
 /obj/effect/decal/cleanable/cum
 	decal_reagent = /datum/reagent/consumable/cum
+	reagent_amount = 10
 
-/obj/effect/decal/cleanable/cum/Initialize(mapload, list/datum/disease/diseases, amount = 5)
+/obj/effect/decal/cleanable/cum/New(mapload, list/datum/disease/diseases, amount = 10)
 	reagent_amount = amount
 	return ..()
 
 /obj/effect/decal/cleanable/cum/femcum
 	decal_reagent = /datum/reagent/consumable/femcum
 
-/obj/effect/decal/cleanable/femcum/Initialize(mapload, list/datum/disease/diseases, amount = 5)
+/obj/effect/decal/cleanable/femcum/New(mapload, list/datum/disease/diseases, amount = 10)
 	reagent_amount = amount
 	return ..()
