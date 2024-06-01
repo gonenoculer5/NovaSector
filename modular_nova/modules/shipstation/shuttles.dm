@@ -20,22 +20,18 @@
 	shuttle_id = "whiteship_home"
 	roundstart_template = /datum/map_template/shuttle/shipstation
 	height = 25
-	width = 43
+	width = 46
 	dwidth = 12
 
 /obj/docking_port/mobile/shipstation
 	callTime = 150
 	can_move_docking_ports = 1
-	dheight = 1
-	dwidth = 12
-	height = 25
 	shuttle_id = "station"
 	launch_status = 0
 	movement_force = list("KNOCKDOWN"=0,"THROW"=0)
 	name = "NTSS 'Blue Moon'"
 	port_direction = 4
 	preferred_direction = 4
-	width = 43
 
 /obj/machinery/computer/shuttle/shipstation
 	name = "NTSS 'Blue Moon' Shuttle Console"
@@ -60,15 +56,6 @@
 		"whiteship_home" = 1,
 		"whiteship_lavaland" = 1,
 		"whiteship_z4" = 1,
-	)
-	whitelist_turfs = list(
-		/turf/open/space,
-		/turf/open/floor/plating,
-		/turf/open/lava,
-		/turf/closed/mineral,
-		/turf/open/misc/asteroid/basalt/lava_land_surface,
-		/turf/open/lava/smooth/lava_land_surface,
-		/turf/closed/mineral/random/volcanic,
 	)
 	view_range = 12
 	designate_time = 50
