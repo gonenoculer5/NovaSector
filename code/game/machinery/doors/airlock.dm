@@ -257,7 +257,7 @@
 	set_bolt(TRUE)
 	// Bluemoon edit - Louder airlock bolts
 	if(loud_bolts)
-		playsound(src,boltDown,50,FALSE,3)
+		playsound(src,boltDown,100,FALSE,3)
 	else
 		playsound(src,boltDown,30,FALSE,3)
 	audible_message(span_hear("You hear a click from the bottom of the door."), null,  1)
@@ -279,7 +279,7 @@
 	set_bolt(FALSE)
 	// Bluemoon edit - Louder airlock bolts
 	if(loud_bolts)
-		playsound(src,boltUp,50,FALSE,3)
+		playsound(src,boltUp,100,FALSE,3)
 	else
 		playsound(src,boltUp,30,FALSE,3)
 	audible_message(span_hear("You hear a click from the bottom of the door."), null,  1)
@@ -1287,7 +1287,10 @@
 				return FALSE
 			use_energy(50 JOULES)
 			// Bluemoon edit - Custom airlock sounds
-			playsound(src, doorOpen, 25, FALSE, ignore_walls = FALSE)
+			if(quiet)
+				playsound(src, doorOpen, 15, FALSE, ignore_walls = FALSE)
+			else
+				playsound(src, doorOpen, 30, FALSE, ignore_walls = FALSE)
 			return TRUE
 
 		if(FORCING_DOOR_CHECKS) // Only one check.
@@ -1295,7 +1298,10 @@
 				return FALSE
 			use_energy(50 JOULES)
 			// Bluemoon edit - Custom airlock sounds
-			playsound(src, doorOpen, 25, FALSE, ignore_walls = FALSE)
+			if(quiet)
+				playsound(src, doorOpen, 15, FALSE, ignore_walls = FALSE)
+			else
+				playsound(src, doorOpen, 30, FALSE, ignore_walls = FALSE)
 			return TRUE
 
 		if(BYPASS_DOOR_CHECKS) // No power usage, special sound, get it open.
@@ -1373,7 +1379,10 @@
 				return FALSE
 			use_energy(50 JOULES)
 			// Bluemoon edit - Custom airlock sounds
-			playsound(src, doorClose, 30, FALSE, ignore_walls = TRUE)
+			if(quiet)
+				playsound(src, doorClose, 15, FALSE, ignore_walls = TRUE)
+			else
+				playsound(src, doorClose, 30, FALSE, ignore_walls = TRUE)
 			return TRUE
 
 		if(BYPASS_DOOR_CHECKS)
