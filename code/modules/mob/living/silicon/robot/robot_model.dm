@@ -309,9 +309,14 @@
 		cyborg.set_anchored(TRUE)
 	cyborg.logevent("Chassis model has been set to [name].")
 	sleep(0.1 SECONDS)
+	// Bluemoon edit - Custom cyborg transformation sound
+	playsound(cyborg, 'modular_nova/modules_bluemoon/cyborgs/sound/model_transform.ogg', 50)
+	sleep(4.4 SECONDS)
+	/*
 	for(var/i in 1 to 4)
 		playsound(cyborg, pick('sound/items/drill_use.ogg', 'sound/items/jaws_cut.ogg', 'sound/items/jaws_pry.ogg', 'sound/items/welder.ogg', 'sound/items/ratchet.ogg'), 80, TRUE, -1)
 		sleep(0.7 SECONDS)
+	*/
 	cyborg.SetLockdown(FALSE)
 	cyborg.ai_lockdown = FALSE
 	cyborg.setDir(SOUTH)
