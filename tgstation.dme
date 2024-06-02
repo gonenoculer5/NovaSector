@@ -8399,6 +8399,8 @@
 #include "modular_nova\modules_bluemoon\shipstation\machinery.dm"
 #include "modular_nova\modules_bluemoon\shipstation\mothroach.dm"
 #include "modular_nova\modules_bluemoon\shipstation\shuttles.dm"
+#include "modular_nova\modules_bluemoon\shipstation\jobs\harbor_master.dm"
+#include "modular_nova\modules_bluemoon\shipstation\jobs\shuttle_pilot.dm"
 #include "modular_nova\modules_bluemoon\sizeplay\resize.dm"
 #include "modular_nova\modules_bluemoon\sizeplay\resize_chems.dm"
 #include "modular_nova\modules_bluemoon\sizeplay\resize_prefs.dm"
