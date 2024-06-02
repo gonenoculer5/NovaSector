@@ -11,11 +11,11 @@
 	return ..()
 
 /obj/machinery/power/turbine/core_rotor/power_on()
-	playsound(src, 'modular_nova/modules/custom_generators/sound/turbine_breaker.ogg', 75, TRUE)
+	playsound(src, 'modular_nova/modules_bluemoon/generators/sound/turbine_breaker.ogg', 75, TRUE)
 	soundloop.start()
 	return ..()
 
 /obj/machinery/power/turbine/core_rotor/power_off()
-	playsound(src, 'modular_nova/modules/custom_generators/sound/turbine_breaker.ogg', 75, TRUE)
+	playsound(src, 'modular_nova/modules_bluemoon/generators/sound/turbine_breaker.ogg', 75, TRUE)
 	soundloop.stop()
 	return ..()

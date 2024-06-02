@@ -4,4 +4,4 @@
 	message = "whines!"
 	emote_type = EMOTE_AUDIBLE
 	vary = TRUE
-	sound = 'modular_nova/modules/whine_emote/sound/voice/whine.ogg'
+	sound = 'modular_nova/modules_bluemoon/whine_emote/sound/voice/whine.ogg'

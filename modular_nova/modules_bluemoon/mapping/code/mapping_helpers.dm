@@ -1,5 +1,5 @@
 /obj/effect/mapping_helpers/airlock/vented
-	icon = 'modular_nova/modules/custom_mapping/icons/mapping_helpers.dmi'
+	icon = 'modular_nova/modules_bluemoon/mapping/icons/mapping_helpers.dmi'
 	name = "airlock ventilation helper"
 	icon_state = "airlock_vent_helper"
 

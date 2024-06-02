@@ -19,7 +19,7 @@
 	name = "Portable Turbine Generator"
 	greyscale_colors = CIRCUIT_COLOR_ENGINEERING
 	desc = "Comes with a small sticker on the corner: \"Warning: Not explosion-proof.\""
-	build_path = /obj/machinery/power/generator/port_turbine
+	build_path = /obj/machinery/power/port_turbine
 	req_components = list(
 		/obj/item/stack/cable_coil = 5,
 		/obj/item/stock_parts/matter_bin = 1,

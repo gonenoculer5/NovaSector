@@ -1,4 +1,4 @@
-#define AIRLOCK_SOUNDPATH(filename) "modular_nova/modules/custom_airlocks/sound/" + ##filename
+#define AIRLOCK_SOUNDPATH(filename) "modular_nova/modules_bluemoon/airlocks/sound/" + ##filename
 #define INT_AIRLOCK_SOUNDPATH(filename) AIRLOCK_SOUNDPATH("airlock/" + ##filename)
 #define EXT_AIRLOCK_SOUNDPATH(filename) AIRLOCK_SOUNDPATH("external_airlock/" + ##filename)
 #define VAULT_SOUNDPATH(filename) AIRLOCK_SOUNDPATH("vault_airlock/" + ##filename)

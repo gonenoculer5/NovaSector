@@ -1,14 +1,14 @@
 // Bluemoon edit - Methane gas
 /obj/effect/turf_decal/vg_decals/atmos/methane
-	icon = 'modular_nova/modules/custom_mapping/icons/bluemoon_decals.dmi'
+	icon = 'modular_nova/modules_bluemoon/mapping/icons/bluemoon_decals.dmi'
 	icon_state = "methane"
 
 /obj/effect/turf_decal/vg_decals/atmos/hydrogen
-	icon = 'modular_nova/modules/custom_mapping/icons/bluemoon_decals.dmi'
+	icon = 'modular_nova/modules_bluemoon/mapping/icons/bluemoon_decals.dmi'
 	icon_state = "hydrogen"
 
 /obj/effect/turf_decal/vg_decals/atmos/water_vapor
-	icon = 'modular_nova/modules/custom_mapping/icons/bluemoon_decals.dmi'
+	icon = 'modular_nova/modules_bluemoon/mapping/icons/bluemoon_decals.dmi'
 	icon_state = "water_vapor"
 
 // Bluemoon edit - Add reagents to cum decals

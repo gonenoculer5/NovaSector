@@ -13,15 +13,16 @@
 /obj/item/tank/port_turbine_expander
 	volume = 1000
 
-/obj/machinery/power/generator/port_turbine
+/obj/machinery/power/port_turbine
 	name = "portable turbine generator"
 	desc = "A device which combusts gas to spin a turbine and produce power."
 	icon = 'modular_nova/modules/aesthetics/emitter/icons/emitter.dmi'
 	icon_state = "ca"
-	req_access = list(ACCESS_ENGINE_EQUIP, ACCESS_ATMOSPHERICS)
 	max_integrity = 350
 	integrity_failure = 0.2
+	use_power = NO_POWER_USE
 	can_atmos_pass = ATMOS_PASS_DENSITY
+	interaction_flags_atom = INTERACT_ATOM_ATTACK_HAND | INTERACT_ATOM_UI_INTERACT
 
 	/// Soundloop for while the turbine is turned on
 	var/datum/looping_sound/port_turbine/soundloop
@@ -40,15 +41,21 @@
 	///Amount of power the generator is producing
 	var/produced_energy
 
-/obj/machinery/power/generator/port_turbine/anchored
+/obj/machinery/power/port_turbine/examine(mob/user)
+	. = ..()
+	if(!active)
+		. += span_notice("<b>[src]'s display displays the words:</b> \"Power production mode. Please insert <b>combustible gas</b>.\"")
+	. += span_notice("[src]'s display states that it is producing <b>[display_energy(produced_energy)]</b>.")
+
+/obj/machinery/power/port_turbine/anchored
 	anchored = TRUE
 
-/obj/machinery/power/generator/port_turbine/Initialize(mapload)
+/obj/machinery/power/port_turbine/Initialize(mapload)
 	. = ..()
 	soundloop = new(src, FALSE)
 
 // Transfers gas from the attached tank to the internal tank and ignites it
-/obj/machinery/power/generator/port_turbine/process_atmos()
+/obj/machinery/power/port_turbine/process_atmos()
 	if(!active || (machine_stat & BROKEN) || !powered(ignore_use_power = TRUE))
 		toggle_power(turn_off = TRUE)
 		if(soundloop.loop_started)
@@ -73,7 +80,11 @@
 		toggle_power(turn_off = TRUE)
 		return
 
-	//The turbine expands the exhaust gas from 280 L to 500 L in order to cool it down.
+	// Combust gas inside the reaction tank.
+	reactor_mix.temperature = max(reactor_mix.temperature, FIRE_MINIMUM_TEMPERATURE_TO_EXIST)
+	reactor_mix.react()
+
+	//The turbine expands the exhaust gas from 200 L to 1000 L in order to cool it down.
 	var/turbine_work = transfer_gases(reactor_mix, expander_mix, compressor_work)
 
 	//Calculate final power output based on how much exhaust gas was ejected
@@ -101,7 +112,7 @@
  * work_amount_to_remove - The amount of work to subtract from the actual work done to pump in the input mixture. For e.g. if gas was transfered from the inlet compressor to the rotor we want to subtract the work done by the inlet from the rotor to get the true work done.
  * intake_size - the percentage of gas to be fed into an turbine part, controlled by turbine computer for inlet compressor only
  */
-/obj/machinery/power/generator/port_turbine/proc/transfer_gases(datum/gas_mixture/input_mix, datum/gas_mixture/output_mix, work_amount_to_remove, intake_size = 1)
+/obj/machinery/power/port_turbine/proc/transfer_gases(datum/gas_mixture/input_mix, datum/gas_mixture/output_mix, work_amount_to_remove, intake_size = 1)
 	// Pump gases. If no gases were transferred then no work was done.
 	var/output_pressure = PRESSURE_MAX(output_mix.return_pressure())
 	var/datum/gas_mixture/transferred_gases = input_mix.pump_gas_to(output_mix, input_mix.return_pressure() * intake_size)
@@ -122,7 +133,7 @@
 	return work_done
 
 /// push gases from its gas mix to output turf
-/obj/machinery/power/generator/port_turbine/proc/expel_gases(datum/gas_mixture/gas_mix)
+/obj/machinery/power/port_turbine/proc/expel_gases(datum/gas_mixture/gas_mix)
 	var/turf/open/output_turf = loc
 	if(QDELETED(output_turf))
 		output_turf = get_step(loc, dir)
@@ -139,25 +150,8 @@
 	//return ejected gases
 	return ejected_gases
 
-/obj/machinery/power/generator/port_turbine/interact(mob/user)
-	if(!anchored)
-		return
-	toggle_power()
-	user.visible_message(span_notice("[user.name] turns the [src.name] [active? "on":"off"]."), \
-	span_notice("You turn the [src.name] [active? "on":"off"]."))
-
-/obj/machinery/power/generator/port_turbine/can_be_unfasten_wrench(mob/user, silent)
-	if(!fuel_tank)
-		return ..()
-	if(!silent)
-		to_chat(user, span_warning("Remove the gas tank first!"))
-	return FAILED_UNFASTEN
-
-/obj/machinery/power/generator/port_turbine/attackby(obj/item/item, mob/user, params)
+/obj/machinery/power/port_turbine/attackby(obj/item/item, mob/user, params)
 	if(istype(item, /obj/item/tank/internals/plasma))
-		if(!anchored)
-			to_chat(user, span_warning("[src] needs to be secured to the floor first!"))
-			return TRUE
 		if(fuel_tank)
 			to_chat(user, span_warning("There's already a gas tank loaded!"))
 			return TRUE
@@ -171,12 +165,16 @@
 	else
 		return ..()
 
-/obj/machinery/power/generator/port_turbine/wrench_act(mob/living/user, obj/item/item)
+/obj/machinery/power/port_turbine/wrench_act(mob/living/user, obj/item/item)
 	. = ..()
-	default_unfasten_wrench(user, item)
-	return TRUE
+	if(!active)
+		default_unfasten_wrench(user, item)
+		return ITEM_INTERACT_SUCCESS
+	else
+		to_chat(user, span_warning("Turn the generator off first!"))
+		return ITEM_INTERACT_BLOCKING
 
-/obj/machinery/power/generator/port_turbine/screwdriver_act(mob/living/user, obj/item/item)
+/obj/machinery/power/port_turbine/screwdriver_act(mob/living/user, obj/item/item)
 	if(..())
 		return TRUE
 	if(!fuel_tank)
@@ -185,7 +183,7 @@
 	to_chat(user, span_warning("Remove the gas tank first!"))
 	return TRUE
 
-/obj/machinery/power/generator/port_turbine/crowbar_act(mob/living/user, obj/item/I)
+/obj/machinery/power/port_turbine/crowbar_act(mob/living/user, obj/item/I)
 	if(fuel_tank)
 		eject()
 		return TRUE
@@ -194,23 +192,12 @@
 	to_chat(user, span_warning("There isn't a gas tank loaded!"))
 	return TRUE
 
-/obj/machinery/power/generator/port_turbine/return_analyzable_air()
-	if(!fuel_tank)
-		return null
-	return fuel_tank.return_analyzable_air()
-
-/obj/machinery/power/generator/port_turbine/examine(mob/user)
-	. = ..()
-	if(!active)
-		. += span_notice("<b>[src]'s display displays the words:</b> \"Power production mode. Please insert <b>combustible gas</b>.\"")
-	. += span_notice("[src]'s display states that it is producing <b>[display_energy(produced_energy)]</b>.")
-
-/obj/machinery/power/generator/port_turbine/atom_break(damage_flag)
+/obj/machinery/power/port_turbine/atom_break(damage_flag)
 	. = ..()
 	if(.)
 		eject()
 
-/obj/machinery/power/generator/port_turbine/proc/eject()
+/obj/machinery/power/port_turbine/proc/eject()
 	var/obj/item/tank/internals/plasma/tank = fuel_tank
 	if (!tank)
 		return
@@ -223,7 +210,7 @@
 	else
 		update_appearance()
 
-/obj/machinery/power/generator/port_turbine/update_overlays()
+/obj/machinery/power/port_turbine/update_overlays()
 	. = ..()
 	if(fuel_tank)
 		. += "ptank"
@@ -232,7 +219,7 @@
 	if(active)
 		. += "on" // SKYRAT EDIT CHANGE - ORIGINAL. += fuel_tank ? "on" : "error"
 
-/obj/machinery/power/generator/port_turbine/proc/toggle_power(turn_off = FALSE)
+/obj/machinery/power/port_turbine/proc/toggle_power(turn_off = FALSE)
 	if(turn_off)
 		active = FALSE
 	else
@@ -240,25 +227,27 @@
 	if(active)
 		icon_state = "ca_on"
 		flick("ca_active", src)
+		SSair.start_processing_machine(src)
 	else
 		icon_state = "ca"
 		flick("ca_deactive", src)
+		SSair.stop_processing_machine(src)
 	update_appearance()
 	return
 
-/obj/machinery/power/generator/port_turbine/attack_ai(mob/user)
+/obj/machinery/power/port_turbine/attack_ai(mob/user)
 	interact(user)
 
-/obj/machinery/power/generator/port_turbine/attack_paw(mob/user, list/modifiers)
+/obj/machinery/power/port_turbine/attack_paw(mob/user, list/modifiers)
 	interact(user)
 
-/obj/machinery/power/generator/port_turbine/ui_interact(mob/user, datum/tgui/ui)
+/obj/machinery/power/port_turbine/ui_interact(mob/user, datum/tgui/ui)
 	ui = SStgui.try_update_ui(user, src, ui)
 	if(!ui)
 		ui = new(user, src, "PortableTurbine", name)
 		ui.open()
 
-/obj/machinery/power/generator/port_turbine/ui_data()
+/obj/machinery/power/port_turbine/ui_data()
 	var/data = list()
 
 	data["active"] = active
@@ -282,7 +271,7 @@
 	data["current_heat"] = reactor_tank.air_contents.return_temperature()
 	. = data
 
-/obj/machinery/power/generator/port_turbine/ui_act(action, params)
+/obj/machinery/power/port_turbine/ui_act(action, params)
 	. = ..()
 	if(.)
 		return
@@ -307,5 +296,6 @@
 				. = TRUE
 
 #undef MAXIMUM_TURBINE_RPM
+#undef MINIMUM_TURBINE_PRESSURE
 #undef PRESSURE_MAX
 #undef FUEL_DRAIN_MAX
