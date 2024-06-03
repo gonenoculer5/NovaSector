@@ -1259,13 +1259,6 @@
 /obj/machinery/light/directional/east,
 /turf/open/floor/mineral/plastitanium,
 /area/shuttle/shipstation)
-"fa" = (
-/obj/structure/sign/logo{
-	icon_state = "nanotrasen_sign4";
-	pixel_y = -32
-	},
-/turf/template_noop,
-/area/shuttle/shipstation)
 "fc" = (
 /obj/machinery/posialert/directional/north,
 /obj/effect/turf_decal/trimline/purple/filled/line{
@@ -1287,12 +1280,6 @@
 	dir = 8
 	},
 /turf/open/floor/plating/airless,
-/area/shuttle/shipstation)
-"fh" = (
-/obj/structure/sign/logo{
-	pixel_y = -32
-	},
-/turf/template_noop,
 /area/shuttle/shipstation)
 "fl" = (
 /obj/effect/turf_decal/trimline/blue/filled/line{
@@ -2314,13 +2301,6 @@
 	},
 /turf/open/floor/iron/checker,
 /area/shuttle/shipstation)
-"mP" = (
-/obj/structure/sign/logo{
-	icon_state = "nanotrasen_sign3";
-	pixel_y = 32
-	},
-/turf/template_noop,
-/area/shuttle/shipstation)
 "mS" = (
 /obj/machinery/door/window/right/directional/north{
 	name = "Security Post"
@@ -2532,13 +2512,6 @@
 	},
 /obj/item/stack/cable_coil,
 /turf/open/floor/iron/edge,
-/area/shuttle/shipstation)
-"oc" = (
-/obj/structure/sign/logo{
-	icon_state = "nanotrasen_sign4";
-	pixel_y = 32
-	},
-/turf/template_noop,
 /area/shuttle/shipstation)
 "oe" = (
 /obj/effect/turf_decal/siding/thinplating_new/dark{
@@ -4071,12 +4044,6 @@
 	dir = 1
 	},
 /area/shuttle/shipstation)
-"zP" = (
-/obj/structure/sign/logo{
-	pixel_y = 32
-	},
-/turf/template_noop,
-/area/shuttle/shipstation)
 "zQ" = (
 /obj/effect/turf_decal/trimline/dark_green/filled/line{
 	dir = 9
@@ -4807,10 +4774,6 @@
 /turf/open/floor/mineral/plastitanium,
 /area/shuttle/shipstation)
 "Ev" = (
-/obj/structure/sign/logo{
-	icon_state = "nanotrasen_sign5";
-	pixel_y = -32
-	},
 /turf/template_noop,
 /area/shuttle/shipstation)
 "Ew" = (
@@ -5392,13 +5355,6 @@
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/o2supply/hidden/layer4,
 /turf/open/floor/iron/dark,
-/area/shuttle/shipstation)
-"HD" = (
-/obj/structure/sign/logo{
-	icon_state = "nanotrasen_sign3";
-	pixel_y = -32
-	},
-/turf/template_noop,
 /area/shuttle/shipstation)
 "HE" = (
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
@@ -6010,13 +5966,6 @@
 	},
 /turf/open/floor/pod/dark,
 /area/shuttle/shipstation)
-"LS" = (
-/obj/structure/sign/logo{
-	icon_state = "nanotrasen_sign2";
-	pixel_y = 32
-	},
-/turf/template_noop,
-/area/shuttle/shipstation)
 "Mb" = (
 /obj/structure/closet/secure_closet/atmospherics,
 /obj/effect/turf_decal/bot,
@@ -6323,13 +6272,6 @@
 	},
 /obj/item/stack/sheet/mineral/plasma,
 /turf/open/floor/iron/white/textured_large,
-/area/shuttle/shipstation)
-"NF" = (
-/obj/structure/sign/logo{
-	icon_state = "nanotrasen_sign5";
-	pixel_y = 32
-	},
-/turf/template_noop,
 /area/shuttle/shipstation)
 "NG" = (
 /obj/machinery/power/shuttle_engine/large{
@@ -6649,13 +6591,6 @@
 /obj/machinery/light/floor,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /turf/open/floor/iron/checker,
-/area/shuttle/shipstation)
-"QK" = (
-/obj/structure/sign/logo{
-	icon_state = "nanotrasen_sign2";
-	pixel_y = -32
-	},
-/turf/template_noop,
 /area/shuttle/shipstation)
 "QO" = (
 /turf/open/floor/iron/dark,
@@ -8554,7 +8489,7 @@ CX
 ei
 "}
 (21,1,1) = {"
-fh
+Ev
 ZH
 uS
 Fr
@@ -8578,10 +8513,10 @@ Hm
 bD
 qg
 ZH
-zP
+Ev
 "}
 (22,1,1) = {"
-QK
+Ev
 ZH
 ZH
 RG
@@ -8605,10 +8540,10 @@ ZH
 Yl
 nN
 ZH
-LS
+Ev
 "}
 (23,1,1) = {"
-HD
+Ev
 ZH
 Py
 gp
@@ -8632,10 +8567,10 @@ ak
 zQ
 Dy
 ZH
-mP
+Ev
 "}
 (24,1,1) = {"
-fa
+Ev
 ZH
 cB
 Hx
@@ -8659,7 +8594,7 @@ ow
 cg
 pT
 ZH
-oc
+Ev
 "}
 (25,1,1) = {"
 Ev
@@ -8686,7 +8621,7 @@ Nz
 bC
 sF
 ZH
-NF
+Ev
 "}
 (26,1,1) = {"
 ei
