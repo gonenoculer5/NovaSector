@@ -48019,10 +48019,10 @@
 /turf/open/floor/iron,
 /area/station/security)
 "qwG" = (
-/obj/item/kirbyplants/random/fullysynthetic,
 /obj/effect/decal/cleanable/glass,
 /obj/machinery/airalarm/directional/north,
 /obj/effect/decal/cleanable/dirt,
+/obj/structure/aquarium/lawyer,
 /turf/open/floor/iron/dark,
 /area/station/service/lawoffice)
 "qwU" = (
@@ -76062,6 +76062,7 @@
 	},
 /obj/effect/decal/cleanable/dirt,
 /obj/machinery/light/small/directional/north,
+/mob/living/basic/spider/giant/sgt_araneus,
 /turf/open/floor/stone,
 /area/station/command/heads_quarters/hos)
 "yaG" = (

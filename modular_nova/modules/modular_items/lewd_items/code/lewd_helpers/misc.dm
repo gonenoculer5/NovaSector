@@ -51,12 +51,14 @@
 		pseudo_z_axis = newloc.get_fake_z()
 		pixel_z = pseudo_z_axis
 
+// Bluemoon edit - Add reagents to cum decals
 /// Used to add a cum decal to the floor while transferring viruses and DNA to it
-/mob/living/proc/add_cum_splatter_floor(turf/the_turf, female = FALSE)
+/mob/living/proc/add_cum_splatter_floor(turf/the_turf, female = FALSE, amount = 0)
 	if(!the_turf)
 		the_turf = get_turf(src)
 
 	var/selected_type = female ? /obj/effect/decal/cleanable/cum/femcum : /obj/effect/decal/cleanable/cum
-	var/atom/stain = new selected_type(the_turf, get_static_viruses())
+	// Bluemoon edit - Add reagents to cum decals
+	var/atom/stain = new selected_type(the_turf, get_static_viruses(), amount)
 
 	stain.transfer_mob_blood_dna(src) //I'm not adding a new forensics category for cumstains

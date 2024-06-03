@@ -414,7 +414,8 @@
 				continue
 			if(isliving(current_atom))
 				var/mob/living/current_mob = atom
-				if(current_mob.buckled || current_mob.mob_size >= MOB_SIZE_LARGE)
+				// Bluemoon edit - Allow large mobs inside machines
+				if(current_mob.buckled || current_mob.mob_size >= MOB_SIZE_HUGE)
 					continue
 			target = atom
 

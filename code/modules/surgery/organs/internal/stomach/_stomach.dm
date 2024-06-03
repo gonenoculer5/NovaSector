@@ -154,6 +154,9 @@
 			hunger_rate = 3 * HUNGER_FACTOR
 		hunger_rate *= hunger_modifier
 		hunger_rate *= human.physiology.hunger_mod
+		// Bluemoon edit - Halve hunger rate when lying down or sleeping
+		if((human.body_position == LYING_DOWN) || (human.stat == UNCONSCIOUS))
+			hunger_rate *= 0.5
 		human.adjust_nutrition(-hunger_rate * seconds_per_tick)
 
 	var/nutrition = human.nutrition
@@ -181,8 +184,12 @@
 		human.metabolism_efficiency = 1
 
 	//Hunger slowdown for if mood isn't enabled
+	// Bluemoon edit - Disable sanity movespeed modifier
+	handle_hunger_slowdown(human)
+	/*
 	if(CONFIG_GET(flag/disable_human_mood))
 		handle_hunger_slowdown(human)
+	*/
 
 ///for when mood is disabled and hunger should handle slowdowns
 /obj/item/organ/internal/stomach/proc/handle_hunger_slowdown(mob/living/carbon/human/human)

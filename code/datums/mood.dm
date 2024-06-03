@@ -410,11 +410,11 @@
 				msg += "[span_boldnicegreen("I love life!")]\n"
 	else
 		msg += "[span_notice("No clue.")]\n"
-	
+
 	msg += "[span_notice("Moodlets:")]\n"//All moodlets
 	msg += get_alcohol_processing(user)
 	msg += get_drunk_mood(user)
-	if(mood_events.len && !HAS_TRAIT(user, TRAIT_MOOD_NOEXAMINE)) //ORIGINAL: if(mood_events.len) 
+	if(mood_events.len && !HAS_TRAIT(user, TRAIT_MOOD_NOEXAMINE)) //ORIGINAL: if(mood_events.len)
 	//NOVA EDIT CHANGE END
 		for(var/category in mood_events)
 			var/datum/mood_event/event = mood_events[category]
@@ -493,32 +493,50 @@
 	switch(sanity)
 		if(SANITY_INSANE to SANITY_CRAZY)
 			set_insanity_effect(MAJOR_INSANITY_PEN)
+			// Bluemoon edit - Disable sanity movespeed modifier
+			/*
 			mob_parent.add_movespeed_modifier(/datum/movespeed_modifier/sanity/insane)
+			*/
 			mob_parent.add_actionspeed_modifier(/datum/actionspeed_modifier/low_sanity)
 			sanity_level = SANITY_LEVEL_INSANE
 		if(SANITY_CRAZY to SANITY_UNSTABLE)
 			set_insanity_effect(MINOR_INSANITY_PEN)
+			// Bluemoon edit - Disable sanity movespeed modifier
+			/*
 			mob_parent.add_movespeed_modifier(/datum/movespeed_modifier/sanity/crazy)
+			*/
 			mob_parent.add_actionspeed_modifier(/datum/actionspeed_modifier/low_sanity)
 			sanity_level = SANITY_LEVEL_CRAZY
 		if(SANITY_UNSTABLE to SANITY_DISTURBED)
 			set_insanity_effect(0)
+			// Bluemoon edit - Disable sanity movespeed modifier
+			/*
 			mob_parent.add_movespeed_modifier(/datum/movespeed_modifier/sanity/disturbed)
+			*/
 			mob_parent.add_actionspeed_modifier(/datum/actionspeed_modifier/low_sanity)
 			sanity_level = SANITY_LEVEL_UNSTABLE
 		if(SANITY_DISTURBED to SANITY_NEUTRAL)
 			set_insanity_effect(0)
+			// Bluemoon edit - Disable sanity movespeed modifier
+			/*
 			mob_parent.remove_movespeed_modifier(MOVESPEED_ID_SANITY)
+			*/
 			mob_parent.remove_actionspeed_modifier(ACTIONSPEED_ID_SANITY)
 			sanity_level = SANITY_LEVEL_DISTURBED
 		if(SANITY_NEUTRAL+1 to SANITY_GREAT+1) //shitty hack but +1 to prevent it from responding to super small differences
 			set_insanity_effect(0)
+			// Bluemoon edit - Disable sanity movespeed modifier
+			/*
 			mob_parent.remove_movespeed_modifier(MOVESPEED_ID_SANITY)
+			*/
 			mob_parent.add_actionspeed_modifier(/datum/actionspeed_modifier/high_sanity)
 			sanity_level = SANITY_LEVEL_NEUTRAL
 		if(SANITY_GREAT+1 to INFINITY)
 			set_insanity_effect(0)
+			// Bluemoon edit - Disable sanity movespeed modifier
+			/*
 			mob_parent.remove_movespeed_modifier(MOVESPEED_ID_SANITY)
+			*/
 			mob_parent.add_actionspeed_modifier(/datum/actionspeed_modifier/high_sanity)
 			sanity_level = SANITY_LEVEL_GREAT
 
