@@ -15,7 +15,7 @@
 	requires_power = TRUE
 	fire_detect = FALSE
 
-/obj/docking_port/stationary/shipstations
+/obj/docking_port/stationary/shipstation
 	name = "Space Dock 32"
 	shuttle_id = "whiteship_home"
 	roundstart_template = /datum/map_template/shuttle/shipstation
