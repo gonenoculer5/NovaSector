@@ -5638,9 +5638,16 @@
 /turf/open/floor/iron/dark,
 /area/station/security/prison)
 "Ay" = (
-/obj/docking_port/stationary/shipstation,
-/turf/open/space/basic,
-/area/space)
+/obj/structure/cable,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4{
+	dir = 8
+	},
+/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2{
+	dir = 8
+	},
+/obj/effect/landmark/blobstart,
+/turf/open/floor/iron,
+/area/station/hallway/primary/central)
 "AB" = (
 /obj/structure/lattice/catwalk,
 /obj/machinery/atmospherics/pipe/smart/simple/yellow/visible{
@@ -6983,17 +6990,6 @@
 /obj/effect/turf_decal/delivery,
 /turf/open/floor/iron/dark,
 /area/station/engineering/atmos)
-"GQ" = (
-/obj/structure/cable,
-/obj/effect/landmark/blobstart,
-/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4{
-	dir = 8
-	},
-/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2{
-	dir = 8
-	},
-/turf/open/floor/iron,
-/area/station/hallway/primary/central)
 "GS" = (
 /turf/open/floor/iron/dark,
 /area/station/maintenance/disposal/incinerator)
@@ -48715,7 +48711,7 @@ nv
 nv
 nv
 nv
-Ay
+nv
 Gm
 Ve
 bD
@@ -53344,7 +53340,7 @@ nv
 nv
 NJ
 FE
-bD
+Ay
 ot
 UX
 TU
@@ -54115,7 +54111,7 @@ nv
 nv
 NJ
 FE
-GQ
+bD
 ke
 wK
 nv
@@ -54370,7 +54366,7 @@ nv
 nv
 nv
 nv
-xV
+NJ
 FE
 bD
 ke
@@ -54627,10 +54623,10 @@ nv
 nv
 nv
 nv
-Oz
+NJ
 FE
 bD
-Ny
+ke
 wK
 nv
 nv
@@ -54884,7 +54880,7 @@ nv
 nv
 nv
 nv
-xV
+NJ
 FE
 bD
 ke
@@ -55141,10 +55137,10 @@ nv
 nv
 nv
 nv
-wK
-EK
-HD
-Fw
+NJ
+FE
+bD
+ke
 wK
 nv
 nv
@@ -55398,11 +55394,11 @@ nv
 nv
 nv
 nv
-nv
-nv
-nv
-nv
-nv
+xV
+FE
+bD
+ke
+wK
 nv
 nv
 nv
@@ -55655,11 +55651,11 @@ nv
 nv
 nv
 nv
-nv
-nv
-nv
-nv
-nv
+Oz
+FE
+bD
+Ny
+wK
 nv
 nv
 nv
@@ -55912,11 +55908,11 @@ nv
 nv
 nv
 nv
-nv
-nv
-nv
-nv
-nv
+xV
+FE
+bD
+ke
+wK
 nv
 nv
 nv
@@ -56169,11 +56165,11 @@ nv
 nv
 nv
 nv
-nv
-nv
-nv
-nv
-nv
+wK
+EK
+HD
+Fw
+wK
 nv
 nv
 nv
