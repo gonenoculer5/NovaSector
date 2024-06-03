@@ -181,11 +181,11 @@
 	if(measured_size < 1)
 		measured_size = 1
 	switch(measured_size) //BLUEMOON EDIT: Adjusts the rescaling.
-		if(1 to 12)
+		if(1 to 8)
 			size_affix = "1"
-		if(13 to 24)
+		if(9 to 16)
 			size_affix = "2"
-		if(25 to 36)
+		if(17 to 24)
 			size_affix = "3"
 		else
 			size_affix = "4"
@@ -209,11 +209,11 @@
 	if(measured_size < 1)
 		measured_size = 1
 	switch(measured_size) //BLUEMOON EDIT: Adjusts the rescaling.
-		if(1 to 12)
+		if(1 to 8)
 			size_affix = "1"
-		if(13 to 24)
+		if(9 to 16)
 			size_affix = "2"
-		if(25 to 36)
+		if(17 to 24)
 			size_affix = "3"
 		else
 			size_affix = "4"
