@@ -593,21 +593,11 @@
 /turf/open/floor/mineral/titanium/tiled/white,
 /area/shuttle/shipstation)
 "cq" = (
-/obj/effect/turf_decal/siding/thinplating_new/dark,
-/obj/machinery/door/window/left/directional/west{
-	pixel_x = -4
+/obj/machinery/cryopod{
+	dir = 4
 	},
-/obj/machinery/hydroponics/constructable{
-	pixel_y = 7
-	},
-/obj/effect/turf_decal/tile/dark/half{
-	pixel_y = 7
-	},
-/obj/structure/window/reinforced/survival_pod/spawner/directional/south,
-/obj/effect/turf_decal/siding/thinplating_new/dark{
-	dir = 1
-	},
-/turf/open/floor/grass,
+/obj/machinery/light/cold/directional/west,
+/turf/open/floor/mineral/titanium/tiled/white,
 /area/shuttle/shipstation)
 "cr" = (
 /obj/effect/turf_decal/siding/thinplating_new/dark{
@@ -1974,6 +1964,7 @@
 /obj/item/compact_remote{
 	pixel_y = 5
 	},
+/obj/machinery/light/directional/west,
 /turf/open/floor/iron/edge{
 	dir = 4
 	},
@@ -2175,13 +2166,6 @@
 /obj/machinery/suit_storage_unit/mining/eva,
 /obj/effect/turf_decal/box,
 /turf/open/floor/pod/dark,
-/area/shuttle/shipstation)
-"lY" = (
-/obj/structure/fluff/metalpole/end/left{
-	dir = 1;
-	name = "radio antenna"
-	},
-/turf/template_noop,
 /area/shuttle/shipstation)
 "mc" = (
 /obj/machinery/light/directional/south,
@@ -2470,6 +2454,7 @@
 	dir = 4
 	},
 /obj/machinery/atmospherics/components/unary/vent_scrubber/on/layer2,
+/obj/machinery/duct,
 /turf/open/floor/iron/checker,
 /area/shuttle/shipstation)
 "nB" = (
@@ -2600,12 +2585,6 @@
 /area/shuttle/shipstation)
 "ou" = (
 /obj/effect/turf_decal/siding/thinplating_new/dark,
-/obj/machinery/hydroponics/constructable{
-	pixel_y = 7
-	},
-/obj/effect/turf_decal/tile/dark/half{
-	pixel_y = 7
-	},
 /obj/machinery/door/window/left/directional/west{
 	pixel_x = -4
 	},
@@ -2613,6 +2592,8 @@
 /obj/effect/turf_decal/siding/thinplating_new/dark{
 	dir = 1
 	},
+/obj/machinery/hydroponics/constructable,
+/obj/effect/turf_decal/tile/dark/half,
 /turf/open/floor/grass,
 /area/shuttle/shipstation)
 "ow" = (
@@ -2714,7 +2695,6 @@
 /obj/effect/turf_decal/siding/thinplating_new/dark/corner{
 	dir = 8
 	},
-/obj/machinery/duct,
 /turf/open/floor/iron/checker,
 /area/shuttle/shipstation)
 "pq" = (
@@ -3274,6 +3254,7 @@
 /obj/machinery/atmospherics/components/unary/vent_pump/on/layer4{
 	pipe_color = "#00FF00"
 	},
+/obj/machinery/duct,
 /turf/open/floor/iron/dark/side{
 	dir = 4
 	},
@@ -3301,9 +3282,6 @@
 /obj/structure/window/reinforced/survival_pod/spawner/directional/north,
 /obj/effect/turf_decal/siding/thinplating_new/dark{
 	dir = 1
-	},
-/obj/structure/sink/kitchen{
-	pixel_y = -8
 	},
 /turf/open/floor/pod/dark,
 /area/shuttle/shipstation)
@@ -3433,6 +3411,7 @@
 	},
 /obj/effect/turf_decal/box,
 /obj/structure/window/reinforced/survival_pod/spawner/directional/north,
+/obj/machinery/duct,
 /turf/open/floor/pod/dark,
 /area/shuttle/shipstation)
 "uS" = (
@@ -3512,13 +3491,6 @@
 /obj/effect/turf_decal/trimline/purple/filled/line,
 /obj/effect/turf_decal/trimline/purple/filled/mid_joiner,
 /turf/open/floor/mineral/titanium,
-/area/shuttle/shipstation)
-"vF" = (
-/obj/structure/fluff/metalpole/anchor{
-	dir = 1;
-	name = "radio antenna anchor"
-	},
-/turf/template_noop,
 /area/shuttle/shipstation)
 "vG" = (
 /obj/effect/turf_decal/tile/blue{
@@ -3667,7 +3639,6 @@
 /turf/open/floor/pod/dark,
 /area/shuttle/shipstation)
 "wv" = (
-/obj/machinery/light/cold/dim/directional/south,
 /obj/machinery/stasissleeper{
 	dir = 4
 	},
@@ -3676,7 +3647,7 @@
 "wx" = (
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/o2supply/hidden/layer4,
-/turf/open/floor/mineral/titanium/tiled/white,
+/turf/open/floor/mineral/titanium/white,
 /area/shuttle/shipstation)
 "wF" = (
 /obj/machinery/light/floor,
@@ -3696,13 +3667,6 @@
 /obj/structure/chair/comfy/shuttle,
 /obj/effect/landmark/start/nanotrasen_consultant,
 /turf/open/floor/mineral/plastitanium,
-/area/shuttle/shipstation)
-"xe" = (
-/obj/structure/fluff/metalpole/end/right{
-	dir = 1;
-	name = "radio antenna"
-	},
-/turf/template_noop,
 /area/shuttle/shipstation)
 "xh" = (
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
@@ -4074,7 +4038,6 @@
 	dir = 1
 	},
 /obj/machinery/computer/order_console/cook,
-/obj/machinery/duct,
 /turf/open/floor/pod/dark,
 /area/shuttle/shipstation)
 "zH" = (
@@ -4930,6 +4893,7 @@
 /obj/effect/turf_decal/siding/thinplating_new/dark{
 	dir = 8
 	},
+/obj/machinery/duct,
 /turf/open/floor/iron/dark/side{
 	dir = 4
 	},
@@ -5192,13 +5156,6 @@
 	},
 /turf/open/floor/mineral/plastitanium,
 /area/shuttle/shipstation)
-"Gk" = (
-/obj/structure/fluff/metalpole{
-	dir = 1;
-	name = "radio antenna"
-	},
-/turf/template_noop,
-/area/shuttle/shipstation)
 "Gl" = (
 /obj/machinery/door/airlock/public{
 	name = "Bunk 1";
@@ -5246,6 +5203,7 @@
 /obj/effect/turf_decal/stripes/line{
 	dir = 5
 	},
+/obj/machinery/light/directional/west,
 /turf/open/floor/pod/light,
 /area/shuttle/shipstation)
 "Gz" = (
@@ -5515,7 +5473,9 @@
 "HR" = (
 /obj/machinery/light/floor,
 /obj/effect/turf_decal/siding/thinplating_new/dark/corner,
-/obj/machinery/duct,
+/obj/structure/sink/kitchen/directional/south{
+	pixel_y = 25
+	},
 /turf/open/floor/iron/checker,
 /area/shuttle/shipstation)
 "HT" = (
@@ -5957,16 +5917,6 @@
 /obj/machinery/recharge_station,
 /obj/effect/landmark/start/cyborg,
 /turf/open/floor/iron/recharge_floor,
-/area/shuttle/shipstation)
-"Lr" = (
-/obj/structure/fluff/metalpole/end{
-	dir = 4;
-	name = "radio antenna"
-	},
-/obj/structure/fluff/tram_rail/end{
-	name = "radio antenna"
-	},
-/turf/template_noop,
 /area/shuttle/shipstation)
 "Ls" = (
 /obj/machinery/suit_storage_unit/mining/eva,
@@ -6447,12 +6397,6 @@
 	},
 /turf/open/floor/iron/dark,
 /area/shuttle/shipstation)
-"Oh" = (
-/obj/structure/fluff/metalpole{
-	name = "radio antenna"
-	},
-/turf/template_noop,
-/area/shuttle/shipstation)
 "Ou" = (
 /turf/open/floor/iron/large,
 /area/shuttle/shipstation)
@@ -6507,10 +6451,6 @@
 	dir = 4
 	},
 /obj/structure/curtain/cloth,
-/obj/machinery/door/window/survival_pod{
-	name = "Toilet";
-	dir = 4
-	},
 /turf/open/floor/iron/freezer,
 /area/shuttle/shipstation)
 "OO" = (
@@ -6836,9 +6776,9 @@
 /area/shuttle/shipstation)
 "Ru" = (
 /obj/machinery/time_clock/directional/west,
-/obj/machinery/light/cold/dim/directional/north,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/o2supply/hidden/layer4,
+/obj/machinery/light/cold/directional/north,
 /turf/open/floor/mineral/titanium/white,
 /area/shuttle/shipstation)
 "Rv" = (
@@ -6880,12 +6820,6 @@
 /obj/effect/landmark/start/chemist,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /turf/open/floor/iron/white/textured_large,
-/area/shuttle/shipstation)
-"RF" = (
-/obj/structure/fluff/metalpole/end/left{
-	name = "radio antenna"
-	},
-/turf/template_noop,
 /area/shuttle/shipstation)
 "RG" = (
 /obj/machinery/door/airlock/public{
@@ -7660,12 +7594,6 @@
 /obj/effect/landmark/start/chemist,
 /turf/open/floor/iron/white/textured_large,
 /area/shuttle/shipstation)
-"WR" = (
-/obj/structure/fluff/metalpole/end/right{
-	name = "radio antenna"
-	},
-/turf/template_noop,
-/area/shuttle/shipstation)
 "WT" = (
 /obj/effect/turf_decal/trimline/blue/filled/line{
 	dir = 10
@@ -7678,16 +7606,12 @@
 /area/shuttle/shipstation)
 "Xd" = (
 /obj/effect/turf_decal/siding/thinplating_new/dark,
-/obj/machinery/hydroponics/constructable{
-	pixel_y = 7
-	},
-/obj/effect/turf_decal/tile/dark/half{
-	pixel_y = 7
-	},
 /obj/structure/window/reinforced/survival_pod/spawner/directional/south,
 /obj/effect/turf_decal/siding/thinplating_new/dark{
 	dir = 1
 	},
+/obj/machinery/hydroponics/constructable,
+/obj/effect/turf_decal/tile/dark/half,
 /turf/open/floor/grass,
 /area/shuttle/shipstation)
 "Xe" = (
@@ -7928,12 +7852,6 @@
 	},
 /turf/open/floor/iron/dark,
 /area/shuttle/shipstation)
-"YB" = (
-/obj/structure/fluff/metalpole/anchor{
-	name = "radio antenna anchor"
-	},
-/turf/template_noop,
-/area/shuttle/shipstation)
 "YE" = (
 /obj/effect/turf_decal/trimline/blue/filled/line{
 	dir = 4
@@ -8045,12 +7963,6 @@
 /obj/structure/window/reinforced/survival_pod/spawner/directional/east{
 	pixel_x = 4
 	},
-/obj/machinery/hydroponics/constructable{
-	pixel_y = 7
-	},
-/obj/effect/turf_decal/tile/dark/half{
-	pixel_y = 7
-	},
 /obj/effect/turf_decal/siding/thinplating_new/dark{
 	dir = 6
 	},
@@ -8061,6 +7973,8 @@
 /obj/effect/turf_decal/siding/thinplating_new/dark{
 	dir = 1
 	},
+/obj/machinery/hydroponics/constructable,
+/obj/effect/turf_decal/tile/dark/half,
 /turf/open/floor/grass,
 /area/shuttle/shipstation)
 "ZE" = (
@@ -8499,7 +8413,7 @@ ZH
 ZH
 ZH
 gn
-gn
+cq
 wv
 ZH
 ei
@@ -8573,7 +8487,7 @@ Wz
 XP
 nd
 rb
-cq
+ou
 TU
 TG
 ZH
@@ -9316,7 +9230,7 @@ ei
 "}
 (46,1,1) = {"
 ei
-RF
+ei
 ZH
 go
 QP
@@ -9338,12 +9252,12 @@ yD
 VS
 sM
 ZH
-lY
+ei
 ei
 "}
 (47,1,1) = {"
 ei
-YB
+ei
 ZH
 ne
 CH
@@ -9365,12 +9279,12 @@ CZ
 eR
 dg
 ZH
-vF
+ei
 ei
 "}
 (48,1,1) = {"
 ei
-Oh
+ei
 wd
 ZH
 ed
@@ -9392,14 +9306,14 @@ ZH
 ed
 ZH
 wd
-Gk
+ei
 ei
 "}
 (49,1,1) = {"
 ei
-Oh
 ei
-Lr
+ei
+ei
 ei
 ei
 wd
@@ -9417,14 +9331,14 @@ ZH
 wd
 ei
 ei
-Lr
 ei
-Gk
+ei
+ei
 ei
 "}
 (50,1,1) = {"
 ei
-WR
+ei
 ei
 ei
 ei
@@ -9446,6 +9360,6 @@ ei
 ei
 ei
 ei
-xe
+ei
 ei
 "}
