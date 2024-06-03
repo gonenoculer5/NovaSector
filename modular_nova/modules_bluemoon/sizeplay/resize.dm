@@ -26,7 +26,7 @@
 				return
 			// Determine the required scaler to reach the target value
 			var/target_value = scaling_factor
-			// A bit nasty, but just pretend we passed in the correct arg :3
+			// A bit nasty, but just pretend we passed in the correct arg
 			scaling_factor = (target_value / current_size)
 
 	// update_transform scales it's current value relatively, so we can just pass in the argument directly.
