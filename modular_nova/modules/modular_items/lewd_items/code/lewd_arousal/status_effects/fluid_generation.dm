@@ -30,11 +30,16 @@
 	// Bluemoon edit - Fix infinite body fluid regen bug
 	if(vagina.internal_fluid_full())
 		return FALSE
+	// Bluemoon edit - Always-active body fluid regen
+	var/regen = max(0.5, (affected_human.arousal / AROUSAL_MULTIPLIER) * (vagina.internal_fluid_maximum / VAGINA_MULTIPLIER) * BASE_MULTIPLIER)
+	vagina.adjust_internal_fluid(regen)
+	/*
 	if(affected_human.arousal > AROUSAL_LOW)
 		var/regen = (affected_human.arousal / AROUSAL_MULTIPLIER) * (vagina.internal_fluid_maximum / VAGINA_MULTIPLIER) * BASE_MULTIPLIER
 		vagina.adjust_internal_fluid(regen)
 	else
 		vagina.adjust_internal_fluid(VAGINA_FLUID_REMOVAL_AMOUNT)
+	*/
 
 /datum/status_effect/body_fluid_regen/testes
 	id = "testes fluid regen"
@@ -51,12 +56,10 @@
 	// Bluemoon edit - Fix infinite body fluid regen bug
 	if(testes.internal_fluid_full())
 		return FALSE
-	var/regen = (affected_human.arousal / AROUSAL_MULTIPLIER) * (testes.internal_fluid_maximum / TESTES_MULTIPLIER) * BASE_MULTIPLIER
+	// Bluemoon edit - Always-active body fluid regen
+	var/regen = max(0.5, (affected_human.arousal / AROUSAL_MULTIPLIER) * (testes.internal_fluid_maximum / TESTES_MULTIPLIER) * BASE_MULTIPLIER)
 	// Bluemoon edit - Fix infinite body fluid regen bug
 	testes.adjust_internal_fluid(regen)
-	/*
-	testes.internal_fluid_count += regen
-	*/
 
 /datum/status_effect/body_fluid_regen/breasts
 	id = " breast milk regen"
