@@ -20,7 +20,7 @@
 	shuttle_id = "whiteship_home"
 	roundstart_template = /datum/map_template/shuttle/shipstation
 	height = 25
-	width = 46
+	width = 50
 	dwidth = 12
 
 /obj/docking_port/mobile/shipstation
@@ -57,7 +57,7 @@
 		"whiteship_lavaland" = 1,
 		"whiteship_z4" = 1,
 	)
-	view_range = 12
+	view_range = 15
 	designate_time = 50
 	x_offset = 9
 	y_offset = 9
