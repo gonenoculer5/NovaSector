@@ -49,3 +49,21 @@ MAPPING_DIRECTIONAL_HELPERS(/obj/structure/sign/departments/dorms, 32)
 	icon_state = "dorms2"
 
 MAPPING_DIRECTIONAL_HELPERS(/obj/structure/sign/departments/dorms_alt, 32)
+
+/obj/structure/sign/departments/laundry
+	name = "\improper Laundry Room sign"
+	sign_change_name = "Location - Laundry Room"
+	desc = "A sign labeling a designated area for washing clothing."
+	icon = 'modular_nova/modules_bluemoon/mapping/icons/bluemoon_signs.dmi'
+	icon_state = "laundry"
+
+MAPPING_DIRECTIONAL_HELPERS(/obj/structure/sign/departments/laundry, 32)
+
+/obj/structure/sign/departments/laundry_alt
+	name = "\improper Washing Machine sign"
+	sign_change_name = "Location - Laundry Room"
+	desc = "A sign labeling an area containing washing machines."
+	icon = 'modular_nova/modules_bluemoon/mapping/icons/bluemoon_signs.dmi'
+	icon_state = "laundry2"
+
+MAPPING_DIRECTIONAL_HELPERS(/obj/structure/sign/departments/laundry_alt, 32)
