@@ -7768,6 +7768,10 @@
 	},
 /turf/open/floor/iron,
 /area/station/hallway/primary/central)
+"JY" = (
+/obj/docking_port/stationary/shipstation,
+/turf/open/space/basic,
+/area/space)
 "JZ" = (
 /obj/machinery/vending/autodrobe/all_access{
 	onstation_override = 1
@@ -48711,7 +48715,7 @@ nv
 nv
 nv
 nv
-nv
+JY
 Gm
 Ve
 bD
