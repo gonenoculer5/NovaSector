@@ -226,3 +226,9 @@
 
 	/// What our current gravity state is. Used to avoid duplicate animates and such
 	var/gravity_state = null
+
+	/// Is this mob normalized
+	var/is_normalized = FALSE
+
+	/// What the wearers natural size is, without a normalizer on.
+	var/natural_size = 1

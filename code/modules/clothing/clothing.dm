@@ -41,6 +41,10 @@
 	/// How many zones (body parts, not precise) we have disabled so far, for naming purposes
 	var/zones_disabled
 
+	//BLUEMOON EDIT: SIZEPLAY: Normalizers
+	/// What size the normalizer is set at.
+	var/normalizer_size = 1
+
 	/// A lazily initiated "food" version of the clothing for moths.
 	// This intentionally does not use the edible component, for a few reasons.
 	// 1. Effectively everything that wants something edible, from now and into the future,

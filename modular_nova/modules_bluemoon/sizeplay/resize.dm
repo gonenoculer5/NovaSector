@@ -9,10 +9,8 @@
 #define RESIZE_SCALE 0 // Scale sprite up or down via update_transform() by scaling_factor
 #define RESIZE_SET 1 // Set scale via update_transform() to scaling_factor
 
-// TO-DO, add return error codes using defines
-
 /// Bounds-checked wrapper around update_transform for kink reasons.
-/mob/living/proc/adjust_height(scaling_factor = 0, resize_mode = RESIZE_SCALE)
+/mob/living/carbon/proc/adjust_height(scaling_factor = 0, resize_mode = RESIZE_SCALE)
 	switch(resize_mode)
 		if(RESIZE_SCALE)
 			/// Conceptual resulting value after alteration. Used for bounds checking.

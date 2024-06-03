@@ -77,6 +77,10 @@
 
 				/obj/item/clothing/under/stripper_outfit = 5,
 				/obj/item/clothing/glasses/nice_goggles = 1, //easter egg, don't touch plz
+
+				/obj/item/clothing/neck/normalizer/pendant = 3, //BLUEMOON EDIT: Normalizer equipment
+				/obj/item/clothing/neck/normalizer/collar = 3,
+				/obj/item/clothing/gloves/ring/normalizer = 3
 			),
 		),
 		list(
