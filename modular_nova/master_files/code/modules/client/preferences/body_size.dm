@@ -12,6 +12,7 @@
 
 /datum/preference/numeric/body_size/apply_to_human(mob/living/carbon/human/target, value)
 	target.dna.features["body_size"] = value
+	target.current_size = value //BLUEMOON EDIT: whoever thought it would be funny to just directly manipulate the dna without using the proper helper proc should be shot, will come back and refactor this later to use resize()
 
 /datum/preference/numeric/body_size/create_default_value()
 	return BODY_SIZE_NORMAL
