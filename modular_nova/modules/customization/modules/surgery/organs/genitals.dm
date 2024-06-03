@@ -180,12 +180,12 @@
 	var/measured_size = FLOOR(genital_size,1)
 	if(measured_size < 1)
 		measured_size = 1
-	switch(measured_size)
-		if(1 to 8)
+	switch(measured_size) //BLUEMOON EDIT: Adjusts the rescaling.
+		if(1 to 12)
 			size_affix = "1"
-		if(9 to 15)
+		if(13 to 24)
 			size_affix = "2"
-		if(16 to 24)
+		if(25 to 36)
 			size_affix = "3"
 		else
 			size_affix = "4"
@@ -208,12 +208,12 @@
 		is_erect = 1
 	if(measured_size < 1)
 		measured_size = 1
-	switch(measured_size)
-		if(1 to 8)
+	switch(measured_size) //BLUEMOON EDIT: Adjusts the rescaling.
+		if(1 to 12)
 			size_affix = "1"
-		if(9 to 15)
+		if(13 to 24)
 			size_affix = "2"
-		if(16 to 24)
+		if(25 to 36)
 			size_affix = "3"
 		else
 			size_affix = "4"
