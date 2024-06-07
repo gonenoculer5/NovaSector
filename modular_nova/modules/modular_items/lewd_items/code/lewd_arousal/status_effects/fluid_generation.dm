@@ -72,10 +72,13 @@
 	var/obj/item/organ/external/genital/breasts/breasts = owner.get_organ_slot(ORGAN_SLOT_BREASTS)
 	if(!breasts || !breasts.lactates)
 		return FALSE
-
-	var/regen = ((owner.nutrition / (NUTRITION_LEVEL_WELL_FED / NUTRITION_MULTIPLIER)) / NUTRITION_MULTIPLIER) * (breasts.internal_fluid_maximum / BREASTS_MULTIPLIER) * BASE_MULTIPLIER
+	// Bluemoon edit - Allow breast fluid regen without nutrition
+	var/regen = max(0.5, ((owner.nutrition / (NUTRITION_LEVEL_WELL_FED / NUTRITION_MULTIPLIER)) / NUTRITION_MULTIPLIER) * (breasts.internal_fluid_maximum / BREASTS_MULTIPLIER) * BASE_MULTIPLIER)
 	if(!breasts.internal_fluid_full())
+		// Bluemoon edit - Allow breast fluid regen without nutrition
+		/*
 		owner.adjust_nutrition(-regen / NUTRITION_COST_MULTIPLIER)
+		*/
 		breasts.adjust_internal_fluid(regen)
 
 #undef AROUSAL_MULTIPLIER
