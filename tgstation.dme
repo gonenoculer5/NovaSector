@@ -8376,6 +8376,8 @@
 #include "modular_nova\modules_bluemoon\cyborg_romance\pleasure.dm"
 #include "modular_nova\modules_bluemoon\cyborg_romance\silicon.dm"
 #include "modular_nova\modules_bluemoon\cyborg_romance\verbs.dm"
+#include "modular_nova\modules_bluemoon\cyborgs\cyborg_hand_item.dm"
+#include "modular_nova\modules_bluemoon\cyborgs\silicon.dm"
 #include "modular_nova\modules_bluemoon\generators\collector.dm"
 #include "modular_nova\modules_bluemoon\generators\machine_boards.dm"
 #include "modular_nova\modules_bluemoon\generators\port_gen.dm"
