@@ -63,6 +63,8 @@ SUBSYSTEM_DEF(tts)
 	UNTIL(request.is_complete())
 	var/datum/http_response/response = request.into_response()
 	if(response.errored || response.status_code != 200)
+		// Bluemoon edit - Add logging to diagnose TTS issues
+		log_config("TTS HTTP error! Status: [response.status_code], Error: [response.error], Body: [response.body]")
 		stack_trace(response.error)
 		return FALSE
 	available_speakers = json_decode(response.body)
