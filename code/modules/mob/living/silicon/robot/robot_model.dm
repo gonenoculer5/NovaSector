@@ -306,7 +306,7 @@
 // Bluemoon edit - Workaround for missing cyborg animations
 /// A factory which produces smoke that dissipates after 4 seconds.
 /datum/effect_system/fluid_spread/smoke/borg
-	effect_type = /obj/effect/particle_effect/fluid/smoke/quick
+	effect_type = /obj/effect/particle_effect/fluid/smoke/borg
 
 /obj/item/robot_model/proc/do_transform_delay()
 	var/mob/living/silicon/robot/cyborg = loc
