@@ -114,7 +114,8 @@
 
 /obj/machinery/power/port_gen/pacman/examine(mob/user)
 	. = ..()
-	. += span_notice("The generator has [sheets] units of [sheet_name] fuel left, producing [display_power(power_gen)].")
+	// Bluemoon edit - Correct PACMAN readout
+	. += span_notice("The generator has [sheets] units of [sheet_name] fuel left, producing [display_power(power_gen * power_output, convert = FALSE)].")
 	if(anchored)
 		. += span_notice("It is anchored to the ground.")
 
