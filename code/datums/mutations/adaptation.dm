@@ -7,6 +7,8 @@
 	instability = 25
 	conflicts = list(/datum/mutation/human/pressure_adaptation)
 
+// Bluemoon edit - Hide visual indicator for Temperature Adaptation
+/*
 /datum/mutation/human/temperature_adaptation/New(class_ = MUT_OTHER, timer, datum/mutation/human/copymut)
 	..()
 	if(!(type in visual_indicators))
@@ -14,6 +16,7 @@
 
 /datum/mutation/human/temperature_adaptation/get_visual_indicator()
 	return visual_indicators[type][1]
+*/
 
 /datum/mutation/human/temperature_adaptation/on_acquiring(mob/living/carbon/human/owner)
 	if(..())
@@ -34,6 +37,8 @@
 	instability = 25
 	conflicts = list(/datum/mutation/human/temperature_adaptation)
 
+// Bluemoon edit - Hide visual indicator for Pressure Adaptation
+/*
 /datum/mutation/human/pressure_adaptation/New(class_ = MUT_OTHER, timer, datum/mutation/human/copymut)
 	..()
 	if(!(type in visual_indicators))
@@ -41,6 +46,7 @@
 
 /datum/mutation/human/pressure_adaptation/get_visual_indicator()
 	return visual_indicators[type][1]
+*/
 
 /datum/mutation/human/pressure_adaptation/on_acquiring(mob/living/carbon/human/owner)
 	if(..())
