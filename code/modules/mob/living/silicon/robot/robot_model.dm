@@ -299,12 +299,12 @@
 	do_transform_delay()
 
 // Bluemoon edit - Workaround for missing cyborg animations
-/// Smoke that dissipates after 4 seconds
+/// Smoke that dissipates after 5 seconds
 /obj/effect/particle_effect/fluid/smoke/borg
-	lifetime = 4 SECONDS
+	lifetime = 5 SECONDS
 
 // Bluemoon edit - Workaround for missing cyborg animations
-/// A factory which produces smoke that dissipates after 4 seconds.
+/// A factory which produces smoke that dissipates after 5 seconds.
 /datum/effect_system/fluid_spread/smoke/borg
 	effect_type = /obj/effect/particle_effect/fluid/smoke/borg
 
