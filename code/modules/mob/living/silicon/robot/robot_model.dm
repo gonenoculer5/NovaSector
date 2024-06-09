@@ -298,10 +298,27 @@
 	cyborg.setDir(SOUTH)
 	do_transform_delay()
 
+// Bluemoon edit - Workaround for missing cyborg animations
+/// Smoke that dissipates after 4 seconds
+/obj/effect/particle_effect/fluid/smoke/borg
+	lifetime = 4 SECONDS
+
+// Bluemoon edit - Workaround for missing cyborg animations
+/// A factory which produces smoke that dissipates after 4 seconds.
+/datum/effect_system/fluid_spread/smoke/borg
+	effect_type = /obj/effect/particle_effect/fluid/smoke/quick
+
 /obj/item/robot_model/proc/do_transform_delay()
 	var/mob/living/silicon/robot/cyborg = loc
 	sleep(0.1 SECONDS)
-	flick("[cyborg_base_icon]_transform", cyborg)
+	// Bluemoon edit - Workaround for missing cyborg animations
+	if(icon_exists(cyborg.icon, "[cyborg_base_icon]_transform"))
+		flick("[cyborg_base_icon]_transform", cyborg)
+	else
+		var/datum/effect_system/fluid_spread/smoke/borg/smoke = new
+		smoke.set_up(1, holder = cyborg, location = cyborg.loc)
+		smoke.start()
+
 	ADD_TRAIT(cyborg, TRAIT_NO_TRANSFORM, REF(src))
 	if(locked_transform)
 		cyborg.ai_lockdown = TRUE
@@ -311,7 +328,7 @@
 	sleep(0.1 SECONDS)
 	// Bluemoon edit - Custom cyborg transformation sound
 	playsound(cyborg, 'modular_nova/modules_bluemoon/cyborgs/sound/model_transform.ogg', 50)
-	sleep(4.4 SECONDS)
+	sleep(4 SECONDS)
 	/*
 	for(var/i in 1 to 4)
 		playsound(cyborg, pick('sound/items/drill_use.ogg', 'sound/items/jaws_cut.ogg', 'sound/items/jaws_pry.ogg', 'sound/items/welder.ogg', 'sound/items/ratchet.ogg'), 80, TRUE, -1)
