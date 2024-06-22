@@ -57,8 +57,12 @@
 #define FIRE_PLASMA_ENERGY_RELEASED 3e6
 
 // - Hydrogen:
+// Bluemoon edit - Increase minimum burn temp for Hydrogen
 /// The minimum temperature hydrogen combusts at.
+#define HYDROGEN_MINIMUM_BURN_TEMPERATURE 858+T0C
+/*
 #define HYDROGEN_MINIMUM_BURN_TEMPERATURE FIRE_MINIMUM_TEMPERATURE_TO_EXIST
+*/
 /// The amount of energy released by burning one mole of hydrogen.
 #define FIRE_HYDROGEN_ENERGY_RELEASED 2.8e6
 /// Multiplier for hydrogen fire with O2 moles * HYDROGEN_OXYGEN_FULLBURN for the maximum fuel consumption
