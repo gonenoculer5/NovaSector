@@ -1,4 +1,4 @@
-## Nova Sector: The Blue Moon Branch
+## The Blue Moon Branch
 
 The Blue Moon Branch is an enhanced fork of [Nova Sector](https://github.com/NovaSector/NovaSector).
 
