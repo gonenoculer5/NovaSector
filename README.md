@@ -1,63 +1,22 @@
-## Nova Sector (/tg/station Downstream)
+## Nova Sector: The Blue Moon Branch
 
-[![CI Suite](https://github.com/NovaSector/NovaSector/workflows/CI%20Suite/badge.svg)](https://github.com/NovaSector/NovaSector/actions?query=workflow%3A%22CI+Suite%22)
-[![Percentage of issues still open](https://isitmaintained.com/badge/open/NovaSector/NovaSector.svg)](https://isitmaintained.com/project/NovaSector/NovaSector "Percentage of issues still open")
-[![Average time to resolve an issue](https://isitmaintained.com/badge/resolution/NovaSector/NovaSector.svg)](https://isitmaintained.com/project/NovaSector/NovaSector "Average time to resolve an issue")
-![Coverage](https://img.shields.io/codecov/c/github/NovaSector/NovaSector)
+The Blue Moon Branch is an enhanced fork of [Nova Sector](https://github.com/NovaSector/NovaSector).
 
-[![resentment](.github/images/badges/built-with-resentment.svg)](.github/images/comics/131-bug-free.png) [![technical debt](.github/images/badges/contains-technical-debt.svg)](.github/images/comics/106-tech-debt-modified.png) [![forinfinityandbyond](.github/images/badges/made-in-byond.gif)](https://www.reddit.com/r/SS13/comments/5oplxp/what_is_the_main_problem_with_byond_as_an_engine/dclbu1a)
+**Please note that the contents of this repository are not suitable for people under the age of 18.**
 
-| Website                   | Link                                           |
-|---------------------------|------------------------------------------------|
-| Git / GitHub cheatsheet   | [https://www.notion.so/Git-GitHub-61bc81766b2e4c7d9a346db3078ce833](https://www.notion.so/Git-GitHub-61bc81766b2e4c7d9a346db3078ce833) |
-| Guide to Modularization   | [./modular_nova/readme.md](./modular_nova/readme.md)            |
-| Website                   | [https://www.tgstation13.org](https://www.tgstation13.org)          |
-| Code                      | [https://github.com/NovaSector/NovaSector](https://github.com/NovaSector/NovaSector)    |
-| Wiki                      | [https://wiki.novasector13.com](https://wiki.novasector13.com)   |
-| Codedocs                  | [https://GalacticStation.github.io/GalaxiaStation/](https://GalacticStation.github.io/GalaxiaStation/)       |
-| Nova Sector's Discord     | [https://discord.gg/novasector](https://discord.gg/novasector) |
-| Coderbus Discord          | [https://discord.gg/Vh8TJp9](https://discord.gg/Vh8TJp9)               |
+If you enjoy this version of the game, then please consider a donation to help keep our hardware and software development efforts going!
 
-This is Nova Sector's downstream fork of /tg/station created in byond.
+[![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/bluemoonclub)
 
-**Please note that this repository contains sexually explicit content and is not suitable for those under the age of 18.**
+## Notable Improvements
 
-Space Station 13 is a paranoia-laden round-based roleplaying game set against the backdrop of a nonsensical, metal death trap masquerading as a space station, with charming spritework designed to represent the sci-fi setting and its dangerous undertones. Have fun, and survive!
+- Over 144 unique enhancements to the game!
+- More enhancements added regularly.
+- Increased player freedom and unrestricted gameplay.
 
-## Important note - TEST YOUR PULL REQUESTS
+## Software Licenses
 
-You are responsible for the testing of your content and providing proof of such in your pull request. You should not mark a pull request ready for review until you have actually tested it. If you require a separate client for testing, you can use a guest account by logging out of BYOND and connecting to your test server. Test merges are not for bug finding, they are for stress tests where local testing simply doesn't allow for this.
-
-## DEVELOPMENT FLOWCHART
-![image](https://i.imgur.com/aJnE4WT.png)
-
-[Modularisation Guide](./modular_nova/readme.md)
-
-## DOWNLOADING
-[Downloading](.github/guides/DOWNLOADING.md)
-
-[Running on the server](.github/guides/RUNNING_A_SERVER.md)
-
-[Maps and Away Missions](.github/guides/MAPS_AND_AWAY_MISSIONS.md)
-
-## Compilation
-
-Find `BUILD.bat` here in the root folder of tgstation, and double click it to initiate the build. It consists of multiple steps and might take around 1-5 minutes to compile.
-
-**The long way**. Find `bin/build.cmd` in this folder, and double click it to initiate the build. It consists of multiple steps and might take around 1-5 minutes to compile. If it closes, it means it has finished its job. You can then [setup the server](.github/guides/RUNNING_A_SERVER.md) normally by opening `tgstation.dmb` in DreamDaemon.
-
-**Building tgstation in DreamMaker directly is deprecated and might produce errors**, such as `'tgui.bundle.js': cannot find file`.
-
-**[How to compile in VSCode and other build options](tools/build/README.md).**
-
-## Contributors
-[Guides for Contributors](.github/CONTRIBUTING.md)
-
-[/tg/station HACKMD account](https://hackmd.io/@tgstation) - Design documentation here
-
-[Interested in some starting lore?](https://github.com/tgstation/common_core)
-
-## LICENSE
+The following are legally binding guidelines for the use and distribution of this software.
 
 All code after [commit 333c566b88108de218d882840e61928a9b759d8f on 2014/31/12 at 4:38 PM PST](https://github.com/tgstation/tgstation/commit/333c566b88108de218d882840e61928a9b759d8f) is licensed under [GNU AGPL v3](https://www.gnu.org/licenses/agpl-3.0.html).
 
