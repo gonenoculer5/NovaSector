@@ -14,17 +14,126 @@
 
 	var/refractory_period
 
+	var/datum/cyborg_organ_descriptor/genitals
+
+/datum/cyborg_organ_descriptor
+	var/organs_type = CYBORG_ORGAN_BOTH
+	var/vagina_visibility = GENITAL_HIDDEN_BY_CLOTHES
+	var/penis_visibility = GENITAL_HIDDEN_BY_CLOTHES
+
 
 /mob/living/silicon/robot/Initialize(mapload)
 	. = ..()
 	AddComponent(/datum/component/interactable)
-	if(CONFIG_GET(flag/disable_erp_preferences))
+	if(!client?.prefs?.read_preference(/datum/preference/toggle/erp) || CONFIG_GET(flag/disable_erp_preferences))
 		verbs -= /mob/living/carbon/human/verb/climax_verb
+	else
+		genitals = new /datum/cyborg_organ_descriptor
 
 /mob/living/silicon/robot/Life(seconds_per_tick, times_fired)
 	. = ..()
 	if(client?.prefs?.read_preference(/datum/preference/toggle/erp))
 		handle_arousal(seconds_per_tick, times_fired)
+
+/mob/living/silicon/robot/proc/set_sex(client/player_client)
+	if(!client?.prefs?.read_preference(/datum/preference/toggle/erp) || CONFIG_GET(flag/disable_erp_preferences))
+		return
+	// Oops. Only cyborgs have this equipment...
+	if(!iscyborg(src))
+		return
+	if(!genitals)
+		genitals = new /datum/cyborg_organ_descriptor
+	var/pref_sex = player_client.prefs.read_preference(/datum/preference/choiced/sex_cyborg)
+	if(pref_sex == "Default")
+		var/has_penis = player_client.prefs.read_preference(/datum/preference/choiced/genital/penis)
+		var/has_vagina = player_client.prefs.read_preference(/datum/preference/choiced/genital/vagina)
+		if(has_penis)
+			if(has_vagina)
+				genitals.organs_type = CYBORG_ORGAN_BOTH
+			else
+				genitals.organs_type = CYBORG_ORGAN_PENIS
+		else if(has_vagina)
+			genitals.organs_type = CYBORG_ORGAN_VAGINA
+	else
+		genitals.organs_type = pref_sex
+
+/mob/living/silicon/robot/verb/toggle_genitals()
+	set category = "IC"
+	set name = "Expose/Hide genitals"
+	set desc = "Allows you to toggle which genitals should show through clothes or not."
+
+	if(stat != CONSCIOUS)
+		to_chat(usr, span_warning("You can't toggle genitals visibility right now..."))
+		return
+
+	if(!genitals || genitals.organs_type == CYBORG_ORGAN_NONE) //There is nothing to expose
+		return
+
+	var/list/genital_list = list()
+	if(has_penis())
+		genital_list = CYBORG_ORGAN_PENIS
+		if(has_vagina())
+			genital_list =  CYBORG_ORGAN_BOTH
+	else if(has_vagina())
+		genital_list =  CYBORG_ORGAN_VAGINA
+
+	var/obj/item/organ/external/genital/picked_organ = tgui_input_list(src, "Choose which genitalia to expose/hide", "Expose/Hide genitals", genital_list)
+
+	if(!picked_organ)
+		return
+
+	var/static/list/cyborg_gen_vis_trans = list(
+		"Never show" = GENITAL_NEVER_SHOW,
+		"Hidden by plating" = GENITAL_HIDDEN_BY_CLOTHES,
+		"Always show" = GENITAL_ALWAYS_SHOW,
+	)
+
+	var/picked_visibility = tgui_input_list(src, "Choose visibility setting", "Expose/Hide genitals", cyborg_gen_vis_trans)
+
+	if(!picked_visibility)
+		return
+
+	if(picked_organ == CYBORG_ORGAN_BOTH || picked_organ == CYBORG_ORGAN_PENIS)
+		genitals.penis_visibility = cyborg_gen_vis_trans[picked_visibility]
+	if(picked_organ == CYBORG_ORGAN_BOTH || picked_organ == CYBORG_ORGAN_VAGINA)
+		genitals.vagina_visibility = cyborg_gen_vis_trans[picked_visibility]
+
+	balloon_alert(src, "set to [lowertext(picked_visibility)]")
+// Returns true of the cyborg has genitals
+/mob/living/silicon/robot/proc/has_genitals()
+	if(genitals && genitals.organs_type != CYBORG_ORGAN_NONE)
+		return TRUE
+	return FALSE
+
+/// Returns true if the human has an accessible penis for the parameter. Accepts any of the `REQUIRE_GENITAL_` defines.
+/mob/living/silicon/robot/proc/has_penis(required_state = REQUIRE_GENITAL_ANY)
+	if(!genitals || (genitals.organs_type != CYBORG_ORGAN_PENIS && genitals.organs_type != CYBORG_ORGAN_BOTH))
+		return FALSE
+
+	switch(required_state)
+		if(REQUIRE_GENITAL_ANY)
+			return TRUE
+		if(REQUIRE_GENITAL_EXPOSED)
+			return genitals.penis_visibility == GENITAL_ALWAYS_SHOW
+		if(REQUIRE_GENITAL_UNEXPOSED)
+			return genitals.penis_visibility != GENITAL_ALWAYS_SHOW
+		else
+			return TRUE
+
+/// Returns true if the human has an accessible vagina for the parameter. Accepts any of the `REQUIRE_GENITAL_` defines.
+/mob/living/silicon/robot/proc/has_vagina(required_state = REQUIRE_GENITAL_ANY)
+	if(!genitals || (genitals.organs_type != CYBORG_ORGAN_VAGINA && genitals.organs_type != CYBORG_ORGAN_BOTH))
+		return FALSE
+
+	switch(required_state)
+		if(REQUIRE_GENITAL_ANY)
+			return TRUE
+		if(REQUIRE_GENITAL_EXPOSED)
+			return genitals.vagina_visibility == GENITAL_ALWAYS_SHOW
+		if(REQUIRE_GENITAL_UNEXPOSED)
+			return genitals.vagina_visibility != GENITAL_ALWAYS_SHOW
+		else
+			return TRUE
 
 /// Sends an icon to the screen that gives an approximate indication of the mob's arousal.
 /mob/living/silicon/robot/proc/throw_arousal_alert(level, atom/movable/screen/alert/aroused/arousal_alert)

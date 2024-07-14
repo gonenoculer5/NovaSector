@@ -92,7 +92,7 @@
 				var/mob/living/carbon/human/target_human
 				if(ishuman(target))
 					target_human = target
-					
+
 				var/target_them = target.p_them()
 
 				var/list/target_buttons = list()
@@ -137,7 +137,8 @@
 							transfer_climax_fluid(/datum/reagent/consumable/cum, belly.reagents, 15)
 
 			if(create_cum_decal)
-				add_cum_splatter_floor(get_turf(src))
+				// Bluemoon edit - Add reagents to cum decals
+				add_cum_splatter_floor(get_turf(src), amount = 15)
 
 		if(climax_choice == CLIMAX_PENIS)
 			apply_status_effect(/datum/status_effect/climax)
@@ -146,7 +147,8 @@
 
 	if(climax_choice == CLIMAX_VAGINA || climax_choice == CLIMAX_BOTH)
 		visible_message(span_userlove("[src] twitches and moans as [p_they()] climax from their vagina!"), span_userlove("You twitch and moan as you climax from your vagina!"))
-		add_cum_splatter_floor(get_turf(src), female = TRUE)
+		// Bluemoon edit - Add reagents to cum decals
+		add_cum_splatter_floor(get_turf(src), female = TRUE, amount = 15)
 
 	apply_status_effect(/datum/status_effect/climax)
 	apply_status_effect(/datum/status_effect/climax_cooldown)
