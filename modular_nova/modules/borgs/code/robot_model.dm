@@ -38,6 +38,8 @@
 		add_verb(cyborg, /mob/living/silicon/robot/proc/robot_lay_down)
 		add_verb(cyborg, /mob/living/silicon/robot/proc/rest_style)
 	else
+		// Bluemoon edit - Fix for dogborg rest style breaking iconstate
+		cyborg.robot_rest_style = ROBOT_REST_NORMAL // You're the man now, dog!
 		cyborg.set_base_pixel_x(0)
 		remove_verb(cyborg, /mob/living/silicon/robot/proc/robot_lay_down)
 		remove_verb(cyborg, /mob/living/silicon/robot/proc/rest_style)
