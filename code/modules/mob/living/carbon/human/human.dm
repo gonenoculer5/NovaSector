@@ -516,6 +516,8 @@
 			return FALSE
 
 		var/obj/item/organ/internal/lungs/human_lungs = get_organ_slot(ORGAN_SLOT_LUNGS)
+		// Bluemoon edit - Allow CPR without lungs
+		/*
 		if(isnull(human_lungs))
 			balloon_alert(src, "you don't have lungs!")
 			return FALSE
@@ -527,6 +529,7 @@
 		if(human_lungs.organ_flags & ORGAN_FAILING)
 			balloon_alert(src, "your lungs are too damaged!")
 			return FALSE
+		*/
 
 		visible_message(span_notice("[src] is trying to perform CPR on [target.name]!"), \
 						span_notice("You try to perform CPR on [target.name]... Hold still!"))
@@ -545,13 +548,23 @@
 			add_mood_event("saved_life", /datum/mood_event/saved_life)
 		log_combat(src, target, "CPRed")
 
-		if (HAS_TRAIT(target, TRAIT_NOBREATH))
-			to_chat(target, span_unconscious("You feel a breath of fresh air... which is a sensation you don't recognise..."))
-		else if (!target.get_organ_slot(ORGAN_SLOT_LUNGS))
-			to_chat(target, span_unconscious("You feel a breath of fresh air... but you don't feel any better..."))
+		// Bluemoon edit - Allow CPR without lungs
+		var/no_breath = FALSE
+		if(isnull(human_lungs) || istype(human_lungs, /obj/item/organ/internal/lungs/synth) || (human_lungs.organ_flags & ORGAN_FAILING))
+			no_breath = TRUE
+		if(issynthetic(target))
+			if(no_breath)
+				to_chat(target, span_unconscious("You feel someone pushing down onto your chest, but you don't feel any better..."))
+			else
+				to_chat(target, span_unconscious("You feel a breath of fresh air... but you don't feel any better..."))
+		else if(no_breath || (HAS_TRAIT(target, TRAIT_NOBREATH) || !target.get_organ_slot(ORGAN_SLOT_LUNGS)))
+			// Someone lacks the ability to breathe, so only chest compressions are possible
+			to_chat(target, span_unconscious("You feel someone pushing down onto your chest..."))
+			target.adjustOxyLoss(-min(target.getOxyLoss(), 5))
 		else
+			// Both parties can breathe, so increase efficacy slightly
+			to_chat(target, span_unconscious("You feel someone pushing on your chest, and fresh air inside your lungs... It feels good..."))
 			target.adjustOxyLoss(-min(target.getOxyLoss(), 7))
-			to_chat(target, span_unconscious("You feel a breath of fresh air enter your lungs... It feels good..."))
 
 		if (target.health <= target.crit_threshold)
 			if (!panicking)
