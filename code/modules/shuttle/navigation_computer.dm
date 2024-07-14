@@ -376,7 +376,11 @@
 			continue
 		if(console.jump_to_ports[S.shuttle_id])
 			L["([L.len])[S.name]"] = S
-
+	// Bluemoon edit - Allow shuttles to fly anywhere
+	for(var/datum/space_level/z_level in SSmapping.z_list)
+		var/z_value = z_level.z_value
+		var/turf/corner = locate(128, 128, z_value)
+		L["Sector [z_value]"] = corner
 	for(var/V in SSshuttle.beacon_list)
 		if(!V)
 			stack_trace("SSshuttle.beacon_list have null entry!")
