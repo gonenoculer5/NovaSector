@@ -138,6 +138,10 @@
 	var/mob/living/silicon/robot/new_borg = new /mob/living/silicon/robot(loc)
 
 	new_borg.gender = gender
+	// Bluemoon edit - Cyborg gender
+	if(client)
+		new_borg.set_gender(client)
+		new_borg.set_sex(client)
 	new_borg.SetInvisibility(INVISIBILITY_NONE)
 
 	if(client)

@@ -77,6 +77,9 @@
 			mmi.brainmob.container = mmi
 			mmi.update_appearance()
 		setup_default_name()
+		// Bluemoon edit - Cyborg gender
+		if(mmi.brainmob)
+			gender = mmi.brainmob.gender
 
 	aicamera = new/obj/item/camera/siliconcam/robot_camera(src)
 	toner = tonermax
@@ -149,8 +152,11 @@
 	return cell
 
 /mob/living/silicon/robot/proc/pick_model()
+	// Bluemoon edit - Allow cyborgs to switch models
+	/*
 	if(model.type != /obj/item/robot_model)
 		return
+	*/
 
 	if(wires.is_cut(WIRE_RESET_MODEL))
 		to_chat(src,span_userdanger("ERROR: Model installer reply timeout. Please check internal connections."))
@@ -188,7 +194,8 @@
 	// NOVA EDIT END
 
 	var/input_model = show_radial_menu(src, src, GLOB.cyborg_base_models_icon_list, radius = 42)
-	if(!input_model || model.type != /obj/item/robot_model)
+	// Bluemoon edit - Allow cyborgs to switch models
+	if(!input_model /*|| model.type != /obj/item/robot_model*/)
 		return
 
 	model.transform_to(GLOB.cyborg_model_list[input_model])
@@ -856,6 +863,10 @@
 /mob/living/silicon/robot/proc/deploy_init(mob/living/silicon/ai/AI)
 	real_name = "[AI.real_name] [designation] Shell-[ident]"
 	name = real_name
+	// Bluemoon edit - Cyborg gender
+	if(AI.client)
+		set_gender(AI.client)
+		set_sex(AI.client)
 	if(!QDELETED(builtInCamera))
 		builtInCamera.c_tag = real_name //update the camera name too
 	mainframe = AI

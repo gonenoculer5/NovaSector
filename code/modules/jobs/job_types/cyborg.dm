@@ -28,6 +28,10 @@
 		return
 	spawned.gender = NEUTER
 	var/mob/living/silicon/robot/robot_spawn = spawned
+	// Bluemoon edit - Cyborg gender
+	if(player_client)
+		robot_spawn.set_gender(player_client)
+		robot_spawn.set_sex(player_client)
 	robot_spawn.notify_ai(AI_NOTIFICATION_NEW_BORG)
 	//NOVA EDIT START
 	var/list/malf_ais = list()
