@@ -222,7 +222,8 @@
 		to_chat(usr, span_warning("You can't do this right now..."))
 		return
 
-	var/static/list/choices = list("drunkenness", "jittering")
+	// Bluemoon edit - Add stuttering to feign impairment
+	var/static/list/choices = list("drunkenness", "jittering", "stuttering")
 	var/impairment = tgui_input_list(src, "Select an impairment to perform:", "Impairments", choices)
 	if(!impairment)
 		return
@@ -236,6 +237,9 @@
 			set_slurring_if_lower(duration SECONDS)
 		if("jittering")
 			set_jitter_if_lower(duration SECONDS)
+		// Bluemoon edit - Add stuttering to feign impairment
+		if("stuttering")
+			set_stutter_if_lower(duration SECONDS)
 
 	if(duration)
 		addtimer(CALLBACK(src, PROC_REF(acting_expiry), impairment), duration SECONDS)
