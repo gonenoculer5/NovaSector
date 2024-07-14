@@ -296,7 +296,8 @@
 /obj/structure/grille/atom_break()
 	. = ..()
 	if(!broken)
-		icon_state = "brokengrille"
+		// Bluemoon edit - Custom grille icons
+		icon_state = broken_icon_state
 		set_density(FALSE)
 		atom_integrity = 20
 		broken = TRUE
@@ -306,7 +307,8 @@
 
 /obj/structure/grille/proc/repair_grille()
 	if(broken)
-		icon_state = "grille"
+		// Bluemoon edit - Custom grille icons
+		icon_state = base_icon_state
 		set_density(TRUE)
 		atom_integrity = max_integrity
 		broken = FALSE
