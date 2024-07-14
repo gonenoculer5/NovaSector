@@ -61,11 +61,14 @@
 
 	var/afterattack_result = afterattack(target, user, TRUE, params)
 
+	// Bluemoon edit - Disable tutorials
+	/*
 	if (!(afterattack_result & AFTERATTACK_PROCESSED_ITEM) && isitem(target))
 		if (isnull(user.get_inactive_held_item()))
 			SStutorials.suggest_tutorial(user, /datum/tutorial/switch_hands, params2list(params))
 		else
 			SStutorials.suggest_tutorial(user, /datum/tutorial/drop, params2list(params))
+	*/
 
 	return afterattack_result & TRUE //this is really stupid but its needed because afterattack can return TRUE | FLAGS.
 
