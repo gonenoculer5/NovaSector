@@ -70,19 +70,11 @@
 
 	holy_bible.deity_name = new_deity
 	switch(LOWER_TEXT(new_religion))
-		if("homosexuality", "gay", "penis", "ass", "cock", "cocks")
-			new_bible = pick("Guys Gone Wild","Coming Out of The Closet","War of Cocks")
-			switch(new_bible)
-				if("War of Cocks")
-					holy_bible.deity_name = pick("Dick Powers", "King Cock")
-				else
-					holy_bible.deity_name = pick("Gay Space Jesus", "Gandalf", "Dumbledore")
-			human_spawned.adjustOrganLoss(ORGAN_SLOT_BRAIN, 100) // starts off brain damaged as fuck
+		// Bluemoon edit - Removed homophobia reference
 		if("lol", "wtf", "poo", "badmin", "shitmin", "deadmin", "meme", "memes")
-			new_bible = pick("Woody's Got Wood: The Aftermath", "Sweet Bro and Hella Jeff: Expanded Edition","F.A.T.A.L. Rulebook")
+			// Bluemoon edit - Removed CSA reference
+			new_bible = pick("Sweet Bro and Hella Jeff: Expanded Edition","F.A.T.A.L. Rulebook")
 			switch(new_bible)
-				if("Woody's Got Wood: The Aftermath")
-					holy_bible.deity_name = pick("Woody", "Andy", "Cherry Flavored Lube")
 				if("Sweet Bro and Hella Jeff: Expanded Edition")
 					holy_bible.deity_name = pick("Sweet Bro", "Hella Jeff", "Stairs", "AH")
 				if("F.A.T.A.L. Rulebook")
