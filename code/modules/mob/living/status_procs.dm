@@ -394,7 +394,7 @@
 		S = apply_status_effect(/datum/status_effect/incapacitating/sleeping, amount)
 	return S
 
-// Bluemoon edit - Allow waking from voluntary sleeping
+// Bluemoon edit - Voluntary sleeping
 /mob/living/proc/SetSleeping(amount, is_voluntary = FALSE) //Sets remaining duration
 	if(SEND_SIGNAL(src, COMSIG_LIVING_STATUS_SLEEP, amount) & COMPONENT_NO_STUN)
 		return
@@ -407,7 +407,7 @@
 	else if(S)
 		S.duration = world.time + amount
 	else
-		// Bluemoon edit - Allow waking from voluntary sleeping
+		// Bluemoon edit - Voluntary sleeping
 		S = apply_status_effect(/datum/status_effect/incapacitating/sleeping, amount, is_voluntary)
 	return S
 
@@ -423,7 +423,7 @@
 		S = apply_status_effect(/datum/status_effect/incapacitating/sleeping, amount)
 	return S
 
-// Bluemoon edit - Allow waking from voluntary sleeping
+// Bluemoon edit - Voluntary sleeping
 ///Allows us to set a permanent sleep on a player (use with caution and remember to unset it with SetSleeping() after the effect is over)
 /mob/living/proc/PermaSleeping(is_voluntary = FALSE)
 	if(SEND_SIGNAL(src, COMSIG_LIVING_STATUS_SLEEP, -1) & COMPONENT_NO_STUN)
@@ -436,10 +436,8 @@
 		// Bluemoon edit - Hide sleep duration if permanent
 		S.show_duration = FALSE
 	else
-		// Bluemoon edit - Allow waking from voluntary sleeping
+		// Bluemoon edit - Voluntary sleeping
 		S = apply_status_effect(/datum/status_effect/incapacitating/sleeping, -1, is_voluntary)
-		// Bluemoon edit - Hide sleep duration if permanent
-		S.show_duration = FALSE
 	return S
 
 ///////////////////////// CLEAR STATUS /////////////////////////
