@@ -133,12 +133,15 @@
 	tick_interval = 2 SECONDS
 	// Bluemoon edit - Show sleep duration
 	show_duration = TRUE
-	// Bluemoon edit - Allow waking from voluntary sleeping
+	// Bluemoon edit - Voluntary sleeping
 	var/voluntary = FALSE
 
-// Bluemoon edit - Allow waking from voluntary sleeping
+// Bluemoon edit - Voluntary sleeping
 /datum/status_effect/incapacitating/sleeping/on_creation(mob/living/new_owner, set_duration, is_voluntary = FALSE)
 	voluntary = is_voluntary
+	// Hide sleep duration if permanent
+	if(set_duration == -1)
+		show_duration = FALSE
 	return ..()
 
 /datum/status_effect/incapacitating/sleeping/on_apply()
