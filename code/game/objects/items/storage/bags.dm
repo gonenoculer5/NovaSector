@@ -237,8 +237,9 @@
 /obj/item/storage/bag/plants/Initialize(mapload)
 	. = ..()
 	atom_storage.max_specific_storage = WEIGHT_CLASS_NORMAL
-	atom_storage.max_total_storage = 100
-	atom_storage.max_slots = 100
+	// Bluemoon edit - Increase plant bag capacity
+	atom_storage.max_total_storage = 200
+	atom_storage.max_slots = 200
 	atom_storage.set_holdable(list(
 		/obj/item/food/grown,
 		/obj/item/graft,
