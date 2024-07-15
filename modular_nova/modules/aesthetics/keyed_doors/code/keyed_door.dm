@@ -41,8 +41,11 @@
 	resistance_flags = FIRE_PROOF | ACID_PROOF | LAVA_PROOF
 	move_resist = MOVE_FORCE_OVERPOWERING
 	damage_deflection = 70
+	// Bluemoon edit - Lets door spam be a thing
+	/*
 	/// Given the case of this being used, let's not let door spam be a thing.
 	doorDeni = null
+	*/
 	/// The access ID of the airlock. Needs to match the variable of the
 	/// same name from a /obj/item/key_card in order to be opened, unless it's null,
 	/// in which case it will open no matter what.
