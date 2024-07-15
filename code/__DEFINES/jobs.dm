@@ -143,6 +143,8 @@
 
 // Bluemoon edit - Add Shipstation map
 #define JOB_SHUTTLE_PILOT "Shuttle Pilot"
+#define JOB_HARBORMASTER "Marina Harbormaster"
+#define JOB_DOCKWORKER "Marina Employee"
 
 #define JOB_GROUP_ENGINEERS list( \
 	JOB_STATION_ENGINEER, \
