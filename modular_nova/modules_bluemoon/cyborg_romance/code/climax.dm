@@ -26,11 +26,26 @@
 		return
 
 	// Reduce pop-ups and make it slightly more frictionless (lewd).
-	var/climax_choice = CLIMAX_BOTH
+	var/climax_choice
+	if(has_penis())
+		climax_choice = CLIMAX_PENIS
+		if(has_vagina())
+			climax_choice = CLIMAX_BOTH
+	else if(has_vagina())
+		climax_choice = CLIMAX_VAGINA
 
 	if(manual)
-		var/list/genitals = list(CLIMAX_VAGINA, CLIMAX_PENIS, CLIMAX_BOTH)
-		climax_choice = tgui_alert(src, "You are climaxing, choose which genitalia to climax with.", "Genitalia Preference!", genitals)
+		var/list/genitals = list()
+		if(has_vagina())
+			genitals.Add(CLIMAX_VAGINA)
+			if(has_penis())
+				genitals.Add(CLIMAX_PENIS)
+				genitals.Add(CLIMAX_BOTH)
+		else if(has_penis())
+			genitals.Add(CLIMAX_PENIS)
+		// Hide climax dialog if only one genital
+		if(length(genitals) > 1)
+			climax_choice = tgui_alert(src, "You are climaxing, choose which genitalia to climax with.", "Genitalia Preference!", genitals)
 
 	var/self_their = p_their()
 
