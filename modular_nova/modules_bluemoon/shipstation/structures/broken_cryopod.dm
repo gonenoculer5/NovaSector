@@ -20,12 +20,13 @@
 /obj/structure/closet/crate/freezer/cryo/proc/close_pod(mob/user)
 	. = close(user)
 	if(!.)
-		return
+		return FALSE
 	visible_message(span_danger("[src] hums and hisses... but then sounds an alarm!"))
-	balloon_alert(user, "error!")
+	balloon_alert_to_viewers("error!")
 	playsound(src, 'sound/machines/terminal_off.ogg', 70, TRUE)
 	addtimer(CALLBACK(GLOBAL_PROC, GLOBAL_PROC_REF(playsound), get_turf(src), 'sound/machines/defib_failed.ogg', 300, FALSE), 1.5 SECONDS)
 	addtimer(CALLBACK(GLOBAL_PROC, GLOBAL_PROC_REF(playsound), get_turf(src), 'sound/machines/defib_failed.ogg', 300, FALSE), 2.1 SECONDS)
+	return TRUE
 
 /obj/structure/closet/crate/freezer/cryo/update_icon_state()
 	base_icon_state = opened ? "cryopod-" : "cryopod"
@@ -52,9 +53,9 @@
 		var/turf/freezer_turf = get_turf(src)
 		target.forceMove(freezer_turf)
 		close_pod(user)
-		balloon_alert(target, "error!")
+		balloon_alert(user, "error!")
 	else
 		. = ..()
 		if(. && close_pod(user))
-			balloon_alert(target, "error!")
+			balloon_alert(user, "error!")
 
