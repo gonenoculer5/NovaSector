@@ -28,9 +28,13 @@
 		T.icon_state = icon_state
 	if(T.icon != icon)
 		T.icon = icon
+	// Bluemoon edit - Fix colored spaceship walls
 	if(color)
-		T.atom_colours = atom_colours.Copy()
-		T.update_atom_colour()
+		if(atom_colours)
+			T.atom_colours = atom_colours.Copy()
+			T.update_atom_colour()
+		else
+			T.add_atom_colour(color, FIXED_COLOUR_PRIORITY)
 	if(T.dir != dir)
 		T.setDir(dir)
 	T.transform = transform

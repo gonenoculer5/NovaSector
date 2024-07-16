@@ -25,9 +25,13 @@ GLOBAL_LIST_INIT(blacklisted_automated_baseturfs, typecacheof(list(
 		copy_to_turf.icon_state = icon_state
 	if(copy_to_turf.icon != icon)
 		copy_to_turf.icon = icon
+	// Bluemoon edit - Fix colored spaceship walls
 	if(color)
-		copy_to_turf.atom_colours = atom_colours.Copy()
-		copy_to_turf.update_atom_colour()
+		if(atom_colours)
+			copy_to_turf.atom_colours = atom_colours.Copy()
+			copy_to_turf.update_atom_colour()
+		else
+			copy_to_turf.add_atom_colour(color, FIXED_COLOUR_PRIORITY)
 	if(copy_to_turf.dir != dir)
 		copy_to_turf.setDir(dir)
 	return copy_to_turf
