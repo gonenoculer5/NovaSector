@@ -169,6 +169,16 @@
 	// NOVA EDIT START - Making the cyborg model list static to reduce how many times it's generated.
 	if(!length(GLOB.cyborg_model_list))
 		GLOB.cyborg_model_list = list(
+			// Bluemoon edit - Extra cyborg models
+			"Standard" = /obj/item/robot_model/standard,
+			"Syndicate" = /obj/item/robot_model/syndicatejack,
+			"Syndicate Assault" = /obj/item/robot_model/syndicate,
+			"Syndicate Medical" = /obj/item/robot_model/syndicate_medical,
+			"Syndicate Saboteur" = /obj/item/robot_model/saboteur,
+			"Spider Clan Assault" = /obj/item/robot_model/ninja,
+			"Spider Clan Medical" = /obj/item/robot_model/ninja/ninja_medical,
+			"Spider Clan Saboteur" = /obj/item/robot_model/ninja_saboteur,
+			"Clown" = /obj/item/robot_model/clown,
 			"Engineering" = /obj/item/robot_model/engineering,
 			"Medical" = /obj/item/robot_model/medical,
 			"Cargo" = /obj/item/robot_model/cargo,
@@ -193,7 +203,7 @@
 			GLOB.cyborg_base_models_icon_list[option] = image(icon = 'modular_nova/master_files/icons/mob/robots.dmi', icon_state = model_icon) // NOVA EDIT - CARGO BORGS - ORIGINAL: model_icons[option] = image(icon = 'icons/mob/robots.dmi', icon_state = model_icon)
 	// NOVA EDIT END
 
-	var/input_model = show_radial_menu(src, src, GLOB.cyborg_base_models_icon_list, radius = 42)
+	var/input_model = show_radial_menu(src, src, GLOB.cyborg_base_models_icon_list, radius = 84)
 	// Bluemoon edit - Allow cyborgs to switch models
 	if(!input_model /*|| model.type != /obj/item/robot_model*/)
 		return
