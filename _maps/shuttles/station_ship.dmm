@@ -893,7 +893,7 @@
 	name = "Science Desk";
 	req_access = list("science")
 	},
-/obj/item/stock_parts/cell/hyper,
+/obj/item/stock_parts/power_store/cell/hyper,
 /turf/open/floor/pod/light,
 /area/shuttle/shipstation)
 "dw" = (
@@ -2431,7 +2431,6 @@
 "mF" = (
 /obj/structure/window/reinforced/spawner/directional/south,
 /obj/structure/table/reinforced/plastitaniumglass,
-/obj/item/clothing/mask/cigarette/cigar/cohiba,
 /obj/effect/turf_decal/siding/thinplating_new/dark,
 /turf/open/floor/mineral/plastitanium,
 /area/shuttle/shipstation)
@@ -3317,10 +3316,7 @@
 /turf/open/floor/iron/white/textured_edge,
 /area/shuttle/shipstation)
 "sC" = (
-/obj/effect/turf_decal/trimline/yellow/filled/warning{
-	dir = 1
-	},
-/mob/living/simple_animal/pet/poppy,
+/mob/living/basic/pet/poppy,
 /turf/open/floor/mineral/plastitanium,
 /area/shuttle/shipstation)
 "sF" = (
@@ -3398,6 +3394,7 @@
 /obj/item/mod/control/pre_equipped/advanced,
 /obj/item/clothing/shoes/magboots/advance,
 /obj/effect/turf_decal/bot,
+/obj/item/storage/fancy/cigarettes/cigars/cohiba,
 /turf/open/floor/pod/dark,
 /area/shuttle/shipstation)
 "te" = (
@@ -3410,7 +3407,6 @@
 /obj/item/stack/rods/fifty,
 /obj/item/stack/sheet/plastitaniumglass/fifty,
 /obj/item/stack/sheet/mineral/titanium/fifty,
-/obj/item/stock_parts/cell/lead,
 /obj/effect/turf_decal/delivery,
 /turf/open/floor/pod/dark,
 /area/shuttle/shipstation)
@@ -8954,7 +8950,7 @@ Vg
 hN
 ra
 BD
-sC
+jG
 Am
 pl
 EC
@@ -8984,7 +8980,7 @@ bD
 IZ
 dQ
 Gz
-Am
+sC
 En
 EB
 Zq
