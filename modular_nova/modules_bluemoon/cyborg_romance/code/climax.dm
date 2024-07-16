@@ -25,6 +25,11 @@
 	if(has_status_effect(/datum/status_effect/climax_cooldown) || !client?.prefs?.read_preference(/datum/preference/toggle/erp))
 		return
 
+	if(HAS_TRAIT(src, TRAIT_NEVERBONER) || (!has_vagina() && !has_penis()))
+		visible_message(span_purple("[src] twitches, trying to cum, but with no result."), \
+			span_purple("You can't have an orgasm!"))
+		return TRUE
+
 	// Reduce pop-ups and make it slightly more frictionless (lewd).
 	var/climax_choice
 	if(has_penis())
@@ -154,11 +159,6 @@
 			if(create_cum_decal)
 				// Bluemoon edit - Add reagents to cum decals
 				add_cum_splatter_floor(get_turf(src), amount = 15)
-
-		if(climax_choice == CLIMAX_PENIS)
-			apply_status_effect(/datum/status_effect/climax)
-			apply_status_effect(/datum/status_effect/climax_cooldown)
-			return TRUE
 
 	if(climax_choice == CLIMAX_VAGINA || climax_choice == CLIMAX_BOTH)
 		visible_message(span_userlove("[src] twitches and moans as [p_they()] climax from their vagina!"), span_userlove("You twitch and moan as you climax from your vagina!"))
