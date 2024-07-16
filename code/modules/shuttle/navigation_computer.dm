@@ -24,7 +24,9 @@
 	var/list/locked_traits = list(ZTRAIT_RESERVED, ZTRAIT_CENTCOM, ZTRAIT_AWAY)
 	*/
 	var/view_range = 0
+	///x offset for where the camera eye will spawn. Starts from shuttle's docking port
 	var/x_offset = 0
+	///y offset for where the camera eye will spawn. Starts from the shuttle's docking port
 	var/y_offset = 0
 	// Bluemoon edit - Allow more shuttle destinations
 	var/list/whitelist_turfs = list(/turf/open/misc, /turf/open/floor, /turf/open/space, /turf/open/lava, /turf/open/openspace, /turf/closed/mineral/)

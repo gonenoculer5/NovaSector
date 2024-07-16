@@ -50,6 +50,7 @@
 		return
 	build_interactions_list()
 	INVOKE_ASYNC(src, PROC_REF(ui_interact), user)
+	return CLICK_ACTION_SUCCESS
 
 // Bluemoon edit - Cyborg interactions
 /datum/component/interactable/proc/can_interact(datum/interaction/interaction, mob/living/target)

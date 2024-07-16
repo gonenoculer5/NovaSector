@@ -71,14 +71,16 @@
 	holy_bible.deity_name = new_deity
 	switch(LOWER_TEXT(new_religion))
 		// Bluemoon edit - Removed homophobia reference
-		if("lol", "wtf", "poo", "badmin", "shitmin", "deadmin", "meme", "memes")
+		if("lol", "wtf", "poo", "badmin", "shitmin", "deadmin", "meme", "memes", "skibidi")
 			// Bluemoon edit - Removed CSA reference
-			new_bible = pick("Sweet Bro and Hella Jeff: Expanded Edition","F.A.T.A.L. Rulebook")
+			new_bible = pick("Sweet Bro and Hella Jeff: Expanded Edition","F.A.T.A.L. Rulebook", "Toilet Humor")
 			switch(new_bible)
 				if("Sweet Bro and Hella Jeff: Expanded Edition")
 					holy_bible.deity_name = pick("Sweet Bro", "Hella Jeff", "Stairs", "AH")
 				if("F.A.T.A.L. Rulebook")
 					holy_bible.deity_name = "Twenty Ten-Sided Dice"
+				if("Toilet Humor")
+					holy_bible.deity_name = pick("Skibidi Toilet", "Skibidi Wizard", "Skibidi Bathtub", "John Skibidi", "Skibidi Skibidi", "G-Toilet 1.0", "John Freeman")
 			human_spawned.adjustOrganLoss(ORGAN_SLOT_BRAIN, 100) // also starts off brain damaged as fuck
 		if("servicianism", "partying")
 			holy_bible.desc = "Happy, Full, Clean. Live it and give it."
