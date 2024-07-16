@@ -32,8 +32,9 @@
 /mob/living/silicon/robot/Initialize(mapload)
 	. = ..()
 	AddComponent(/datum/component/interactable)
-	if(!client?.prefs?.read_preference(/datum/preference/toggle/erp) || CONFIG_GET(flag/disable_erp_preferences))
-		verbs -= /mob/living/carbon/human/verb/climax_verb
+	if(CONFIG_GET(flag/disable_erp_preferences))
+		verbs -= /mob/living/silicon/robot/verb/climax_verb
+		verbs -= /mob/living/silicon/robot/verb/toggle_genitals
 	else
 		genitals = new /datum/cyborg_organ_descriptor
 
@@ -45,10 +46,7 @@
 // Proof of concept for cyborg genitals
 //TODO: Genital type, length, girth, and arousal state.
 /mob/living/silicon/robot/proc/set_sex(client/player_client)
-	if(!client?.prefs?.read_preference(/datum/preference/toggle/erp) || CONFIG_GET(flag/disable_erp_preferences))
-		return
-	// Oops. Only cyborgs have this equipment...
-	if(!iscyborg(src))
+	if(!player_client.prefs?.read_preference(/datum/preference/toggle/erp) || CONFIG_GET(flag/disable_erp_preferences))
 		return
 
 	if(!genitals)
@@ -105,9 +103,9 @@
 	if(!picked_visibility)
 		return
 
-	if(picked_organ == CYBORG_ORGAN_BOTH || picked_organ == CYBORG_ORGAN_PENIS)
+	if((picked_organ == CYBORG_ORGAN_BOTH) || (picked_organ == CYBORG_ORGAN_PENIS))
 		genitals.penis_visibility = cyborg_gen_vis_trans[picked_visibility]
-	if(picked_organ == CYBORG_ORGAN_BOTH || picked_organ == CYBORG_ORGAN_VAGINA)
+	if((picked_organ == CYBORG_ORGAN_BOTH) || (picked_organ == CYBORG_ORGAN_VAGINA))
 		genitals.vagina_visibility = cyborg_gen_vis_trans[picked_visibility]
 
 	balloon_alert(src, "set to [lowertext(picked_visibility)]")
