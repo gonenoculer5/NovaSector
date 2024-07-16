@@ -1626,13 +1626,11 @@
 /obj/structure/closet/abductor{
 	anchored = 1
 	},
-/obj/item/mod/module/jetpack/advanced,
 /obj/item/mod/module/auto_doc,
 /obj/item/mod/module/clamp/loader,
 /obj/item/mod/module/constructor,
 /obj/item/mod/module/storage/bluespace,
 /obj/item/mod/core/infinite,
-/obj/item/stock_parts/cell/infinite,
 /obj/effect/turf_decal/trimline/white/filled/line,
 /obj/item/mod/module/smartgun,
 /obj/item/ammo_box/magazine/smartgun_drum,
@@ -2185,8 +2183,7 @@
 	id = "autumnal_windows";
 	name = "Windows Blast Door Control";
 	pixel_x = -6;
-	pixel_y = 6;
-	req_access_txt = "19"
+	pixel_y = 6
 	},
 /turf/open/floor/iron/dark/smooth_edge{
 	dir = 4
