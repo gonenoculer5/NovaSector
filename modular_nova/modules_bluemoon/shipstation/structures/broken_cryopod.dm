@@ -31,24 +31,28 @@
 	base_icon_state = opened ? "cryopod-" : "cryopod"
 	return ..()
 
-/obj/structure/closet/crate/freezer/cryo/MouseDrop_T(mob/living/target, mob/user)
-	if(!istype(target) || !can_interact(user) || !target.Adjacent(user) || !ismob(target) || isanimal(target) || !istype(user.loc, /turf) || target.buckled)
+/obj/structure/closet/crate/freezer/cryo/mouse_drop_receive(mob/living/target, mob/user, params)
+	if(!istype(target) || !ismob(target) || isanimal(target) || !istype(user.loc, /turf) || target.buckled)
 		return
+
 	if(LAZYLEN(target.buckled_mobs) > 0)
 		if(target == user)
 			to_chat(user, span_danger("You can't fit into the cryopod while someone is buckled to you."))
 		else
 			to_chat(user, span_danger("You can't fit [target] into the cryopod while someone is buckled to them."))
 		return
+
 	if(!opened)
 		to_chat(user, span_notice("[src] is already occupied!"))
 		return
+
 	if(target == user)
 		if(tgui_alert(target, "Would you like to enter cryosleep?", "Enter Cryopod?", list("Yes", "No")) != "Yes")
 			return
 		var/turf/freezer_turf = get_turf(src)
 		target.forceMove(freezer_turf)
 		close_pod(user)
+		balloon_alert(target, "error!")
 	else
 		. = ..()
 		if(. && close_pod(user))

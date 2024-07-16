@@ -67,48 +67,5 @@
 			op_mode = RESIZE_SCALE
 			balloon_alert(user, "You change the operating mode to scale size.")
 
-/obj/item/debug/sizebutton/alt_click_secondary(mob/living/carbon/user)
+/obj/item/debug/sizebutton/click_alt_secondary(mob/living/carbon/user)
 	set_size = input(user, "Adjust size increment?", "New size", set_size) as num
-
-// Quick use debug-vapes for respective chems. Makes direct testing easier, also useful for events.
-/obj/item/clothing/mask/vape/debug
-	chem_volume = 1000
-	dragtime = 4 SECONDS
-
-/obj/item/clothing/mask/vape/debug/prospacillin
-	name = "alluring red vape"
-	desc = "An oddly alluring red vape. It bares no proof markings other than the words 'RA-ENTERPRISES', how interesting. It seems to be filled with prospacillin."
-
-/obj/item/clothing/mask/vape/debug/prospacillin/Initialize(mapload) // Filled with straight prospacillin; will not stop instantly when removed.
-	. = ..()
-	create_reagents(chem_volume, NO_REACT)
-	reagents.add_reagent(/datum/reagent/prospacillin, 1000)
-
-/obj/item/clothing/mask/vape/debug/prospacillin/custom
-	name = "alluring custom red vape"
-	desc = "An oddly alluring red vape. It bares no proof markings other than the words 'RA-ENTERPRISES', how interesting. It seems to be filled with prospacillin and water."
-
-/obj/item/clothing/mask/vape/debug/prospacillin/custom/Initialize(mapload) // Filled with a dilluted mix; will stop instantly once removed from mouth.
-	. = ..()
-	create_reagents(chem_volume, NO_REACT)
-	reagents.add_reagent(/datum/reagent/prospacillin, 334)
-	reagents.add_reagent(/datum/reagent/water, 666)
-
-/obj/item/clothing/mask/vape/debug/dimicillin
-	name = "alluring blue vape"
-	desc = "An oddly alluring blue vape. It bares no proof markings other than the words 'RA-ENTERPRISES', how interesting. It seems to be filled with dimicillin."
-
-/obj/item/clothing/mask/vape/debug/dimicillin/Initialize(mapload) // Filled with straight prospacillin; will not stop instantly when removed.
-	. = ..()
-	create_reagents(chem_volume, NO_REACT)
-	reagents.add_reagent(/datum/reagent/dimicillin, 1000)
-
-/obj/item/clothing/mask/vape/debug/dimicillin/custom
-	name = "alluring custom blue vape"
-	desc = "An oddly alluring blue vape. It bares no proof markings other than the words 'RA-ENTERPRISES', how interesting. It seems to be filled with dimicillin and water."
-
-/obj/item/clothing/mask/vape/debug/dimicillin/custom/Initialize(mapload) // Filled with a dilluted mix; will stop instantly once removed from mouth.
-	. = ..()
-	create_reagents(chem_volume, NO_REACT)
-	reagents.add_reagent(/datum/reagent/dimicillin, 334)
-	reagents.add_reagent(/datum/reagent/water, 666)

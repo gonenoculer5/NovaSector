@@ -535,7 +535,7 @@
 /obj/machinery/light/proc/use_emergency_power(power_usage_amount = LIGHT_EMERGENCY_POWER_USE)
 	if(!has_emergency_power(power_usage_amount))
 		return FALSE
-	var/obj/item/stock_parts/cell/real_cell = get_cell()
+	var/obj/item/stock_parts/power_store/real_cell = get_cell()
 	// Bluemoon edit - Reliable light bulbs
 	/*
 	var/obj/item/stock_parts/power_store/real_cell = get_cell()

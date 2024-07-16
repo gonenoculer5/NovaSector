@@ -8524,7 +8524,6 @@
 #include "modular_nova\modules_bluemoon\crimson_freighter\shuttles.dm"
 #include "modular_nova\modules_bluemoon\crimson_freighter\machinery\machinery.dm"
 #include "modular_nova\modules_bluemoon\crimson_freighter\structures\static_plaques.dm"
-#include "modular_nova\modules_bluemoon\custom_footstep_sounds\human.dm"
 #include "modular_nova\modules_bluemoon\cyborg_romance\__DEFINES\cyborg_defines.dm"
 #include "modular_nova\modules_bluemoon\cyborg_romance\code\arousal.dm"
 #include "modular_nova\modules_bluemoon\cyborg_romance\code\climax.dm"
