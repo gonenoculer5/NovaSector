@@ -13,10 +13,10 @@
 	name = "Refueling Station: Port 9"
 	shuttle_id = "crimson_home"
 	roundstart_template = /datum/map_template/shuttle/crimson
-	height = 42
-	width = 26
-	dwidth = 6
-	dheight = 31
+	height = 39
+	width = 23
+	dwidth = 1
+	dheight = 25
 
 /obj/docking_port/mobile/crimson
 	callTime = 3 MINUTES
