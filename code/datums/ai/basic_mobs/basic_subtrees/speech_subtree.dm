@@ -215,7 +215,8 @@
 	emote_see = list("stares ferociously.")
 
 /datum/ai_planning_subtree/random_speech/cats
-	speech_chance = 10
+	// Bluemoon edit - Reduce cat meow chance from 10% to 3%
+	speech_chance = 3
 	speak = list(
 		"mrawww!",
 		"meow!",
