@@ -9,11 +9,11 @@
 /datum/emote/living/mwag
 	key = "mwag"
 	key_third_person = "waggles"
-	message = "their antennae!"
+	message = "waggles their antennae!"
 	emote_type = EMOTE_VISIBLE
 
 /datum/emote/living/amwag
 	key = "amwag"
 	key_third_person = "waggles"
-	message = "their antennae ANGRILY!"
+	message = "waggles their antennae ANGRILY!"
 	emote_type = EMOTE_VISIBLE
