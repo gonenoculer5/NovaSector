@@ -203,7 +203,7 @@
 			GLOB.cyborg_base_models_icon_list[option] = image(icon = 'modular_nova/master_files/icons/mob/robots.dmi', icon_state = model_icon) // NOVA EDIT - CARGO BORGS - ORIGINAL: model_icons[option] = image(icon = 'icons/mob/robots.dmi', icon_state = model_icon)
 	// NOVA EDIT END
 
-	var/input_model = show_radial_menu(src, src, GLOB.cyborg_base_models_icon_list, radius = 84)
+	var/input_model = show_radial_menu(src, src, GLOB.cyborg_base_models_icon_list, radius = 42)
 	// Bluemoon edit - Allow cyborgs to switch models
 	if(!input_model /*|| model.type != /obj/item/robot_model*/)
 		return
