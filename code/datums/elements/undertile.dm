@@ -44,7 +44,8 @@
 
 	if(underfloor_accessibility < UNDERFLOOR_INTERACTABLE)
 		SET_PLANE_IMPLICIT(source, FLOOR_PLANE) // We do this so that turfs that allow you to see what's underneath them don't have to be on the game plane (which causes ambient occlusion weirdness)
-		source.layer = ABOVE_OPEN_TURF_LAYER
+		// Bluemoon edit - Fix catwalk layering issue. Original: ABOVE_OPEN_TURF_LAYER
+		source.layer = BELOW_CATWALK_LAYER
 		ADD_TRAIT(source, TRAIT_UNDERFLOOR, REF(src))
 
 		if(tile_overlay)
