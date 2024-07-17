@@ -40,7 +40,6 @@
 	back_nodes = null
 	nodes = list()
 
-
 /obj/machinery/atmospherics/pipe/layer_manifold/update_layer()
 	// Bluemoon edit - Fix catwalk layering issue. Original: ABOVE_OPEN_TURF_LAYER
 	layer = (HAS_TRAIT(src, TRAIT_UNDERFLOOR) ? BELOW_CATWALK_LAYER : initial(layer)) + (PIPING_LAYER_MAX * PIPING_LAYER_LCHANGE) //This is above everything else.
