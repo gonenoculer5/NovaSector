@@ -59,7 +59,7 @@
 // - Hydrogen:
 // Bluemoon edit - Increase minimum burn temp for Hydrogen
 /// The minimum temperature hydrogen combusts at.
-#define HYDROGEN_MINIMUM_BURN_TEMPERATURE 858+T0C
+#define HYDROGEN_MINIMUM_BURN_TEMPERATURE 560+T0C
 /*
 #define HYDROGEN_MINIMUM_BURN_TEMPERATURE FIRE_MINIMUM_TEMPERATURE_TO_EXIST
 */
