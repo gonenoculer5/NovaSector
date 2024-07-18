@@ -32,5 +32,3 @@
 	name = "NTSS 'Blue Moon'"
 	port_direction = EAST
 	preferred_direction = EAST
-	// Ship is so large that not having a pre-arrival time leads to accidents.
-	prearrivalTime = 15 SECONDS

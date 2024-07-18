@@ -27,4 +27,3 @@
 	name = "NTSS 'Autumnal'"
 	port_direction = SOUTH
 	preferred_direction = NORTH
-	prearrivalTime = 10 SECONDS
