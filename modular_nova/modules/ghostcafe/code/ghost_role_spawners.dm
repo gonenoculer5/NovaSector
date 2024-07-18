@@ -31,6 +31,10 @@
 		// Bluemoon edit - Cyborg gender
 		new_spawn.set_gender(new_spawn.client)
 		new_spawn.set_sex(new_spawn.client)
+		// Bluemoon edit - Remove transform action from ghost cafe cyborgs
+		var/datum/action/action_to_remove = locate(/datum/action/cyborg_transform) in new_spawn.actions
+		if(action_to_remove)
+			qdel(action_to_remove)
 		/*
 		new_spawn.gender = NEUTER
 		*/
