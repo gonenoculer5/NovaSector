@@ -56,6 +56,15 @@
 /obj/machinery/door/airlock/security
 	doorDeni = VAULT_SOUNDPATH("deniedbeep.ogg")
 
+/obj/machinery/door/airlock/colony_prefab
+	doorOpen = PREFAB_SOUNDPATH("airlock.ogg")
+	doorClose = PREFAB_SOUNDPATH("airlockclose.ogg")
+	doorDeni = PREFAB_SOUNDPATH("deniedbeep.ogg")
+	boltUp = PREFAB_SOUNDPATH("boltsup.ogg")
+	boltDown = PREFAB_SOUNDPATH("boltsdown.ogg")
+	loud_bolts = TRUE
+	quiet = FALSE
+
 /obj/machinery/door/airlock/external/wagon
 	doorOpen = PREFAB_SOUNDPATH("airlock.ogg")
 	doorClose = PREFAB_SOUNDPATH("airlockclose.ogg")
@@ -69,13 +78,12 @@
 /obj/machinery/door/airlock/external/wagon/command
 	doorDeni = VAULT_SOUNDPATH("deniedbeep.ogg")
 
-/obj/machinery/door/airlock/colony_prefab
+/obj/machinery/door/airlock/survival_pod
 	doorOpen = PREFAB_SOUNDPATH("airlock.ogg")
 	doorClose = PREFAB_SOUNDPATH("airlockclose.ogg")
 	doorDeni = PREFAB_SOUNDPATH("deniedbeep.ogg")
 	boltUp = PREFAB_SOUNDPATH("boltsup.ogg")
 	boltDown = PREFAB_SOUNDPATH("boltsdown.ogg")
-	loud_bolts = TRUE
 	quiet = FALSE
 
 /*
