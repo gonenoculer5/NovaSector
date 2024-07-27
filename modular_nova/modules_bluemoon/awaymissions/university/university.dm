@@ -4,7 +4,7 @@
 /area/awaymission/university
 	name = "University"
 	icon_state = "away2"
-	static_lighting = FALSE
+	static_lighting = TRUE
 	requires_power = TRUE
 	has_gravity = STANDARD_GRAVITY
 	always_unpowered = FALSE
@@ -16,7 +16,7 @@
 /area/awaymission/university/outside
 	name = "Outside"
 	icon_state = "away2"
-	static_lighting = FALSE
+	static_lighting = TRUE
 	requires_power = FALSE
 	ambient_buzz = 'modular_nova/modules_bluemoon/awaymissions/forest/sound/ambience_forest.ogg'
 	forced_ambience = TRUE
