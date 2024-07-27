@@ -8619,4 +8619,5 @@
 #include "modular_nova\modules_bluemoon\sizeplay\resize_chems.dm"
 #include "modular_nova\modules_bluemoon\sizeplay\resize_prefs.dm"
 #include "modular_nova\modules_bluemoon\weapons\code\executioner.dm"
+#include "modular_nova\modules_bluemoon\awaymissions\university\university.dm"
 // END_INCLUDE
