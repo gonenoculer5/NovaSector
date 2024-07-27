@@ -42,20 +42,20 @@
 	icon_state = "away4"
 
 /area/awaymission/university/dormitorybunks
-	name = "Dorms"
+	name = "Student Dorms"
 	icon_state = "away"
 
 /area/awaymission/university/dormitorybunks/bunk1
-name = "Bunk1"
+	name = "First Bunk"
 
 /area/awaymission/university/dormitorybunks/bunk2
-name = "Bunk2"
+	name = "Second Bunk"
 
 /area/awaymission/university/dormitorybunks/bunk3
-name = "Bunk3"
+	name = "Third Bunk"
 
 /area/awaymission/university/dormitorybunks/bunk4
-name = "Bunk4"
+	name = "Forth Bunk"
 
 //Call a specialised cleaning team here
 //There is too much...
