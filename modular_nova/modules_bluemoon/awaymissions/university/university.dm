@@ -55,7 +55,7 @@
 	name = "Third Bunk"
 
 /area/awaymission/university/dormitorybunks/bunk4
-	name = "Forth Bunk"
+	name = "Fourth Bunk"
 
 //Call a specialised cleaning team here
 //There is too much...
