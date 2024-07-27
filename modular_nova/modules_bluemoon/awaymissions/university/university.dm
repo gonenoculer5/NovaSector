@@ -96,3 +96,5 @@
 	initial_gas_mix = OPENTURF_DEFAULT_ATMOS
 	planetary_atmos = TRUE
 	baseturfs = /turf/open/misc/sandy_dirt/planet
+
+//I am GOING TO ULTRAMAP YOU, YOU INSIGNIFICANT FUCK!
