@@ -91,3 +91,8 @@
 	initial_gas_mix = OPENTURF_DEFAULT_ATMOS
 	planetary_atmos = TRUE
 	baseturfs = /turf/open/misc/sandy_dirt/planet
+
+/turf/open/floor/stone/planetary
+	initial_gas_mix = OPENTURF_DEFAULT_ATMOS
+	planetary_atmos = TRUE
+	baseturfs = /turf/open/misc/sandy_dirt/planet
