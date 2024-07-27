@@ -59,3 +59,35 @@
 
 //Call a specialised cleaning team here
 //There is too much...
+
+//Turfs time!
+
+/turf/open/floor/iron/dark/side/planetary
+	initial_gas_mix = OPENTURF_DEFAULT_ATMOS
+	planetary_atmos = TRUE
+	baseturfs = /turf/open/misc/sandy_dirt/planet
+
+/turf/open/floor/iron/dark/smooth_large/planetary
+	initial_gas_mix = OPENTURF_DEFAULT_ATMOS
+	planetary_atmos = TRUE
+	baseturfs = /turf/open/misc/sandy_dirt/planet
+
+/turf/open/floor/iron/dark/corner/planetary
+	initial_gas_mix = OPENTURF_DEFAULT_ATMOS
+	planetary_atmos = TRUE
+	baseturfs = /turf/open/misc/sandy_dirt/planet
+
+/turf/open/floor/iron/large/planetary
+	initial_gas_mix = OPENTURF_DEFAULT_ATMOS
+	planetary_atmos = TRUE
+	baseturfs = /turf/open/misc/sandy_dirt/planet
+
+/turf/open/floor/plating/cobblestone/planetary
+	initial_gas_mix = OPENTURF_DEFAULT_ATMOS
+	planetary_atmos = TRUE
+	baseturfs = /turf/open/misc/sandy_dirt/planet
+
+/turf/open/floor/shuttle/exploration/doubleside/planetary
+	initial_gas_mix = OPENTURF_DEFAULT_ATMOS
+	planetary_atmos = TRUE
+	baseturfs = /turf/open/misc/sandy_dirt/planet
