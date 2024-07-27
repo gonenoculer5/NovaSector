@@ -1,1 +1,23 @@
+{
+	"version": 1,
+	"map_name": "Inter-Space-National University N30032",
+	"map_path": "map_files/unidorms",
+	"map_file": "unidorms.dmm",
+	"shuttles": {
 		"cargo": "cargo_nova",
+		"ferry": "ferry_fancy",
+		"whiteship": "whiteship_tram",
+		"emergency": "emergency_tram"
+	},
+	"traits": [
+		{
+			"Up": true,
+			"Linkage": "Cross"
+		},
+		{
+			"Down": true,
+			"Linkage": "Cross"
+		}
+	]
+
+}
