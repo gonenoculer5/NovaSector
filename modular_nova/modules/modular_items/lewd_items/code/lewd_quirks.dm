@@ -33,6 +33,8 @@
 	///The time between each desire message within company
 	var/desire_cooldown_number = 30 SECONDS
 	///The list of manual emotes that will be done when unsatisfied
+	// Bluemoon edit - Remove emotes from Amorous quirk
+	/*
 	var/static/list/lust_emotes = list(
 		"pants as their body trembles lightly.",
 		"lightly touches themselves up and down, feeling every inch.",
@@ -40,6 +42,7 @@
 		"places their hands on their hip as they slowly gyrate.",
 		"moans, their head tilted slightly."
 	)
+	*/
 
 /**
  * If we are not satisfied, this will be ran through
@@ -53,7 +56,10 @@
 	//the message that will be sent to the owner at the end
 	var/lust_message = "Your breath begins to feel warm..."
 	//we are using if statements so that it slowly becomes more and more to the person
+	// Bluemoon edit - Remove emotes from Amorous quirk
+	/*
 	human_owner.manual_emote(pick(lust_emotes))
+	*/
 	if(stress >= 60)
 		human_owner.set_jitter_if_lower(40 SECONDS)
 		lust_message = "You feel a static sensation all across your skin..."
@@ -172,7 +178,10 @@
 		ADD_TRAIT(owner, TRAIT_AMOROUS, TRAIT_LEWDCHEM)
 	if(!HAS_TRAIT_FROM(owner, TRAIT_MASOCHISM, TRAIT_APHRO))
 		ADD_TRAIT(owner, TRAIT_MASOCHISM, TRAIT_APHRO)
+	// Bluemoon edit - Remove altered speech from Amorous quirk
+	/*
 	RegisterSignal(owner, COMSIG_MOB_SAY, PROC_REF(handle_speech), override=TRUE)
+	*/
 
 /datum/brain_trauma/very_special/amorous/on_lose()
 	. = ..()
@@ -181,7 +190,10 @@
 		REMOVE_TRAIT(owner, TRAIT_AMOROUS, TRAIT_LEWDCHEM)
 	if(HAS_TRAIT_FROM(owner, TRAIT_MASOCHISM, TRAIT_APHRO))
 		REMOVE_TRAIT(owner, TRAIT_MASOCHISM, TRAIT_APHRO)
+	// Bluemoon edit - Remove altered speech from Amorous quirk
+	/*
 	UnregisterSignal(owner, COMSIG_MOB_SAY)
+	*/
 
 //Mood boost
 /datum/mood_event/amorous
