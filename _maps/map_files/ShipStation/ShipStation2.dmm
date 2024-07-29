@@ -3820,7 +3820,6 @@
 	pixel_x = -4;
 	pixel_y = 2
 	},
-/obj/item/clothing/mask/cigarette/cigar,
 /obj/item/reagent_containers/cup/glass/flask/gold,
 /turf/open/floor/carpet,
 /area/station/command/heads_quarters/captain/private)
@@ -4495,7 +4494,6 @@
 "tR" = (
 /obj/structure/table/reinforced,
 /obj/machinery/cell_charger,
-/obj/item/stock_parts/cell/high,
 /obj/item/clothing/glasses/meson{
 	pixel_y = 4
 	},
@@ -5552,7 +5550,6 @@
 	pixel_y = 3
 	},
 /obj/item/stack/cable_coil,
-/obj/item/stock_parts/cell/high,
 /obj/item/radio/intercom{
 	pixel_y = 26
 	},
@@ -6126,6 +6123,11 @@
 	},
 /turf/open/floor/iron,
 /area/station/cargo/storage)
+"BZ" = (
+/obj/structure/lattice/catwalk,
+/obj/structure/sign/warning/fire,
+/turf/open/space/basic,
+/area/station/engineering/atmos)
 "Cb" = (
 /obj/machinery/atmospherics/components/unary/vent_pump/on/layer4{
 	dir = 4
@@ -7441,7 +7443,6 @@
 /obj/machinery/light_switch{
 	pixel_y = 28
 	},
-/obj/item/stock_parts/cell/high,
 /obj/structure/cable,
 /turf/open/floor/iron,
 /area/station/commons/storage/primary)
@@ -8998,7 +8999,6 @@
 	dir = 4
 	},
 /obj/machinery/cell_charger,
-/obj/item/stock_parts/cell/high,
 /turf/open/floor/iron,
 /area/station/engineering/main)
 "Ox" = (
@@ -23832,7 +23832,7 @@ Zu
 jo
 nv
 nv
-nA
+oF
 oF
 Ut
 Ut
@@ -23842,7 +23842,7 @@ Ut
 Ut
 Ut
 oF
-nA
+oF
 nv
 nv
 mu
@@ -24099,7 +24099,7 @@ Ut
 Ut
 Ut
 Ut
-oF
+nA
 Jm
 nv
 AW
@@ -24344,7 +24344,7 @@ pC
 jv
 jv
 Zz
-jv
+BZ
 pC
 uC
 RN
@@ -24613,7 +24613,7 @@ Ut
 Ut
 Ut
 Ut
-oF
+nA
 Jm
 nv
 Xe
@@ -24860,7 +24860,7 @@ Mu
 UY
 nv
 nv
-nA
+oF
 oF
 Ut
 Ut
@@ -24870,7 +24870,7 @@ Ut
 Ut
 Ut
 oF
-nA
+oF
 nv
 nv
 ys
@@ -27430,7 +27430,7 @@ zN
 EJ
 nv
 nv
-nA
+oF
 oF
 oO
 oO
@@ -27440,7 +27440,7 @@ oO
 oO
 oO
 oF
-nA
+oF
 nv
 nv
 fW
@@ -27697,7 +27697,7 @@ oO
 oO
 oO
 oO
-oF
+nA
 Jm
 nv
 xt
@@ -27942,7 +27942,7 @@ pC
 jv
 AB
 yM
-jv
+BZ
 pC
 uC
 mM
@@ -27966,7 +27966,7 @@ GS
 GS
 GS
 CY
-CY
+DT
 CY
 CY
 RW
@@ -28211,7 +28211,7 @@ oO
 oO
 oO
 oO
-oF
+nA
 Jm
 Kj
 nC
@@ -28458,7 +28458,7 @@ AB
 yM
 MO
 nv
-nA
+oF
 oF
 oO
 oO
@@ -28468,7 +28468,7 @@ oO
 oO
 oO
 oF
-nA
+oF
 nv
 Kj
 Wl
@@ -30022,7 +30022,7 @@ dP
 Oh
 GS
 CY
-CY
+DT
 CY
 CY
 LO
@@ -31028,7 +31028,7 @@ zN
 rw
 jv
 nv
-nA
+oF
 oF
 TO
 TO
@@ -31038,7 +31038,7 @@ TO
 TO
 TO
 oF
-nA
+oF
 nv
 JS
 jP
@@ -31295,7 +31295,7 @@ TO
 TO
 TO
 TO
-oF
+nA
 Jm
 JS
 jP
@@ -31540,7 +31540,7 @@ pC
 jv
 AB
 yM
-jv
+BZ
 pC
 uC
 XS
@@ -31809,7 +31809,7 @@ TO
 TO
 TO
 TO
-oF
+nA
 Jm
 nv
 jP
@@ -32056,7 +32056,7 @@ AB
 yM
 nv
 nv
-nA
+oF
 oF
 TO
 TO
@@ -32066,7 +32066,7 @@ TO
 TO
 TO
 oF
-nA
+oF
 nv
 nv
 jP
@@ -34626,7 +34626,7 @@ zN
 cR
 nv
 nv
-nA
+oF
 oF
 rA
 rA
@@ -34636,7 +34636,7 @@ rA
 rA
 rA
 oF
-nA
+oF
 nv
 nv
 xr
@@ -34893,7 +34893,7 @@ rA
 rA
 rA
 rA
-oF
+nA
 Jm
 nv
 xr
@@ -35138,7 +35138,7 @@ pC
 jv
 AB
 yM
-jv
+BZ
 pC
 uC
 ps
@@ -35407,7 +35407,7 @@ rA
 rA
 rA
 rA
-oF
+nA
 Jm
 nv
 xr
@@ -35654,7 +35654,7 @@ Mu
 Ik
 nv
 nv
-nA
+oF
 oF
 rA
 rA
@@ -35664,7 +35664,7 @@ rA
 rA
 rA
 oF
-nA
+oF
 nv
 nv
 sz
