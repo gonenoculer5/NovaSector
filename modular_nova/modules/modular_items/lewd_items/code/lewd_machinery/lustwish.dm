@@ -60,7 +60,7 @@
 				/obj/item/clothing/shoes/latex_heels/domina_heels = 4,
 				/obj/item/clothing/gloves/evening = 5,
 
-				/obj/item/clothing/under/misc/nova/gear_harness = 6,//Important "not-nude" outfit
+				/obj/item/clothing/under/misc/nova/gear_harness = 20,//Important "not-nude" outfit
 				/obj/item/clothing/shoes/jackboots/knee = 3,
 
 				/obj/item/clothing/under/misc/latex_catsuit = 8,
@@ -77,6 +77,10 @@
 
 				/obj/item/clothing/under/stripper_outfit = 5,
 				/obj/item/clothing/glasses/nice_goggles = 1, //easter egg, don't touch plz
+
+				/obj/item/clothing/neck/normalizer/pendant = 3, //BLUEMOON EDIT: Normalizer equipment
+				/obj/item/clothing/neck/normalizer/collar = 3,
+				/obj/item/clothing/gloves/ring/normalizer = 3
 			),
 		),
 		list(

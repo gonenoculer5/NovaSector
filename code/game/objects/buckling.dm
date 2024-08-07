@@ -29,7 +29,10 @@
 				return TRUE
 
 //literally just the above extension of attack_hand(), but for silicons instead (with an adjacency check, since attack_robot() being called doesn't mean that you're adjacent to something)
-/atom/movable/attack_robot(mob/living/user)
+// Bluemoon edit - Cyborg hands
+/atom/movable/attack_robot(mob/living/user, list/modifiers)
+	if(isnull(modifiers))
+		modifiers = list()
 	. = ..()
 	if(.)
 		return
@@ -42,8 +45,7 @@
 		else
 			return user_unbuckle_mob(buckled_mobs[1], user)
 
-/atom/movable/MouseDrop_T(mob/living/M, mob/living/user)
-	. = ..()
+/atom/movable/mouse_drop_receive(mob/living/M, mob/user, params)
 	return mouse_buckle_handling(M, user)
 
 /**

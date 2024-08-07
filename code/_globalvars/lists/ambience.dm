@@ -111,7 +111,8 @@ GLOBAL_LIST_INIT(spooky_ambience,list(
 ))
 
 GLOBAL_LIST_INIT(space_ambience,list(
-	'modular_nova/master_files/sound/ambience/starlight.ogg', //NOVA EDIT ADDITION
+	// Bluemoon edit - Disable starlight music in space ambience
+	// 'modular_nova/master_files/sound/ambience/starlight.ogg', //NOVA EDIT ADDITION
 	'sound/ambience/ambiatmos.ogg',
 	'sound/ambience/ambispace.ogg',
 	'sound/ambience/ambispace2.ogg',
@@ -204,4 +205,6 @@ GLOBAL_LIST_INIT(ambience_assoc,list(
 	AMBIENCE_RUINS = GLOB.ruins_ambience,
 	AMBIENCE_SPACE = GLOB.space_ambience,
 	AMBIENCE_SPOOKY = GLOB.spooky_ambience,
+	AMBIENCE_MUSHROOM = GLOB.mushroom_ambience, // NOVA EDIT - Mushroom caves!
+	AMBIENCE_FOREST = GLOB.forest_ambience, // NOVA EDIT - Forest ambience
 ))

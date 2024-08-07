@@ -131,6 +131,7 @@ GLOBAL_DATUM_INIT(crewmonitor, /datum/crewmonitor, new)
 		JOB_STATION_ENGINEER = 41,
 		JOB_ATMOSPHERIC_TECHNICIAN = 42,
 		JOB_ENGINEERING_GUARD = 43, // NOVA EDIT ADDITION
+		JOB_TELECOMMS_SPECIALIST = 44, // NOVA EDIT ADDITION
 		// 50-59: Cargo
 		JOB_QUARTERMASTER = 50,
 		JOB_SHAFT_MINER = 51,
@@ -149,8 +150,8 @@ GLOBAL_DATUM_INIT(crewmonitor, /datum/crewmonitor, new)
 		JOB_MIME = 68,
 		JOB_JANITOR = 69,
 		JOB_LAWYER = 70,
-		JOB_BARBER = 72, // NOVA EDIT ADDITION
-		JOB_BOUNCER = 73, // NOVA EDIT ADDITION
+		JOB_BARBER = 71, // NOVA EDIT ADDITION
+		JOB_BOUNCER = 72, // NOVA EDIT ADDITION
 		// 200-239: Centcom
 		JOB_CENTCOM_ADMIRAL = 200,
 		JOB_CENTCOM = 201,
@@ -173,6 +174,7 @@ GLOBAL_DATUM_INIT(crewmonitor, /datum/crewmonitor, new)
 
 		// ANYTHING ELSE = UNKNOWN_JOB_ID, Unknowns/custom jobs will appear after civilians, and before assistants
 		JOB_ASSISTANT = 999,
+		JOB_PRISONER = 401, //NOVA EDIT ADDITION
 	)
 
 /datum/crewmonitor/ui_interact(mob/user, datum/tgui/ui)

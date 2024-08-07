@@ -28,7 +28,16 @@
 		new_spawn.updatename(new_spawn.client)
 		new_spawn.transfer_brain_pref(new_spawn.client)
 		new_spawn.transfer_emote_pref(new_spawn.client)
+		// Bluemoon edit - Cyborg gender
+		new_spawn.set_gender(new_spawn.client)
+		new_spawn.set_sex(new_spawn.client)
+		// Bluemoon edit - Remove transform action from ghost cafe cyborgs
+		var/datum/action/action_to_remove = locate(/datum/action/cyborg_transform) in new_spawn.actions
+		if(action_to_remove)
+			qdel(action_to_remove)
+		/*
 		new_spawn.gender = NEUTER
+		*/
 		var/area/A = get_area(src)
 		//new_spawn.AddElement(/datum/element/ghost_role_eligibility, free_ghosting = TRUE) SKYRAT PORT -- Needs to be completely rewritten
 		new_spawn.AddElement(/datum/element/dusts_on_catatonia)

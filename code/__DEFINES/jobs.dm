@@ -67,6 +67,7 @@
 //Engineering
 #define JOB_STATION_ENGINEER "Station Engineer"
 #define JOB_ATMOSPHERIC_TECHNICIAN "Atmospheric Technician"
+#define JOB_TELECOMMS_SPECIALIST "Telecomms Specialist" // NOVA EDIT ADDITION
 #define JOB_ENGINEERING_GUARD "Engineering Guard" // NOVA EDIT ADDITION
 //Medical
 #define JOB_CORONER "Coroner"
@@ -143,6 +144,8 @@
 
 // Bluemoon edit - Add Shipstation map
 #define JOB_SHUTTLE_PILOT "Shuttle Pilot"
+#define JOB_HARBORMASTER "Marina Harbormaster"
+#define JOB_DOCKWORKER "Marina Employee"
 
 #define JOB_GROUP_ENGINEERS list( \
 	JOB_STATION_ENGINEER, \
@@ -200,6 +203,7 @@
 #define JOB_DISPLAY_ORDER_ENGINEER_GUARD 48 //NOVA EDIT ADDITION
 #define JOB_DISPLAY_ORDER_CUSTOMS_AGENT 49 //NOVA EDIT ADDITION
 #define JOB_DISPLAY_ORDER_EXP_CORPS 50 //NOVA EDIT ADDITON
+#define JOB_DISPLAY_ORDER_TELECOMMS_SPECIALIST 51 //NOVA EDIT ADDITION
 
 #define DEPARTMENT_UNASSIGNED "No Department"
 

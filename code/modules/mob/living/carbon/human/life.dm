@@ -141,6 +141,9 @@
 	return dna.species.bodytemp_cold_damage_limit
 
 /mob/living/carbon/human/proc/get_thermal_protection()
+	// Bluemoon edit - Add thermal protection to TRAIT_RESISTHEAT
+	if(HAS_TRAIT(src, TRAIT_RESISTHEAT))
+		return INFINITY
 	var/thermal_protection = 0 //Simple check to estimate how protected we are against multiple temperatures
 	if(wear_suit)
 		if((wear_suit.heat_protection & CHEST) && (wear_suit.max_heat_protection_temperature >= FIRE_SUIT_MAX_TEMP_PROTECT))
@@ -207,7 +210,7 @@
 		if(thermal_protection_flags & HAND_RIGHT)
 			thermal_protection += THERMAL_PROTECTION_HAND_RIGHT
 
-	return min(1, thermal_protection)
+	return min(1, round(thermal_protection, 0.001))
 
 //See proc/get_heat_protection_flags(temperature) for the description of this proc.
 /mob/living/carbon/human/proc/get_cold_protection_flags(temperature)
@@ -268,7 +271,7 @@
 		if(thermal_protection_flags & HAND_RIGHT)
 			thermal_protection += THERMAL_PROTECTION_HAND_RIGHT
 
-	return min(1, thermal_protection)
+	return min(1, round(thermal_protection, 0.001))
 
 /mob/living/carbon/human/has_smoke_protection()
 	if(isclothing(wear_mask))

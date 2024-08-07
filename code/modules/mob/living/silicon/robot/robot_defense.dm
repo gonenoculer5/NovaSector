@@ -22,7 +22,7 @@ GLOBAL_LIST_INIT(blacklisted_borg_hats, typecacheof(list( //Hats that don't real
 			to_chat(user, span_warning("The wires seem fine, there's no need to fix them."))
 		return
 
-	if(istype(W, /obj/item/stock_parts/cell) && opened) // trying to put a cell inside
+	if(istype(W, /obj/item/stock_parts/power_store/cell) && opened) // trying to put a cell inside
 		if(wiresexposed)
 			to_chat(user, span_warning("Close the cover first!"))
 		else if(cell)
@@ -44,14 +44,21 @@ GLOBAL_LIST_INIT(blacklisted_borg_hats, typecacheof(list( //Hats that don't real
 		return
 
 	if((W.slot_flags & ITEM_SLOT_HEAD) && hat_offset != INFINITY && !user.combat_mode && !is_type_in_typecache(W, GLOB.blacklisted_borg_hats))
+		// Bluemoon edit - Allow cyborgs to put hats on
+		/*
 		if(user == src)
 			to_chat(user,  span_notice("You can't seem to manage to place [W] on your head by yourself!") )
 			return
+		*/
 		if(hat && HAS_TRAIT(hat, TRAIT_NODROP))
 			to_chat(user, span_warning("You can't seem to remove [src]'s existing headwear!"))
 			return
-		to_chat(user, span_notice("You begin to place [W] on [src]'s head..."))
-		to_chat(src, span_notice("[user] is placing [W] on your head..."))
+		// Bluemoon edit - Allow cyborgs to put hats on
+		if(user == src)
+			to_chat(user, span_notice("You begin to place [W] on your head..."))
+		else
+			to_chat(user, span_notice("You begin to place [W] on [src]'s head..."))
+			to_chat(src, span_notice("[user] is placing [W] on your head..."))
 		if(do_after(user, 3 SECONDS, target = src))
 			if (user.temporarilyRemoveItemFromInventory(W, TRUE))
 				place_on_head(W)
@@ -242,7 +249,7 @@ GLOBAL_LIST_INIT(blacklisted_borg_hats, typecacheof(list( //Hats that don't real
 	if (!getBruteLoss())
 		to_chat(user, span_warning("[src] is already in good condition!"))
 		return
-	if (!tool.tool_start_check(user, amount=1)) //The welder has 1u of fuel consumed by it's afterattack, so we don't need to worry about taking any away.
+	if (!tool.tool_start_check(user, amount=1)) //The welder has 1u of fuel consumed by its afterattack, so we don't need to worry about taking any away.
 		return
 	if(src == user)
 		to_chat(user, span_notice("You start fixing yourself..."))

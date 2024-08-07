@@ -50,7 +50,9 @@
 				genitals.Add(CLIMAX_BOTH)
 		else if(has_penis())
 			genitals.Add(CLIMAX_PENIS)
-		climax_choice = tgui_alert(src, "You are climaxing, choose which genitalia to climax with.", "Genitalia Preference!", genitals)
+		// Bluemoon edit - Hide climax dialog if only one genital
+		if(length(genitals) > 1)
+			climax_choice = tgui_alert(src, "You are climaxing, choose which genitalia to climax with.", "Genitalia Preference!", genitals)
 
 	switch(gender)
 		if(MALE)

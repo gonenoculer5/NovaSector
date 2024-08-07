@@ -11,7 +11,7 @@
 		post_tipped_callback = CALLBACK(src, PROC_REF(after_tip_over)), \
 		post_untipped_callback = CALLBACK(src, PROC_REF(after_righted)), \
 		roleplay_friendly = TRUE, \
-		roleplay_emotes = list(/datum/emote/living/human/buzz, /datum/emote/living/human/buzz2, /datum/emote/living/beep, /datum/emote/living/human/beep2), /* NOVA EDIT CHANGE - ORIGINAL: roleplay_emotes = list(/datum/emote/silicon/buzz, /datum/emote/silicon/buzz2, /datum/emote/living/beep), */ \
+		roleplay_emotes = list(/datum/emote/silicon/buzz, /datum/emote/silicon/buzz2, /datum/emote/silicon/beep, /datum/emote/silicon/beep2), /* NOVA EDIT CHANGE - ORIGINAL: roleplay_emotes = list(/datum/emote/silicon/buzz, /datum/emote/silicon/buzz2, /datum/emote/silicon/beep) */ \
 		roleplay_callback = CALLBACK(src, PROC_REF(untip_roleplay)))
 
 	set_wires(new /datum/wires/robot(src))
@@ -77,6 +77,9 @@
 			mmi.brainmob.container = mmi
 			mmi.update_appearance()
 		setup_default_name()
+		// Bluemoon edit - Cyborg gender
+		if(mmi.brainmob)
+			gender = mmi.brainmob.gender
 
 	aicamera = new/obj/item/camera/siliconcam/robot_camera(src)
 	toner = tonermax
@@ -125,9 +128,9 @@
 		GLOB.available_ai_shells -= src
 
 	QDEL_NULL(modularInterface)
-	QDEL_NULL(wires)
 	QDEL_NULL(model)
 	QDEL_NULL(eye_lights)
+	QDEL_NULL(hat_overlay)
 	QDEL_NULL(inv1)
 	QDEL_NULL(inv2)
 	QDEL_NULL(inv3)
@@ -149,8 +152,11 @@
 	return cell
 
 /mob/living/silicon/robot/proc/pick_model()
+	// Bluemoon edit - Allow cyborgs to switch models
+	/*
 	if(model.type != /obj/item/robot_model)
 		return
+	*/
 
 	if(wires.is_cut(WIRE_RESET_MODEL))
 		to_chat(src,span_userdanger("ERROR: Model installer reply timeout. Please check internal connections."))
@@ -163,6 +169,16 @@
 	// NOVA EDIT START - Making the cyborg model list static to reduce how many times it's generated.
 	if(!length(GLOB.cyborg_model_list))
 		GLOB.cyborg_model_list = list(
+			// Bluemoon edit - Extra cyborg models
+			"Standard" = /obj/item/robot_model/standard,
+			"Syndicate" = /obj/item/robot_model/syndicatejack,
+			"Syndicate Assault" = /obj/item/robot_model/syndicate,
+			"Syndicate Medical" = /obj/item/robot_model/syndicate_medical,
+			"Syndicate Saboteur" = /obj/item/robot_model/saboteur,
+			"Spider Clan Assault" = /obj/item/robot_model/ninja,
+			"Spider Clan Medical" = /obj/item/robot_model/ninja/ninja_medical,
+			"Spider Clan Saboteur" = /obj/item/robot_model/ninja_saboteur,
+			"Clown" = /obj/item/robot_model/clown,
 			"Engineering" = /obj/item/robot_model/engineering,
 			"Medical" = /obj/item/robot_model/medical,
 			"Cargo" = /obj/item/robot_model/cargo,
@@ -184,11 +200,17 @@
 		for(var/option in GLOB.cyborg_model_list)
 			var/obj/item/robot_model/model = GLOB.cyborg_model_list[option]
 			var/model_icon = initial(model.cyborg_base_icon)
+			// Bluemoon edit - Fix cyborg model radial menu icons
+			var/model_icon_file = model.cyborg_icon_override ? model.cyborg_icon_override : 'modular_nova/master_files/icons/mob/robots.dmi'
+			GLOB.cyborg_base_models_icon_list[option] = image(icon = model_icon_file, icon_state = model_icon)
+			/*
 			GLOB.cyborg_base_models_icon_list[option] = image(icon = 'modular_nova/master_files/icons/mob/robots.dmi', icon_state = model_icon) // NOVA EDIT - CARGO BORGS - ORIGINAL: model_icons[option] = image(icon = 'icons/mob/robots.dmi', icon_state = model_icon)
+			*/
 	// NOVA EDIT END
 
 	var/input_model = show_radial_menu(src, src, GLOB.cyborg_base_models_icon_list, radius = 42)
-	if(!input_model || model.type != /obj/item/robot_model)
+	// Bluemoon edit - Allow cyborgs to switch models
+	if(!input_model /*|| model.type != /obj/item/robot_model*/)
 		return
 
 	model.transform_to(GLOB.cyborg_model_list[input_model])
@@ -320,11 +342,33 @@
 			add_overlay("ov-opencover +c")
 		else
 			add_overlay("ov-opencover -c")
+
 	if(hat)
-		var/mutable_appearance/head_overlay = hat.build_worn_icon(default_layer = 20, default_icon_file = 'icons/mob/clothing/head/default.dmi')
-		head_overlay.pixel_z += hat_offset
-		add_overlay(head_overlay)
+		hat_overlay = hat.build_worn_icon(default_layer = 20, default_icon_file = 'icons/mob/clothing/head/default.dmi')
+		update_worn_icons()
+	else if(hat_overlay)
+		QDEL_NULL(hat_overlay)
+
 	update_appearance(UPDATE_OVERLAYS)
+
+/mob/living/silicon/robot/proc/update_worn_icons()
+	if(!hat_overlay)
+		return
+	cut_overlay(hat_overlay)
+
+	if(islist(hat_offset))
+		var/list/offset = hat_offset[ISDIAGONALDIR(dir) ? dir2text(dir & (WEST|EAST)) : dir2text(dir)]
+		if(offset)
+			hat_overlay.pixel_w = offset[1]
+			hat_overlay.pixel_z = offset[2]
+
+	add_overlay(hat_overlay)
+
+/mob/living/silicon/robot/setDir(newdir)
+	var/old_dir = dir
+	. = ..()
+	if(. != old_dir)
+		update_worn_icons()
 
 /mob/living/silicon/robot/on_changed_z_level(turf/old_turf, turf/new_turf, same_z_layer, notify_contents)
 	if(same_z_layer || QDELING(src))
@@ -359,7 +403,7 @@
 	set_lockcharge(FALSE)
 	scrambledcodes = TRUE
 	log_silicon("CYBORG: [key_name(src)] has been unlinked from an AI.")
-	//Disconnect it's camera so it's not so easily tracked.
+	//Disconnect its camera so it's not so easily tracked.
 	if(!QDELETED(builtInCamera))
 		QDEL_NULL(builtInCamera)
 		// I'm trying to get the Cyborg to not be listed in the camera list
@@ -561,7 +605,7 @@
 		if(AI_NOTIFICATION_CYBORG_DISCONNECTED) //Tampering with the wires
 			to_chat(connected_ai, "<br><br>[span_notice("NOTICE - Remote telemetry lost with [name].")]<br>")
 
-/mob/living/silicon/robot/can_perform_action(atom/movable/target, action_bitflags)
+/mob/living/silicon/robot/can_perform_action(atom/target, action_bitflags)
 	if(lockcharge || low_power_mode)
 		to_chat(src, span_warning("You can't do that right now!"))
 		return FALSE
@@ -856,6 +900,10 @@
 /mob/living/silicon/robot/proc/deploy_init(mob/living/silicon/ai/AI)
 	real_name = "[AI.real_name] [designation] Shell-[ident]"
 	name = real_name
+	// Bluemoon edit - Cyborg gender
+	if(AI.client)
+		set_gender(AI.client)
+		set_sex(AI.client)
 	if(!QDELETED(builtInCamera))
 		builtInCamera.c_tag = real_name //update the camera name too
 	mainframe = AI
@@ -969,7 +1017,9 @@
 	SIGNAL_HANDLER
 
 	if(model)
-		model.respawn_consumable(src, cell.use(cell.charge * 0.005))
+		if(cell.charge)
+			if(model.respawn_consumable(src, cell.charge * 0.005))
+				cell.use(cell.charge * 0.005)
 		if(sendmats)
 			model.restock_consumable()
 	if(repairs)

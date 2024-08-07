@@ -1,12 +1,4 @@
-/*
-*	LOADOUT ITEM DATUMS FOR THE HEAD SLOT
-*/
-
-/// Head Slot Items (Moves overrided items to backpack)
-GLOBAL_LIST_INIT(loadout_helmets, generate_loadout_items(/datum/loadout_item/head))
-
-/datum/loadout_item/head
-	category = LOADOUT_ITEM_HEAD
+// LOADOUT ITEM DATUMS FOR THE HEAD SLOT
 
 /datum/loadout_item/head/pre_equip_item(datum/outfit/outfit, datum/outfit/outfit_important_for_life, mob/living/carbon/human/equipper, visuals_only = FALSE)
 	if(initial(outfit_important_for_life.head))
@@ -136,6 +128,11 @@ GLOBAL_LIST_INIT(loadout_helmets, generate_loadout_items(/datum/loadout_item/hea
 /datum/loadout_item/head/frontiercap/medic
 	name = "Frontier Medical Cap"
 	item_path = /obj/item/clothing/head/soft/frontier_colonist/medic
+
+/datum/loadout_item/head/tarkon
+	name = "Tarkon Welder's Cap"
+	item_path = /obj/item/clothing/head/utility/welding/hat
+	blacklisted_roles = list(JOB_CAPTAIN, JOB_HEAD_OF_PERSONNEL, JOB_BLUESHIELD, JOB_HEAD_OF_SECURITY, JOB_RESEARCH_DIRECTOR, JOB_QUARTERMASTER, JOB_CHIEF_MEDICAL_OFFICER, JOB_CHIEF_ENGINEER, JOB_SECURITY_OFFICER, JOB_DETECTIVE, JOB_WARDEN, JOB_BLUESHIELD, JOB_CORRECTIONS_OFFICER)
 
 /*
 *	FEDORAS
@@ -396,12 +393,12 @@ GLOBAL_LIST_INIT(loadout_helmets, generate_loadout_items(/datum/loadout_item/hea
 /datum/loadout_item/head/maidhead
 	name = "Simple Maid Headband"
 	item_path = /obj/item/clothing/head/costume/nova/maid
-	additional_tooltip_contents = list("Small headband that only fits on top the head.")
+	additional_displayed_text = list("Top of Head")
 
 /datum/loadout_item/head/maidhead2
 	name = "Frilly Maid Headband"
 	item_path = /obj/item/clothing/head/costume/maidheadband
-	additional_tooltip_contents = list("Larger headband from the maid rework. Fits around head and ears.")
+	additional_displayed_text = list("Behind Ears")
 
 /datum/loadout_item/head/wig
 	name = "Wig"
@@ -677,6 +674,7 @@ GLOBAL_LIST_INIT(loadout_helmets, generate_loadout_items(/datum/loadout_item/hea
 */
 
 /datum/loadout_item/head/donator
+	abstract_type = /datum/loadout_item/head/donator
 	donator_only = TRUE
 
 /*
@@ -718,7 +716,7 @@ GLOBAL_LIST_INIT(loadout_helmets, generate_loadout_items(/datum/loadout_item/hea
 /datum/loadout_item/head/donator/rainbow_bunch
 	name = "Rainbow Bunch"
 	item_path = /obj/item/food/grown/rainbow_flower
-	additional_tooltip_contents = list(TOOLTIP_RANDOM_COLOR)
+	additional_displayed_text = list(TOOLTIP_RANDOM_COLOR)
 
 // Legacy unpaintable cowboy hat because it fits a character better
 /datum/loadout_item/head/cowboyhat_legacy

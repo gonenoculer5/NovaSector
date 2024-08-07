@@ -12,6 +12,7 @@
 
 /datum/preference/numeric/body_size/apply_to_human(mob/living/carbon/human/target, value)
 	target.adjust_height(value, 1) //BLUEMOON EDIT: Refactors this fucking nonsense to use my new helper proc; because manipulating DNA features is bad. 1 = RESIZE_SET in resize.dm
+	target.natural_size = value
 
 /datum/preference/numeric/body_size/create_default_value()
 	return BODY_SIZE_NORMAL

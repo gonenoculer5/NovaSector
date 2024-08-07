@@ -1,7 +1,3 @@
-/obj/effect/landmark/start/shuttle_pilot
-	name = "Shuttle Pilot"
-	icon_state = "Security Officer"
-
 /datum/job/shuttle_pilot
 	title = JOB_SHUTTLE_PILOT
 	description = "Fly the ship. The real captain stays at the dock and keeps the nuke diskie."
@@ -50,7 +46,7 @@
  * Think of them as what the warden is to the HoS. Kind of.
  */
 /datum/outfit/job/shuttle_pilot
-	name = "Shuttle Pilot"
+	name = JOB_SHUTTLE_PILOT
 	jobtype = /datum/job/shuttle_pilot
 
 	id = /obj/item/card/id/advanced/centcom
@@ -58,10 +54,10 @@
 	belt = /obj/item/modular_computer/pda/heads/captain
 	glasses = /obj/item/clothing/glasses/sunglasses
 	ears = /obj/item/radio/headset/heads/captain/alt
-	gloves = /obj/item/clothing/gloves/captain // TODO: Find old pilot subtype
-	uniform =  /obj/item/clothing/under/rank/captain // TODO: Find old pilot subtype
+	gloves = /obj/item/clothing/gloves/captain/pilot
+	uniform = /obj/item/clothing/under/rank/captain/nova/pilot
 	shoes = /obj/item/clothing/shoes/sneakers/brown
-	head = /obj/item/clothing/head/hats/caphat // TODO: Find old pilot subtype
+	head = /obj/item/clothing/head/hats/caphat/pilot
 	backpack_contents = list(
 		/obj/item/melee/baton/telescopic = 1,
 	)
@@ -75,11 +71,11 @@
 /datum/outfit/plasmaman/shuttle_pilot
 	name = "Shuttle Pilot Plasmaman"
 
-	head = /obj/item/clothing/head/helmet/space/plasmaman/captain
-	uniform = /obj/item/clothing/under/plasmaman/captain
-	gloves = /obj/item/clothing/gloves/captain // TODO: Find old pilot subtype
+	head = /obj/item/clothing/head/helmet/space/plasmaman/captain // TODO: pilot subtype
+	uniform = /obj/item/clothing/under/plasmaman/captain // TODO: pilot subtype
+	gloves = /obj/item/clothing/gloves/captain/pilot
 
 /datum/id_trim/job/captain/shuttle_pilot
-	assignment = "Shuttle Pilot"
+	assignment = JOB_SHUTTLE_PILOT
 	intern_alt_name = "Shuttle-Pilot-in-Training" // there's gotta be a funnier name
 	job = /datum/job/shuttle_pilot

@@ -1,54 +1,55 @@
+// Bluemoon ed[p_They()] - Cyborg gender
 /mob/living/silicon/robot/examine(mob/user)
 	. = list("<span class='info'>This is [icon2html(src, user)] <EM>[src]</EM>!")
 	if(desc)
 		. += "[desc]"
 
 	var/model_name = model ? "\improper [model.name]" : "\improper Default"
-	. += "\nIt is currently \a \"[span_bold("[model_name]")]\"-type cyborg.\n"
+	. += "\n[p_They()] [p_are()] currently \a \"[span_bold("[model_name]")]\"-type cyborg.\n"
 
 	var/obj/act_module = get_active_held_item()
 	if(act_module)
-		. += "It is holding [icon2html(act_module, user)] \a [act_module]."
+		. += "[p_They()] [p_are()] holding [icon2html(act_module, user)] \a [act_module]."
 	. += get_status_effect_examinations()
 	if (getBruteLoss())
 		if (getBruteLoss() < maxHealth*0.5)
-			. += span_warning("It looks slightly dented.")
+			. += span_warning("[p_They()] look[p_s()] slightly dented.")
 		else
-			. += span_warning("<B>It looks severely dented!</B>")
+			. += span_warning("<B>[p_They()] look[p_s()] severely dented!</B>")
 	if (getFireLoss() || getToxLoss())
 		var/overall_fireloss = getFireLoss() + getToxLoss()
 		if (overall_fireloss < maxHealth * 0.5)
-			. += span_warning("It looks slightly charred.")
+			. += span_warning("[p_They()] look[p_s()] slightly charred.")
 		else
-			. += span_warning("<B>It looks severely burnt and heat-warped!</B>")
+			. += span_warning("<B>[p_They()] look[p_s()] severely burnt and heat-warped!</B>")
 	if (health < -maxHealth*0.5)
-		. += span_warning("It looks barely operational.")
+		. += span_warning("[p_They()] look[p_s()] barely operational.")
 	if (fire_stacks < 0)
-		. += span_warning("It's covered in water.")
+		. += span_warning("[p_They()] [p_are()] covered in water.")
 	else if (fire_stacks > 0)
-		. += span_warning("It's coated in something flammable.")
+		. += span_warning("[p_They()] [p_are()] coated in something flammable.")
 
 	if(opened)
-		. += span_warning("Its cover is open and the power cell is [cell ? "installed" : "missing"].")
+		. += span_warning("[p_Their()] cover is open and the power cell is [cell ? "installed" : "missing"].")
 	else
-		. += "Its cover is closed[locked ? "" : ", and looks unlocked"]."
+		. += "[p_Their()] cover is closed[locked ? "" : ", and look[p_s()] unlocked"]."
 
 	if(cell && cell.charge <= 0)
-		. += span_warning("Its battery indicator is blinking red!")
+		. += span_warning("[p_Their()] battery indicator is blinking red!")
 
 	switch(stat)
 		if(CONSCIOUS)
 			if(shell)
-				. += "It appears to be an [deployed ? "active" : "empty"] AI shell."
+				. += "[p_They()] appear[p_s()] to be an [deployed ? "active" : "empty"] AI shell."
 			else if(!client)
-				. += "It appears to be in stand-by mode." //afk
+				. += "[p_They()] appear[p_s()] to be in stand-by mode." //afk
 		if(SOFT_CRIT, UNCONSCIOUS, HARD_CRIT)
-			. += span_warning("It doesn't seem to be responding.")
+			. += span_warning("[p_They()] doesn't seem to be responding.")
 		if(DEAD)
-			. += span_deadsay("It looks like its system is corrupted and requires a reset.")
-	//NOVA EDIT ADDITION BEGIN - CUSTOMIZATION
+			. += span_deadsay("[p_They()] look[p_s()] like [p_their()] system is corrupted and requires a reset.")
+	//NOVA ED[p_They()] ADDITION BEGIN - CUSTOMIZATION
 	. += get_silicon_flavortext()
-	//NOVA EDIT ADDITION END
+	//NOVA ED[p_They()] ADDITION END
 	. += "</span>"
 
 	. += ..()

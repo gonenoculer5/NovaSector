@@ -1,5 +1,5 @@
 /datum/loadout_item/toys/miafoxplush
-	name = "Mia’s fox plushie"
+	name = "Mia's fox plushie"
 	item_path = /obj/item/toy/plush/nova/fox/mia
 	ckeywhitelist = list("fuzlet")
 
@@ -11,16 +11,42 @@
 /datum/loadout_item/pocket_items/drawingtablet
 	name = "Drawing Tablet"
 	item_path = /obj/item/canvas/drawingtablet
+	donator_only = TRUE
+
+/datum/loadout_item/under/jumpsuit/paddedunder
+	name = "Feathered Serenity Suit"
+	item_path = /obj/item/clothing/under/padded
 	ckeywhitelist = list("thedragmeme")
 
-/datum/loadout_item/suit/furcoat
-	name = "Leather coat with fur"
-	item_path = /obj/item/clothing/suit/furcoat
+/datum/loadout_item/under/jumpsuit/paddedunder/alt
+	name = "Feathered Serenity Suit"
+	item_path = /obj/item/clothing/under/padded/alt
+	ckeywhitelist = list("snailomi")
+
+/datum/loadout_item/neck/padded
+	name = "Feathered Serenity Cloak"
+	item_path = /obj/item/clothing/neck/padded
 	ckeywhitelist = list("thedragmeme")
 
-/datum/loadout_item/under/jumpsuit/black_turtleneck
-	name = "Black turtleneck"
-	item_path = /obj/item/clothing/under/syndicate/tacticool/black
+/datum/loadout_item/neck/padded/alt
+	name = "Feathered Serenity Cloak"
+	item_path = /obj/item/clothing/neck/padded/alt
+	ckeywhitelist = list("snailomi")
+
+/datum/loadout_item/neck/padded/alt
+	name = "Feathered Serenity Cloak"
+	item_path = /obj/item/clothing/neck/padded/alt
+	ckeywhitelist = list("thedragmeme")
+
+
+/datum/loadout_item/gloves/padded
+	name = "Serenity Gloves"
+	item_path = /obj/item/clothing/gloves/padded
+	ckeywhitelist = list("thedragmeme", "snailomi")
+
+/datum/loadout_item/shoes/padded
+	name = "Serenity Boots"
+	item_path = /obj/item/clothing/shoes/jackboots/padded
 	ckeywhitelist = list("thedragmeme")
 
 /datum/loadout_item/under/jumpsuit/long_skirtleneck
@@ -116,6 +142,9 @@
 	item_path = /obj/item/clothing/mask/gas/psycho_malice
 	ckeywhitelist = list("snakebittenn", "chillylobster", "candlejax", "theooz", "alvcyktor")
 
+/datum/loadout_item/suit/jacket
+	abstract_type = /datum/loadout_item/suit/jacket
+
 /datum/loadout_item/suit/jacket/cherno
 	name = "Blue-Silvered Coat"
 	item_path = /obj/item/clothing/suit/jacket/cherno
@@ -174,7 +203,23 @@
 /datum/loadout_item/suit/caligram_parka_vest_tan
 	name = "Caligram Armored Tan Parka"
 	item_path = /obj/item/clothing/suit/armor/vest/caligram_parka_vest
-	restricted_roles = list(JOB_BLUESHIELD, JOB_HEAD_OF_SECURITY, JOB_SECURITY_OFFICER, JOB_WARDEN, JOB_DETECTIVE, JOB_CORRECTIONS_OFFICER)
+	restricted_roles = list(
+		JOB_BLUESHIELD,
+		JOB_HEAD_OF_SECURITY,
+		JOB_SECURITY_OFFICER,
+		JOB_WARDEN,
+		JOB_DETECTIVE,
+		JOB_CORRECTIONS_OFFICER,
+		JOB_VETERAN_ADVISOR,
+		JOB_QUARTERMASTER,
+		JOB_CAPTAIN,
+		JOB_BRIDGE_ASSISTANT,
+		JOB_ORDERLY,
+		JOB_ENGINEERING_GUARD,
+		JOB_CUSTOMS_AGENT,
+		JOB_SCIENCE_GUARD,
+		JOB_BOUNCER,
+	)
 
 /datum/loadout_item/suit/brasspriest
 	name = "Brasspriest Coat"
@@ -280,7 +325,7 @@
 
 /datum/loadout_item/pocket_items/brightcosmos
 	name = "Bright Cosmos cigar"
-	item_path = /obj/item/clothing/mask/holocigarette/cigar
+	item_path = /obj/item/holocigarette/cigar
 	ckeywhitelist = list("lyricalpaws")
 
 /datum/loadout_item/under/jumpsuit/lannese
@@ -578,7 +623,7 @@
 /datum/loadout_item/shoes/dragheels
 	name = "Fancy Heels (dragmeme)"
 	item_path = /obj/item/clothing/shoes/fancy_heels/drag
-	ckeywhitelist = list("thedragmeme")
+	ckeywhitelist = list("thedragmeme", "snailomi")
 
 /datum/loadout_item/under/jumpsuit/bimpcap
 	name = "Formal Matte Black Captain Uniform"
@@ -633,20 +678,6 @@
 	item_path = /obj/item/clothing/glasses/gold_aviators
 	ckeywhitelist = list("nikohyena")
 
-/datum/loadout_item/under/jumpsuit/caged_dress
-	name = "Caged Purple Dress"
-	item_path = /obj/item/clothing/under/caged_dress
-	ckeywhitelist = list("thedragmeme")
-
-/datum/loadout_item/suit/shortcoat
-	name = "Short Purple Coat"
-	item_path = /obj/item/clothing/suit/short_coat
-	ckeywhitelist = list("thedragmeme")
-
-/datum/loadout_item/neck/flowercollar
-	name = "Flower Collar"
-	item_path = /obj/item/clothing/neck/flower_collar
-	ckeywhitelist = list("thedragmeme")
 
 /datum/loadout_item/under/jumpsuit/goldenkimono
 	name = "Short-Sleeved Kimono"
@@ -685,7 +716,7 @@
 
 /datum/loadout_item/pocket_items/masvedishcigar
 	name = "Holocigar"
-	item_path = /obj/item/clothing/mask/holocigarette/masvedishcigar
+	item_path = /obj/item/holocigarette/masvedishcigar
 	// Asked it to be public, and as such has no whitelist.
 
 /datum/loadout_item/suit/lt3_armor
@@ -809,3 +840,24 @@
 	item_path = /obj/item/clothing/suit/hooded/seva/melon
 	ckeywhitelist = list("deadmonwonderland")
 	restricted_roles = list(JOB_SHAFT_MINER)
+
+
+/datum/loadout_item/suit/desminus
+	name = "Jómsvíking Coat"
+	item_path = /obj/item/clothing/suit/toggle/desminus
+	ckeywhitelist = list("desminus", "junglerat", "deadmonwonderland")
+
+/datum/loadout_item/suit/desminus2
+	name = "Elderwood Garment"
+	item_path = /obj/item/clothing/suit/toggle/desminus2
+	ckeywhitelist = list("desminus", "junglerat", "deadmonwonderland")
+
+/datum/loadout_item/pocket_items/akarimod
+	name = "Akari's MOD Refitter"
+	item_path = /obj/item/mod/skin_applier/akari
+	ckeywhitelist = list("samman166", "cainedclxvi")
+
+/datum/loadout_item/pocket_items/mrsanderp_cookbook
+	name = "Riva Family Cookbook"
+	item_path = /obj/item/book/granter/crafting_recipe/mrsanderp_donator_cookbook
+	ckeywhitelist = list("mrsanderp")

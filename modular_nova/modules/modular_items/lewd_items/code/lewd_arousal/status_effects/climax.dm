@@ -27,14 +27,14 @@
 
 	// Bluemoon edit - Forced orgasms
 	if(forced)
-		owner?.reagents.add_reagent(/datum/reagent/drug/aphrodisiac/dopamine, 0.3)
+		owner.reagents?.add_reagent(/datum/reagent/drug/aphrodisiac/dopamine, 0.3)
 		owner.adjustStaminaLoss(STAMINA_REMOVAL_AMOUNT_EXTERNAL * 1.2)
 		affected_mob.adjust_arousal(AROUSAL_REMOVAL_AMOUNT * 0.5)
 		affected_mob.adjust_pleasure(AROUSAL_REMOVAL_AMOUNT * 0.5)
 		return
 
 	// Bluemoon edit - Cyborg interactions
-	owner?.reagents.add_reagent(/datum/reagent/drug/aphrodisiac/dopamine, 0.5)
+	owner.reagents?.add_reagent(/datum/reagent/drug/aphrodisiac/dopamine, 0.5)
 	owner.adjustStaminaLoss(STAMINA_REMOVAL_AMOUNT_EXTERNAL)
 	affected_mob.adjust_arousal(AROUSAL_REMOVAL_AMOUNT)
 	affected_mob.adjust_pleasure(AROUSAL_REMOVAL_AMOUNT)
@@ -53,7 +53,8 @@
 
 	var/mob/living/carbon/human/affected_mob = owner
 
-	owner.reagents.add_reagent(/datum/reagent/drug/aphrodisiac/dopamine, 0.3)
+	// Bluemoon edit - Cyborg interactions
+	owner.reagents?.add_reagent(/datum/reagent/drug/aphrodisiac/dopamine, 0.3)
 	owner.adjustStaminaLoss(STAMINA_REMOVAL_AMOUNT_SELF)
 	affected_mob.adjust_arousal(AROUSAL_REMOVAL_AMOUNT)
 	affected_mob.adjust_pleasure(AROUSAL_REMOVAL_AMOUNT)

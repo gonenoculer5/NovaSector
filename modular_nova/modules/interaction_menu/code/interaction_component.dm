@@ -44,12 +44,13 @@
 
 /datum/component/interactable/proc/open_interaction_menu(datum/source, mob/user)
 	SIGNAL_HANDLER
-	
+
 	// Bluemoon edit - Cyborg interactions
 	if(!ishuman(user) && !iscyborg(user))
 		return
 	build_interactions_list()
 	INVOKE_ASYNC(src, PROC_REF(ui_interact), user)
+	return CLICK_ACTION_SUCCESS
 
 // Bluemoon edit - Cyborg interactions
 /datum/component/interactable/proc/can_interact(datum/interaction/interaction, mob/living/target)
@@ -218,13 +219,19 @@
 
 	message_admins("Unhandled interaction '[params["interaction"]]'. Inform coders.")
 
+// Bluemoon edit - Cyborg lewd stripping
 /// Checks if the target has ERP toys enabled, and can be logially reached by the user.
-/datum/component/interactable/proc/can_lewd_strip(mob/living/carbon/human/source, mob/living/carbon/human/target, slot_index)
+/datum/component/interactable/proc/can_lewd_strip(mob/living/source, mob/living/carbon/human/target, slot_index)
 	if(!target.client?.prefs?.read_preference(/datum/preference/toggle/erp/sex_toy))
 		return FALSE
 	if(!(source.loc == target.loc || source.Adjacent(target)))
 		return FALSE
-	if(!source.has_arms())
+	// Bluemoon edit - Cyborg lewd stripping
+	var/mob/living/carbon/human/human_source
+	if(ishuman(source))
+		human_source = source
+	// Bluemoon edit - Cyborg lewd stripping
+	if(human_source && !human_source.has_arms())
 		return FALSE
 	if(!slot_index) // This condition is for the UI to decide if the button is shown at all. Slot index should never be null otherwise.
 		return TRUE

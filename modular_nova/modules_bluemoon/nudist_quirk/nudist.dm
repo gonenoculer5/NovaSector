@@ -62,7 +62,7 @@
 
 	uniform_type_cache = uniform.type
 	new /obj/effect/temp_visual/annoyed(human_parent.loc)
-	human_parent.visible_message(src, span_danger("[src] looks very uncomfortable in the [uniform]."),
+	human_parent.visible_message(src, span_danger("[human_parent] looks very uncomfortable in the [uniform]."),
 		span_userdanger("The [uniform] feels very tight and uncomfortable!"))
 	human_parent.add_mood_event("tight_clothes", /datum/mood_event/tight_clothes)
 

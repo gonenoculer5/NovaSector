@@ -3,7 +3,7 @@
 	desc = "Circumstances have rendered this protective suit into someone's second skin. Literally."
 	extended_desc = "Some great aspect of someone's past has permanently bound them to this device, for better or worse."
 
-	default_skin = "civilian"
+	default_skin = "standard"
 	armor_type = /datum/armor/mod_entombed
 	resistance_flags = FIRE_PROOF | ACID_PROOF // It is better to die for the Emperor than live for yourself.
 	max_heat_protection_temperature = FIRE_SUIT_MAX_TEMP_PROTECT
@@ -90,7 +90,7 @@
 
 /obj/item/mod/control/pre_equipped/entombed
 	theme = /datum/mod_theme/entombed
-	applied_cell = /obj/item/stock_parts/cell/high
+	applied_cell = /obj/item/stock_parts/power_store/cell/high
 
 // CUSTOM BEHAVIOR
 
@@ -137,7 +137,7 @@
 /obj/item/mod/control/pre_equipped/entombed/Initialize(mapload, new_theme, new_skin, new_core)
 	. = ..()
 	// Apply the entombed mod piece component to our applicable clothing pieces, so that they *always* return to the unit or self-delete if they can't.
-	for (var/obj/item/part as anything in mod_parts)
+	for (var/obj/item/part as anything in get_parts())
 		part.AddComponent(/datum/component/entombed_mod_piece, host_suit = src)
 
 	ADD_TRAIT(src, TRAIT_NODROP, QUIRK_TRAIT)

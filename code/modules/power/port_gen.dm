@@ -1,4 +1,4 @@
-//Baseline portable generator. Has all the default handling. Not intended to be used on it's own (since it generates unlimited power).
+//Baseline portable generator. Has all the default handling. Not intended to be used on its own (since it generates unlimited power).
 /obj/machinery/power/port_gen
 	name = "portable generator"
 	desc = "A portable generator for emergency backup power."
@@ -114,7 +114,8 @@
 
 /obj/machinery/power/port_gen/pacman/examine(mob/user)
 	. = ..()
-	. += span_notice("The generator has [sheets] units of [sheet_name] fuel left, producing [display_power(power_gen)].")
+	// Bluemoon edit - Correct PACMAN readout
+	. += span_notice("The generator has [sheets] units of [sheet_name] fuel left, producing [display_power(power_gen * power_output, convert = FALSE)].")
 	if(anchored)
 		. += span_notice("It is anchored to the ground.")
 
