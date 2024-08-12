@@ -1,3 +1,7 @@
+/mob/living/silicon/robot
+	maxHealth = 250
+	health = 250
+
 /mob/living/silicon/New()
 	. = ..()
 	// Bluemoon edit - Allow cyborgs to switch models
