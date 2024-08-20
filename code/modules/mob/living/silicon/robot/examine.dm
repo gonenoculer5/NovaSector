@@ -1,4 +1,4 @@
-// Bluemoon ed[p_They()] - Cyborg gender
+// Bluemoon edit - Cyborg gender
 /mob/living/silicon/robot/examine(mob/user)
 	. = list("<span class='info'>This is [icon2html(src, user)] <EM>[src]</EM>!")
 	if(desc)
@@ -47,9 +47,9 @@
 			. += span_warning("[p_They()] doesn't seem to be responding.")
 		if(DEAD)
 			. += span_deadsay("[p_They()] look[p_s()] like [p_their()] system is corrupted and requires a reset.")
-	//NOVA ED[p_They()] ADDITION BEGIN - CUSTOMIZATION
+	//NOVA EDIT ADDITION BEGIN - CUSTOMIZATION
 	. += get_silicon_flavortext()
-	//NOVA ED[p_They()] ADDITION END
+	//NOVA EDIT ADDITION END
 	. += "</span>"
 
 	. += ..()
