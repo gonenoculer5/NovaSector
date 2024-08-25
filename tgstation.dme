@@ -8556,6 +8556,7 @@
 #include "modular_nova\modules\xenos_nova_redo\code\xeno_types\warrior.dm"
 #include "modular_nova\modules_bluemoon\airlocks\code\airlock.dm"
 #include "modular_nova\modules_bluemoon\amorous_quirk\amorous.dm"
+#include "modular_nova\modules_bluemoon\ARV-Hestia\hestia.dm"
 #include "modular_nova\modules_bluemoon\augments_plus\code\implants_arms.dm"
 #include "modular_nova\modules_bluemoon\augments_plus\code\implants_brain.dm"
 #include "modular_nova\modules_bluemoon\augments_plus\code\implants_chest.dm"
@@ -8568,6 +8569,7 @@
 #include "modular_nova\modules_bluemoon\autumnal_cruiser\structures\static_plaques.dm"
 #include "modular_nova\modules_bluemoon\awaymissions\areas.dm"
 #include "modular_nova\modules_bluemoon\awaymissions\forest\forest.dm"
+#include "modular_nova\modules_bluemoon\awaymissions\university\university.dm"
 #include "modular_nova\modules_bluemoon\changeling_quirk\changeling.dm"
 #include "modular_nova\modules_bluemoon\crimson_freighter\shuttles.dm"
 #include "modular_nova\modules_bluemoon\crimson_freighter\machinery\machinery.dm"
@@ -8629,5 +8631,4 @@
 #include "modular_nova\modules_bluemoon\sizeplay\resize_chems.dm"
 #include "modular_nova\modules_bluemoon\sizeplay\resize_prefs.dm"
 #include "modular_nova\modules_bluemoon\weapons\code\executioner.dm"
-#include "modular_nova\modules_bluemoon\awaymissions\university\university.dm"
 // END_INCLUDE
