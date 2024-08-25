@@ -8589,6 +8589,7 @@
 #include "modular_nova\modules_bluemoon\cyborgs\code\mod_ai.dm"
 #include "modular_nova\modules_bluemoon\cyborgs\code\silicon.dm"
 #include "modular_nova\modules_bluemoon\cyborgs\code\transform_action.dm"
+#include "modular_nova\modules_bluemoon\dmapi_commands\custom_commands.dm"
 #include "modular_nova\modules_bluemoon\emotes\code\emotes.dm"
 #include "modular_nova\modules_bluemoon\generators\code\collector.dm"
 #include "modular_nova\modules_bluemoon\generators\code\machine_boards.dm"
