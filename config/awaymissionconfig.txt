@@ -15,4 +15,5 @@
 #_maps/RandomZLevels/research.dmm
 #_maps/RandomZLevels/SnowCabin.dmm
 #_maps/RandomZLevels/museum.dmm
-_maps/RandomZLevels/forest.dmm
+#_maps/RandomZLevels/forest.dmm
+_maps/RandomZLevels/ARV-Hestia.dmm
