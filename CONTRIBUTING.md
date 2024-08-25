@@ -1,8 +1,5 @@
 # How To Contribute
 
-## Contribution Basics
-
-
 - There are no contribution policies except for a single "pottery barn rule". Relax and have fun!
 - Create GitHub [issues](https://github.com/Floofies/NovaSector/issues) when you encounter bugs or have questions.
 - Create GitHub [pull requests](https://github.com/Floofies/NovaSector/pulls) to fix bugs or add new features.
