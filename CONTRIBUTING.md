@@ -13,4 +13,4 @@ You will be held responsible for ensuring that your new contributions are fully 
 
 If you frequently fail to follow the pottery barn rule, such as by the leaving your contributions in a "broken" or "buggy" state, then your future contributions may be delayed.
 
-![tech debt](github/images/comics/106-tech-debt-modified.png)
+![tech debt](.github/images/comics/106-tech-debt-modified.png)
