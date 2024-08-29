@@ -161,9 +161,12 @@
 /// If clothing can also be damaged by piercing wound checks, instead of JUST slashes and burns
 #define TRAIT_CLOTHES_DAMAGED_BY_PIERCING "clothing_damaged_by_piercing"
 
-// Bluemoon edit - Flexible quirk
-#define TRAIT_FLEXIBLE "flexible"
 /// If a slimeperson is currently protecting themselves from water
 #define TRAIT_SLIME_HYDROPHOBIA "slime_hydrophobia"
 
 // END TRAIT DEFINES
+
+// Bluemoon edit - Flexible quirk
+#define TRAIT_FLEXIBLE "flexible"
+// Bluemoon edit - Oversensitive quirk
+#define TRAIT_OVERSENSITIVE "oversensitive"
