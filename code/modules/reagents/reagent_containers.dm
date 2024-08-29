@@ -170,7 +170,10 @@
 	var/mob/thrown_by = thrownby?.resolve()
 	if(isturf(target) && reagents.reagent_list.len && thrown_by)
 		log_combat(thrown_by, target, "splashed (thrown) [english_list(reagents.reagent_list)]")
+		// Bluemoon edit - Silence splash logging
+		/*
 		message_admins("[ADMIN_LOOKUPFLW(thrown_by)] splashed (thrown) [english_list(reagents.reagent_list)] on [target] at [ADMIN_VERBOSEJMP(target)].")
+		*/
 
 	reagents.expose(target, TOUCH)
 	log_combat(user, target, "splashed", reagent_text)
