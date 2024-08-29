@@ -76,7 +76,6 @@
 
 	if(length(area_names))
 		. += span_cyan("This collar will work in the following areas: [english_list(area_names)]")
-	*/
 
 	return .
 */
