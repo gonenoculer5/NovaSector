@@ -1,3 +1,25 @@
+/datum/augment_item/implant/r_arm/hacker
+	name = "Right Hacking Implant"
+	path = /obj/item/organ/internal/cyberimp/arm/hacker
+
+/obj/item/organ/internal/cyberimp/arm/hacker/l
+	zone = BODY_ZONE_L_ARM
+
+/datum/augment_item/implant/r_arm/hacker/l
+	name = "Left Hacking Implant"
+	path = /obj/item/organ/internal/cyberimp/arm/hacker/l
+
+/datum/augment_item/implant/r_arm/botany
+	name = "Right Botany Implant"
+	path = /obj/item/organ/internal/cyberimp/arm/botany
+
+/obj/item/organ/internal/cyberimp/arm/botany/l
+	zone = BODY_ZONE_L_ARM
+
+/datum/augment_item/implant/r_arm/botany
+	name = "Left Botany Implant"
+	path = /obj/item/organ/internal/cyberimp/arm/botany/l
+
 /datum/augment_item/implant/r_arm/toolset_adv
 	name = "Right Advanced Engineering Toolset Implant"
 	path = /obj/item/organ/internal/cyberimp/arm/toolset
@@ -32,6 +54,17 @@
 /datum/augment_item/implant/l_arm/taser
 	name = "Left Arm-Mounted Taser Implant"
 	path = /obj/item/organ/internal/cyberimp/arm/gun/taser/l
+
+/datum/augment_item/implant/r_arm/armblade
+	name = "Right Armblade Implant"
+	path = /obj/item/organ/internal/cyberimp/arm/armblade
+
+/obj/item/organ/internal/cyberimp/arm/armblade/l
+	zone = BODY_ZONE_L_ARM
+
+/datum/augment_item/implant/l_arm/armblade
+	name = "Left Armblade Implant"
+	path = /obj/item/organ/internal/cyberimp/arm/armblade
 
 /datum/augment_item/implant/r_arm/esword
 	name = "Right Arm-Mounted Energy Sword Implant"
@@ -99,3 +132,24 @@
 	name = "Left Strong-Arm Empowered Musculature Implant"
 	path = /obj/item/organ/internal/cyberimp/arm/muscle/l
 
+/datum/augment_item/implant/r_arm/razorwire
+	name = "Right Razorwire Spool Implant"
+	path = /obj/item/organ/internal/cyberimp/arm/razorwire
+
+/obj/item/organ/internal/cyberimp/arm/razorwire/l
+	zone = BODY_ZONE_L_ARM
+
+/datum/augment_item/implant/l_arm/razorwire/l
+	name = "Left Razorwire Spool Implant"
+	path = /obj/item/organ/internal/cyberimp/arm/razorwire/l
+
+/datum/augment_item/implant/r_arm/shell_launcher
+	name = "Right Shell Launcher Implant"
+	path = /obj/item/organ/internal/cyberimp/arm/shell_launcher
+
+/obj/item/organ/internal/cyberimp/arm/shell_launcher/l
+	zone = BODY_ZONE_L_ARM
+
+/datum/augment_item/implant/l_arm/shell_launcher/l
+	name = "Left Shell Launcher Implant"
+	path = /obj/item/organ/internal/cyberimp/arm/shell_launcher/l
