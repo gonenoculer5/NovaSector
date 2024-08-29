@@ -128,8 +128,10 @@ GLOBAL_DATUM(main_supermatter_engine, /obj/machinery/power/supermatter_crystal)
 
 	///Only main engines can have their sliver stolen, can trigger cascades, and can spawn stationwide anomalies.
 	var/is_main_engine = FALSE
+	// Bluemoon edit - Quiet supermatter shard
+	// ORIGINAL: var/datum/looping_sound/supermatter/soundloop
 	///Our soundloop
-	var/datum/looping_sound/supermatter/soundloop
+	var/datum/looping_sound/supermatter/shard/soundloop
 	///Can it be moved?
 	var/moveable = FALSE
 
