@@ -29,6 +29,8 @@ ADMIN_VERB(revokebunkerbypass, R_ADMIN, "Revoke PB Bypass", "Revoke's a ckey's p
 	log_admin("[key_name(usr)] has removed [ckeytobypass] from the current round's bunker bypass list.")
 	message_admins("[key_name_admin(usr)] has removed [ckeytobypass] from the current round's bunker bypass list.")
 
+// Bluemoon edit - Disable bunker bypass DMAPI command
+/*
 /datum/tgs_chat_command/addbunkerbypass
 	name = "whitelist"
 	help_text = "whitelist <ckey>"
@@ -46,6 +48,7 @@ ADMIN_VERB(revokebunkerbypass, R_ADMIN, "Revoke PB Bypass", "Revoke's a ckey's p
 	message_admins("[sender.friendly_name] has added [params] to the current round's bunker bypass list.")
 	return new /datum/tgs_message_content("[params] has been added to the current round's bunker bypass list.")
 
+*/
 /datum/controller/subsystem/persistence/proc/load_panic_bunker()
 	var/bunker_path = file("data/bunker_passthrough.json")
 	if(fexists(bunker_path))
