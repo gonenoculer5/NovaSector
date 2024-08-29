@@ -109,7 +109,7 @@
 
 /datum/uplink_item/role_restricted/ez_clean_bundle
 	name = "EZ Clean Grenade Bundle"
-	desc = "A box with three cleaner grenades using the trademark Waffle Co. formula. Serves as a cleaner and causes acid damage to anyone standing nearby. \
+	desc = "A box with three cleaner grenades using the trademark Waffle Corp. formula. Serves as a cleaner and causes acid damage to anyone standing nearby. \
 			The acid only affects carbon-based creatures."
 	item = /obj/item/storage/box/syndie_kit/ez_clean
 	cost = 6
@@ -164,7 +164,7 @@
 
 /datum/uplink_item/role_restricted/gorillacube
 	name = "Gorilla Cube"
-	desc = "A Waffle Co. brand gorilla cube. Eat big to get big. \
+	desc = "A Waffle Corp. brand gorilla cube. Eat big to get big. \
 			Caution: Product may rehydrate when exposed to water."
 	item = /obj/item/food/monkeycube/gorilla
 	cost = 6
@@ -332,8 +332,6 @@
 	restricted_roles = list(JOB_RESEARCH_DIRECTOR, JOB_SCIENTIST, JOB_ROBOTICIST)
 	surplus = 10
 
-*/
-// NOVA EDIT REMOVAL END
 /datum/uplink_item/role_restricted/blastcannon
 	name = "Blast Cannon"
 	desc = "A highly specialized weapon, the Blast Cannon is actually relatively simple. It contains an attachment for a tank transfer valve mounted to an angled pipe specially constructed \
@@ -345,6 +343,8 @@
 	cost = 14 //High cost because of the potential for extreme damage in the hands of a skilled scientist.
 	restricted_roles = list(JOB_RESEARCH_DIRECTOR, JOB_SCIENTIST)
 	surplus = 5
+*/
+// NOVA EDIT REMOVAL END
 
 /datum/uplink_item/role_restricted/evil_seedling
 	name = "Evil Seedling"
@@ -392,5 +392,6 @@
 	restricted_roles = list(JOB_MIME)
 	restricted = TRUE
 	refundable = FALSE
+	progression_minimum = 30 MINUTES
 	purchasable_from = parent_type::purchasable_from & ~UPLINK_SPY
 

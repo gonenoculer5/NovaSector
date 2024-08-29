@@ -133,6 +133,44 @@
 	icon_file = 'modular_nova/modules/GAGS/icons/hats.dmi'
 	json_config = 'modular_nova/modules/GAGS/json_configs/flatcap/flatcap_worn.json'
 
+// FEDCAPS & NAVAL CAPS
+
+/datum/greyscale_config/fedcap
+	name = "Fedcap (Custom Badge)"
+	icon_file = 'modular_nova/modules/GAGS/icons/hats.dmi'
+	json_config = 'modular_nova/modules/GAGS/json_configs/head/fedcap_silver.json'
+
+/datum/greyscale_config/fedcap/worn
+	name = "Fedcap (Custom Badge, Worn)"
+	json_config = 'modular_nova/modules/GAGS/json_configs/head/fedcap_silver_worn.json'
+
+/datum/greyscale_config/fedcap_gold
+	name = "Fedcap (Gold Badge)"
+	icon_file = 'modular_nova/modules/GAGS/icons/hats.dmi'
+	json_config = 'modular_nova/modules/GAGS/json_configs/head/fedcap_gold.json'
+
+/datum/greyscale_config/fedcap_gold/worn
+	name = "Fedcap (Gold Badge, Worn)"
+	json_config = 'modular_nova/modules/GAGS/json_configs/head/fedcap_gold_worn.json'
+
+/datum/greyscale_config/naval
+	name = "Naval Cap (Custom Badge)"
+	icon_file = 'modular_nova/modules/GAGS/icons/hats.dmi'
+	json_config = 'modular_nova/modules/GAGS/json_configs/head/naval_silver.json'
+
+/datum/greyscale_config/naval/worn
+	name = "Naval Cap (Custom Badge, Worn)"
+	json_config = 'modular_nova/modules/GAGS/json_configs/head/naval_silver_worn.json'
+
+/datum/greyscale_config/naval_gold
+	name = "Naval Cap (Gold Badge)"
+	icon_file = 'modular_nova/modules/GAGS/icons/hats.dmi'
+	json_config = 'modular_nova/modules/GAGS/json_configs/head/naval_gold.json'
+
+/datum/greyscale_config/naval_gold/worn
+	name = "Naval Cap (Gold Badge, Worn)"
+	json_config = 'modular_nova/modules/GAGS/json_configs/head/naval_gold_worn.json'
+
 // FLOWER PIN
 
 /datum/greyscale_config/flowerpin
@@ -320,6 +358,17 @@
 /datum/greyscale_config/masquerade_mask/worn/vox
 	name = "Masquerade Mask (Worn) (Vox)"
 	icon_file = 'modular_nova/modules/GAGS/icons/mask/masquerade_mask_worn_vox.dmi'
+
+// GAITER
+
+/datum/greyscale_config/neck_gaiter
+	name = "Neck Gaiter"
+	icon_file = 'modular_nova/modules/GAGS/icons/masks.dmi'
+	json_config = 'modular_nova/modules/GAGS/json_configs/gaiter/gaiter.json'
+
+/datum/greyscale_config/neck_gaiter/worn
+	name = "Neck Gaiter (Worn)"
+	json_config = 'modular_nova/modules/GAGS/json_configs/gaiter/gaiter_worn.json'
 
 /*
 *	EYES
@@ -949,16 +998,27 @@
 	name = "Tailored Jacket (Worn)"
 	icon_file = 'modular_nova/modules/GAGS/icons/crop_jacket_worn.dmi'
 
+// SHORT-SLEEVED CROPPED JACKET
+
+/datum/greyscale_config/shortsleeve_crop_jacket
+	name = "Tailored Jacket (Short-Sleeved)"
+	icon_file = 'modular_nova/modules/GAGS/icons/crop_jacket.dmi'
+	json_config = 'modular_nova/modules/GAGS/json_configs/crop_jacket/crop_jacket_short.json'
+
+/datum/greyscale_config/shortsleeve_crop_jacket/worn
+	name = "Tailored Jacket (Short-Sleeved, Worn)"
+	icon_file = 'modular_nova/modules/GAGS/icons/crop_jacket_worn.dmi'
+
 // SLEEVELESS CROPPED JACKET
 
 /datum/greyscale_config/sleeveless_crop_jacket
-	name = "Tailored Jacket"
-	icon_file = 'modular_nova/modules/GAGS/icons/sleeveless_crop_jacket.dmi'
-	json_config = 'modular_nova/modules/GAGS/json_configs/sleeveless_crop_jacket/sleeveless_crop_jacket.json'
+	name = "Tailored Jacket (Sleeveless)"
+	icon_file = 'modular_nova/modules/GAGS/icons/crop_jacket.dmi'
+	json_config = 'modular_nova/modules/GAGS/json_configs/crop_jacket/crop_jacket_none.json'
 
 /datum/greyscale_config/sleeveless_crop_jacket/worn
-	name = "Tailored Jacket (Worn)"
-	icon_file = 'modular_nova/modules/GAGS/icons/sleeveless_crop_jacket_worn.dmi'
+	name = "Tailored Jacket (Sleeveless, Worn)"
+	icon_file = 'modular_nova/modules/GAGS/icons/crop_jacket_worn.dmi'
 
 
 // PARADE JACKET
@@ -1241,6 +1301,25 @@
 	name = "Long Skirt (Worn)"
 	icon_file = 'modular_nova/master_files/icons/mob/clothing/under/skirts_dresses.dmi'
 
+/datum/greyscale_config/wedding_dress
+	name = "Wedding Dress"
+	icon_file = 'modular_nova/master_files/icons/obj/clothing/under/skirts_dresses.dmi'
+	json_config = 'modular_nova/modules/GAGS/json_configs/pants_shorts_skirts_dresses/wedding_dress.json'
+
+/datum/greyscale_config/wedding_dress/worn
+	name = "Wedding Dress (Worn)"
+	icon_file = 'modular_nova/master_files/icons/mob/clothing/under/skirts_dresses.dmi'
+
+/datum/greyscale_config/wedding_dress_ribbon
+	name = "Wedding Dress With Ribbon"
+	icon_file = 'modular_nova/master_files/icons/obj/clothing/under/skirts_dresses.dmi'
+	json_config = 'modular_nova/modules/GAGS/json_configs/pants_shorts_skirts_dresses/wedding_dress_ribbon.json'
+
+/datum/greyscale_config/wedding_dress_ribbon/worn
+	name = "Wedding Dress With Ribbon (Worn)"
+	icon_file = 'modular_nova/master_files/icons/mob/clothing/under/skirts_dresses.dmi'
+
+
 // KILT
 // COSTUMES
 
@@ -1362,6 +1441,16 @@
 /datum/greyscale_config/chrimbo/worn/digi
 	name = "christmas_male (Worn, Digi)"
 	icon_file = 'modular_nova/master_files/icons/mob/clothing/under/costume_digi.dmi'
+
+//HALF-LEOTARD (DONATOR)
+/datum/greyscale_config/half_leotard
+	name = "One-Sleeved Leotard"
+	icon_file = 'modular_nova/master_files/icons/donator/obj/clothing/uniform.dmi'
+	json_config = 'modular_nova/modules/GAGS/json_configs/fancy_under/half_leotard.json'
+
+/datum/greyscale_config/half_leotard/worn
+	name = "One-Sleeved Leotard (Worn)"
+	icon_file = 'modular_nova/master_files/icons/donator/mob/clothing/uniform.dmi'
 
 //RELIGIOUS COSTUMES (MONK HABIT, ETC)
 /datum/greyscale_config/monk_habit
@@ -1812,15 +1901,6 @@ TREK
 /datum/greyscale_config/primitive_catgirl_boots/worn
 	name = "Primitive Winter Boots (Worn)"
 	json_config = 'modular_nova/modules/GAGS/json_configs/primitive_catgirl_clothing/boots_worn.json'
-
-/datum/greyscale_config/primitive_catgirl_gaiter
-	name = "Neck Gaiter"
-	icon_file = 'modular_nova/modules/primitive_catgirls/icons/clothing_greyscale.dmi'
-	json_config = 'modular_nova/modules/GAGS/json_configs/primitive_catgirl_clothing/gaiter.json'
-
-/datum/greyscale_config/primitive_catgirl_gaiter/worn
-	name = "Neck Gaiter (Worn)"
-	json_config = 'modular_nova/modules/GAGS/json_configs/primitive_catgirl_clothing/gaiter_worn.json'
 
 /datum/greyscale_config/primitive_catgirl_gauntlets
 	name = "Gauntlets"
