@@ -1,6 +1,6 @@
 //============ Actions ============
 /datum/action/innate/shuttle_creator
-	button_icon = 'signia_modules/modules/custom_whiteship/icons/actions_shuttle.dmi'
+	button_icon = 'modular_nova/modules_bluemoon/custom_shuttles/icons/actions_shuttle.dmi'
 	var/mob/living/C
 	var/mob/camera/ai_eye/remote/shuttle_creation/remote_eye
 	var/obj/item/shuttle_creator/shuttle_creator
@@ -81,9 +81,12 @@
 			return
 		if(shuttle_creator.linkedShuttleId)
 			return
+		// Bluemoon edit - Infinite custom shuttles
+		/*
 		if(GLOB.custom_shuttle_count > CUSTOM_SHUTTLE_LIMIT)
 			to_chat(C, "<span class='warning'>Shuttle limit reached, sorry.</span>")
 			return
+		*/
 		if(shuttle_creator.loggedTurfs.len > SHUTTLE_CREATOR_MAX_SIZE)
 			to_chat(C, "<span class='warning'>This shuttle is too large!</span>")
 			return

@@ -1,9 +1,3 @@
-/*
-#define SHUTTLE_CREATOR_MAX_SIZE CONFIG_GET(number/max_shuttle_size)
-#define CUSTOM_SHUTTLE_LIMIT CONFIG_GET(number/max_shuttle_count)
-*/
-#define SHUTTLE_CREATOR_MAX_SIZE 200
-#define CUSTOM_SHUTTLE_LIMIT 6
 #define CARDINAL_DIRECTIONS_X list(1, 0, -1, 0)
 #define CARDINAL_DIRECTIONS_Y list(0, 1, 0, -1)
 
@@ -13,8 +7,8 @@ GLOBAL_LIST_EMPTY(custom_shuttle_machines)		//Machines that require updating (He
 //============ Shuttle Creator Object ============
 /obj/item/shuttle_creator
 	name = "Rapid Shuttle Designator"
-	icon = 'icons/obj/tools.dmi'
-	icon_state = "rcd"
+	icon = 'modular_nova/modules_bluemoon/custom_shuttles/icons/shuttle_creator.dmi'
+	icon_state = "rsd_empty"
 
 	lefthand_file = 'icons/mob/inhands/equipment/tools_lefthand.dmi'
 	righthand_file = 'icons/mob/inhands/equipment/tools_righthand.dmi'
@@ -60,10 +54,13 @@ GLOBAL_LIST_EMPTY(custom_shuttle_machines)		//Machines that require updating (He
 	..()
 	if(linkedShuttleId)
 		return
+	// Bluemoon edit - Infinite custom shuttles
+	/*
 	if(GLOB.custom_shuttle_count > CUSTOM_SHUTTLE_LIMIT && !override_max_shuttles)
 		to_chat(user, "<span class='warning'>Too many shuttles have been created.</span>")
 		message_admins("[ADMIN_FLW(user)] attempted to create a shuttle, however [CUSTOM_SHUTTLE_LIMIT] have already been created.")
 		return
+	*/
 	if(!internal_shuttle_creator)
 		return
 	overlay_holder.add_client(user.client)
@@ -249,8 +246,13 @@ GLOBAL_LIST_EMPTY(custom_shuttle_machines)		//Machines that require updating (He
 	//Clear highlights
 	overlay_holder.clear_highlights()
 	GLOB.custom_shuttle_count ++
+	// Bluemoon edit - Infinite custom shuttles
+	/*
 	message_admins("[ADMIN_LOOKUPFLW(user)] created a new shuttle with a [src] at [ADMIN_VERBOSEJMP(user)] ([GLOB.custom_shuttle_count] custom shuttles, limit is [CUSTOM_SHUTTLE_LIMIT])")
 	log_game("[key_name(user)] created a new shuttle with a [src] at [AREACOORD(user)] ([GLOB.custom_shuttle_count] custom shuttles, limit is [CUSTOM_SHUTTLE_LIMIT])")
+	*/
+	message_admins("[ADMIN_LOOKUPFLW(user)] created a new shuttle with a [src] at [ADMIN_VERBOSEJMP(user)] ([GLOB.custom_shuttle_count] custom shuttles.")
+	log_game("[key_name(user)] created a new shuttle with a [src] at [AREACOORD(user)] ([GLOB.custom_shuttle_count] custom shuttles.")
 	return TRUE
 
 /obj/item/shuttle_creator/proc/create_shuttle_area(mob/user)
@@ -351,7 +353,7 @@ GLOBAL_LIST_EMPTY(custom_shuttle_machines)		//Machines that require updating (He
 	loggedOldArea = get_area(get_turf(user))
 	loggedTurfs |= turfs
 	overlay_holder.highlight_area(turfs)
-	//TODO READD THIS SHIT: icon_state = "rsd_used"
+	icon_state = "rsd"
 	to_chat(user, "<span class='notice'>You add the area into the buffer of the [src], you made add more areas or select an airlock to act as a docking port to complete the shuttle.</span>")
 	return turfs
 
@@ -365,6 +367,7 @@ GLOBAL_LIST_EMPTY(custom_shuttle_machines)		//Machines that require updating (He
 /obj/item/shuttle_creator/proc/reset_saved_area()
 	overlay_holder.clear_highlights()
 	loggedTurfs.Cut()
+	icon_state = "rsd_empty"
 	to_chat(usr, "<span class='notice'>You reset the area buffer on the [src].</span>")
 
 #undef CARDINAL_DIRECTIONS_X
