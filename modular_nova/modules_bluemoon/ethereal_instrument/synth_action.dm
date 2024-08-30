@@ -1,6 +1,6 @@
 /datum/action/sing_tones
 	name = "Sing Tones"
-	desc = "Use your electric discharger organ to sing tones!"
+	desc = "Use your electric discharger to sing!"
 	button_icon = 'icons/obj/art/musician.dmi'
 	button_icon_state = "xylophone"
 
