@@ -2,18 +2,28 @@
 	name = "Sing Tones"
 	desc = "Use your electric discharger organ to sing tones!"
 	button_icon = 'icons/obj/art/musician.dmi'
-	button_icon_state = "synth"
-	button_icon_state = "nomod"
-	var/obj/item/instrument/ethereal_synth/tone_synth
+	button_icon_state = "xylophone"
 
 /datum/action/sing_tones/Grant(mob/grant_to)
-	tone_synth = new /obj/item/instrument/ethereal_synth
+	var/mob/living/carbon/human/human_target = grant_to
+	human_target.tone_synth = new(grant_to)
 	return ..()
 
 /datum/action/sing_tones/Remove(mob/remove_from)
-	tone_synth = null
+	var/mob/living/carbon/human/human_target = remove_from
+	human_target.tone_synth = null
 	return ..()
 
+/datum/action/sing_tones/IsAvailable(feedback)
+	var/mob/living/carbon/human/human_target = owner
+	var/obj/item/organ/internal/tongue/ethereal/discharger = human_target.get_organ_slot(ORGAN_SLOT_TONGUE)
+	if(istype(discharger, /obj/item/organ/internal/tongue/ethereal))
+		return ..()
+	return FALSE
+
 /datum/action/sing_tones/Trigger(trigger_flags)
-	if(..())
-		tone_synth.ui_interact(owner)
+	. = ..()
+	if(!.)
+		return
+	var/mob/living/carbon/human/human_target = owner
+	human_target.tone_synth.interact(owner)

@@ -1,3 +1,6 @@
+/mob/living/carbon/human
+	var/obj/item/instrument/ethereal_synth/tone_synth
+
 /datum/species/ethereal/on_species_gain(mob/living/carbon/human/new_ethereal, datum/species/old_species, pref_load)
 	. = ..()
 	var/datum/action/sing_tones/sing_action = new
