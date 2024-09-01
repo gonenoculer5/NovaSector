@@ -1,6 +1,6 @@
 #define TECHWEB_NODE_CUSTOM_SHUTTLES "custom_shuttles"
 
-/datum/techweb_node/beam_weapons
+/datum/techweb_node/custom_shuttles
 	id = TECHWEB_NODE_CUSTOM_SHUTTLES
 	display_name = "Custom Shuttles"
 	description = "All you need to be able to build new shuttles"
@@ -38,7 +38,7 @@
 	departmental_flags = DEPARTMENT_BITFLAG_ENGINEERING | DEPARTMENT_BITFLAG_SCIENCE
 	autolathe_exportable = TRUE
 
-/datum/design/flight_controller
+/datum/design/flight_computer
 	name = "Navigation Computer"
 	desc = "This lets you find landing locations for your custom shuttle"
 	id = "flight_targeter"
