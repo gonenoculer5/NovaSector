@@ -457,7 +457,11 @@
 /*
 #define HUNGER_FACTOR 0.05 //factor at which mob nutrition decreases
 */
+// Bluemoon edit - Reduce Ethereal discharge rate from 8e-4 to 4e-4
+#define ETHEREAL_DISCHARGE_RATE (4e-4 * STANDARD_CELL_CHARGE)
+/*
 #define ETHEREAL_DISCHARGE_RATE (8e-4 * STANDARD_CELL_CHARGE) // Rate at which ethereal stomach charge decreases
+*/
 /// How much nutrition eating clothes as moth gives and drains
 #define CLOTHING_NUTRITION_GAIN 15
 #define REAGENTS_METABOLISM 0.2 //How many units of reagent are consumed per second, by default.
