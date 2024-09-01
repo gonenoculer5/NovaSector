@@ -9,6 +9,7 @@
 		"rapid_shuttle_contructor",
 		"flight_targeter",
 		"flight_controller",
+		"shuttle_engine",
 	)
 	research_costs = list(TECHWEB_POINT_TYPE_GENERIC = TECHWEB_TIER_2_POINTS)
 
@@ -45,6 +46,19 @@
 	build_type = PROTOLATHE
 	materials = list(/datum/material/glass = SHEET_MATERIAL_AMOUNT)
 	build_path = /obj/machinery/computer/camera_advanced/shuttle_docker/custom
+	category = list(
+		RND_SUBCATEGORY_COMPUTER_ENGINEERING
+	)
+	departmental_flags = DEPARTMENT_BITFLAG_ENGINEERING | DEPARTMENT_BITFLAG_SCIENCE
+	autolathe_exportable = TRUE
+
+/datum/design/shuttle_engine
+	name = "Bluespace Propulsion Engine"
+	desc = "A standard reliable bluespace engine used by many forms of shuttles."
+	id = "shuttle_engine"
+	build_type = PROTOLATHE
+	materials = list(/datum/material/glass = SHEET_MATERIAL_AMOUNT)
+	build_path = /obj/item/circuitboard/machine/engine/propulsion
 	category = list(
 		RND_SUBCATEGORY_COMPUTER_ENGINEERING
 	)
