@@ -4,8 +4,8 @@
 /datum/looping_sound/supermatter/shard
 	volume = 20
 	extra_range = 0
-	falloff_exponent = 5
-	falloff_distance = 4
+	falloff_exponent = 6.6
+	falloff_distance = 3
 
 // Bluemoon addition - Custom generator sounds
 /datum/looping_sound/turbine
