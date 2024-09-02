@@ -49,9 +49,9 @@
 	name = "Bar"
 	icon_state = "bar"
 
-/area/station/hestia/service_breakroom
-	name = "Service Breakroom"
-	icon_state = "station"
+/area/station/hestia/Medical
+	name = "Medbay"
+	icon_state = "medbay"
 
 /area/station/hestia/Janitor
 	name = "Custodial Closet"
