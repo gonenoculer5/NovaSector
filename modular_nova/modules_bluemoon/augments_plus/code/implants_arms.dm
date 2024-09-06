@@ -123,14 +123,14 @@
 
 /datum/augment_item/implant/r_arm/muscle
 	name = "Right Strong-Arm Empowered Musculature Implant"
-	path = /obj/item/organ/internal/cyberimp/arm/muscle
+	path = /obj/item/organ/internal/cyberimp/arm/strongarm
 
-/obj/item/organ/internal/cyberimp/arm/muscle/l
+/obj/item/organ/internal/cyberimp/arm/strongarm/l
 	zone = BODY_ZONE_L_ARM
 
 /datum/augment_item/implant/l_arm/muscle
 	name = "Left Strong-Arm Empowered Musculature Implant"
-	path = /obj/item/organ/internal/cyberimp/arm/muscle/l
+	path = /obj/item/organ/internal/cyberimp/arm/strongarm/l
 
 /datum/augment_item/implant/r_arm/razorwire
 	name = "Right Razorwire Spool Implant"
