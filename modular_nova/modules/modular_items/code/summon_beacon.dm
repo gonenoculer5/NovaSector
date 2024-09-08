@@ -135,8 +135,9 @@
 	desc = "Once a gas miner type is selected, delivers a gas miner to the target location."
 
 	allowed_areas = list(
-		/area/station/engineering/atmos,
-		/area/station/engineering/atmospherics_engine,
+	//	/area/station/engineering/atmos,
+	//	/area/station/engineering/atmospherics_engine,
+		/area, // BLUEMOON EDIT - GasMinersAnywhere - Allows gas miner beacons to summon the gas miner anywhere! Might be a horrible idea on the coder's part.
 	)
 
 	selectable_atoms = list(
@@ -147,5 +148,5 @@
 		/obj/machinery/atmospherics/miner/plasma,
 	)
 
-	area_string = "atmospherics"
+	area_string = /*"atmospherics"*/ "any" // BLUEMOON EDIT - GasMinersAnywhere - Allows gas miner beacons to summon the gas miner anywhere! Might be a horrible idea on the coder's part.
 	supply_pod_stay = TRUE
