@@ -10,46 +10,46 @@
 	fire_detect = FALSE
 
 /area/shuttle/autumnal/bridge
-    name = "FSC 'Autumnal' Bridge"
+	name = "FSC 'Autumnal' Bridge"
 
 /area/shuttle/autumnal/cockpit
-    name = "FSC 'Autumnal' Control Room"
+	name = "FSC 'Autumnal' Control Room"
 
 /area/shuttle/autumnal/crew1
-    name = "FSC 'Autumnal' Crew's Quarters"
+	name = "FSC 'Autumnal' Crew's Quarters"
 
 /area/shuttle/autumnal/crew2
-    name = "FSC 'Autumnal' Crew's Quarters"
+	name = "FSC 'Autumnal' Crew's Quarters"
 
 /area/shuttle/autumnal/forward
-    name = "FSC 'Autumnal' Forward Compartment"
+	name = "FSC 'Autumnal' Forward Compartment"
 
 /area/shuttle/autumnal/midship
-    name = "FSC 'Autumnal' Midship Compartment"
+	name = "FSC 'Autumnal' Midship Compartment"
 
 /area/shuttle/autumnal/mainbedroom
-    name = "FSC 'Autumnal' Main Bedroom"
+	name = "FSC 'Autumnal' Main Bedroom"
 
 /area/shuttle/autumnal/engine
-    name = "FSC 'Autumnal' Engine Compartment"
+	name = "FSC 'Autumnal' Engine Compartment"
 
 /area/shuttle/autumnal/bathroom
-    name = "FSC 'Autumnal' Bathroom"
+	name = "FSC 'Autumnal' Bathroom"
 
 /area/shuttle/autumnal/kitchen
-    name = "FSC 'Autumnal' Kitchen"
+	name = "FSC 'Autumnal' Kitchen"
 
 /area/shuttle/autumnal/restroom
-    name = "FSC 'Autumnal' Restroom"
+	name = "FSC 'Autumnal' Restroom"
 
 /obj/docking_port/stationary/autumnal
 	name = "Refueling Station: Port 8"
 	shuttle_id = "autumnal_home"
 	roundstart_template = /datum/map_template/shuttle/autumnal
-	height = 42
-	width = 26
-	dwidth = 6
-	dheight = 31
+	height = 44
+	width = 32
+	dwidth = 9
+	dheight = 33
 
 /obj/docking_port/mobile/autumnal
 	callTime = 3 MINUTES
@@ -73,4 +73,4 @@
 		/area/shuttle/autumnal/bathroom,
 		/area/shuttle/autumnal/kitchen,
 		/area/shuttle/autumnal/restroom,
-    )
+	)
