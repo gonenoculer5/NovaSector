@@ -6,7 +6,7 @@
 	medical_record_text = "Patient possesses dangerous and alien abilities including a stinger, chemical enhancements, and some form of natural bio-camo!"
 
 /datum/quirk/changeling/add(client/client_source)
-	quirk_holder.mind.make_changeling()
+	quirk_holder?.mind.make_changeling()
 
 /datum/quirk/changeling/remove(client/client_source)
-	quirk_holder.mind.remove_changeling()
+	quirk_holder?.mind.remove_changeling()
