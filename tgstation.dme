@@ -8669,6 +8669,7 @@
 #include "modular_nova\modules_bluemoon\headpat_lover_quirk\headpat_lover.dm"
 #include "modular_nova\modules_bluemoon\loadout_items\code\personal.dm"
 #include "modular_nova\modules_bluemoon\lustwish\lustwish.dm"
+#include "modular_nova\modules_bluemoon\mapping\code\areas.dm"
 #include "modular_nova\modules_bluemoon\mapping\code\decals.dm"
 #include "modular_nova\modules_bluemoon\mapping\code\grille.dm"
 #include "modular_nova\modules_bluemoon\mapping\code\mapping_helpers.dm"
