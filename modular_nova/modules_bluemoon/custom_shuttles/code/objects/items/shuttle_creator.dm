@@ -297,9 +297,12 @@ GLOBAL_LIST_EMPTY(custom_shuttle_machines)		//Machines that require updating (He
 	if(!turfs)
 		to_chat(usr, "<span class='warning'>Shuttles must be created in an airtight space, ensure that the shuttle is airtight, including corners.</span>")
 		return FALSE
+	// Bluemoon edit - Remove custom shuttle size limits
+	/*
 	if(turfs.len + loggedTurfs.len > SHUTTLE_CREATOR_MAX_SIZE)
 		to_chat(usr, "<span class='warning'>The [src]'s internal cooling system wizzes violently and a message appears on the screen, \"Caution, this device can only handle the creation of shuttles up to [SHUTTLE_CREATOR_MAX_SIZE] units in size. Please reduce your shuttle by [turfs.len-SHUTTLE_CREATOR_MAX_SIZE]. Sorry for the inconvinience\"</span>")
 		return FALSE
+	*/
 	//Check to see if it's a valid shuttle
 	for(var/i in 1 to turfs.len)
 		var/area/place = get_area(turfs[i])

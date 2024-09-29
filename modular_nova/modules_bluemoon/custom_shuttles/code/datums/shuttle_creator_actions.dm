@@ -87,9 +87,12 @@
 			to_chat(C, "<span class='warning'>Shuttle limit reached, sorry.</span>")
 			return
 		*/
+		// Bluemoon edit - Remove custom shuttle size limits
+		/*
 		if(shuttle_creator.loggedTurfs.len > SHUTTLE_CREATOR_MAX_SIZE)
 			to_chat(C, "<span class='warning'>This shuttle is too large!</span>")
 			return
+		*/
 		if(!shuttle_creator.getNonShuttleDirection(T))
 			to_chat(C, "<span class='warning'>Docking port must be on an external wall, with only 1 side exposed to space.</span>")
 			return
