@@ -1,5 +1,12 @@
 #define GENERATOR_SOUNDPATH(filename) "modular_nova/modules/generators/sound/" + ##filename
 
+// Bluemoon edit - Quiet supermatter shard
+/datum/looping_sound/supermatter/shard
+	volume = 20
+	extra_range = 0
+	falloff_exponent = 6.6
+	falloff_distance = 3
+
 // Bluemoon addition - Custom generator sounds
 /datum/looping_sound/turbine
 	start_sound = GENERATOR_SOUNDPATH("turbine_spinup.ogg")

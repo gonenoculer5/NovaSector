@@ -141,13 +141,13 @@
 		"img" = (item && can_lewd_strip(source, target, name)) ? icon2base64(icon(item.icon, item.icon_state, SOUTH, 1)) : null
 		)
 
-/datum/component/interactable/ui_act(action, list/params)
+/datum/component/interactable/ui_act(action, list/params, datum/tgui/ui, datum/ui_state/state)
 	. = ..()
 	if(.)
 		return
 
 	// Bluemoon edit - Cyborg interactions
-	if(!ishuman(usr) && !iscyborg(usr))
+	if(!ishuman(ui.user) && !iscyborg(ui.user))
 		return
 
 	if(params["interaction"])

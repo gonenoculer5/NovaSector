@@ -48,4 +48,4 @@
 /datum/component/headpat_lover/proc/pleasure_pet(mob/living/carbon/human/human_pet)
 	human_pet.add_mood_event("headpat_lover", /datum/mood_event/headpat_lover)
 	human_pet.adjust_arousal(2)
-	human_pet.adjust_pleasure(3)
+	human_pet.adjust_pleasure(2)

@@ -23,7 +23,7 @@
 // This component listens for when clothes are being equipped
 /datum/component/nudist
 	/// Whitelist of clothing items which don't cause bad moodlet.
-	var/static/list/obj/item/clothing_whitelist = list(
+	var/static/list/obj/item/nudist_clothing_whitelist = list(
 		/obj/item/clothing/under/misc/nova/gear_harness,
 		/obj/item/clothing/under/costume/nova/bathrobe,
 		/obj/item/clothing/under/costume/nova/yukata,
@@ -52,7 +52,7 @@
 	var/mob/living/carbon/human/human_parent = parent
 	var/obj/item/uniform = human_parent.get_item_by_slot(ITEM_SLOT_ICLOTHING)
 
-	if(!uniform || is_type_in_list(uniform, clothing_whitelist))
+	if(!uniform || is_type_in_list(uniform, nudist_clothing_whitelist))
 		uniform_type_cache = uniform ? uniform.type : null
 		human_parent.clear_mood_event("tight_clothes")
 		return

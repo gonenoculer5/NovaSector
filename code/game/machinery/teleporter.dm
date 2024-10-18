@@ -81,6 +81,8 @@
 	playsound(loc, SFX_PORTAL_ENTER, 50, TRUE, SHORT_RANGE_SOUND_EXTRARANGE)
 	use_energy(active_power_usage)
 	new /obj/effect/temp_visual/portal_animation(start_turf, src, M)
+	// Bluemoon edit - Remove calibration penalty from teleporters
+	/*
 	if(!calibrated && ishuman(M) && prob(30 - ((accuracy) * 10))) //oh dear a problem
 		var/mob/living/carbon/human/human = M
 		/* - NOVA EDIT REMOVAL START
@@ -112,6 +114,7 @@
 				BP.dismember()
 				qdel(BP)
 		//NOVA EDIT ADDITION END
+	*/
 	calibrated = FALSE
 
 /obj/machinery/teleport/hub/update_icon_state()

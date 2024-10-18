@@ -114,7 +114,8 @@
 		stress = clamp(stress + 1, 0, 300)
 
 	human_owner.adjust_arousal(10)
-	if(human_owner.pleasure < 80)
+	// Bluemoon edit - Reduce max Amorous pleasure
+	if(human_owner.pleasure < 45)
 		human_owner.adjust_pleasure(5)
 
 	//Anything beyond this obeys a cooldown system because we don't want to spam it

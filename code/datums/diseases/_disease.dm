@@ -132,8 +132,13 @@
 		switch(severity)
 			if(DISEASE_SEVERITY_POSITIVE) //good viruses don't go anywhere after hitting max stage - you can try to get rid of them by sleeping earlier
 				cycles_to_beat = max(DISEASE_RECOVERY_SCALING, DISEASE_CYCLES_POSITIVE) //because of the way we later check for recovery_prob, we need to floor this at least equal to the scaling to avoid infinitely getting less likely to cure
+				// Bluemoon edit - Remove malnutrition penalties from diseases
+				/*
 				if(((HAS_TRAIT(affected_mob, TRAIT_NOHUNGER)) || ((affected_mob.nutrition > NUTRITION_LEVEL_STARVING) && (affected_mob.satiety >= 0))) && slowdown == 1) //any sort of malnourishment/immunosuppressant opens you to losing a good virus
 					return TRUE
+				*/
+				// Bluemoon edit - Remove malnutrition penalties from diseases
+				return TRUE
 			if(DISEASE_SEVERITY_NONTHREAT)
 				cycles_to_beat = max(DISEASE_RECOVERY_SCALING, DISEASE_CYCLES_NONTHREAT)
 			if(DISEASE_SEVERITY_MINOR)
@@ -146,6 +151,8 @@
 				cycles_to_beat = max(DISEASE_RECOVERY_SCALING, DISEASE_CYCLES_HARMFUL)
 			if(DISEASE_SEVERITY_BIOHAZARD)
 				cycles_to_beat = max(DISEASE_RECOVERY_SCALING, DISEASE_CYCLES_BIOHAZARD)
+			else
+				cycles_to_beat = max(DISEASE_RECOVERY_SCALING, DISEASE_CYCLES_NONTHREAT)
 		peaked_cycles += stage/max_stages //every cycle we spend sick counts towards eventually curing the virus, faster at higher stages
 		recovery_prob += DISEASE_RECOVERY_CONSTANT + (peaked_cycles / (cycles_to_beat / DISEASE_RECOVERY_SCALING)) //more severe viruses are beaten back more aggressively after the peak
 		if(stage_peaked)
@@ -154,11 +161,15 @@
 			recovery_prob += clamp((((1 - slowdown)*(DISEASE_SLOWDOWN_RECOVERY_BONUS * 2)) * ((DISEASE_SLOWDOWN_RECOVERY_BONUS_DURATION - chemical_offsets) / DISEASE_SLOWDOWN_RECOVERY_BONUS_DURATION)), 0, DISEASE_SLOWDOWN_RECOVERY_BONUS)
 			chemical_offsets = min(chemical_offsets + 1, DISEASE_SLOWDOWN_RECOVERY_BONUS_DURATION)
 		if(!HAS_TRAIT(affected_mob, TRAIT_NOHUNGER))
+			// Bluemoon edit - Remove malnutrition penalties from diseases
+			/*
 			if(affected_mob.satiety < 0 || affected_mob.nutrition < NUTRITION_LEVEL_STARVING) //being malnourished makes it a lot harder to defeat your illness
 				recovery_prob -= DISEASE_MALNUTRITION_RECOVERY_PENALTY
 			else
-				if(affected_mob.satiety >= 0)
-					recovery_prob += round((DISEASE_SATIETY_RECOVERY_MULTIPLIER * (affected_mob.satiety/MAX_SATIETY)), 0.1)
+			*/
+			// Bluemoon edit - Remove malnutrition penalties from diseases
+			if(affected_mob.satiety >= 0)
+				recovery_prob += round((DISEASE_SATIETY_RECOVERY_MULTIPLIER * (affected_mob.satiety/MAX_SATIETY)), 0.1)
 
 		if(affected_mob.mob_mood) // this and most other modifiers below a shameless rip from sleeping healing buffs, but feeling good helps make it go away quicker
 			switch(affected_mob.mob_mood.sanity_level)
@@ -166,6 +177,8 @@
 					recovery_prob += 0.4
 				if(SANITY_LEVEL_NEUTRAL)
 					recovery_prob += 0.2
+				// Bluemoon edit - Remove sanity penalties from diseases
+				/*
 				if(SANITY_LEVEL_DISTURBED)
 					recovery_prob += 0
 				if(SANITY_LEVEL_UNSTABLE)
@@ -174,8 +187,10 @@
 					recovery_prob += -0.2
 				if(SANITY_LEVEL_INSANE)
 					recovery_prob += -0.4
+				*/
 
-		if((HAS_TRAIT(affected_mob, TRAIT_NOHUNGER) || !(affected_mob.satiety < 0 || affected_mob.nutrition < NUTRITION_LEVEL_STARVING)) && HAS_TRAIT(affected_mob, TRAIT_KNOCKEDOUT)) //resting starved won't help, but resting helps
+		// Bluemoon edit - Remove malnutrition penalties from diseases
+		if(/*(HAS_TRAIT(affected_mob, TRAIT_NOHUNGER) || (affected_mob.satiety < 0 affected_mob.nutrition < NUTRITION_LEVEL_STARVING)) &&*/ HAS_TRAIT(affected_mob, TRAIT_KNOCKEDOUT)) //resting starved won't help, but resting helps
 			var/turf/rest_turf = get_turf(affected_mob)
 			var/is_sleeping_in_darkness = rest_turf.get_lumcount() <= LIGHTING_TILE_IS_DARK
 
@@ -207,6 +222,8 @@
 		if(recovery_prob)
 			if(SPT_PROB(recovery_prob, seconds_per_tick))
 				if(stage == 1 && prob(cure_chance * DISEASE_FINAL_CURE_CHANCE_MULTIPLIER)) //if we reduce FROM stage == 1, cure the virus - after defeating its cure_chance in a final battle
+					// Bluemoon edit - Remove malnutrition penalties from diseases
+					/*
 					if(!HAS_TRAIT(affected_mob, TRAIT_NOHUNGER) && (affected_mob.satiety < 0 || affected_mob.nutrition < NUTRITION_LEVEL_STARVING))
 						if(stage_peaked == FALSE) //if you didn't ride out the virus from its peak, if you're malnourished when it cures, you don't get resistance
 							cure(add_resistance = FALSE)
@@ -215,8 +232,10 @@
 							cure(add_resistance = TRUE)
 							return FALSE
 					else
-						cure(add_resistance = TRUE) //stay fed and cure it at any point, you're immune
-						return FALSE
+					*/
+					// Bluemoon edit - Remove malnutrition penalties from diseases
+					cure(add_resistance = TRUE) //stay fed and cure it at any point, you're immune
+					return FALSE
 				update_stage(max(stage - 1, 1))
 
 		if(HAS_TRAIT(affected_mob, TRAIT_KNOCKEDOUT) || slowdown != 1) //sleeping and using spaceacillin lets us nosell applicable virus symptoms firing with decreasing effectiveness over time

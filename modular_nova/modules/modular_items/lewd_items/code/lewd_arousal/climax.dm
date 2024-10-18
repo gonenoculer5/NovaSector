@@ -25,6 +25,11 @@
 	if((!is_forced && has_status_effect(/datum/status_effect/climax_cooldown)) || !client?.prefs?.read_preference(/datum/preference/toggle/erp))
 		return
 
+	// Bluemoon edit - Oversensitive quirk
+	if(HAS_TRAIT(src, TRAIT_OVERSENSITIVE))
+		is_forced = TRUE
+		manual = FALSE
+
 	// Bluemoon edit - Forced orgasms
 	if(HAS_TRAIT(src, TRAIT_NEVERBONER) || (!is_forced && has_status_effect(/datum/status_effect/climax_cooldown)) || (!has_vagina() && !has_penis()))
 		visible_message(span_purple("[src] twitches, trying to cum, but with no result."), \

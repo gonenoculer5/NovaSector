@@ -15,7 +15,8 @@
 	var/list/meme_pack_data
 	var/obj/item/supplypod_beacon/beacon //the linked supplypod beacon
 	var/area/landingzone = /area/station/cargo/storage //where we droppin boys
-	var/podType = /obj/structure/closet/supplypod
+	// Bluemoon edit - Pre-upgraded express console
+	var/podType = /obj/structure/closet/supplypod/bluespacepod
 	var/cooldown = 0 //cooldown to prevent printing supplypod beacon spam
 	var/locked = TRUE //is the console locked? unlock with ID
 	var/usingBeacon = FALSE //is the console in beacon mode? exists to let beacon know when a pod may come in
@@ -128,6 +129,7 @@
 	if(.)
 		return
 
+	var/mob/user = ui.user
 	switch(action)
 		if("LZCargo")
 			usingBeacon = FALSE
@@ -143,7 +145,7 @@
 				if(D.adjust_money(-BEACON_COST))
 					cooldown = 10//a ~ten second cooldown for printing beacons to prevent spam
 					var/obj/item/supplypod_beacon/C = new /obj/item/supplypod_beacon(drop_location())
-					C.link_console(src, usr)//rather than in beacon's Initialize(), we can assign the computer to the beacon by reusing this proc)
+					C.link_console(src, user)//rather than in beacon's Initialize(), we can assign the computer to the beacon by reusing this proc)
 					printed_beacons++//printed_beacons starts at 0, so the first one out will be called beacon # 1
 					beacon.name = "Supply Pod Beacon #[printed_beacons]"
 
@@ -159,13 +161,13 @@
 				CRASH("Unknown supply pack id given by express order console ui. ID: [params["id"]]")
 			var/name = "*None Provided*"
 			var/rank = "*None Provided*"
-			var/ckey = usr.ckey
-			if(ishuman(usr))
-				var/mob/living/carbon/human/H = usr
+			var/ckey = user.ckey
+			if(ishuman(user))
+				var/mob/living/carbon/human/H = user
 				name = H.get_authentification_name()
 				rank = H.get_assignment(hand_first = TRUE)
-			else if(HAS_SILICON_ACCESS(usr))
-				name = usr.real_name
+			else if(HAS_SILICON_ACCESS(user))
+				name = user.real_name
 				rank = "Silicon"
 			var/reason = ""
 			var/list/empty_turfs

@@ -1,4 +1,4 @@
-## The Blue Moon Branch
+# The Blue Moon Branch
 
 The Blue Moon Branch is an enhanced fork of [Nova Sector](https://github.com/NovaSector/NovaSector).
 
@@ -13,6 +13,10 @@ If you enjoy this version of the game, then please consider a donation to help k
 - Over 144 unique enhancements to the game!
 - More enhancements added regularly.
 - Increased player freedom and unrestricted gameplay.
+
+## How To Contribute
+
+- Read [CONTRIBUTING.md](CONTRIBUTING.md)
 
 ## Software Licenses
 

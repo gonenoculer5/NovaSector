@@ -120,6 +120,9 @@
 #define TRAIT_REVIVES_BY_HEALING "trait_revives_by_healing"
 #define TRAIT_ROBOTIC_DNA_ORGANS "trait_robotic_dna_organs"
 
+// Isolation trait for synths
+#define TRAIT_SYNTHETIC "trait_synthetic"
+
 /// Trait that changes the ending effects of twitch leaving your system
 #define TRAIT_TWITCH_ADAPTED "twitch_adapted"
 
@@ -158,9 +161,12 @@
 /// If clothing can also be damaged by piercing wound checks, instead of JUST slashes and burns
 #define TRAIT_CLOTHES_DAMAGED_BY_PIERCING "clothing_damaged_by_piercing"
 
-// Bluemoon edit - Flexible quirk
-#define TRAIT_FLEXIBLE "flexible"
 /// If a slimeperson is currently protecting themselves from water
 #define TRAIT_SLIME_HYDROPHOBIA "slime_hydrophobia"
 
 // END TRAIT DEFINES
+
+// Bluemoon edit - Flexible quirk
+#define TRAIT_FLEXIBLE "flexible"
+// Bluemoon edit - Oversensitive quirk
+#define TRAIT_OVERSENSITIVE "oversensitive"

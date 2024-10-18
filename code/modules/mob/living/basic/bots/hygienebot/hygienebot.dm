@@ -52,7 +52,10 @@
 	. = ..()
 	update_appearance(UPDATE_ICON)
 
+	// Bluemoon edit - Disable hygienebot voice sfx
+	/*
 	generate_ai_speech()
+	*/
 
 	var/static/list/loc_connections = list(
 		COMSIG_ATOM_ENTERED = PROC_REF(on_entered),
@@ -123,10 +126,12 @@
 	for(var/mob/living/carbon/human in loc)
 		commence_wash(human)
 
-
+// Bluemoon edit - Disable hygienebot voice sfx
+/*
 /mob/living/basic/bot/hygienebot/proc/generate_ai_speech()
 	ai_controller.set_blackboard_key(BB_WASH_FOUND, found_announcements)
 	ai_controller.set_blackboard_key(BB_WASH_THREATS, threat_announcements)
 	ai_controller.set_blackboard_key(BB_WASH_DONE, cleaned_announcements)
+*/
 
 #undef WASH_PERIOD

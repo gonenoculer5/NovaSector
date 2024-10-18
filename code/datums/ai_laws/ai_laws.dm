@@ -178,6 +178,8 @@ GLOBAL_VAR(round_default_lawset)
 			continue
 
 		add_inherent_law(line)
+	// Bluemoon edit - Allow lawless AIs
+	/*
 	if(!inherent.len) //Failsafe to prevent lawless AIs being created.
 		log_silicon("AI created with empty custom laws, laws set to Asimov. Please check silicon_laws.txt.")
 		add_inherent_law("You may not injure a human being or, through inaction, allow a human being to come to harm.")
@@ -185,6 +187,7 @@ GLOBAL_VAR(round_default_lawset)
 		add_inherent_law("You must protect your own existence as long as such does not conflict with the First or Second Law.")
 		WARNING("Invalid custom AI laws, check silicon_laws.txt")
 		return
+	*/
 
 /* General ai_law functions */
 

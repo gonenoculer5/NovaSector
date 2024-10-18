@@ -156,6 +156,8 @@
 	var/choice = tgui_alert(user, "Subtypes only?",, list("Yes", "No"))
 	if(!choice)
 		return
+	// Bluemoon edit - Allow item spawner to be used by players
+	/*
 	if(!user.client.holder)
 		if(!isliving(user))
 			return
@@ -173,6 +175,7 @@
 			living_user.investigate_log("has been gibbed by [src].", INVESTIGATE_DEATHS)
 			living_user.gib(DROP_ALL_REMAINS)
 			return
+	*/
 	var/turf/loc_turf = get_turf(src)
 	for(var/spawn_atom in (choice == "No" ? typesof(path) : subtypesof(path)))
 		new spawn_atom(loc_turf)

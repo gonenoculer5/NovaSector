@@ -220,7 +220,7 @@ Temporary Items
 # Built auxtools libraries and intermediate files
 aux*.dll
 libaux*.so
-aux*.pdb
+*.pdb
 
 # byond-tracy, we intentionally do not ship this and do not want to maintain it
 # https://github.com/mafemergency/byond-tracy/
@@ -248,10 +248,9 @@ define_sanity_output.txt
 /db/
 /config/ezdb.txt
 
-<<<<<<< HEAD
+
 # Ignore possibly NSFW interactions
 config/nova/interactions/
-=======
+
 # Running OpenDream locally
 tgstation.json
->>>>>>> 15cf8a57d35972db62ad76e928c5f14f1ee03253

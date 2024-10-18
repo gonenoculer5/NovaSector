@@ -256,7 +256,6 @@
 	},
 /obj/machinery/light/directional/north,
 /obj/structure/filingcabinet/chestdrawer,
-/obj/machinery/keycard_auth/directional/north,
 /turf/open/floor/pod/dark,
 /area/shuttle/shipstation)
 "aT" = (
@@ -852,10 +851,6 @@
 /area/shuttle/shipstation)
 "dp" = (
 /obj/effect/landmark/start/chief_engineer,
-/obj/machinery/keycard_auth/directional/north{
-	pixel_y = 39;
-	pixel_x = -5
-	},
 /obj/effect/turf_decal/siding/thinplating/dark{
 	dir = 9
 	},
@@ -2508,9 +2503,6 @@
 /turf/open/floor/pod/dark,
 /area/shuttle/shipstation)
 "ne" = (
-/obj/machinery/telecomms/allinone{
-	id = "tcommsat"
-	},
 /obj/machinery/door/window{
 	base_state = "leftsecure";
 	icon_state = "leftsecure";
@@ -2519,13 +2511,11 @@
 	},
 /obj/machinery/spaceship_navigation_beacon{
 	pixel_y = 19;
-	pixel_x = -7
+	pixel_x = -9
 	},
 /obj/effect/turf_decal/siding/thinplating_new/dark,
-/obj/item/gps/computer/beacon{
-	pixel_y = 16;
-	pixel_x = 6;
-	gpstag = "NTSS Blue Moon"
+/obj/machinery/telecomms/relay/preset/auto{
+	name = "Blue Moon Relay"
 	},
 /turf/open/floor/circuit/green,
 /area/shuttle/shipstation)
@@ -3271,7 +3261,6 @@
 /obj/effect/turf_decal/trimline/red/real_red/warning,
 /obj/machinery/light/directional/south,
 /obj/structure/filingcabinet/chestdrawer,
-/obj/machinery/keycard_auth/directional/south,
 /turf/open/floor/mineral/plastitanium,
 /area/shuttle/shipstation)
 "so" = (
@@ -4131,9 +4120,12 @@
 /turf/open/floor/pod/light,
 /area/shuttle/shipstation)
 "xx" = (
-/obj/effect/landmark/start/ai/secondary,
 /obj/effect/turf_decal/siding/thinplating_new/dark{
 	dir = 1
+	},
+/obj/item/gps/computer/beacon{
+	pixel_y = 0;
+	gpstag = "NTSS Blue Moon"
 	},
 /turf/open/floor/circuit,
 /area/shuttle/shipstation)

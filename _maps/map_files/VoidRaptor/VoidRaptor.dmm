@@ -29518,6 +29518,10 @@
 	},
 /turf/open/floor/iron/dark/smooth_large,
 /area/station/hallway/secondary/command)
+"iwY" = (
+/obj/structure/water_source/puddle,
+/turf/open/floor/grass,
+/area/station/service/hydroponics/garden/abandoned)
 "iwZ" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/table/wood,
@@ -35519,13 +35523,15 @@
 /obj/effect/turf_decal/trimline/purple/filled/line{
 	dir = 10
 	},
-/obj/structure/table/glass,
-/obj/item/knife/kitchen,
-/obj/item/wrench,
+/obj/machinery/vending/cytopro,
 /turf/open/floor/iron/white/smooth_edge{
 	dir = 4
 	},
 /area/station/science/xenobiology)
+"kgf" = (
+/obj/structure/detectiveboard/directional/south,
+/turf/open/floor/carpet,
+/area/station/security/detectives_office)
 "kgj" = (
 /obj/effect/turf_decal/trimline/blue/filled/warning,
 /obj/effect/landmark/start/hangover,
@@ -45336,6 +45342,9 @@
 /obj/effect/turf_decal/trimline/purple/filled/line{
 	dir = 8
 	},
+/obj/structure/table/glass,
+/obj/item/wrench,
+/obj/item/knife/kitchen,
 /turf/open/floor/iron/white/smooth_edge{
 	dir = 4
 	},
@@ -65992,6 +66001,10 @@
 	},
 /turf/open/floor/iron/smooth_edge,
 /area/station/engineering/atmos)
+"svR" = (
+/obj/structure/water_source/puddle,
+/turf/open/floor/grass,
+/area/station/security/prison/garden)
 "svT" = (
 /obj/machinery/atmospherics/components/unary/passive_vent{
 	dir = 1
@@ -74583,9 +74596,7 @@
 /obj/effect/turf_decal/tile/blue/fourcorners,
 /obj/effect/turf_decal/bot,
 /obj/machinery/computer/crew,
-/obj/machinery/computer/security/telescreen/cmo/directional/north{
-	name = "Medbay Monitor"
-	},
+/obj/machinery/computer/security/telescreen/med_sec/directional/north,
 /turf/open/floor/iron/freezer,
 /area/station/security/checkpoint/medical)
 "uHq" = (
@@ -117751,7 +117762,7 @@ cGZ
 lCg
 czg
 pqO
-pqO
+iwY
 gmz
 ngt
 pkp
@@ -122251,7 +122262,7 @@ oPM
 ldo
 naL
 wkj
-ajg
+kgf
 iMs
 hUo
 fcH
@@ -135346,7 +135357,7 @@ dKK
 xbD
 fkx
 wpp
-uZu
+svR
 jDe
 qhJ
 dFp
